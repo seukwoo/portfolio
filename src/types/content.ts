@@ -70,13 +70,19 @@ export type ExperienceProject = {
   details: string[];
 };
 
-export type Experience = {
+/** One company stint — or one affiliate inside a company group. */
+export type ExperienceUnit = {
   role: string;
   company: string;
   department: string;
   tenure: string;
   projects: ExperienceProject[];
 };
+
+/** A company group whose affiliates are listed in order (e.g. moved between subsidiaries). */
+export type ExperienceGroup = { company: string; tenure: string; units: ExperienceUnit[] };
+
+export type Experience = ExperienceUnit | ExperienceGroup;
 
 export type Project = {
   slug: string;

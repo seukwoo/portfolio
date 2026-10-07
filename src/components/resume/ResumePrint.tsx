@@ -1,7 +1,9 @@
 import { RichText } from "@/components/ui";
+import { cn } from "@/lib/cn";
 import { labels, sections } from "@/content";
 import { groupActivities } from "@/lib/activities";
-import type { About, Activity, Certification, Degree, Experience, Profile, SkillGroup } from "@/types/content";
+import { isGroup, tenureLength } from "@/lib/experience";
+import type { About, Activity, Certification, Degree, Experience, ExperienceProject, Profile, SkillGroup } from "@/types/content";
 
 type Props = {
   profile: Profile;
@@ -74,34 +76,36 @@ export function ResumePrint(p: Props) {
             <section key={exp.company}>
               <div className="flex items-baseline justify-between gap-4 border-b-2 border-ink/70 pb-1.5 break-after-avoid">
                 <h3 className="text-[16px] font-bold">
-                  {exp.company} <span className="font-medium text-muted">· {exp.role}</span>
+                  {exp.company}{" "}
+                  <span className="font-medium text-muted">· {isGroup(exp) ? tenureLength(exp.tenure) : exp.role}</span>
                 </h3>
                 <span className="shrink-0 text-[12px] text-muted tabular-nums">{exp.tenure}</span>
               </div>
-              <p className="mt-1 text-[12px] text-muted">{exp.department}</p>
-              <div className="mt-3 space-y-4">
-                {exp.projects.map((proj) => (
-                  <div key={proj.title} className="break-inside-avoid">
-                    <div className="flex items-baseline justify-between gap-4 break-after-avoid">
-                      <p className="font-semibold">
-                        {proj.title} <span className="font-normal text-muted">{proj.subtitle}</span>
-                      </p>
-                      {proj.period && <span className="shrink-0 text-[12px] text-muted tabular-nums">{proj.period}</span>}
+              {isGroup(exp) ? (
+                <div className="mt-3 space-y-5">
+                  {exp.units.map((unit) => (
+                    <div key={unit.company}>
+                      <div className="flex items-baseline justify-between gap-4 break-after-avoid">
+                        <p className="text-[14px] font-bold">
+                          {unit.company} <span className="font-medium text-muted">· {unit.role}</span>
+                        </p>
+                        <span className="shrink-0 text-[12px] text-muted tabular-nums">{unit.tenure}</span>
+                      </div>
+                      <p className="text-[12px] text-muted break-after-avoid">{unit.department}</p>
+                      <div className="mt-2">
+                        <ProjectList projects={unit.projects} siteUrl={p.siteUrl} nested />
+                      </div>
                     </div>
-                    <p className="text-[12px] text-muted">
-                      {proj.role} · {proj.productLabel ?? labels.experience.defaultProductLabel}:{" "}
-                      <RichText text={proj.product} baseUrl={p.siteUrl} />
-                    </p>
-                    <ul className="mt-1 list-disc space-y-0.5 pl-4 marker:text-muted">
-                      {proj.details.map((d) => (
-                        <li key={d}>
-                          <RichText text={d} baseUrl={p.siteUrl} />
-                        </li>
-                      ))}
-                    </ul>
+                  ))}
+                </div>
+              ) : (
+                <>
+                  <p className="mt-1 text-[12px] text-muted">{exp.department}</p>
+                  <div className="mt-3">
+                    <ProjectList projects={exp.projects} siteUrl={p.siteUrl} />
                   </div>
-                ))}
-              </div>
+                </>
+              )}
             </section>
           ))}
         </div>
@@ -196,5 +200,34 @@ function Block({ title, children }: { title: string; children: React.ReactNode }
       <h2 className="mb-2 text-[16px] font-bold text-accent break-after-avoid">{title}</h2>
       {children}
     </section>
+  );
+}
+
+/** `nested` (inside a company group) indents each project with its own left rule, so no empty rule runs across a page break. */
+function ProjectList({ projects, siteUrl, nested }: { projects: ExperienceProject[]; siteUrl: string; nested?: boolean }) {
+  return (
+    <div className="space-y-4">
+      {projects.map((proj) => (
+        <div key={proj.title} className={cn("break-inside-avoid", nested && "border-l-2 border-line pl-3")}>
+          <div className="flex items-baseline justify-between gap-4 break-after-avoid">
+            <p className="font-semibold">
+              {proj.title} <span className="font-normal text-muted">{proj.subtitle}</span>
+            </p>
+            {proj.period && <span className="shrink-0 text-[12px] text-muted tabular-nums">{proj.period}</span>}
+          </div>
+          <p className="text-[12px] text-muted">
+            {proj.role} · {proj.productLabel ?? labels.experience.defaultProductLabel}:{" "}
+            <RichText text={proj.product} baseUrl={siteUrl} />
+          </p>
+          <ul className="mt-1 list-disc space-y-0.5 pl-4 marker:text-muted">
+            {proj.details.map((d) => (
+              <li key={d}>
+                <RichText text={d} baseUrl={siteUrl} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
   );
 }

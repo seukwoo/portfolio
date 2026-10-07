@@ -22,7 +22,7 @@ export const hero: HomeHero = {
 
 /** Every number must be traceable to the resume content; `note` shows the source. */
 export const metrics: Metric[] = [
-  { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.02 – 현재" },
+  { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.01 – 현재" },
   { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
   { value: "5", unit: "개", label: "상용화 서비스 개발", note: "Alan · 닥터메타 · Meta.CRO · 내눈N · WAPL" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
