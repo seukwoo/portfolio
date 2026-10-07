@@ -24,11 +24,13 @@ import {
   site,
   skillGroups,
 } from "@/content";
+import { pageMetadata } from "@/lib/metadata";
+import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata(routes.resume, {
   title: "Resume",
   description: `${profile.nameKo} — ${profile.position} 이력서: 경력, 프로젝트, 스킬, 학위, 수상`,
-};
+});
 
 export default function ResumePage() {
   return (

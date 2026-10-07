@@ -4,12 +4,14 @@ import { SplitHeadline } from "@/components/motion";
 import { ProjectGrid, ProjectRowList } from "@/components/project";
 import { Eyebrow } from "@/components/ui";
 import { labels, projects, sections } from "@/content";
+import { pageMetadata } from "@/lib/metadata";
 import { getFeaturedProjects, getOtherProjects } from "@/lib/projects";
+import { routes } from "@/lib/routes";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata(routes.projects, {
   title: "Projects",
   description: projects.map((p) => p.name).join(", "),
-};
+});
 
 export default function ProjectsPage() {
   return (

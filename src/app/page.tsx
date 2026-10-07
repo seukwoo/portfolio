@@ -6,6 +6,10 @@ import { hero, labels, latestWork, leadership, metrics, profile, sections, workS
 import { getFeaturedProjects, getOtherProjects } from "@/lib/projects";
 import { routes } from "@/lib/routes";
 
+import { pageMetadata } from "@/lib/metadata";
+
+export const metadata = pageMetadata("/");
+
 // Home = the curated argument. Full records live on /resume, every project on /projects.
 export default function HomePage() {
   return (
