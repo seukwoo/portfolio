@@ -1,0 +1,83 @@
+// Fixed UI copy (buttons, field names, alt text). Components read from here instead of inlining strings.
+
+export const labels = {
+  nav: {
+    home: "Home",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    main: "Main menu",
+    toDark: "Switch to dark mode",
+    toLight: "Switch to light mode",
+  },
+  profile: {
+    contact: "Contact",
+    documents: "PDF",
+    downloadResume: "Download resume PDF",
+    resumePdfNote: "Latest resume, generated from this page",
+    resumePdfFileName: "Seukwoo_Lee_Resume.pdf",
+    printFooter: (url: string) => `This resume was generated from the content at ${url}.`,
+    lastUpdated: "Last updated",
+    photoAlt: (name: string) => `Profile photo of ${name}`,
+  },
+  resume: {
+    toc: "Contents",
+  },
+  experience: {
+    department: "Department & title",
+    tenure: "Tenure",
+    defaultProductLabel: "Product",
+    details: "Details",
+  },
+  projects: {
+    featured: "Selected projects",
+    more: "More projects",
+    viewAll: "View all projects →",
+    readCase: "Read more →",
+    backToList: "← All projects",
+    prev: "← Previous project",
+    next: "Next project →",
+    pagerLabel: "Other projects",
+    total: (count: number) => `${count} projects`,
+    imageCount: (count: number) => `${count} images`,
+    coverAlt: (name: string) => `${name} cover image`,
+    screenshotAlt: (name: string, index: number, total: number) => `${name} screenshot ${index}/${total}`,
+    caseStudy: {
+      title: "Summary",
+      problem: "Problem",
+      decisions: "Key decisions",
+    },
+    detailsTitle: "Details",
+    fields: {
+      fullName: "Project name",
+      domain: "Client · Domain",
+      period: "Period",
+      tasks: "Scope of work",
+      roles: "Role",
+      skills: "Tech stack",
+    },
+  },
+  home: {
+    metricsLabel: "Key metrics",
+    latestWorkCta: "See it in practice ↗",
+  },
+  contact: {
+    eyebrow: "Contact",
+    title: "Let's talk",
+    description: "If you're working on turning AI into a real service, or building a development team, feel free to reach out.",
+    mailSubject: "[Portfolio] Inquiry",
+    copyHint: "Click to copy",
+    copyEmailLabel: (email: string) => `Copy email address ${email}`,
+    copied: "Copied ✓",
+    copyFailed: "Copy failed",
+  },
+  activityKinds: { award: "Award", paper: "Paper & research", activity: "Activity" },
+  studentActivities: (count: number) => `Student awards & activities (2010–2013) · ${count}`,
+  footer: {
+    backToTop: "Back to top ↑",
+  },
+  notFound: {
+    code: "404",
+    title: "Page not found",
+    home: "Back to home →",
+  },
+};
