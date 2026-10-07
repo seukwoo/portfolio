@@ -40,7 +40,7 @@ export const latestWork: LatestWork = {
     { label: "03 / Pipeline", value: "룰 기반 모듈 + AI 모델 단계 결합" },
     { label: "04 / Output", value: "React · Flutter · SwiftUI 등 7개 프레임워크 코드" },
   ],
-  footnote: "스튜디오씨드코리아 · 2026.01 –",
+  footnote: "스튜디오씨드코리아 · 2026.01 – 2026.10",
   href: routes.project("ui-code-ai"),
 };
 

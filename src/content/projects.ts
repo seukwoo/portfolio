@@ -22,7 +22,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     fullName:
       "AI 기반 코드 생성 시스템 (AI-assisted Design-to-Code System for Cross-platform Components)",
     domain: "스튜디오씨드코리아 / Design & Interaction data",
-    period: "2026.01 -",
+    period: "2026.01 - 2026.10",
     tasks: [
       "디자인 데이터를 크로스 플랫폼 컴포넌트 코드로 변환·생성하는 AI 시스템 전체 설계 및 개발 리드",
       "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",

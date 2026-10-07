@@ -28,6 +28,7 @@ export const experiences: Experience[] = [
       {
         role: "Head of Product Dev Team",
         product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) 정식 출시",
+        period: "2026.01 - 2026.10",
         title: "AI 기반 코드 생성 시스템",
         subtitle: "(PoC → 제품화)",
         details: [
