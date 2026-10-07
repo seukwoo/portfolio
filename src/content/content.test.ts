@@ -62,7 +62,9 @@ describe("content", () => {
   it("keeps current-employer specifics out (model names, training pipeline)", () => {
     // ui-code-ai is confidential: only the general flow may be published. See content/home.ts.
     const text = JSON.stringify(content);
-    for (const term of ["GAT", "YOLO", "SLM", "SageMaker", "RunPod", "Ground Truth", "Rico", "지식 그래프"]) {
+    // Decision Graph: only my own design decisions — no internal plans, schedules or colleagues from the design review.
+    const internalPlan = ["BYOK", "WBS", "워크샵", "Roadstar", "Mika", "Jeffrey", "Colin", "Checo"];
+    for (const term of ["GAT", "YOLO", "SLM", "SageMaker", "RunPod", "Ground Truth", "Rico", "지식 그래프", ...internalPlan]) {
       expect(text, term).not.toContain(term);
     }
   });
@@ -79,6 +81,20 @@ describe("content", () => {
     const internal = strings.flatMap(parseRichText).flatMap((t) => (t.type === "link" && t.href.startsWith("/") ? [t.href] : []));
     expect(internal.length).toBeGreaterThan(0);
     for (const href of internal) expect(pages.has(href), href).toBe(true);
+  });
+
+  it("answers every case-study challenge with a decision and a result", () => {
+    for (const { slug, caseStudy } of content.projects) {
+      if (!caseStudy?.challenges) continue;
+      const ids = new Set(caseStudy.challenges.map((c) => c.id));
+      const decided = caseStudy.decisions.flatMap((d) => (typeof d === "string" ? [] : [d.challenge]));
+      const shown = (caseStudy.outcome.points ?? []).map((p) => p.challenge);
+      for (const id of [...decided, ...shown]) if (id) expect(ids.has(id), `${slug}: unknown challenge ${id}`).toBe(true);
+      for (const id of ids) {
+        expect(decided, `${slug}: no decision for ${id}`).toContain(id);
+        expect(shown, `${slug}: no result for ${id}`).toContain(id);
+      }
+    }
   });
 
   it("does not publish a phone number", () => {
