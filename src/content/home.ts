@@ -37,7 +37,7 @@ export const latestWork: LatestWork = {
     { label: "02 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 필요한 곳에만 투입" },
     { label: "03 / Pipeline", value: "단계를 나누고, 단계마다 맞는 모델 적용" },
     { label: "04 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로 평가" },
-    { label: "05 / Verify", value: "자동 검증과 사람 검증을 구분해, 판단이 필요한 결과만 사람이 확인" },
+    { label: "05 / Verify", value: "자동 검증으로 거르고, 판단이 필요한 건 사람이 검토" },
     { label: "06 / Operate", value: "비용·지연·품질을 측정하며 개선" },
   ],
   href: routes.projects,
