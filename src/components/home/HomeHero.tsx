@@ -36,16 +36,16 @@ export function HomeHero({ hero, photo, feature }: Props) {
           <br />
           <span className="text-accent">{hero.headline[1]}</span>
         </SplitHeadline>
-        <Reveal className="mt-7 max-w-2xl">
+        <Reveal className="mt-7 max-w-2xl xl:mt-10">
           <p data-reveal className="text-lg leading-relaxed">
             {hero.intro}
           </p>
           {hero.focus && (
-            <p data-reveal className="mt-4 leading-relaxed text-muted">
+            <p data-reveal className="mt-4 leading-relaxed text-muted xl:mt-6">
               {hero.focus}
             </p>
           )}
-          <div data-reveal className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div data-reveal className="mt-8 flex flex-col gap-3 sm:flex-row xl:mt-12">
             {hero.actions.map((action, i) => (
               <ButtonLink
                 key={action.href}

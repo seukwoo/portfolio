@@ -22,7 +22,7 @@ export function LatestWorkCard({ work }: { work: LatestWork }) {
         {work.layers.map((layer) => (
           <li key={layer.label} className="grid grid-cols-[112px_1fr] items-baseline gap-3 py-2.5">
             <span className="font-mono text-[11px] tracking-[0.04em] whitespace-nowrap text-muted uppercase">{layer.label}</span>
-            <span className="text-sm leading-snug">{layer.value}</span>
+            <span className="text-sm leading-snug break-keep">{layer.value}</span>
           </li>
         ))}
       </ol>
