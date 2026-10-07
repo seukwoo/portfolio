@@ -3,6 +3,7 @@ import { ButtonLink, Eyebrow } from "@/components/ui";
 import { mailHref } from "@/lib/links";
 import type { LinkItem } from "@/types/content";
 import { Container } from "./Container";
+import { CopyEmailButton } from "./CopyEmailButton";
 
 type Props = { email: string; socialLinks: LinkItem[] };
 
@@ -21,10 +22,11 @@ export function ContactStrip({ email, socialLinks }: Props) {
             {email}
           </a>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-xl lg:justify-end">
           <ButtonLink href={mailHref(email)} className="justify-center">
             {labels.contact.emailButton}
           </ButtonLink>
+          <CopyEmailButton email={email} className="justify-center" />
           {socialLinks.map((link) => (
             <ButtonLink key={link.href} href={link.href} variant="secondary" className="justify-center">
               {link.label} ↗

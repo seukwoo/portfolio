@@ -1,5 +1,5 @@
 export { AppLink } from "./AppLink";
-export { ButtonLink } from "./ButtonLink";
+export { buttonClass, ButtonLink } from "./ButtonLink";
 export { Card, cardClass } from "./Card";
 export { Chip, ChipList } from "./Chip";
 export { Eyebrow } from "./Eyebrow";

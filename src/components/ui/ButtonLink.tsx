@@ -6,17 +6,14 @@ const variants = {
   secondary: "border border-line bg-surface hover:border-accent",
 };
 
-type Props = React.ComponentProps<typeof AppLink> & { variant?: keyof typeof variants };
+export type ButtonVariant = keyof typeof variants;
+
+/** Pill button look, shared by links (ButtonLink) and real buttons. */
+export const buttonClass = (variant: ButtonVariant = "primary", className?: string) =>
+  cn("inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition", variants[variant], className);
+
+type Props = React.ComponentProps<typeof AppLink> & { variant?: ButtonVariant };
 
 export function ButtonLink({ variant = "primary", className, ...props }: Props) {
-  return (
-    <AppLink
-      className={cn(
-        "inline-flex items-center rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition",
-        variants[variant],
-        className,
-      )}
-      {...props}
-    />
-  );
+  return <AppLink className={buttonClass(variant, className)} {...props} />;
 }

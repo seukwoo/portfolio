@@ -65,6 +65,10 @@ export const labels = {
     title: "함께 이야기 나눠요",
     description: "개발 조직 리딩, AI 제품 개발에 관한 이야기는 이메일로 편하게 연락 주세요.",
     emailButton: "이메일 보내기",
+    mailSubject: "[포트폴리오] 문의",
+    copyEmail: "이메일 복사",
+    copied: "복사됨 ✓",
+    copyFailed: "복사 실패",
   },
   footer: {
     backToTop: "맨 위로 ↑",
