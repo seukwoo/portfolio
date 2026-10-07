@@ -109,7 +109,7 @@ export const experiences: Experience[] = [
       {
         role: "Project Leader",
         product: "Meta.CRO",
-        period: "2023.01 - 2024.01",
+        period: "2023.06 - 2025.01",
         title: "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼",
         subtitle: "'Meta.CRO' 개발 (한국스마트헬스케어협회)",
         details: [
@@ -150,7 +150,7 @@ export const experiences: Experience[] = [
       {
         role: "Project Leader",
         product: "MVS",
-        period: "2023.12 - 2024.08",
+        period: "2023.01 - 2024.09",
         title: "실시간 다중 동기화 서버",
         subtitle: "’MVS: Metaverse Server’ 연구 (사내 프로젝트)",
         details: [
