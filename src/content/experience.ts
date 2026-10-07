@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
           "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 독자 개발 (슬라이드 생성은 조사·기획부터 주도)",
           "결제 시스템 프로세스 및 상품 유료화 정책 수립",
           "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭, 백오피스 내부 운영 툴 개발",
-          "상용화 운영 중 [(https://myalan.ai/)](https://myalan.ai/)",
+          "상용화 운영 중 ([myalan.ai](https://myalan.ai/))",
         ],
       },
     ],
@@ -80,16 +80,16 @@ export const experiences: Experience[] = [
       {
         role: "Project Leader",
         product: "MX studio",
-        period: "2022.07 -",
+        period: "2022.07 - 2025.02",
         title: "3D Web Component 제작 소프트웨어",
         subtitle: "'MX studio' 개발 및 이를 기반으로 한 제품화",
         details: [
-          "MX studio 엔진팀 리드하며 Project Leader 업무 수행",
+          "MX studio 엔진팀 리드",
           "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
           "3D 물체의 이벤트와 액션 기능 설계/개발 리드",
           "물리 엔진과 실시간 렌더링 및 후처리 기능 설계/개발 리드",
           "Node 기반의 visual code system 설계/개발 리드",
-          "외부 Beta test 진행 중 ([https://www.mxstudio.store/](https://www.mxstudio.store/))",
+          "외부 Beta test 진행 중 ([mxstudio.store](https://www.mxstudio.store/))",
         ],
       },
       {
@@ -100,7 +100,6 @@ export const experiences: Experience[] = [
         title: "전국 암센터 활용 메타버스 플랫폼",
         subtitle: "'닥터메타' 개발 (한국스마트헬스케어협회)",
         details: [
-          "앱 개발 TF팀 리드하며 Project Leader 업무 수행",
           "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
           "React 기반의 웹 앱과 Unity 앱 연동 설계/개발 리드",
           "관리자 페이지 및 권한 기능 설계/개발 리드",
@@ -114,10 +113,9 @@ export const experiences: Experience[] = [
         title: "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼",
         subtitle: "'Meta.CRO' 개발 (한국스마트헬스케어협회)",
         details: [
-          "앱 개발 TF팀 리드하며 Project Leader 업무 수행",
           "개발자, QA로 구성된 TF팀 리드",
           "3D render engine library 설계/배포 (private npm 환경 구성)",
-          "전국 암센터에서 상용 운영 ([https://www.crotraining.store/](https://www.crotraining.store/))",
+          "전국 암센터에서 상용 운영 ([crotraining.store](https://www.crotraining.store/))",
         ],
       },
       {
@@ -127,12 +125,11 @@ export const experiences: Experience[] = [
         title: "콘택트렌즈 온라인 마켓 플랫폼",
         subtitle: "'내눈N' 개발 (픽셀로)",
         details: [
-          "앱 개발 TF팀 리드하며 Project Leader 업무 수행",
           "개발자, QA로 구성된 TF팀 리드",
           "규제 샌드박스 실증특례로 처음 허용된 콘택트렌즈 온라인 구매·배송 서비스를 업체와 함께 개발",
           "React, React Native를 활용하여 core 소스 하나로 크로스플랫폼 앱 설계/개발 리드",
           "Android, iOS 심사에 맞게 빌드 및 배포 리드",
-          "상용화 운영 중 ([https://nenoonn.mycafe24.com/](https://nenoonn.mycafe24.com/))",
+          "상용화 운영 중 ([nenoonn.mycafe24.com](https://nenoonn.mycafe24.com/))",
         ],
       },
       {
@@ -142,7 +139,6 @@ export const experiences: Experience[] = [
         title: "GIS 기반 삼성 데이터 센터 정보 시스템",
         subtitle: "'GIS S-DCIS' 개발 (삼성물산)",
         details: [
-          "앱 개발 TF팀 리드하며 Project Leader 업무 수행",
           "기획팀, 사업팀, 타사 연구팀과 소통 및 협업",
           "GeoServer와 PostGIS를 활용한 공간함수 서버 및 DB 구축",
           "GIS 데이터 기반의 map platform 구성을 위한 Openlayers 오픈소스 기술 연구",
@@ -180,10 +176,9 @@ export const experiences: Experience[] = [
         title: "메타버스 교육 플랫폼",
         subtitle: "'Mint' 개발",
         details: [
-          "Project Leader로서 설계/개발/관리 업무 수행",
           "게더타운을 벤치마크 하여 제품 기획",
           "Game engine Phaser, WebRTC, WebGL, React, MobX 등 오픈소스 기술 활용",
-          "공주대학교에 메타버스 교육 플랫폼으로 납품 완료 (참고: [https://m.post.naver.com/viewer/postView.naver?volumeNo=37517956&memberNo=57597506](https://m.post.naver.com/viewer/postView.naver?volumeNo=37517956&memberNo=57597506))",
+          "공주대학교에 메타버스 교육 플랫폼으로 납품 완료 ([관련 기사](https://m.post.naver.com/viewer/postView.naver?volumeNo=37517956&memberNo=57597506))",
         ],
       },
       {
@@ -194,7 +189,6 @@ export const experiences: Experience[] = [
         title: "선행 기술 연구",
         subtitle: "Deep Learning, 3DMM, SLAM 진행",
         details: [
-          "Project Leader로서 설계/개발/관리 업무 수행",
           "선행 기술 연구로, Deep Learning 기반의 Text-to-Speech가 가능한 디지털 휴먼 생성 연구 수행",
           "선행 기술 연구로, Deep Learning 기반의 SLAM 3D 공간 기술을 활용한 메타버스 공간 생성 연구 수행",
           "Blender 및 WebGL 오픈소스 활용",
@@ -217,7 +211,7 @@ export const experiences: Experience[] = [
         subtitle: "'WAPL' 개발",
         details: [
           "캘린더 및 메신저 기능 개발(frontend) 업무 수행",
-          "티맥스와플 사에서 상용화 운영 중 ([https://wapl.ai/](https://wapl.ai/))",
+          "티맥스와플 사에서 상용화 운영 중 ([wapl.ai](https://wapl.ai/))",
         ],
       },
       {
@@ -237,7 +231,7 @@ export const experiences: Experience[] = [
         details: [
           "통합 시스템 인터페이스 솔루션의 구조 분석 및 리팩토링 설계 참여",
           "엔진 연구팀과 협업하여 사용성·품질 개선 포인트 도출",
-          "티맥스소프트 사에서 상용화 운영 중 ([https://www.tmaxsoft.com/kr/solution/view?solutionSeq=9](https://www.tmaxsoft.com/kr/solution/view?solutionSeq=9))",
+          "티맥스소프트 사에서 상용화 운영 중 ([제품 소개](https://www.tmaxsoft.com/kr/solution/view?solutionSeq=9))",
         ],
       },
     ],

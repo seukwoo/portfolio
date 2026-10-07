@@ -33,7 +33,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "코어 파이프라인 직접 개발(PoC) → 팀과 함께 제품화 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
-    skills: list("Python, PyTorch, Computer Vision, LLM, ML Pipeline, AWS, Git, Figma, Notion"),
+    skills: list("Python, Computer Vision, LLM, ML Pipeline, AWS, Git, Figma, Notion"),
     // Official launch images are from the public ProtoPie MCP announcement; the overview is our own diagram.
     images: [
       { src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 },

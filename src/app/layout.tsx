@@ -15,7 +15,7 @@ const pretendard = localFont({
 
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-const description = introduction.slice(1).join(" ");
+const description = introduction.join(" ");
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),

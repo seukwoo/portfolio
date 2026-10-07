@@ -44,23 +44,27 @@ export function ResumePrint(p: Props) {
       </header>
 
       <Block title={sections.introduction.title}>
-        <p>{p.introduction.join(" ")}</p>
+        <p className="text-[14px] leading-[1.7]">{p.introduction.join(" ")}</p>
       </Block>
 
       <Block title={sections.about.title}>
-        <div className="space-y-2">
-          {p.about.paragraphs.map((text) => (
-            <p key={text}>{text}</p>
+        <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+          {p.about.competencies.map((c, i) => (
+            <div key={c.title} className="break-inside-avoid">
+              <p className="text-[14px] font-bold">
+                <span className="mr-1.5 text-accent tabular-nums">{String(i + 1).padStart(2, "0")}</span>
+                {c.title}
+              </p>
+              <ul className="mt-1 list-disc space-y-0.5 pl-4 marker:text-muted">
+                {c.evidence.map((line) => (
+                  <li key={line}>
+                    <RichText text={line} baseUrl={p.siteUrl} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
         </div>
-        <ul className="mt-3 grid grid-cols-2 gap-x-6 gap-y-1.5">
-          {p.about.strengths.map((s) => (
-            <li key={s.title} className="break-inside-avoid">
-              <span className="font-semibold">{s.title}</span>
-              <span className="text-muted"> — {s.description}</span>
-            </li>
-          ))}
-        </ul>
       </Block>
 
       <Block title={sections.experience.title}>
@@ -76,7 +80,7 @@ export function ResumePrint(p: Props) {
               <p className="mt-1 text-[12px] text-muted">{exp.department}</p>
               <div className="mt-2 space-y-3">
                 {exp.projects.map((proj) => (
-                  <div key={proj.title}>
+                  <div key={proj.title} className="break-inside-avoid">
                     <div className="flex items-baseline justify-between gap-4 break-after-avoid">
                       <p className="font-semibold">
                         {proj.title} <span className="font-normal text-muted">{proj.subtitle}</span>

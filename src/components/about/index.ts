@@ -1,1 +1,1 @@
-export { StrengthCard } from "./StrengthCard";
+export { CompetencyCard } from "./CompetencyCard";

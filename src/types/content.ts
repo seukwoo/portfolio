@@ -54,13 +54,10 @@ export type Profile = {
 
 export type DocumentItem = { id: string; label: string; href: string };
 
-export type Strength = { title: string; description: string };
+/** A core competency: one claim, backed by concrete results from the record (may link to projects). */
+export type Competency = { title: string; evidence: string[] };
 
-export type About = {
-  paragraphs: string[];
-  strengthsTitle: string;
-  strengths: Strength[];
-};
+export type About = { competencies: Competency[] };
 
 export type ExperienceProject = {
   role: string;
