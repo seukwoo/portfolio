@@ -4,8 +4,12 @@ import { ogLocale, type Lang } from "@/i18n/config";
 import { localizePath } from "@/i18n/paths";
 import { ogAlt } from "@/lib/og";
 
-/** Fixed per-language preview image (app/share/[lang]/route.tsx). */
-export const shareImageUrl = (lang: Lang) => `/share/${lang}`;
+/**
+ * Per-language preview image (app/share/[lang]/route.tsx). LinkedIn and KakaoTalk cache preview images
+ * by URL for days, so the URL carries the deployed commit: a new deploy → a new URL → a fresh image.
+ */
+const shareVersion = process.env.VERCEL_GIT_COMMIT_SHA?.slice(0, 7) ?? "dev";
+export const shareImageUrl = (lang: Lang) => `/share/${lang}?v=${shareVersion}`;
 
 const other = (lang: Lang): Lang => (lang === "ko" ? "en" : "ko");
 
