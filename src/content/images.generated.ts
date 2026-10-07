@@ -4,24 +4,9 @@ export const profileImage = {"src":"/images/profile.webp","width":354,"height":4
 export const projectImages: Record<string, { src: string; width: number; height: number }[]> = {
   "alan": [
     {
-      "src": "/projects/alan/01.webp",
-      "width": 800,
-      "height": 600
-    },
-    {
       "src": "/projects/alan/02.webp",
       "width": 487,
       "height": 691
-    },
-    {
-      "src": "/projects/alan/03.webp",
-      "width": 1033,
-      "height": 1727
-    },
-    {
-      "src": "/projects/alan/04.webp",
-      "width": 1049,
-      "height": 782
     },
     {
       "src": "/projects/alan/05.webp",

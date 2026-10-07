@@ -18,6 +18,7 @@ for (const { group, file } of manifest) {
   const slug = config.projectPages[group];
   if (!slug || config.privateProjects.includes(slug)) continue;
   const index = file.match(/_(\d+)\.\w+$/)[1];
+  if (config.excludedImages?.[slug]?.includes(index)) continue;
   const outDir = path.join(PUBLIC, "projects", slug);
   await mkdir(outDir, { recursive: true });
   const out = path.join(outDir, `${index}.webp`);

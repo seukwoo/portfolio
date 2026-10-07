@@ -4,8 +4,11 @@ import { projectImages } from "./images.generated";
 
 const list = (s: string) => s.split(",").map((v) => v.trim());
 
-/** `images` overrides the screenshots exported from Notion (used for confidential projects). */
-const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
+/**
+ * `images` replaces the screenshots exported from Notion (used for confidential projects).
+ * `leadImages` are added in front of them (e.g. a newer cover image) and survive `pnpm assets`.
+ */
+const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: ImageAsset[] })[] = [
   {
     slug: "ui-code-ai",
     summary: "사내에 축적된 디자인 데이터로 자체 학습한 모델이 디자인을 크로스 플랫폼 컴포넌트 코드로 변환하도록 돕는 AI 시스템",
@@ -50,6 +53,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
     slug: "alan",
     summary: "검색에서 LLM으로 옮겨가는 사용자를 위한 검색 스타일 LLM Agent 서비스 — 특화 에이전트 개발과 유료 전환",
     punchline: ["검색처럼 쓰는", "LLM Agent 서비스"],
+    // Slide generation feature (led from research/planning). Sidebar with personal history cropped out.
+    leadImages: [{ src: "/projects/alan/cover.webp", width: 1920, height: 1145 }],
     name: "Alan LLM service",
     client: "이스트소프트",
     duty: "Product Owner",
@@ -257,4 +262,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
   },
 ];
 
-export const projects: Project[] = data.map((p) => ({ ...p, images: p.images ?? projectImages[p.slug] ?? [] }));
+export const projects: Project[] = data.map(({ leadImages = [], ...p }) => ({
+  ...p,
+  images: p.images ?? [...leadImages, ...(projectImages[p.slug] ?? [])],
+}));

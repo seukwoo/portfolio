@@ -1,5 +1,5 @@
 {
-  "$comment": "Maps the raw Notion export (notion-export/files) to web assets. Used by scripts/prepare-assets.mjs. Screenshots of projects in privateProjects are never published (confidential: current employer). Files in editedDocuments were edited after export (e.g. phone number removed from resume.pdf) and are never overwritten.",
+  "$comment": "Maps the raw Notion export (notion-export/files) to web assets. Used by scripts/prepare-assets.mjs. Screenshots of projects in privateProjects are never published (confidential: current employer). Files in editedDocuments were edited after export (e.g. phone number removed from resume.pdf) and are never overwritten. excludedImages lists screenshot numbers per project that are not published (e.g. marketing banners).",
   "projectPages": {
     "372092b6-73dc-8022-97e2-ca711bcbeead": "ui-code-ai",
     "21d092b6-73dc-80a5-92f7-cc854d7fadcc": "alan",
@@ -14,6 +14,13 @@
   "privateProjects": [
     "ui-code-ai"
   ],
+  "excludedImages": {
+    "alan": [
+      "01",
+      "03",
+      "04"
+    ]
+  },
   "documents": {
     "이석우 이력서.pdf": "resume.pdf",
     "포트폴리오_이석우.pdf": "portfolio.pdf",
