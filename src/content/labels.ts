@@ -70,6 +70,7 @@ export const labels = {
     copied: "복사됨 ✓",
     copyFailed: "복사 실패",
   },
+  activityKinds: { award: "수상", paper: "논문·학술", activity: "활동" },
   footer: {
     backToTop: "맨 위로 ↑",
   },

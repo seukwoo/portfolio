@@ -3,6 +3,7 @@ import type { Activity } from "@/types/content";
 
 export const activities: Activity[] = [
   {
+    kind: "award",
     title: "연간기술혁신상 수상",
     date: "2023.01",
     lines: [
@@ -11,6 +12,7 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "award",
     title: "Super Leader 수상",
     date: "2022.06",
     lines: [
@@ -19,6 +21,7 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "award",
     title: "Maestro 수상",
     date: "2022.01",
     lines: [
@@ -27,6 +30,7 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "paper",
     title: "졸업 논문 (석사)",
     date: "2016.02",
     lines: [
@@ -40,6 +44,7 @@ export const activities: Activity[] = [
     footer: "열람(공개): 한국과학기술원(카이스트) 도서관",
   },
   {
+    kind: "paper",
     title: "학술대회 1",
     date: "2016.01.28",
     lines: [
@@ -50,6 +55,7 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "paper",
     title: "학술대회 2",
     date: "2016.01.29",
     lines: [
@@ -60,6 +66,7 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "paper",
     title: "학술지",
     date: "2014.11",
     lines: [
@@ -70,16 +77,19 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "activity",
     title: "학생회 학생대표",
     date: "2013.09",
     lines: ["한국과학기술원 문화기술대학원 학생회 학생대표를 역임"],
   },
   {
+    kind: "award",
     title: "국민편익증진 HCI 공모전 우수상 수상",
     date: "2013.01",
     lines: ["서울대학교 QoLT 산업기술지원센터가 주최한 국민편익증진 HCI 공모전에서 앱 부문 우수상을 수상"],
   },
   {
+    kind: "award",
     title: "여수 시장 표창 수상",
     date: "2012.07",
     lines: [
@@ -87,11 +97,13 @@ export const activities: Activity[] = [
     ],
   },
   {
+    kind: "award",
     title: "소셜벤처 경연대회 최우수상 수상",
     date: "2010.11",
     lines: ["(주)사회적기업지원네트워크가 주최한 소셜벤처 경연대회에서 아이디어 부문 최우수상을 수상"],
   },
   {
+    kind: "activity",
     title: "교환학생",
     date: "2011.01",
     lines: ["스웨덴 LTU(Lulea Technology University)에서 3학년 1학기를 교환학생으로 재학"],

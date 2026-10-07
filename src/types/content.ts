@@ -132,7 +132,11 @@ export type Degree = {
   period: string;
 };
 
+/** Groups on the resume, shown in this order. */
+export type ActivityKind = "award" | "paper" | "activity";
+
 export type Activity = {
+  kind: ActivityKind;
   title: string;
   date: string;
   lines: string[];

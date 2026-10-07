@@ -1,5 +1,6 @@
 import { RichText } from "@/components/ui";
 import { labels, sections } from "@/content";
+import { groupActivities } from "@/lib/activities";
 import type { About, Activity, Certification, Degree, Experience, Profile, SkillGroup } from "@/types/content";
 
 type Props = {
@@ -68,17 +69,17 @@ export function ResumePrint(p: Props) {
       </Block>
 
       <Block title={sections.experience.title}>
-        <div className="space-y-5">
+        <div className="space-y-9">
           {p.experiences.map((exp) => (
             <section key={exp.company}>
-              <div className="flex items-baseline justify-between gap-4 border-b border-line pb-1 break-after-avoid">
-                <h3 className="text-[15px] font-bold">
+              <div className="flex items-baseline justify-between gap-4 border-b-2 border-ink/70 pb-1.5 break-after-avoid">
+                <h3 className="text-[16px] font-bold">
                   {exp.company} <span className="font-medium text-muted">· {exp.role}</span>
                 </h3>
                 <span className="shrink-0 text-[12px] text-muted tabular-nums">{exp.tenure}</span>
               </div>
               <p className="mt-1 text-[12px] text-muted">{exp.department}</p>
-              <div className="mt-2 space-y-3">
+              <div className="mt-3 space-y-4">
                 {exp.projects.map((proj) => (
                   <div key={proj.title} className="break-inside-avoid">
                     <div className="flex items-baseline justify-between gap-4 break-after-avoid">
@@ -136,17 +137,35 @@ export function ResumePrint(p: Props) {
       </Block>
 
       <Block title={sections.activities.title}>
-        <ul className="space-y-1.5">
-          {p.activities.map((a) => (
-            <li key={a.title} className="flex gap-3 break-inside-avoid">
-              <span className="w-20 shrink-0 text-[12px] text-muted tabular-nums">{a.date}</span>
-              <span>
-                <span className="font-semibold">{a.title}</span>
-                <span className="text-muted"> — {a.lines.join(" ")}</span>
-              </span>
-            </li>
+        <div className="space-y-4">
+          {groupActivities(p.activities).map((group) => (
+            <section key={group.kind}>
+              <h3 className="mb-1.5 text-[14px] font-bold break-after-avoid">{labels.activityKinds[group.kind]}</h3>
+              <ul className="space-y-1.5">
+                {group.items.map((a) => {
+                  // First line on its own (e.g. a paper title), the rest as one muted line; skip an empty "요약:" label.
+                  const [first, ...rest] = a.lines.filter((line) => !/^요약:?$/.test(line.trim()));
+                  return (
+                    <li key={a.title} className="flex gap-3 break-inside-avoid">
+                      <span className="w-20 shrink-0 text-[12px] text-muted tabular-nums">{a.date}</span>
+                      <span>
+                        <span className="font-semibold">{a.title}</span>
+                        {group.kind === "paper" ? (
+                          <>
+                            <span className="block">{first}</span>
+                            {rest.length > 0 && <span className="block text-[12px] text-muted">{rest.join(" · ")}</span>}
+                          </>
+                        ) : (
+                          <span className="text-muted"> — {[first, ...rest].join(" ")}</span>
+                        )}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            </section>
           ))}
-        </ul>
+        </div>
       </Block>
 
       <Block title={sections.certifications.title}>
