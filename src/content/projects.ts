@@ -113,10 +113,10 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     client: "스튜디오씨드코리아",
     duty: "설계·개발 (1인)",
     keywords: list("LLM Pipeline, Eval, Cost Optimization"),
-    notionDate: { start: "2026-08-21" },
+    notionDate: { start: "2026-08-21", end: "2026-10-02" },
     fullName: "Decision Graph (Slack·Notion 의사결정 추출 LLM 파이프라인)",
     domain: "스튜디오씨드코리아 / 사내 도구 (알파)",
-    period: "2026.08 -",
+    period: "2026.08 - 2026.10",
     tasks: [
       "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 인용 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
       "최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",

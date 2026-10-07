@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
         role: "설계·개발 (1인)",
         productLabel: "사내 도구",
         product: "[Decision Graph](/projects/decision-graph)",
-        period: "2026.08 -",
+        period: "2026.08 - 2026.10",
         title: "의사결정 추출 LLM 파이프라인",
         subtitle: "(Slack·Notion → 근거 있는 결정 기록)",
         details: [
