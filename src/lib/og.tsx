@@ -16,8 +16,8 @@ export const ogAlt = (lang: Lang) => {
 };
 
 const fontDir = join(process.cwd(), "node_modules/pretendard/dist/public/static");
-const [regular, semibold, bold] = await Promise.all(
-  ["Pretendard-Regular.otf", "Pretendard-SemiBold.otf", "Pretendard-Bold.otf"].map((f) => readFile(join(fontDir, f))),
+const [regular, semibold, bold, extrabold] = await Promise.all(
+  ["Pretendard-Regular.otf", "Pretendard-SemiBold.otf", "Pretendard-Bold.otf", "Pretendard-ExtraBold.otf"].map((f) => readFile(join(fontDir, f))),
 );
 
 // The renderer reads PNG/JPEG, not WebP.
@@ -36,6 +36,8 @@ const accent = "#b5431a";
  */
 export function renderShareImage(lang: Lang) {
   const { hero } = contentByLang[lang];
+  // Latin letters have thin strokes: tight tracking makes them merge when the preview is downscaled.
+  const latin = lang === "en";
   return new ImageResponse(
     (
       <div
@@ -64,11 +66,11 @@ export function renderShareImage(lang: Lang) {
         />
         <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
           <div style={{ display: "flex", alignItems: "baseline", gap: 20, flexWrap: "wrap" }}>
-            <span style={{ fontSize: 92, fontWeight: 700, letterSpacing: -2, lineHeight: 1.05 }}>{hero.name}</span>
+            <span style={{ fontSize: 92, fontWeight: 700, letterSpacing: latin ? 0.5 : -2, lineHeight: 1.05 }}>{hero.name}</span>
             <span style={{ fontSize: 40, fontWeight: 600, color: muted }}>{hero.altName}</span>
           </div>
           <div
-            style={{ display: "flex", flexDirection: "column", marginTop: 36, fontSize: 50, fontWeight: 700, lineHeight: 1.2, letterSpacing: -1 }}
+            style={{ display: "flex", flexDirection: "column", marginTop: 36, fontSize: 50, fontWeight: latin ? 800 : 700, lineHeight: 1.2, letterSpacing: latin ? 0.5 : -1 }}
           >
             <span>{hero.headline[0]}</span>
             <span style={{ color: accent }}>{hero.headline[1]}</span>
@@ -82,6 +84,7 @@ export function renderShareImage(lang: Lang) {
         { name: "Pretendard", data: regular, weight: 400, style: "normal" },
         { name: "Pretendard", data: semibold, weight: 600, style: "normal" },
         { name: "Pretendard", data: bold, weight: 700, style: "normal" },
+        { name: "Pretendard", data: extrabold, weight: 800, style: "normal" },
       ],
     },
   );
