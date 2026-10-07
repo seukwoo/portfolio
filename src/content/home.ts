@@ -33,8 +33,8 @@ export const latestWork: LatestWork = {
   title: "AI 서비스를 만드는 방식",
   summary: "PoC부터 운영까지, AI 제품을 만들 때 지키는 다섯 가지",
   layers: [
-    { label: "01 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 꼭 필요한 곳에만" },
-    { label: "02 / Pipeline", value: "문제를 단계로 나누고, 단계마다 맞는 모델을" },
+    { label: "01 / Define", value: "문제·기능을 정의하고, 기술 검토로 AI가 필요한 곳을 고른다" },
+    { label: "02 / Pipeline", value: "룰과 AI 단계를 나누고, 단계마다 맞는 모델을" },
     { label: "03 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로 평가" },
     { label: "04 / Verify", value: "자동 검증과 사람 검증을 구분해, 판단이 필요한 결과만 사람이 확인" },
     { label: "05 / Operate", value: "비용·지연·품질을 측정하며 운영하고 개선" },
