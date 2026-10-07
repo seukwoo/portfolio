@@ -22,7 +22,6 @@ export type HomeHero = {
   headline: [string, string];
   intro: string;
   focus?: string;
-  credibility: string;
   actions: LinkItem[];
 };
 

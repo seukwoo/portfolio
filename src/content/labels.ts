@@ -48,12 +48,12 @@ export const labels = {
     },
     detailsTitle: "상세",
     fields: {
-      fullName: "1. 프로젝트 명",
-      domain: "2. 고객사 / Domain",
-      period: "3. 수행기간",
-      tasks: "4. 업무 내용",
-      roles: "5. 담당 역할",
-      skills: "6. 보유 / 활용 Skill",
+      fullName: "프로젝트 명",
+      domain: "고객사 · 분야",
+      period: "수행 기간",
+      tasks: "업무 내용",
+      roles: "담당 역할",
+      skills: "사용 기술",
     },
   },
   home: {

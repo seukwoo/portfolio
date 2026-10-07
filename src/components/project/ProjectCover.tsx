@@ -39,7 +39,7 @@ export function ProjectCover({ project, className, size, sizes, priority }: Prop
       )}
       {punchline && (
         <>
-          {cover && <span aria-hidden className="absolute inset-0 bg-linear-to-t from-black/80 via-black/35 to-transparent" />}
+          {cover && <span aria-hidden className="absolute inset-0 bg-linear-to-t from-black/90 via-black/55 via-45% to-transparent" />}
           <p
             className={cn(
               "relative leading-snug font-semibold tracking-tight",

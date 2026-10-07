@@ -3,8 +3,8 @@ import { AppLink, Card, Eyebrow, RichText } from "@/components/ui";
 import type { LatestWork } from "@/types/content";
 
 /**
- * Light card for the latest main project with its numbered layers stacked top to bottom.
- * Between the tablet and wide layouts (where the card spans the hero width) the layers sit two per row.
+ * Light card for the latest main project. The layers are a compact numbered list (label | value)
+ * so the card stays about as tall as the hero text next to it.
  */
 export function LatestWorkCard({ work }: { work: LatestWork }) {
   return (
@@ -18,24 +18,17 @@ export function LatestWorkCard({ work }: { work: LatestWork }) {
         <RichText text={work.summary} />
       </p>
 
-      <ol className="mt-6 grid gap-2 sm:grid-cols-2 sm:gap-3 xl:grid-cols-1 xl:gap-0">
-        {work.layers.map((layer, i) => (
-          <li key={layer.label}>
-            <div className="rounded-xl border border-line bg-surface-2/60 px-4 py-3 sm:h-full xl:h-auto">
-              <p className="font-mono text-xs tracking-[0.12em] text-muted uppercase">{layer.label}</p>
-              <p className="mt-1 text-sm">{layer.value}</p>
-            </div>
-            {i < work.layers.length - 1 && (
-              <span aria-hidden className="block text-center text-xs leading-5 text-muted/60 sm:hidden xl:block">
-                ↓
-              </span>
-            )}
+      <ol className="mt-5 divide-y divide-line border-y border-line">
+        {work.layers.map((layer) => (
+          <li key={layer.label} className="grid grid-cols-[112px_1fr] items-baseline gap-3 py-2.5">
+            <span className="font-mono text-[11px] tracking-[0.04em] whitespace-nowrap text-muted uppercase">{layer.label}</span>
+            <span className="text-sm leading-snug">{layer.value}</span>
           </li>
         ))}
       </ol>
 
-      <div className="mt-6 flex items-center justify-between gap-4 border-t border-line pt-4 text-xs">
-        <span className="text-muted">{work.footnote}</span>
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs">
+        <span className="whitespace-nowrap text-muted">{work.footnote}</span>
         <AppLink href={work.href} className="font-semibold whitespace-nowrap text-accent hover:underline">
           {labels.home.latestWorkCta}
         </AppLink>

@@ -3,17 +3,16 @@
 import { routes } from "@/lib/routes";
 import type { HomeHero, LatestWork, LeadershipBlock, Metric, WorkStyle } from "@/types/content";
 
-// 🟨 Derived from the current Notion introduction; replace with the final thesis.
+// Same thesis as the resume introduction (content/profile.ts).
 export const hero: HomeHero = {
   name: "이석우",
   nameEn: "Seukwoo Lee",
   eyebrow: "Development Team Leader · Software & AI Engineer",
   headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
   intro:
-    "안녕하세요, 이석우입니다. 룰 기반 모듈과 AI 모델을 결합한 AI 파이프라인 설계부터 실시간 엔진·크로스 플랫폼 애플리케이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
+    "안녕하세요, 이석우입니다. 연구·시험 단계의 기술을 실제 사용자가 쓰고 돈을 내는 제품으로 만들어 왔습니다. 직접 설계하고 코드를 쓰며, 3명 개발 파트부터 50명 연구 본부까지 이끌었습니다.",
   focus:
     "최근에는 직접 개발한 코어 파이프라인(PoC)을 팀과 함께 제품화해 2026년 10월 ProtoPie MCP로 정식 출시했습니다.",
-  credibility: "2017년부터 소프트웨어·AI 제품 개발",
   actions: [
     { label: "프로젝트 보기 →", href: routes.projects },
     { label: "이력서 보기", href: routes.resume },
@@ -24,7 +23,7 @@ export const hero: HomeHero = {
 export const metrics: Metric[] = [
   { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.01 – 현재" },
   { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
-  { value: "5", unit: "개", label: "상용화 서비스 개발", note: "Alan · 닥터메타 · Meta.CRO · 내눈N · WAPL" },
+  { value: "5", unit: "개", label: "상용화 서비스 개발", note: "ProtoPie MCP · Alan · 닥터메타 · Meta.CRO · 내눈N" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
 

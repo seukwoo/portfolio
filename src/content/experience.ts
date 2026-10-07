@@ -4,9 +4,9 @@ import type { Experience } from "@/types/content";
 
 export const experiences: Experience[] = [
   {
-    role: "Head of Dev Team",
+    role: "Head of Product Dev Team",
     company: "스튜디오씨드코리아(프로토파이)",
-    department: "Product Dev Team/ Head",
+    department: "Product Dev Team",
     tenure: "2026.01.06 - 현재",
     projects: [
       {
@@ -19,10 +19,10 @@ export const experiences: Experience[] = [
         details: [
           "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
           "최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
-          "PoC로 우려되던 기술 리스크를 직접 검증·검토 (신뢰도 % 대신 정답 케이스로 판단, 단방향 기록, 재실행 중복 반영 방지)",
-          "2-tier 추론 구조(1차 분류: 경량 모델, 추출·검증: 고성능 모델)를 같은 테스트 케이스로 비교해 결정",
+          "PoC로 우려되던 기술 리스크를 직접 검증·검토 (신뢰도 % 대신 정답 예제로 판단, 단방향 기록, 재실행 중복 반영 방지)",
+          "2-tier 추론 구조(1차 분류: 경량 모델, 추출·검증: 고성능 모델)를 같은 정답 예제로 비교해 결정",
           "요청별 시간·비용을 기록해 병목을 찾고 호출 구조 개선 — 같은 데이터 기준 1,289회·$10.2 → 336회·$7.6, 바뀐 부분만 다시 돌리면 30회·$0.7",
-          "정답을 정해 둔 테스트 케이스 23개로 수정할 때마다 품질 확인 (평가 비용 상한 설정)",
+          "정답을 정해 둔 예제 23개로 수정할 때마다 품질 확인 (평가 비용 상한 설정)",
         ],
       },
       {

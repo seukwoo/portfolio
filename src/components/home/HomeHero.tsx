@@ -57,13 +57,10 @@ export function HomeHero({ hero, photo, feature }: Props) {
               </ButtonLink>
             ))}
           </div>
-          <p data-reveal className="mt-6 text-xs text-muted">
-            {hero.credibility}
-          </p>
         </Reveal>
       </div>
 
-      <Reveal className="md:col-span-2 xl:col-span-1 xl:pt-4">{feature}</Reveal>
+      <Reveal className="md:col-span-2 xl:col-span-1 xl:pt-2">{feature}</Reveal>
     </Container>
   );
 }
