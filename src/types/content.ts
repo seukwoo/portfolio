@@ -9,7 +9,6 @@ export type SectionMeta = { id: string; eyebrow: string; title: string };
 
 export type Site = {
   url: string;
-  notionUrl: string;
   title: string;
   greeting: string;
   lastUpdated: string;

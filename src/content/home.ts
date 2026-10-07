@@ -10,7 +10,7 @@ export const hero: HomeHero = {
   eyebrow: "Development Team Leader · Software & AI Engineer",
   headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
   intro:
-    "안녕하세요, 이석우입니다. 딥러닝 모델 파인튜닝부터 MCP 기반 AI Agent 오케스트레이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
+    "안녕하세요, 이석우입니다. 룰 기반 모듈과 AI 모델을 결합한 AI 파이프라인 설계부터 실시간 엔진·크로스 플랫폼 애플리케이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
   focus:
     "현재는 모바일 UI 디자인 데이터를 크로스 플랫폼 컴포넌트 코드로 자동 변환·생성하는 AI 기반 코드 생성 시스템을 만들고 있습니다.",
   credibility: "2017년부터 소프트웨어·AI 제품 개발",
@@ -36,8 +36,8 @@ export const latestWork: LatestWork = {
   summary: "디자인 데이터에서 크로스 플랫폼 코드까지",
   layers: [
     { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
-    { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 자체 학습" },
-    { label: "03 / Generate", value: "AI Agent 오케스트레이션 · RAG" },
+    { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 학습" },
+    { label: "03 / Pipeline", value: "룰 기반 모듈 + AI 모델 단계 결합" },
     { label: "04 / Output", value: "AOS · iOS · Web 컴포넌트 코드" },
   ],
   footnote: "스튜디오씨드코리아 · 2026.01 –",

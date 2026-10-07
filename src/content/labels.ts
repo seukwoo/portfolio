@@ -61,7 +61,6 @@ export const labels = {
     emailButton: "이메일 보내기",
   },
   footer: {
-    notion: "Notion",
     backToTop: "맨 위로 ↑",
   },
   notFound: {

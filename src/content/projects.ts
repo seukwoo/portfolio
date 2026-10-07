@@ -14,7 +14,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
     // Confidential (current employer): model names, training pipeline and screenshots are intentionally omitted.
     client: "스튜디오씨드코리아",
     duty: "Development Team Leader",
-    keywords: list("Design-to-Code, AI Agent, Cross-platform"),
+    keywords: list("Design-to-Code, AI Pipeline, Cross-platform"),
     notionDate: { start: "2026-06-01" },
     fullName:
       "AI 기반 코드 생성 시스템 (AI-assisted Design-to-Code System for Cross-platform Components)",
@@ -24,20 +24,20 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
       "디자인 데이터를 크로스 플랫폼 컴포넌트 코드로 변환·생성하는 AI 시스템 전체 설계 및 개발 리드",
       "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",
       "사내에 축적된 디자인 데이터를 학습 데이터로 정제하는 데이터·학습 파이프라인 설계",
-      "이미지 기반·레이아웃(구조) 기반 입력을 코드로 변환할 때 이를 보조하는 모델 자체 학습",
-      "AI Agent 오케스트레이션과 검색 증강(RAG)으로 코드 생성 품질 개선",
+      "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
+      "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델 자체 학습 (AI 엔지니어와 협업)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
-    skills: list("Python, PyTorch, Computer Vision, LLM, AI Agent, RAG, AWS, Git, Figma, Notion"),
+    skills: list("Python, PyTorch, Computer Vision, LLM, AI Pipeline, AWS, Git, Figma, Notion"),
     images: [{ src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 }],
     caseStudy: {
       problem:
         "범용 LLM만으로는 디자인의 구조(계층·반복 요소)를 안정적으로 읽기 어려워, 생성된 코드가 화면 단위로 평평하게 나오고 재사용하기 어려웠습니다.",
       decisions: [
-        "사내에 축적된 디자인 데이터로 이미지·레이아웃(구조)을 이해하는 보조 모델을 자체 학습해, LLM의 코드 생성을 돕는 구조로 설계",
+        "룰 기반 모듈 사이사이에 AI 모델 단계를 배치한 코드 생성 파이프라인을 직접 설계",
         "이미지 기반 입력과 레이아웃(구조) 기반 입력을 모두 코드로 변환할 수 있도록 변환 경로를 설계",
-        "AI Agent 오케스트레이션과 RAG로 생성 단계를 나누고, AOS·iOS·Web 컴포넌트 코드로 출력",
+        "사내에 축적된 디자인 데이터로 이미지·레이아웃(구조)을 이해하는 보조 모델을 팀과 함께 자체 학습해 파이프라인에 연결하고, AOS·iOS·Web 컴포넌트 코드로 출력",
       ],
       outcome: {
         label: "관찰된 효과",
@@ -111,10 +111,23 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
     ],
     roles: ["System Engineer, Project Manager"],
     skills: list("Docker, Git, JavaScript, TypeScript, 3D 그래픽, Java, AWS, Notion, Figma"),
+    caseStudy: {
+      problem:
+        "3D 웹 콘텐츠를 만들 때마다 개발자가 3D 엔진 코드를 직접 작성해야 해서 제작 비용이 크고, 비개발자는 참여하기 어려웠습니다.",
+      decisions: [
+        "노드 기반 노코드 인터랙션(비주얼 코드 시스템)으로 개발자 없이 3D 이벤트·액션을 제작하도록 설계",
+        "물리 엔진·실시간 렌더링·후처리를 엔진 수준에서 제공하고, 3D 템플릿·데이터 연동형 모델·3D 공간 내 2D 콘텐츠 연동 지원",
+        "기획·디자인·개발·QA로 구성된 TF팀 리드",
+      ],
+      outcome: {
+        label: "결과",
+        text: "MX Studio의 3D 웹 컴포넌트 산출물로 [닥터메타](/projects/dr-meta)와 [Meta.CRO](/projects/meta-cro) 웹앱을 개발했고, 외부 베타 테스트를 진행했습니다.",
+      },
+    },
   },
   {
     slug: "dr-meta",
-    summary: "전국 암센터 활용 메타버스 플랫폼",
+    summary: "MX Studio의 3D 컴포넌트 산출물로 개발한 전국 암센터 활용 메타버스 플랫폼",
     name: "닥터메타",
     client: "한국스마트헬스케어협회",
     duty: "Project Leader",
@@ -127,6 +140,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
       "암센터 의료진과 환자를 위한 메타버스 플랫폼 '닥터메타' 프로젝트에 참여",
       "책임자로서 설계 및 개발 PM/PE 업무 수행",
       "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
+      "[MX Studio](/projects/mx-studio)로 제작한 3D 웹 컴포넌트 산출물을 활용해 웹앱 개발",
       "React 기반의 웹 앱과 Unity 앱 연동 설계/개발 리드",
       "관리자 페이지 및 권한 기능 설계/개발 리드",
       "내부 Beta test 진행 중 ([https://healthcare.drmeta.kr/](https://healthcare.drmeta.kr/), [https://web.drmeta.kr/](https://web.drmeta.kr/))",
@@ -136,7 +150,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
   },
   {
     slug: "meta-cro",
-    summary: "의료 전문가 교육 플랫폼",
+    summary: "MX Studio의 3D 컴포넌트 산출물로 개발한 의료 전문가 교육 플랫폼",
     name: "Meta CRO",
     client: "한국스마트헬스케어협회",
     duty: "Project Leader",
@@ -149,6 +163,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[] })[] = [
       "의료 전문가 교육 플랫폼 'M.CRO' 프로젝트에 참여",
       "연구책임자로서 설계 및 개발 PM/PE 업무 수행",
       "개발자, QA로 구성된 TF팀 리드",
+      "[MX Studio](/projects/mx-studio)로 제작한 3D 웹 컴포넌트 산출물을 활용해 웹앱 개발",
       "3D render engine library 설계/배포 (private npm 환경 구성)",
       "상용화 운영 중 (https://www.crotraining.store/)",
     ],

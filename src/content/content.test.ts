@@ -3,6 +3,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import * as content from "@/content";
+import { parseRichText } from "@/lib/rich-text";
 import { routes } from "@/lib/routes";
 
 const publicFile = (href: string) => path.join(process.cwd(), "public", href);
@@ -57,6 +58,20 @@ describe("content", () => {
     for (const term of ["GAT", "YOLO", "SLM", "SageMaker", "RunPod", "Ground Truth", "Rico", "지식 그래프"]) {
       expect(text, term).not.toContain(term);
     }
+  });
+
+  it("only links to pages that exist from inside content text", () => {
+    const pages = new Set<string>([routes.home, routes.projects, routes.resume, ...content.projects.map((p) => routes.project(p.slug))]);
+    const strings: string[] = [];
+    const collect = (v: unknown) => {
+      if (typeof v === "string") strings.push(v);
+      else if (Array.isArray(v)) v.forEach(collect);
+      else if (v && typeof v === "object") Object.values(v).forEach(collect);
+    };
+    collect([content.projects, content.experiences, content.about, content.hero]);
+    const internal = strings.flatMap(parseRichText).flatMap((t) => (t.type === "link" && t.href.startsWith("/") ? [t.href] : []));
+    expect(internal.length).toBeGreaterThan(0);
+    for (const href of internal) expect(pages.has(href), href).toBe(true);
   });
 
   it("does not publish a phone number", () => {

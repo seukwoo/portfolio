@@ -1,4 +1,5 @@
 import { parseRichText } from "@/lib/rich-text";
+import { AppLink } from "./AppLink";
 
 /** Renders a content string, turning `[label](url)` and bare URLs into links. */
 export function RichText({ text }: { text: string }) {
@@ -6,15 +7,13 @@ export function RichText({ text }: { text: string }) {
     token.type === "text" ? (
       token.value
     ) : (
-      <a
+      <AppLink
         key={i}
         href={token.href}
-        target="_blank"
-        rel="noopener noreferrer"
         className="break-all text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
       >
         {token.label}
-      </a>
+      </AppLink>
     ),
   );
 }

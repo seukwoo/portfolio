@@ -4,7 +4,6 @@ import type { LinkItem, SectionMeta, Site } from "@/types/content";
 
 export const site: Site = {
   url: "https://seukwoolee.vercel.app",
-  notionUrl: "https://seukwoo.notion.site",
   title: "이석우 이력서 & 포트폴리오",
   greeting: "안녕하세요!",
   lastUpdated: "2026.06.01",

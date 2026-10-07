@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header navigation={navigation} />
         <main>{children}</main>
         <ContactStrip email={profile.email} socialLinks={socialLinks} />
-        <Footer owner={`${profile.nameKo} (${profile.nameEn})`} lastUpdated={site.lastUpdated} notionUrl={site.notionUrl} />
+        <Footer owner={`${profile.nameKo} (${profile.nameEn})`} lastUpdated={site.lastUpdated} />
       </body>
     </html>
   );

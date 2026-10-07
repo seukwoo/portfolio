@@ -1,6 +1,6 @@
 export type RichTextToken = { type: "text"; value: string } | { type: "link"; label: string; href: string };
 
-// `[label](url)` or a bare http(s) URL (stops at whitespace or a closing parenthesis).
+// `[label](url)` (url may be an in-site path like /projects/x) or a bare http(s) URL (stops at whitespace or `)`).
 const LINK = /\[([^\]]+)\]\(([^)\s]+)\)|(https?:\/\/[^\s)]+)/g;
 
 /** Splits a content string into plain text and link tokens. */
