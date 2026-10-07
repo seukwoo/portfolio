@@ -30,8 +30,12 @@ const ink = "#1d1a17";
 const muted = "#6b6660";
 const accent = "#b5431a";
 
+/**
+ * Big shapes only: previews are shown small (chat bubbles) and LinkedIn re-compresses them,
+ * so no small text — the URL and site title already appear under the preview card.
+ */
 export function renderShareImage(lang: Lang) {
-  const { hero, site } = contentByLang[lang];
+  const { hero } = contentByLang[lang];
   return new ImageResponse(
     (
       <div
@@ -39,42 +43,36 @@ export function renderShareImage(lang: Lang) {
           width: "100%",
           height: "100%",
           display: "flex",
-          flexDirection: "column",
-          padding: "0 80px 56px",
+          alignItems: "center",
+          gap: 64,
+          padding: "0 72px",
           background: "#f6f3ee",
           fontFamily: "Pretendard",
           color: ink,
+          position: "relative",
         }}
       >
-        <div style={{ display: "flex", flex: 1, alignItems: "center", gap: 64 }}>
-          {/* eslint-disable-next-line @next/next/no-img-element -- rendered to PNG by next/og */}
-          <img
-            src={photoSrc}
-            width={260}
-            height={260}
-            alt=""
-            style={{ borderRadius: 9999, border: "6px solid #ffffff", boxShadow: "0 8px 24px rgba(0,0,0,0.12)" }}
-          />
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 20, fontWeight: 600, letterSpacing: 2.5, color: accent }}>{hero.eyebrow.toUpperCase()}</div>
-            <div style={{ display: "flex", alignItems: "baseline", gap: 18, marginTop: 18 }}>
-              <span style={{ fontSize: 72, fontWeight: 700, letterSpacing: -1.5 }}>{hero.name}</span>
-              <span style={{ fontSize: 30, fontWeight: 400, color: muted }}>{hero.altName}</span>
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", marginTop: 22, fontSize: 44, fontWeight: 700, lineHeight: 1.25, letterSpacing: -1 }}>
-              <span>{hero.headline[0]}</span>
-              <span style={{ color: accent }}>{hero.headline[1]}</span>
-            </div>
+        {/* eslint-disable-next-line @next/next/no-img-element -- rendered to PNG by next/og */}
+        <img src={markSrc} width={56} height={56} alt="" style={{ position: "absolute", top: 48, right: 56 }} />
+        {/* eslint-disable-next-line @next/next/no-img-element -- rendered to PNG by next/og */}
+        <img
+          src={photoSrc}
+          width={340}
+          height={340}
+          alt=""
+          style={{ flexShrink: 0, borderRadius: 9999, border: "8px solid #ffffff", boxShadow: "0 10px 30px rgba(0,0,0,0.14)" }}
+        />
+        <div style={{ display: "flex", flexDirection: "column", flex: 1 }}>
+          <div style={{ display: "flex", alignItems: "baseline", gap: 20, flexWrap: "wrap" }}>
+            <span style={{ fontSize: 92, fontWeight: 700, letterSpacing: -2, lineHeight: 1.05 }}>{hero.name}</span>
+            <span style={{ fontSize: 40, fontWeight: 600, color: muted }}>{hero.altName}</span>
           </div>
-        </div>
-
-        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", borderTop: "2px solid #e2dcd2", paddingTop: 24 }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
-            {/* eslint-disable-next-line @next/next/no-img-element -- rendered to PNG by next/og */}
-            <img src={markSrc} width={40} height={40} alt="" />
-            <span style={{ fontSize: 24, fontWeight: 600 }}>{site.url.replace(/^https?:\/\//, "")}</span>
+          <div
+            style={{ display: "flex", flexDirection: "column", marginTop: 36, fontSize: 50, fontWeight: 700, lineHeight: 1.2, letterSpacing: -1 }}
+          >
+            <span>{hero.headline[0]}</span>
+            <span style={{ color: accent }}>{hero.headline[1]}</span>
           </div>
-          <span style={{ fontSize: 22, color: muted }}>{site.title}</span>
         </div>
       </div>
     ),
