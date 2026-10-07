@@ -115,20 +115,12 @@ export type Project = {
   caseStudy?: CaseStudy;
 };
 
-/** A sub-problem spelled out under `problem`; decisions and results point back to it by `id`. */
-export type CaseStudyChallenge = { id: string; label: string; text: string };
-
-/** A decision or result; `challenge` is the id of the challenge it answers. */
-export type CaseStudyItem = { challenge?: string; text: string };
-
 /** Case-study summary shown at the top of a featured project page. */
 export type CaseStudy = {
   problem: string;
-  /** When set, every challenge needs at least one decision and one outcome point (see content.test.ts). */
-  challenges?: CaseStudyChallenge[];
-  decisions: (string | CaseStudyItem)[];
+  decisions: string[];
   /** `label` lets an unverified result read as an observation rather than a measured outcome. */
-  outcome: { label: string; text: string; points?: CaseStudyItem[]; note?: string };
+  outcome: { label: string; text: string; note?: string };
 };
 
 export type SkillGroup = { type: string; items: string[] };

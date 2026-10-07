@@ -132,32 +132,18 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Internal tool: no screenshots of real data — our own diagrams only.
     images: [{ src: "/projects/decision-graph/overview.svg", width: 1200, height: 675 }],
     cardImage: { src: "/projects/decision-graph/card.svg", width: 1200, height: 750 },
-    // Decisions come from my own design review for this tool; the problem's two challenges are answered one by one.
     caseStudy: {
-      problem: "결정은 Slack·Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어려웠습니다.",
-      challenges: [
-        { id: "trust", label: "믿을 수 있는 결과", text: "지어낸 결정이나 빠진 조건 없이" },
-        { id: "cost", label: "비용·속도", text: "매일 돌려도 부담 없게" },
-      ],
+      problem:
+        "결정은 Slack과 Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어려웠습니다. LLM으로 자동 추출하되, 지어낸 결정이나 빠진 조건 없이 믿을 수 있어야 했고 매일 돌려도 부담 없는 비용과 속도여야 했습니다.",
       decisions: [
-        { challenge: "trust", text: "발언 중 결정만 후보로 올리고, 사람이 확정하기 전엔 기록하지 않음" },
-        {
-          challenge: "trust",
-          text: "근거는 원문 문장 번호로 인용해 두 번 검증, 모델이 매긴 신뢰도(%)는 자동화 기준에서 제외",
-        },
-        { challenge: "trust", text: "자주 틀리는 경우(조건 누락 등)로 정답을 정해 둔 예제 23개를 만들어, 프롬프트를 고칠 때마다 결과가 나빠지지 않았는지 확인" },
-        {
-          challenge: "cost",
-          text: "잡담은 경량 모델로 먼저 거르고 바뀐 부분만 다시 분석 (전부 경량 모델로 바꾸면 정답 예제 24개 중 17개만 맞아 기각)",
-        },
+        "발언 중 결정만 후보로 올리고, 사람이 확정하기 전에는 기록에 넣지 않도록 설계",
+        "근거는 원문 문장 번호로 인용해 두 번 검증하고, 모델이 스스로 매긴 신뢰도(%)는 자동화 기준에서 제외",
+        "자주 틀리는 경우(조건 누락 등)로 정답 예제 23개를 만들어, 프롬프트를 고칠 때마다 결과가 나빠지지 않았는지 확인",
+        "잡담은 경량 모델로 먼저 거르고 바뀐 부분만 다시 분석 (전부 경량 모델로 바꾸는 안은 정답 예제 24개 중 17개만 맞아 기각)",
       ],
       outcome: {
         label: "결과",
-        text: "두 문제 모두 숫자로 확인했습니다.",
-        points: [
-          { challenge: "trust", text: "정답 예제 24/24 통과, 잘못 제외된 결정 0건" },
-          { challenge: "cost", text: "한 번 실행 비용 $10.2 → $7.6 (새로 바뀐 대화만 다시 돌리면 $0.7), 첫 결과까지 16분 → 8초" },
-        ],
+        text: "정답 예제 24개를 모두 통과하고 잘못 제외된 결정 없이 품질을 지키면서, 한 번 실행 비용을 $10.2에서 $7.6으로(새로 바뀐 대화만 다시 돌리면 $0.7), 첫 결과가 나오기까지의 시간을 16분에서 8초로 줄였습니다.",
         note: "사내 알파 단계 기준입니다.",
       },
     },

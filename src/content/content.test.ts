@@ -83,20 +83,6 @@ describe("content", () => {
     for (const href of internal) expect(pages.has(href), href).toBe(true);
   });
 
-  it("answers every case-study challenge with a decision and a result", () => {
-    for (const { slug, caseStudy } of content.projects) {
-      if (!caseStudy?.challenges) continue;
-      const ids = new Set(caseStudy.challenges.map((c) => c.id));
-      const decided = caseStudy.decisions.flatMap((d) => (typeof d === "string" ? [] : [d.challenge]));
-      const shown = (caseStudy.outcome.points ?? []).map((p) => p.challenge);
-      for (const id of [...decided, ...shown]) if (id) expect(ids.has(id), `${slug}: unknown challenge ${id}`).toBe(true);
-      for (const id of ids) {
-        expect(decided, `${slug}: no decision for ${id}`).toContain(id);
-        expect(shown, `${slug}: no result for ${id}`).toContain(id);
-      }
-    }
-  });
-
   it("does not publish a phone number", () => {
     expect(JSON.stringify(content)).not.toMatch(/01[016789]-?\d{3,4}-?\d{4}/);
   });
