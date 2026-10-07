@@ -26,7 +26,7 @@ export function Section({ meta, action, bare = false, children }: SectionProps) 
         </div>
         {action}
       </Reveal>
-      <div className={bare ? "mt-8" : "mt-10 sm:mt-14"}>{children}</div>
+      <div className={bare ? "mt-8" : "mt-8 sm:mt-10"}>{children}</div>
     </>
   );
 
@@ -36,7 +36,7 @@ export function Section({ meta, action, bare = false, children }: SectionProps) 
       aria-labelledby={`${meta.id}-title`}
       className={cn("scroll-mt-20 border-t border-line", bare && "py-14 first:border-t-0 first:pt-0")}
     >
-      {bare ? body : <Container className="py-20 sm:py-28">{body}</Container>}
+      {bare ? body : <Container className="py-14 sm:py-20">{body}</Container>}
     </section>
   );
 }
