@@ -10,15 +10,35 @@
   --accent: #d9581f;
   --accent-soft: #fbe6da;
   --accent-ink: #ffffff;
-  /* Inverted panel (e.g. the "Now building" card) — dark in both themes */
+  /* Inverted panel tones — used for text laid over dark image gradients (featured cards) */
   --panel: #1d1a17;
   --panel-ink: #efe9e1;
   --panel-accent: #f2814b;
+  /* Monochrome SVG icons are drawn dark; flip them in the dark theme */
+  --icon-filter: none;
   color-scheme: light;
 }
 
+/*
+ * Dark theme. Applies when the visitor picked it (data-theme="dark", set by ThemeToggle),
+ * or when the OS prefers dark and the visitor hasn't forced light. Keep both blocks identical.
+ */
+:root[data-theme="dark"] {
+  --bg: #121110;
+  --surface: #1b1a18;
+  --surface-2: #24221f;
+  --ink: #eeeae4;
+  --muted: #a39e97;
+  --line: #2e2b28;
+  --accent: #f2814b;
+  --accent-soft: #3a2418;
+  --accent-ink: #1b0f08;
+  --icon-filter: invert(1);
+  color-scheme: dark;
+}
+
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg: #121110;
     --surface: #1b1a18;
     --surface-2: #24221f;
@@ -28,6 +48,7 @@
     --accent: #f2814b;
     --accent-soft: #3a2418;
     --accent-ink: #1b0f08;
+    --icon-filter: invert(1);
     color-scheme: dark;
   }
 }

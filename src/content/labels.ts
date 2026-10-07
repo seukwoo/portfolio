@@ -6,6 +6,8 @@ export const labels = {
     openMenu: "메뉴 열기",
     closeMenu: "메뉴 닫기",
     main: "주 메뉴",
+    toDark: "다크 모드로 전환",
+    toLight: "라이트 모드로 전환",
   },
   profile: {
     contact: "연락처",

@@ -6,6 +6,7 @@ import { AppLink } from "@/components/ui";
 import { labels } from "@/content/labels";
 import { cn } from "@/lib/cn";
 import type { LinkItem } from "@/types/content";
+import { ThemeToggle } from "./ThemeToggle";
 
 const isActive = (pathname: string, href: string) =>
   href.startsWith("/") && (pathname === href || pathname.startsWith(`${href}/`));
@@ -37,10 +38,12 @@ export function NavMenu({ items }: { items: LinkItem[] }) {
     ));
 
   return (
-    <nav aria-label={labels.nav.main}>
+    <nav aria-label={labels.nav.main} className="flex items-center gap-1 sm:gap-2">
       <div className="hidden items-center gap-1 text-sm sm:flex">
         {links("rounded-full px-3 py-1.5 hover:bg-surface-2")}
       </div>
+
+      <ThemeToggle />
 
       <button
         type="button"

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Geist_Mono } from "next/font/google";
 import { ContactStrip, Footer, Header } from "@/components/layout";
+import { themeInitScript } from "@/components/layout/ThemeToggle";
 import { introduction, navigation, profile, site, socialLinks } from "@/content";
 import "./globals.css";
 
@@ -35,7 +36,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="ko" className={`${pretendard.variable} ${geistMono.variable}`}>
+    // suppressHydrationWarning: the theme script may set data-theme on <html> before React hydrates.
+    <html lang="ko" className={`${pretendard.variable} ${geistMono.variable}`} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body id="top" className="min-h-dvh antialiased">
         <Header navigation={navigation} />
         <main>{children}</main>
