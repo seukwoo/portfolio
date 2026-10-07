@@ -8,12 +8,10 @@
     "18f092b6-73dc-80f1-91d4-da812b17bbf1": "meta-cro",
     "18f092b6-73dc-801d-b3cb-d6cc4327f051": "nenoonn",
     "18f092b6-73dc-80d5-b7bd-d88cc2d58f05": "gis-s-dcis",
-    "18f092b6-73dc-800c-8538-eda6afa63050": "mvs",
-    "18f092b6-73dc-80c9-9ee4-f6c28b67a37b": "scon"
+    "18f092b6-73dc-800c-8538-eda6afa63050": "mvs"
   },
   "privateProjects": [
-    "ui-code-ai",
-    "scon"
+    "ui-code-ai"
   ],
   "excludedImages": {
     "alan": [
