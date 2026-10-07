@@ -27,13 +27,22 @@ export function ResumePrint(p: Props) {
   return (
     <article className="mx-auto max-w-[760px] px-6 py-10 text-[13px] leading-[1.6] text-ink print:max-w-none print:px-0 print:py-0">
       <header className="flex items-end justify-between gap-6 border-b-2 border-ink pb-4">
-        <div>
+        <div className="flex items-center gap-5">
+          {/* Plain img: the PDF is printed from a static page, no lazy loading or srcset needed */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={p.profile.photo.src}
+            alt={labels.profile.photoAlt(p.profile.nameKo)}
+            className="size-[84px] shrink-0 rounded-full border border-line object-cover"
+          />
+          <div>
           <h1 className="text-[28px] leading-tight font-bold">
             {p.profile.nameKo} <span className="text-base font-medium text-muted">{p.profile.nameEn}</span>
           </h1>
           <p className="mt-1 text-[14px]">
             {p.profile.position} · {p.profile.role}
           </p>
+          </div>
         </div>
         <div className="text-right text-[12px] text-muted">
           <p>{p.profile.email}</p>
