@@ -31,7 +31,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
           </>
         )}
       </div>
-      <div className="space-y-8">
+      <div className="space-y-12">
         {units.map((unit) => (
           <section key={unit.company}>
             {group && <UnitHeader unit={unit} />}
