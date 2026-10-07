@@ -61,9 +61,5 @@ export const socialLinks: LinkItem[] = [
     href: "https://connect.rememberapp.co.kr/profile/2472858?internal_path=rc_connect_search_list",
   },
   { label: "링크드인 (LinkedIn)", href: "http://www.linkedin.com/in/seuk-woo-lee-ko" },
-  {
-    label: "원티드 (Wanted)",
-    href: "https://social.wanted.co.kr/community/profile/RyqwZkEfbfdxg4YXLHBPHD?utm_source=wanted&utm_medium=share",
-  },
 ];
 

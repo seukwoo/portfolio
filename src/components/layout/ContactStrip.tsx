@@ -22,16 +22,21 @@ export function ContactStrip({ email, socialLinks }: Props) {
             {email}
           </a>
         </div>
-        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:max-w-xl lg:justify-end">
-          <ButtonLink href={mailHref(email)} className="justify-center">
-            {labels.contact.emailButton}
-          </ButtonLink>
-          <CopyEmailButton email={email} className="justify-center" />
-          {socialLinks.map((link) => (
-            <ButtonLink key={link.href} href={link.href} variant="secondary" className="justify-center">
-              {link.label} ↗
+        {/* Email actions on the first row, profiles on the second */}
+        <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
+            <ButtonLink href={mailHref(email)} className="justify-center">
+              {labels.contact.emailButton}
             </ButtonLink>
-          ))}
+            <CopyEmailButton email={email} className="justify-center" />
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
+            {socialLinks.map((link) => (
+              <ButtonLink key={link.href} href={link.href} variant="secondary" className="justify-center">
+                {link.label} ↗
+              </ButtonLink>
+            ))}
+          </div>
         </div>
       </Container>
     </section>
