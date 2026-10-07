@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/layout";
-import { ProjectCaseStudy, ProjectGallery, ProjectHeader, ProjectInfoList, ProjectPager } from "@/components/project";
+import {
+  ProjectCaseStudy,
+  ProjectCover,
+  ProjectGallery,
+  ProjectHeader,
+  ProjectInfoList,
+  ProjectPager,
+} from "@/components/project";
 import { AppLink } from "@/components/ui";
 import { labels, projects } from "@/content";
 import { getAdjacentProjects, getProject } from "@/lib/projects";
@@ -35,6 +42,16 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
         {labels.projects.backToList}
       </AppLink>
       <ProjectHeader project={project} />
+      {/* Featured projects open with the same cover as their card */}
+      {project.punchline && (
+        <ProjectCover
+          project={project}
+          size="banner"
+          className="aspect-16/10 rounded-2xl sm:aspect-2/1"
+          sizes="(min-width: 1152px) 1104px, 100vw"
+          priority
+        />
+      )}
       {project.caseStudy && <ProjectCaseStudy caseStudy={project.caseStudy} />}
       <ProjectGallery images={project.images} title={project.name} />
       {project.caseStudy && <h2 className="text-xl font-bold">{labels.projects.detailsTitle}</h2>}

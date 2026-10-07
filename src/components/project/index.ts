@@ -7,3 +7,4 @@ export { ProjectPager } from "./ProjectPager";
 export { ProjectRow } from "./ProjectRow";
 export { ProjectRowList } from "./ProjectRowList";
 export { ProjectCaseStudy } from "./ProjectCaseStudy";
+export { ProjectCover } from "./ProjectCover";
