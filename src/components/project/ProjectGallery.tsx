@@ -16,7 +16,7 @@ type Props = {
   extraSlide?: React.ReactNode;
 };
 
-/** Screenshot carousel; each image slide links to the full-size image. */
+/** Screenshot carousel. Slides are not links, so a missed click on the arrows never opens a new tab. */
 export function ProjectGallery({ images, title, extraSlide }: Props) {
   if (images.length === 0) return null;
   return (
@@ -30,17 +30,15 @@ export function ProjectGallery({ images, title, extraSlide }: Props) {
       >
         {images.flatMap((img, i) => [
           <SwiperSlide key={img.src} className="pb-10">
-            <a href={img.src} target="_blank" rel="noopener noreferrer" className="block">
-              <Image
-                src={img.src}
-                alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
-                width={img.width}
-                height={img.height}
-                priority={i === 0}
-                sizes="(min-width: 1152px) 1104px, 100vw"
-                className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
-              />
-            </a>
+            <Image
+              src={img.src}
+              alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
+              width={img.width}
+              height={img.height}
+              priority={i === 0}
+              sizes="(min-width: 1152px) 1104px, 100vw"
+              className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
+            />
           </SwiperSlide>,
           ...(i === 0 && extraSlide
             ? [

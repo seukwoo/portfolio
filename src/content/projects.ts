@@ -37,7 +37,6 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Official launch images are from the public ProtoPie MCP announcement; the overview is our own diagram.
     images: [
       { src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 },
-      { src: "/projects/ui-code-ai/release-01.webp", width: 1920, height: 1078 },
       { src: "/projects/ui-code-ai/release-03.webp", width: 1920, height: 1202 },
       { src: "/projects/ui-code-ai/release-02.webp", width: 1920, height: 1202 },
       { src: "/projects/ui-code-ai/release-04.webp", width: 1920, height: 1202 },
