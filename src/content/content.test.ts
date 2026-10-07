@@ -44,8 +44,8 @@ describe("content", () => {
     expect(content.featuredProjectSlugs.length).toBeGreaterThan(0);
   });
 
-  it("links the latest-work card to an existing project", () => {
-    const hrefs = content.projects.map((p) => routes.project(p.slug));
+  it("links the hero card to the project list or an existing project", () => {
+    const hrefs = [routes.projects, ...content.projects.map((p) => routes.project(p.slug))];
     expect(hrefs).toContain(content.latestWork.href);
   });
 

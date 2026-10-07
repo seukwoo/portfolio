@@ -20,7 +20,7 @@ const description = introduction.join(" ");
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${profile.nameKo} | ${profile.role} · ${profile.position}`,
+    default: `${profile.nameKo} | ${profile.position}`,
     template: `%s | ${profile.nameKo} 포트폴리오`,
   },
   description,
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     siteName: site.title,
-    title: `${profile.nameKo} | ${profile.role}`,
+    title: `${profile.nameKo} | ${profile.position}`,
     description,
   },
 };

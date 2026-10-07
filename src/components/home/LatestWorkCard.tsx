@@ -3,7 +3,7 @@ import { AppLink, Card, Eyebrow, RichText } from "@/components/ui";
 import type { LatestWork } from "@/types/content";
 
 /**
- * Light card for the latest main project. The layers are a compact numbered list (label | value)
+ * Light card in the hero (e.g. "How I build" principles). The layers are a compact numbered list (label | value)
  * so the card stays about as tall as the hero text next to it.
  */
 export function LatestWorkCard({ work }: { work: LatestWork }) {
@@ -28,7 +28,7 @@ export function LatestWorkCard({ work }: { work: LatestWork }) {
       </ol>
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-2 text-xs">
-        <span className="whitespace-nowrap text-muted">{work.footnote}</span>
+        {work.footnote && <span className="whitespace-nowrap text-muted">{work.footnote}</span>}
         <AppLink href={work.href} className="font-semibold whitespace-nowrap text-accent hover:underline">
           {labels.home.latestWorkCta}
         </AppLink>

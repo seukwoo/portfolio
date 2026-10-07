@@ -34,7 +34,7 @@ export type LatestWork = {
   title: string;
   summary: string;
   layers: { label: string; value: string }[];
-  footnote: string;
+  footnote?: string;
   href: string;
 };
 

@@ -6,8 +6,8 @@ import { profileImage } from "./images.generated";
 export const profile: Profile = {
   nameKo: "이석우",
   nameEn: "Seukwoo Lee",
-  role: "Software & AI Engineer",
-  position: "Development Team Leader",
+  role: "10년차 개발 리더",
+  position: "AI Engineering Lead",
   email: "seukwoo88@gmail.com",
   photo: profileImage,
 };
@@ -24,7 +24,7 @@ export const about: About = {
     {
       title: "시험 단계의 기술을 상용 제품으로",
       evidence: [
-        "연구 조직이 시험 운영하던 LLM 서비스 [Alan](/projects/alan)을 Pro 구독으로 전환해 첫 유료 매출을 만들고 엔터프라이즈 상품 기획까지 — 이후 대학교 계약 매출의 발판",
+        "연구 조직이 시험 운영하던 LLM 서비스 [Alan](/projects/alan)을 Pro 구독으로 전환해 첫 유료 매출을 만들고 엔터프라이즈 상품 기획까지 — 이후 기관 계약 매출의 발판",
         "3D 웹 컴포넌트 도구 [MX Studio](/projects/mx-studio)의 산출물로 [닥터메타](/projects/dr-meta)·[Meta.CRO](/projects/meta-cro)를 만들어 전국 암센터에서 상용 운영",
       ],
     },

@@ -58,7 +58,7 @@ export const labels = {
   },
   home: {
     metricsLabel: "주요 지표",
-    latestWorkCta: "사례 보기 ↗",
+    latestWorkCta: "적용 사례 보기 ↗",
   },
   contact: {
     eyebrow: "Contact",

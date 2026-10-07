@@ -7,7 +7,7 @@ import type { HomeHero, LatestWork, LeadershipBlock, Metric, WorkStyle } from "@
 export const hero: HomeHero = {
   name: "이석우",
   nameEn: "Seukwoo Lee",
-  eyebrow: "Development Team Leader · Software & AI Engineer",
+  eyebrow: "AI Engineering Lead",
   headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
   intro:
     "안녕하세요, 이석우입니다. 연구·시험 단계의 기술을 실제 사용자가 쓰고 돈을 내는 제품으로 만들어 왔습니다. 직접 설계하고 코드를 쓰며, 3명 개발 파트부터 50명 연구 본부까지 이끌었습니다.",
@@ -21,26 +21,24 @@ export const hero: HomeHero = {
 
 /** Every number must be traceable to the resume content; `note` shows the source. */
 export const metrics: Metric[] = [
-  { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.01 – 현재" },
+  { value: "10", unit: "년차", label: "소프트웨어·AI 개발", note: "2017.01 – 현재" },
   { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
   { value: "5", unit: "개", label: "상용화 서비스 개발", note: "ProtoPie MCP · Alan · 닥터메타 · Meta.CRO · 내눈N" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
 
-// "How I build": the pipeline approach used in both UI code AI and Decision Graph, so it doesn't repeat a featured card.
-// Confidential (current employer): principles only — no model names, tools or pipeline specifics.
+// "How I build": general principles for building AI products (not tied to one project), linking to the projects.
 export const latestWork: LatestWork = {
   kicker: "How I build",
-  title: "AI 파이프라인 설계 원칙",
-  summary: "[UI 코드 AI](/projects/ui-code-ai)와 [Decision Graph](/projects/decision-graph)에서 실제로 쓴 방식",
+  title: "AI 서비스를 만드는 방식",
+  summary: "PoC부터 운영까지, AI 제품을 만들 때 지키는 네 가지",
   layers: [
-    { label: "01 / Split", value: "룰로 풀 수 있는 건 룰로, 나머지만 AI 모델 단계로" },
-    { label: "02 / Route", value: "싼 모델이 먼저 거르고, 판단만 고성능 모델에" },
-    { label: "03 / Ground", value: "결과엔 원문 근거를, 확정은 사람이" },
-    { label: "04 / Measure", value: "정답 예제·골든셋과 비용으로 판단" },
+    { label: "01 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 필요한 곳에만" },
+    { label: "02 / Pipeline", value: "단계를 나누고, 단계마다 맞는 모델을" },
+    { label: "03 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로" },
+    { label: "04 / Operate", value: "비용·품질을 측정하며 운영하고, 사람이 볼 지점은 남긴다" },
   ],
-  footnote: "골든셋 신뢰도 80%+ · 실행 비용 $10.2 → $7.6",
-  href: routes.project("decision-graph"),
+  href: routes.projects,
 };
 
 /** Which projects are featured; they're shown newest first (by period), not in this order. */
