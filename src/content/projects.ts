@@ -68,10 +68,10 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     client: "이스트소프트",
     duty: "Product Owner",
     keywords: list("PO, PMO, System Architect, Development Leader"),
-    notionDate: { start: "2025-04-22" },
+    notionDate: { start: "2025-04-22", end: "2026-01-05" },
     fullName: "Alan (LLM based Agentic AI Search Engine Service)",
     domain: "이스트소프트/ LLM 기반 AI 서비스",
-    period: "2025.04 -",
+    period: "2025.04 - 2026.01",
     tasks: [
       "연구 조직에서 시험 운영 중이던 서비스를 상용화·수익화까지 리드",
       "LLM 기반의 Agentic AI 앱 서비스 개발 파트 리드하며 Product Owner 업무 수행",
