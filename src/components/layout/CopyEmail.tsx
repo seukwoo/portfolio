@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { buttonClass } from "@/components/ui/ButtonLink";
 import { labels } from "@/content/labels";
+import { cn } from "@/lib/cn";
 
 type Status = "idle" | "copied" | "failed";
 
@@ -20,8 +20,8 @@ function copyWithSelection(text: string) {
   return ok;
 }
 
-/** Copies the address — works even when no mail app is set up for mailto links. */
-export function CopyEmailButton({ email, className }: { email: string; className?: string }) {
+/** The email address itself; clicking copies it and shows "복사됨" beside it for two seconds. */
+export function CopyEmail({ email, className }: { email: string; className?: string }) {
   const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {
@@ -41,8 +41,18 @@ export function CopyEmailButton({ email, className }: { email: string; className
 
   const l = labels.contact;
   return (
-    <button type="button" onClick={copy} className={buttonClass("secondary", `whitespace-nowrap ${className ?? ""}`)}>
-      <span aria-live="polite">{status === "copied" ? l.copied : status === "failed" ? l.copyFailed : l.copyEmail}</span>
+    <button
+      type="button"
+      onClick={copy}
+      aria-label={l.copyEmailLabel(email)}
+      className={cn("group inline-flex flex-wrap items-baseline gap-x-3 text-left", className)}
+    >
+      <span className="font-mono text-sm break-all underline decoration-line underline-offset-4 group-hover:text-accent group-hover:decoration-accent">
+        {email}
+      </span>
+      <span aria-live="polite" className={cn("text-xs", status === "idle" ? "text-muted" : "font-semibold text-accent")}>
+        {status === "copied" ? l.copied : status === "failed" ? l.copyFailed : l.copyHint}
+      </span>
     </button>
   );
 }

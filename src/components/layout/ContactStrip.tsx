@@ -1,9 +1,8 @@
 import { labels } from "@/content";
 import { ButtonLink, Eyebrow } from "@/components/ui";
-import { mailHref } from "@/lib/links";
 import type { LinkItem } from "@/types/content";
 import { Container } from "./Container";
-import { CopyEmailButton } from "./CopyEmailButton";
+import { CopyEmail } from "./CopyEmail";
 
 type Props = { email: string; socialLinks: LinkItem[] };
 
@@ -18,25 +17,14 @@ export function ContactStrip({ email, socialLinks }: Props) {
             {labels.contact.title}
           </h2>
           <p className="mt-3 max-w-xl text-muted">{labels.contact.description}</p>
-          <a href={mailHref(email)} className="mt-4 inline-block font-mono text-sm break-all hover:text-accent">
-            {email}
-          </a>
+          <CopyEmail email={email} className="mt-4" />
         </div>
-        {/* Email actions on the first row, profiles on the second */}
-        <div className="flex flex-col gap-3">
-          <div className="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <ButtonLink href={mailHref(email)} className="justify-center">
-              {labels.contact.emailButton}
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
+          {socialLinks.map((link) => (
+            <ButtonLink key={link.href} href={link.href} variant="secondary" className="justify-center">
+              {link.label} ↗
             </ButtonLink>
-            <CopyEmailButton email={email} className="justify-center" />
-          </div>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap lg:justify-end">
-            {socialLinks.map((link) => (
-              <ButtonLink key={link.href} href={link.href} variant="secondary" className="justify-center">
-                {link.label} ↗
-              </ButtonLink>
-            ))}
-          </div>
+          ))}
         </div>
       </Container>
     </section>
