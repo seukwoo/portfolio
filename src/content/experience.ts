@@ -38,6 +38,7 @@ export const experiences: Experience[] = [
         title: "AI 검색 엔진 서비스 (LLM 기반 Agentic AI)",
         subtitle: "’Alan’ 고도화 (이스트소프트)",
         details: [
+          "연구 조직에서 시험 운영 중이던 서비스를 상용화·수익화까지 리드",
           "LLM 기반의 Agentic AI 앱 서비스 개발 파트 리드하며 Product Owner 업무 수행",
           "AI 연구원 및 앱 개발자(FE, BE)로 구성된 파트 리드",
           "Dev, QA, Stage, Release 서버 분리하여 운영, 관리",

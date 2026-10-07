@@ -51,8 +51,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "alan",
-    summary: "검색에서 LLM으로 옮겨가는 사용자를 위한 검색 스타일 LLM Agent 서비스 — 특화 에이전트 개발과 유료 전환",
-    punchline: ["검색처럼 쓰는", "LLM Agent 서비스"],
+    summary: "연구 조직에서 시험 운영 중이던 검색 스타일 LLM Agent 서비스를 상용화하고 수익화까지 리드",
+    punchline: ["시험 운영 중이던 LLM 서비스를", "상용화·수익화까지"],
     // Slide generation feature (led from research/planning). Sidebar with personal history cropped out.
     leadImages: [{ src: "/projects/alan/cover.webp", width: 1920, height: 1145 }],
     name: "Alan LLM service",
@@ -64,6 +64,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     domain: "이스트소프트/ LLM 기반 AI 서비스",
     period: "2025.04 -",
     tasks: [
+      "연구 조직에서 시험 운영 중이던 서비스를 상용화·수익화까지 리드",
       "LLM 기반의 Agentic AI 앱 서비스 개발 파트 리드하며 Product Owner 업무 수행",
       "AI 연구원 및 앱 개발자(FE, BE)로 구성된 파트 리드",
       "Dev, QA, Stage, Release 서버 분리하여 운영, 관리",
@@ -81,16 +82,16 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["Product Owner", "(+ Project Manager, + Development Leader)"],
     caseStudy: {
       problem:
-        "사용자들이 검색 사이트에서 LLM 서비스로 옮겨가는 흐름 속에서, 검색에 익숙한 사용자도 자연스럽게 쓸 수 있는 LLM Agent 서비스가 필요했습니다.",
+        "연구 조직(AI Agent Lab)에서 시험 운영 중이던 LLM 서비스를 실제 상용 서비스로 만들고 수익을 내야 했습니다. 사용자들이 검색 사이트에서 LLM 서비스로 옮겨가는 흐름 속에서, 검색에 익숙한 사용자도 자연스럽게 쓸 수 있어야 했습니다.",
       decisions: [
+        "시험 운영 단계의 서비스를 Dev·QA·Stage·Release 서버 분리 운영 체계로 전환해 상용 서비스 수준으로 정비",
         "LLM Agent 서비스를 검색 스타일로 제공해 기존 검색 사용자의 진입 장벽을 낮춤",
-        "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 등 기능과 특화 에이전트를 독자 개발",
-        "슬라이드 생성 기능은 조사·기획 단계부터 프로젝트를 주도",
-        "무료 서비스를 유료로 전환하며 다양한 사용자층을 고려한 결제 프로세스와 유료화 정책 수립",
+        "이미지 서치, 유튜브 서치·요약, 보고서·슬라이드 생성 등 기능과 특화 에이전트를 독자 개발 (슬라이드 생성은 조사·기획 단계부터 주도)",
+        "다양한 사용자층을 고려한 결제 프로세스와 유료화 정책 수립",
       ],
       outcome: {
         label: "결과",
-        text: "딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 무료 서비스를 유료 상용 서비스로 전환했으며, 운영을 위한 백오피스 내부 툴까지 개발했습니다. ([myalan.ai](https://myalan.ai/))",
+        text: "연구 조직에서 시험 운영하던 서비스를 상용화하고 수익화까지 리드했습니다. 딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 유료 상용 서비스로 전환했으며, 운영을 위한 백오피스 내부 툴까지 개발했습니다. ([myalan.ai](https://myalan.ai/))",
       },
     },
     skills: list("GPT, Gemini, MCP, Notion, Google Analytics, Git, Azure, Figma, MS Docs, Slashpage"),
