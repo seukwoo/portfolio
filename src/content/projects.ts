@@ -17,7 +17,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Confidential (current employer): model names, training pipeline and screenshots are intentionally omitted.
     client: "스튜디오씨드코리아",
     duty: "Development Team Leader",
-    keywords: list("Design-to-Code, AI Pipeline, Cross-platform"),
+    keywords: list("Design-to-Code, ML Pipeline, Cross-platform"),
     notionDate: { start: "2026-06-01" },
     fullName:
       "AI 기반 코드 생성 시스템 (AI-assisted Design-to-Code System for Cross-platform Components)",
@@ -33,7 +33,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "코어 파이프라인 직접 개발(PoC) → 팀과 함께 제품화 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
-    skills: list("Python, PyTorch, Computer Vision, LLM, AI Pipeline, AWS, Git, Figma, Notion"),
+    skills: list("Python, PyTorch, Computer Vision, LLM, ML Pipeline, AWS, Git, Figma, Notion"),
     // Official launch images are from the public ProtoPie MCP announcement; the overview is our own diagram.
     images: [
       { src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 },
