@@ -11,6 +11,6 @@
 <text x="444" y="512" font-size="20" font-weight="700" fill="#18181b">비용·지연 측정</text>
 <text x="444" y="542" font-size="16" fill="#6b6660">요청별 지연·재시도·캐시·토큰·비용 기록</text>
 <text x="804" y="512" font-size="20" font-weight="700" fill="#18181b">평가</text>
-<text x="804" y="542" font-size="16" fill="#6b6660">회귀 검사 23개 · 비용 상한 평가 실행기</text>
+<text x="804" y="542" font-size="16" fill="#6b6660">정답 케이스 23개 · 평가 비용 상한</text>
 <text x="60" y="640" font-size="15" fill="#6b6660">사내 도구 구조를 직접 그린 개요도입니다. 실제 화면과 데이터는 포함하지 않습니다.</text>
 </svg>
