@@ -76,8 +76,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2025.04 - 2026.01",
     tasks: [
       "Led a service in trial operation at the research org through commercial launch and monetization",
-      "Led the development part for an LLM-based agentic AI app service, working as Product Owner",
-      "Led a part made up of AI researchers and app developers (FE, BE)",
+      "Led the development team for an LLM-based agentic AI app service, working as Product Owner",
+      "Led a team made up of AI researchers and app developers (FE, BE)",
       "Ran and managed separate Dev, QA, Stage and Release servers",
       "Architected the Azure, FastAPI, React and LangGraph stack",
       "Ran and managed the patch notes page",

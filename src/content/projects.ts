@@ -74,8 +74,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2025.04 - 2026.01",
     tasks: [
       "연구 조직에서 시험 운영 중이던 서비스를 상용화·수익화까지 리드",
-      "LLM 기반의 Agentic AI 앱 서비스 개발 파트 리드하며 Product Owner 업무 수행",
-      "AI 연구원 및 앱 개발자(FE, BE)로 구성된 파트 리드",
+      "LLM 기반의 Agentic AI 앱 서비스 개발 팀 리드하며 Product Owner 업무 수행",
+      "AI 연구원 및 앱 개발자(FE, BE)로 구성된 팀 리드",
       "Dev, QA, Stage, Release 서버 분리하여 운영, 관리",
       "Azure, Fast API, React, LangGraph 구조 아키텍처링",
       "패치 노트 페이지 운영, 관리",

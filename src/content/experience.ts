@@ -46,7 +46,7 @@ export const experiences: Experience[] = [
   {
     role: "Product Owner",
     company: "이스트소프트",
-    department: "AI Agent Lab / Alan 개발 파트 / PO",
+    department: "AI Agent Lab / Alan 개발 팀 / PO",
     tenure: "2025.04.22 - 2026.01.05",
     projects: [
       {
@@ -57,8 +57,8 @@ export const experiences: Experience[] = [
         subtitle: "’Alan’ 고도화 (이스트소프트)",
         details: [
           "연구 조직에서 시험 운영 중이던 서비스를 상용화·수익화까지 리드",
-          "LLM 기반의 Agentic AI 앱 서비스 개발 파트 리드하며 Product Owner 업무 수행",
-          "AI 연구원 및 앱 개발자(FE, BE)로 구성된 파트 리드",
+          "LLM 기반의 Agentic AI 앱 서비스 개발 팀 리드하며 Product Owner 업무 수행",
+          "AI 연구원 및 앱 개발자(FE, BE)로 구성된 팀 리드",
           "Dev, QA, Stage, Release 서버 분리하여 운영, 관리",
           "Azure, Fast API, React, LangGraph 구조 아키텍처링",
           "품질 테스트 및 사내 타 부서 (QA, 인증, 결제, 인프라 등) 개발/품질/인프라 팀과 협업",

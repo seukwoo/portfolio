@@ -8,7 +8,7 @@ export const hero: HomeHero = {
   name: "Seukwoo Lee",
   altName: "이석우",
   eyebrow: "AI Engineering Lead",
-  headline: ["10 years leading development,", "from kickoff to commercial launch."],
+  headline: ["10 years in development,", "from kickoff to launch."],
   intro:
     "Hi, I'm Seukwoo Lee. I turn research- and pilot-stage technology into products people actually use and pay for. I design and write the code myself, and have led teams from a 3-person dev unit to a 50-person research division.",
   focus:

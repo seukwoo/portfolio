@@ -46,7 +46,7 @@ export const experiences: Experience[] = [
   {
     role: "Product Owner",
     company: "ESTsoft",
-    department: "AI Agent Lab / Alan Development Part / PO",
+    department: "AI Agent Lab / Alan Development Team / PO",
     tenure: "2025.04.22 - 2026.01.05",
     projects: [
       {
@@ -57,8 +57,8 @@ export const experiences: Experience[] = [
         subtitle: "Advancing ’Alan’ (ESTsoft)",
         details: [
           "Led a service in trial operation at the research organization through commercial launch and monetization",
-          "Led the development part for an LLM-based agentic AI app service, working as Product Owner",
-          "Led a part made up of AI researchers and app developers (FE, BE)",
+          "Led the development team for an LLM-based agentic AI app service, working as Product Owner",
+          "Led a team made up of AI researchers and app developers (FE, BE)",
           "Operated and managed separate Dev, QA, Stage and Release servers",
           "Architected the Azure, Fast API, React and LangGraph structure",
           "Ran quality testing and collaborated with other in-house development, quality and infrastructure teams (QA, authentication, payments, infrastructure, etc.)",
