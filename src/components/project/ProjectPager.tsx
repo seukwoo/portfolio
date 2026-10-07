@@ -23,7 +23,7 @@ function PagerLink({ project, caption, alignEnd }: { project: Project; caption: 
       href={routes.project(project.slug)}
       className={cn(cardClass, "rounded-2xl p-5 hover:border-accent", alignEnd && "sm:text-right")}
     >
-      <p className="font-mono text-xs text-muted">{caption}</p>
+      <p className="text-xs text-muted">{caption}</p>
       <p className="mt-1 font-semibold">{project.name}</p>
     </Link>
   );

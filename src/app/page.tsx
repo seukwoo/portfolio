@@ -2,7 +2,7 @@ import { HomeHero, LatestWorkCard, LeadershipSection, ProofStrip, WorkStyleSecti
 import { ProjectGrid, ProjectRowList } from "@/components/project";
 import { Section } from "@/components/sections";
 import { AppLink } from "@/components/ui";
-import { hero, labels, latestWork, leadership, metrics, sections, workStyle } from "@/content";
+import { hero, labels, latestWork, leadership, metrics, profile, sections, workStyle } from "@/content";
 import { getFeaturedProjects, getOtherProjects } from "@/lib/projects";
 import { routes } from "@/lib/routes";
 
@@ -10,7 +10,7 @@ import { routes } from "@/lib/routes";
 export default function HomePage() {
   return (
     <>
-      <HomeHero hero={hero} aside={<LatestWorkCard work={latestWork} />} />
+      <HomeHero hero={hero} photo={profile.photo} aside={<LatestWorkCard work={latestWork} />} />
       <ProofStrip metrics={metrics} />
       <Section
         meta={sections.featured}

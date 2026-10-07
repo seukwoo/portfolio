@@ -6,7 +6,7 @@ import type { LatestWork } from "@/types/content";
 export function LatestWorkCard({ work }: { work: LatestWork }) {
   return (
     <Card className="p-6 shadow-sm sm:p-7">
-      <Eyebrow latin className="flex items-center gap-2 text-[11px]">
+      <Eyebrow latin className="flex items-center gap-2">
         <span className="size-1.5 rounded-full bg-accent" aria-hidden />
         {work.kicker}
       </Eyebrow>
@@ -17,7 +17,7 @@ export function LatestWorkCard({ work }: { work: LatestWork }) {
         {work.layers.map((layer, i) => (
           <li key={layer.label}>
             <div className="rounded-xl border border-line bg-surface-2/60 px-4 py-3">
-              <p className="font-mono text-[10px] tracking-[0.15em] text-muted uppercase">{layer.label}</p>
+              <p className="font-mono text-xs tracking-[0.12em] text-muted uppercase">{layer.label}</p>
               <p className="mt-1 text-sm">{layer.value}</p>
             </div>
             {i < work.layers.length - 1 && (

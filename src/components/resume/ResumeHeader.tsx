@@ -16,7 +16,7 @@ export function ResumeHeader({ greeting, profile, documents, lastUpdated }: Prop
         height={profile.photo.height}
         alt={labels.profile.photoAlt(profile.nameKo)}
         priority
-        className="w-28 rounded-2xl object-cover sm:w-32"
+        className="size-24 rounded-full border border-line object-cover object-[50%_20%] shadow-sm sm:size-28"
       />
 
       <div>

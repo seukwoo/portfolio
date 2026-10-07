@@ -5,9 +5,9 @@
   --surface: #ffffff;
   --surface-2: #efeae2;
   --ink: #18181b;
-  --muted: #6b6660;
+  --muted: #5f5a53;
   --line: #e2dcd2;
-  --accent: #d9581f;
+  --accent: #b5431a;
   --accent-soft: #fbe6da;
   --accent-ink: #ffffff;
   /* Inverted panel tones — used for text laid over dark image gradients (featured cards) */
@@ -66,6 +66,11 @@
   --color-panel: var(--panel);
   --color-panel-ink: var(--panel-ink);
   --color-panel-accent: var(--panel-accent);
+  /* Readability: small sizes bumped for Korean text (xs 13px, sm 15px) */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.25rem;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.6;
   --font-sans: var(--font-pretendard), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
@@ -79,6 +84,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
+  line-height: 1.65;
   word-break: keep-all;
   overflow-wrap: anywhere;
   -webkit-font-smoothing: antialiased;

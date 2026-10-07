@@ -9,7 +9,7 @@ export function DegreeCard({ degree }: { degree: Degree }) {
       <div className="mt-4 space-y-1 text-sm text-muted">
         <p>{degree.gpa}</p>
         <p>{degree.focus}</p>
-        <p className="font-mono text-xs">{degree.period}</p>
+        <p className="text-xs">{degree.period}</p>
       </div>
     </Card>
   );

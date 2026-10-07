@@ -13,7 +13,7 @@ export function ProjectRow({ project, index }: { project: Project; index: number
     >
       <span className="font-mono text-sm text-muted">{String(index + 1).padStart(2, "0")}</span>
       <div className="min-w-0">
-        <p className="font-mono text-xs text-muted">
+        <p className="text-xs text-muted tabular-nums">
           {[project.client, project.period].filter(Boolean).join(" · ")}
         </p>
         <h3 className="mt-1 font-semibold group-hover:text-accent">

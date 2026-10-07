@@ -10,11 +10,11 @@ export function ProjectCaseStudy({ caseStudy }: { caseStudy: CaseStudy }) {
     <section aria-label={l.title}>
       <Reveal className="grid gap-5 lg:grid-cols-[1fr_1.4fr_1fr]">
         <Card data-reveal className="p-6 sm:p-7">
-          <Eyebrow className="font-sans font-semibold">{l.problem}</Eyebrow>
+          <Eyebrow>{l.problem}</Eyebrow>
           <p className="mt-3 leading-relaxed">{caseStudy.problem}</p>
         </Card>
         <Card data-reveal className="p-6 sm:p-7">
-          <Eyebrow className="font-sans font-semibold">{l.decisions}</Eyebrow>
+          <Eyebrow>{l.decisions}</Eyebrow>
           <ol className="mt-3 space-y-3 leading-relaxed">
             {caseStudy.decisions.map((decision, i) => (
               <li key={decision} className="flex gap-3">
@@ -27,7 +27,7 @@ export function ProjectCaseStudy({ caseStudy }: { caseStudy: CaseStudy }) {
           </ol>
         </Card>
         <Card data-reveal className="bg-accent-soft p-6 sm:p-7">
-          <Eyebrow className="font-sans font-semibold">{caseStudy.outcome.label}</Eyebrow>
+          <Eyebrow>{caseStudy.outcome.label}</Eyebrow>
           <p className="mt-3 leading-relaxed font-medium">
             <RichText text={caseStudy.outcome.text} />
           </p>

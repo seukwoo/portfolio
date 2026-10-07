@@ -109,8 +109,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     slug: "mx-studio",
     summary: "3D 웹 컴포넌트 저작 도구 — 이를 기반으로 닥터메타·Meta.CRO 제품 개발 및 제품화",
     punchline: ["3D 웹 컴포넌트 도구에서", "실서비스 제품화까지"],
-    // Screenshot 01 with its built-in caption/logo cropped off, so the punchline reads cleanly.
-    cardImage: { src: "/projects/mx-studio/card.webp", width: 1200, height: 509 },
+    // Screenshot 01 re-cropped around the car (car in the upper part, caption band darkened under the punchline).
+    cardImage: { src: "/projects/mx-studio/card.webp", width: 1200, height: 750 },
     name: "MX Studio",
     client: "티맥스메타에이아이",
     duty: "Project Leader",
