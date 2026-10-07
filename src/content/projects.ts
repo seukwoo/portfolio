@@ -30,7 +30,6 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
       "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
-      "최근 1년 내 실제 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
       "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
@@ -55,8 +54,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "PoC를 개발하며 최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 생성 결과를 검증했고, 80% 이상의 신뢰도를 확인했습니다. 이 코어 파이프라인에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시했습니다. Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
-        note: "신뢰도 검증은 프로젝트 1건 기준이며, 여러 프로젝트로 넓힌 검증은 아직 진행하지 못했습니다. 반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
+        text: "직접 개발한 코어 파이프라인(PoC)에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시했습니다. Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
+        note: "반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
       },
     },
   },
@@ -121,6 +120,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2026.08 -",
     tasks: [
       "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 인용 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
+      "최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
       "PoC로 우려되던 기술 리스크를 직접 검증·검토 (예: 신뢰도 % 대신 정답 케이스로 판단, 원문 → 결정 → 문서 단방향 기록, 재실행 중복 반영 방지)",
       "분석 단위 분할 → 1차 분류(경량 모델) → 결정 추출 → 근거 검증(코드 + 모델) → 중복·관계 분석의 다단계 파이프라인 설계",
       "2-tier 추론 구조 — 같은 데이터·같은 테스트 케이스로 모델을 비교해 1차 분류는 경량 모델, 추출·검증은 고성능 모델로 결정",
@@ -146,7 +146,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "정답 예제 24개를 모두 통과하고 잘못 제외된 결정 없이 품질을 지키면서, 한 번 실행 비용을 $10.2에서 $7.6으로 줄였습니다. 새로 바뀐 대화만 다시 돌리면 $0.7입니다.",
+        text: "최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 검증해 80% 이상의 신뢰도를 확인했습니다. 정답 예제 24개를 모두 통과하고 잘못 제외된 결정 없이 품질을 지키면서, 한 번 실행 비용을 $10.2에서 $7.6으로 줄였습니다. 새로 바뀐 대화만 다시 돌리면 $0.7입니다.",
         note: "사내 알파 단계 기준입니다.",
       },
     },
