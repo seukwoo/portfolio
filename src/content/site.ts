@@ -1,4 +1,5 @@
 // Site-wide settings: metadata, navigation, and the heading of each section.
+import { buildDate } from "@/lib/date";
 import { routes } from "@/lib/routes";
 import type { LinkItem, SectionMeta, Site } from "@/types/content";
 
@@ -6,7 +7,8 @@ export const site: Site = {
   url: "https://seukwoolee.vercel.app",
   title: "이석우 이력서 & 포트폴리오",
   greeting: "안녕하세요!",
-  lastUpdated: "2026.06.01",
+  // Set at build time, so every deploy updates it automatically.
+  lastUpdated: buildDate,
 };
 
 /** Header menu (the "Home" link on the left is separate). */
