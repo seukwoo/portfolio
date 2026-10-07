@@ -110,6 +110,8 @@ export type Project = {
   /** 6. 보유 / 활용 Skill */
   skills: string[];
   images: ImageAsset[];
+  /** Cover used only on featured cards (falls back to images[0]); keep its bottom free of text for the punchline. */
+  cardImage?: ImageAsset;
   caseStudy?: CaseStudy;
 };
 

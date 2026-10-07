@@ -12,7 +12,7 @@ export const hero: HomeHero = {
   intro:
     "안녕하세요, 이석우입니다. 룰 기반 모듈과 AI 모델을 결합한 AI 파이프라인 설계부터 실시간 엔진·크로스 플랫폼 애플리케이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
   focus:
-    "현재는 모바일 UI 디자인 데이터를 크로스 플랫폼 컴포넌트 코드로 자동 변환·생성하는 AI 기반 코드 생성 시스템을 만들고 있습니다.",
+    "최근에는 PoC를 리드한 AI 코드 생성 기술이 제품화를 거쳐 ProtoPie에 Dev View·MCP 기능으로 공식 출시되었습니다.",
   credibility: "2017년부터 소프트웨어·AI 제품 개발",
   actions: [
     { label: "프로젝트 보기 →", href: routes.projects },
@@ -24,16 +24,16 @@ export const hero: HomeHero = {
 export const metrics: Metric[] = [
   { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.02 – 현재" },
   { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
-  { value: "4", unit: "개", label: "상용화 서비스 개발", note: "Alan · Meta.CRO · 내눈N · WAPL" },
+  { value: "5", unit: "개", label: "상용화 서비스 개발", note: "Alan · 닥터메타 · Meta.CRO · 내눈N · WAPL" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
 
 // 🟨 Temporary: current main project. Swap to Decision Graph once its details are ready.
 // Confidential (current employer): describe the flow only — no model names, tools or pipeline specifics.
 export const latestWork: LatestWork = {
-  kicker: "Now building",
+  kicker: "Recently shipped",
   title: "AI 기반 코드 생성 시스템",
-  summary: "디자인 데이터에서 크로스 플랫폼 코드까지",
+  summary: "PoC부터 제품화까지 — ProtoPie Dev View·MCP로 출시",
   layers: [
     { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
     { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 학습" },

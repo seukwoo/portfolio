@@ -180,17 +180,5 @@ export const projectImages: Record<string, { src: string; width: number; height:
       "width": 1362,
       "height": 976
     }
-  ],
-  "scon": [
-    {
-      "src": "/projects/scon/01.webp",
-      "width": 1348,
-      "height": 960
-    },
-    {
-      "src": "/projects/scon/02.webp",
-      "width": 1317,
-      "height": 1001
-    }
   ]
 };

@@ -1,16 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif">
-  <title>AI 기반 코드 생성 시스템 개요</title>
-  <rect width="1200" height="675" fill="#f6f3ee"/>
-  <text x="80" y="92" font-size="18" fill="#d9581f" letter-spacing="3">OVERVIEW</text>
-  <text x="80" y="140" font-size="38" font-weight="700" fill="#18181b">디자인 데이터에서 크로스 플랫폼 코드까지</text>
-  <text x="80" y="184" font-size="20" fill="#6b6660">룰 기반 파이프라인과 자체 학습한 보조 모델로 디자인을 컴포넌트 코드로 바꿉니다.</text>
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif">
+  <title>AI 기반 코드 생성 시스템 흐름</title>
+  <rect width="1200" height="750" fill="#f6f3ee"/>
   <defs>
     <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
       <path d="M0 0L10 5L0 10z" fill="#b8b0a5"/>
     </marker>
   </defs>
-
+  <!-- Card cover: the four-step flow only (the card overlays its own headline at the bottom) -->
+  <g transform="translate(0,-180)">
   <!-- 01 data -->
   <rect x="80" y="260" width="220" height="250" rx="22" fill="#ffffff" stroke="#e2dcd2" stroke-width="2"/>
   <text x="104" y="300" font-size="15" fill="#6b6660" letter-spacing="2">01 / DATA</text>
@@ -50,5 +47,5 @@
   <text x="964" y="452" font-size="18" fill="#efe9e1">iOS</text>
   <text x="964" y="480" font-size="18" fill="#efe9e1">Web</text>
 
-  <text x="80" y="600" font-size="16" fill="#6b6660">세부 모델 구성과 학습 파이프라인은 비공개입니다.</text>
+  </g>
 </svg>

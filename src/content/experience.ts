@@ -11,9 +11,9 @@ export const experiences: Experience[] = [
     projects: [
       {
         role: "Head of Product Dev Team",
-        product: "[ProtoPie](https://www.protopie.io/) 의 AI 기반 New Product 사내 출시",
+        product: "[ProtoPie](https://www.protopie.io/) Dev View · MCP (AI 기반 신규 기능) 공식 출시",
         title: "AI 기반 코드 생성 시스템",
-        subtitle: "(New Product R&D)",
+        subtitle: "(PoC → 제품화)",
         details: [
           "AI 기반 코드 생성 시스템 전체 설계 및 개발 팀 리드",
           "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",
@@ -21,6 +21,7 @@ export const experiences: Experience[] = [
           "사내에 축적된 디자인 데이터로 이미지 기반·레이아웃(구조) 기반 코드 변환을 보조하는 모델 자체 학습 (AI 엔지니어와 협업)",
           "데이터 정제부터 학습·배포까지 이어지는 MLOps 파이프라인 설계",
           "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
+          "PoC 리드 → 제품화를 거쳐 ProtoPie에 공식 탑재, [Dev View·MCP](https://www.protopie.io/learn/docs/mcp-dev-view)로 출시",
         ],
       },
     ],
@@ -64,7 +65,7 @@ export const experiences: Experience[] = [
         product: "MX studio",
         period: "2022.07 -",
         title: "3D Web Component 제작 소프트웨어",
-        subtitle: "'MX studio' 개발 (사내 주력 제품)",
+        subtitle: "'MX studio' 개발 및 이를 기반으로 한 제품화",
         details: [
           "MX studio 엔진팀 리드하며 Project Leader 업무 수행",
           "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
@@ -86,20 +87,20 @@ export const experiences: Experience[] = [
           "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
           "React 기반의 웹 앱과 Unity 앱 연동 설계/개발 리드",
           "관리자 페이지 및 권한 기능 설계/개발 리드",
-          "내부 Beta test 진행 중 ([web.drmeta.kr](http://web.drmeta.kr/))",
+          "전국 암센터에서 상용 운영 ([web.drmeta.kr](http://web.drmeta.kr/))",
         ],
       },
       {
         role: "Project Leader",
         product: "Meta.CRO",
         period: "2023.01 - 2024.01",
-        title: "의료 전문가 교육 플랫폼",
+        title: "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼",
         subtitle: "'Meta.CRO' 개발 (한국스마트헬스케어협회)",
         details: [
           "앱 개발 TF팀 리드하며 Project Leader 업무 수행",
           "개발자, QA로 구성된 TF팀 리드",
           "3D render engine library 설계/배포 (private npm 환경 구성)",
-          "상용화 운영 중 ([https://www.crotraining.store/](https://www.crotraining.store/))",
+          "전국 암센터에서 상용 운영 ([https://www.crotraining.store/](https://www.crotraining.store/))",
         ],
       },
       {
@@ -142,14 +143,6 @@ export const experiences: Experience[] = [
           "Client Library 설계 (Javascript, C#)",
           "서비스 플로우 설계",
         ],
-      },
-      {
-        role: "Project Leader",
-        product: "Scon",
-        period: "2023.12 - 2024.08",
-        title: "블록체인 기반의 스마트 컨트렉트 플랫폼",
-        subtitle: "’Scon: Smart Contract’ 연구 (사내 프로젝트)",
-        details: ["R&D 팀 리드하며 이더리움, Web3j 등 기술 연구 및 개발", "Web 기반 Prototype 기획", "서비스 플로우 설계"],
       },
     ],
   },

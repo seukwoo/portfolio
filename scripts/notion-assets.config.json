@@ -12,7 +12,8 @@
     "18f092b6-73dc-80c9-9ee4-f6c28b67a37b": "scon"
   },
   "privateProjects": [
-    "ui-code-ai"
+    "ui-code-ai",
+    "scon"
   ],
   "excludedImages": {
     "alan": [

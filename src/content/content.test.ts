@@ -17,7 +17,9 @@ describe("content", () => {
   it("gives every project at least one existing screenshot", () => {
     for (const project of content.projects) {
       expect(project.images.length, project.slug).toBeGreaterThan(0);
-      for (const image of project.images) expect(existsSync(publicFile(image.src)), image.src).toBe(true);
+      for (const image of [...project.images, ...(project.cardImage ? [project.cardImage] : [])]) {
+        expect(existsSync(publicFile(image.src)), image.src).toBe(true);
+      }
     }
   });
 

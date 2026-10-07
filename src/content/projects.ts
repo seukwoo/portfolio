@@ -11,7 +11,7 @@ const list = (s: string) => s.split(",").map((v) => v.trim());
 const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: ImageAsset[] })[] = [
   {
     slug: "ui-code-ai",
-    summary: "사내에 축적된 디자인 데이터로 자체 학습한 모델이 디자인을 크로스 플랫폼 컴포넌트 코드로 변환하도록 돕는 AI 시스템",
+    summary: "디자인을 크로스 플랫폼 컴포넌트 코드로 바꿔주는 AI 시스템 — PoC를 리드해 ProtoPie Dev View·MCP로 출시",
     punchline: ["디자인 데이터에서", "크로스 플랫폼 코드로"],
     name: "UI 코드 자동화 AI 시스템",
     // Confidential (current employer): model names, training pipeline and screenshots are intentionally omitted.
@@ -30,10 +30,12 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
       "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델 자체 학습 (AI 엔지니어와 협업)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
+      "PoC 리드 → 제품화를 거쳐 ProtoPie에 공식 탑재, [Dev View·MCP](https://www.protopie.io/learn/docs/mcp-dev-view)로 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
     skills: list("Python, PyTorch, Computer Vision, LLM, AI Pipeline, AWS, Git, Figma, Notion"),
     images: [{ src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 }],
+    cardImage: { src: "/projects/ui-code-ai/card.svg", width: 1200, height: 750 },
     caseStudy: {
       problem:
         "범용 LLM만으로는 디자인의 구조(계층·반복 요소)를 안정적으로 읽기 어려워, 생성된 코드가 화면 단위로 평평하게 나오고 재사용하기 어려웠습니다.",
@@ -43,9 +45,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
         "사내에 축적된 디자인 데이터로 이미지·레이아웃(구조)을 이해하는 보조 모델을 팀과 함께 자체 학습해 파이프라인에 연결하고, AOS·iOS·Web 컴포넌트 코드로 출력",
       ],
       outcome: {
-        label: "관찰된 효과",
-        text: "반복되는 UI 요소를 묶어 재사용하기 쉬운 컴포넌트 단위로 코드를 그룹화·구성하는 데 도움을 주었습니다.",
-        note: "내부 사례 기준의 정성적 관찰입니다.",
+        label: "결과",
+        text: "PoC를 리드한 기술이 제품화를 거쳐 ProtoPie에 공식 탑재되어 [Dev View(웹)와 MCP](https://www.protopie.io/learn/docs/mcp-dev-view) 기능으로 출시되었습니다. 반복되는 UI 요소를 묶어 재사용하기 쉬운 컴포넌트 단위로 코드를 구성하는 데에도 도움을 주었습니다.",
+        note: "컴포넌트화 효과는 내부 사례 기준의 정성적 관찰입니다.",
       },
     },
   },
@@ -98,8 +100,10 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "mx-studio",
-    summary: "3D Web Component 제작 소프트웨어 (사내 주력 제품)",
-    punchline: ["3D Web Component", "제작 소프트웨어"],
+    summary: "3D 웹 컴포넌트 저작 도구 — 이를 기반으로 닥터메타·Meta.CRO 제품 개발 및 제품화",
+    punchline: ["3D 웹 컴포넌트 도구에서", "실서비스 제품화까지"],
+    // Screenshot 01 with its built-in caption/logo cropped off, so the punchline reads cleanly.
+    cardImage: { src: "/projects/mx-studio/card.webp", width: 1200, height: 509 },
     name: "MX Studio",
     client: "티맥스메타에이아이",
     duty: "Project Leader",
@@ -109,7 +113,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     domain: "티맥스메타에이아이/3D소프트웨어",
     period: "2022.07 - 2025.02",
     tasks: [
-      "3D Web Component 제작 소프트웨어 'MX studio' 개발에 참여",
+      "3D Web Component 제작 소프트웨어 'MX studio' 개발",
+      "MX Studio를 기반으로 [닥터메타](/projects/dr-meta)·[Meta.CRO](/projects/meta-cro) 제품 개발 및 제품화",
       "System Engineer, Project Manager로서 설계 및 개발 업무 수행",
       "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
       "3D 물체의 이벤트와 액션 기능 설계/개발 리드",
@@ -135,7 +140,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "dr-meta",
-    summary: "MX Studio의 3D 컴포넌트 산출물로 개발한 전국 암센터 활용 메타버스 플랫폼",
+    summary: "전국 암센터 의료진·환자를 위한 웹 메타 공간 — 컨퍼런스, 환자 소통, 모션 캡처 운동 게임 (상용 운영)",
     name: "닥터메타",
     client: "한국스마트헬스케어협회",
     duty: "Project Leader",
@@ -150,15 +155,27 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
       "[MX Studio](/projects/mx-studio)로 제작한 3D 웹 컴포넌트 산출물을 활용해 웹앱 개발",
       "React 기반의 웹 앱과 Unity 앱 연동 설계/개발 리드",
+      "Three.js 기반 웹 메타 공간 구축 — 의료진 컨퍼런스와 환자 소통",
+      "웹캠 모션 캡처 기반 환자 운동 게임 제공",
       "관리자 페이지 및 권한 기능 설계/개발 리드",
-      "내부 Beta test 진행 중 ([https://healthcare.drmeta.kr/](https://healthcare.drmeta.kr/), [https://web.drmeta.kr/](https://web.drmeta.kr/))",
+      "전국 암센터에서 상용 운영 ([https://healthcare.drmeta.kr/](https://healthcare.drmeta.kr/), [https://web.drmeta.kr/](https://web.drmeta.kr/))",
     ],
     roles: ["System Engineer, Project Manager"],
     skills: list("Docker, Git, HTML, JavaScript, TypeScript, AWS, Unity"),
+    caseStudy: {
+      problem:
+        "전국 암센터의 의료진과 환자가 교육·컨퍼런스·소통을 위해 별도 설치 없이 웹에서 함께 모일 수 있는 공간이 필요했습니다.",
+      decisions: [
+        "Three.js로 의료진 컨퍼런스와 환자 소통을 위한 웹 메타 공간을 구축하고, 멀티플레이 서버에는 [MVS](/projects/mvs) 연구 기술을 활용",
+        "Unity 콘텐츠와 [MX Studio](/projects/mx-studio)의 3D 컴포넌트 산출물을 React 웹앱에 심리스하게 통합",
+        "환자를 위한 웹캠 모션 캡처 기반 운동 게임 제공",
+      ],
+      outcome: { label: "결과", text: "전국 암센터에서 상용화되어 운영되었습니다. ([web.drmeta.kr](http://web.drmeta.kr/))" },
+    },
   },
   {
     slug: "meta-cro",
-    summary: "MX Studio의 3D 컴포넌트 산출물로 개발한 의료 전문가 교육 플랫폼",
+    summary: "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼 (상용 운영)",
     name: "Meta CRO",
     client: "한국스마트헬스케어협회",
     duty: "Project Leader",
@@ -168,19 +185,30 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     domain: "한국스마트헬스케어협회/헬스케어",
     period: "2023.06 - 2025.01",
     tasks: [
-      "의료 전문가 교육 플랫폼 'M.CRO' 프로젝트에 참여",
+      "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼 'M.CRO' 프로젝트에 참여",
       "연구책임자로서 설계 및 개발 PM/PE 업무 수행",
       "개발자, QA로 구성된 TF팀 리드",
       "[MX Studio](/projects/mx-studio)로 제작한 3D 웹 컴포넌트 산출물을 활용해 웹앱 개발",
+      "Unity VR 교육 콘텐츠를 WebGL로 배포해 웹앱에 통합",
       "3D render engine library 설계/배포 (private npm 환경 구성)",
-      "상용화 운영 중 (https://www.crotraining.store/)",
+      "전국 암센터에서 상용 운영 (https://www.crotraining.store/)",
     ],
     roles: ["System Engineer, Project Manager"],
     skills: list("Docker, Git, HTML, JavaScript, TypeScript, AWS"),
+    caseStudy: {
+      problem:
+        "임상시험은 실제로 경험해 보기 전에는 절차를 익히기 어렵고, 기존 교육 자료로는 한계가 있었습니다. 3D 가상 시뮬레이션으로 실제 경험 전에 먼저 익히면 교육의 질은 높이고 비용과 시행착오는 줄일 수 있었습니다.",
+      decisions: [
+        "Unity로 임상시험 가상 시뮬레이션(VR) 콘텐츠를 만들고 WebGL로 배포해 웹앱에 통합",
+        "[MX Studio](/projects/mx-studio)의 3D 웹 컴포넌트 산출물로 웹앱 개발",
+        "3D 렌더 엔진 라이브러리를 설계해 private npm으로 배포",
+      ],
+      outcome: { label: "결과", text: "전국 암센터에서 상용화되어 운영되었습니다. ([crotraining.store](https://www.crotraining.store/))" },
+    },
   },
   {
     slug: "nenoonn",
-    summary: "React · React Native 크로스플랫폼 콘택트렌즈 온라인 마켓 플랫폼",
+    summary: "규제 샌드박스 실증특례로 처음 열린 콘택트렌즈 온라인 구매·배송 서비스 — 크로스플랫폼 앱",
     name: "내눈N",
     client: "픽셀로",
     duty: "Project Leader",
@@ -199,10 +227,22 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     ],
     roles: ["System Engineer, Project Manager"],
     skills: list("Docker, Git, HTML, JavaScript, TypeScript, Java, AWS, Android, IOS"),
+    caseStudy: {
+      problem:
+        "콘택트렌즈 온라인 판매는 원래 허용되지 않던 영역이라, 규제 샌드박스 실증특례를 받은 업체와 함께 국내에 없던 서비스를 처음부터 만들어야 했습니다. 사용자는 모바일을 비롯한 여러 플랫폼에서 접속하길 기대했습니다.",
+      decisions: [
+        "React·React Native로 core 소스 하나를 공유해 웹·Android·iOS 앱을 빠르게 제작",
+        "Android·iOS 심사 기준에 맞춘 빌드·배포 리드",
+      ],
+      outcome: {
+        label: "결과",
+        text: "국내 첫 콘택트렌즈 온라인 구매·배송 서비스를 출시해 상용 운영했습니다. ([nenoonn.mycafe24.com](https://nenoonn.mycafe24.com/))",
+      },
+    },
   },
   {
     slug: "gis-s-dcis",
-    summary: "GIS 기반 삼성 데이터 센터 정보 시스템",
+    summary: "연우테크놀러지와 공동 개발·납품한 GIS 기반 데이터센터 정보 시스템 (B2B)",
     name: "GIS S-DCIS",
     client: "삼성물산",
     duty: "Project Leader",
@@ -219,13 +259,24 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "GIS 데이터 기반의 map platform 구성을 위한 Openlayers 오픈소스 기술 연구",
       "공공 데이터 활용 및 정책 이슈 핸들링",
       "폐쇄망 소스 이관 및 On-Premise 환경 구축 시 생기는 이슈 트러블슈팅",
+      "연우테크놀러지 개발 연구원들과 공동 개발 후 납품",
     ],
     roles: ["System Engineer, Project Manager"],
     skills: list("Docker, Git, HTML, JavaScript, TypeScript, Java, AWS"),
+    caseStudy: {
+      problem:
+        "데이터센터 구축 사업의 대상지를 지도 기반으로 조사·분석할 정보 시스템이 필요했고, 폐쇄망·On-Premise 환경이라는 제약이 있었습니다.",
+      decisions: [
+        "건설 BIM 솔루션 기업 연우테크놀러지의 개발 연구원들과 공동 개발 체계로 진행",
+        "GeoServer·PostGIS로 공간함수 서버와 DB를 구축하고 OpenLayers 기반 지도 플랫폼 구성",
+        "폐쇄망 소스 이관과 On-Premise 환경 구축 이슈 해결",
+      ],
+      outcome: { label: "결과", text: "B2B 프로젝트로 공동 개발을 마치고 납품했습니다." },
+    },
   },
   {
     slug: "mvs",
-    summary: "멀티플레이를 위한 실시간 다중 접속 싱크 서버 연구",
+    summary: "실시간 다중 접속 싱크 서버 연구 — 닥터메타 의료진 컨퍼런스의 멀티플레이 서버로 활용",
     name: "MVS (Metaverse Server)",
     client: "티맥스메타에이아이",
     duty: "Project Leader",
@@ -239,29 +290,18 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "R&D 팀 리드하며 C++ 기반의 서버 엔진 기술 연구 및 개발",
       "Client Library 설계 (Javascript, C#)",
       "서비스 플로우 설계",
+      "연구 기술을 [닥터메타](/projects/dr-meta) 의료진 컨퍼런스의 멀티플레이 서버로 적용",
     ],
     roles: ["Project Manager"],
     skills: list("Docker, Git, C++, AWS, Javascript, C#"),
-  },
-  {
-    slug: "scon",
-    summary: "블록체인 기반의 스마트 컨트렉트 플랫폼 연구",
-    name: "Scon (Smart Contract)",
-    client: "티맥스메타에이아이",
-    duty: "Project Leader",
-    keywords: list("Blockchain, Web3, React, Spring"),
-    notionDate: { start: "2023-06-01", end: "2024-06-15" },
-    fullName: "Scon (Smart Contract)",
-    domain: "티맥스메타에이아이/Server engine",
-    period: "2023.01 - 2024.09",
-    tasks: [
-      "블록체인 기반의 스마트 컨트렉트 플랫폼 연구",
-      "R&D 팀 리드하며 이더리움, Web3j 등 기술 연구 및 개발",
-      "Web 기반 Prototype 기획",
-      "서비스 플로우 설계",
-    ],
-    roles: ["Project Manager"],
-    skills: list("Git, JavaScript, Java"),
+    caseStudy: {
+      problem: "메타버스 서비스에서 여러 사용자가 같은 공간에 동시에 접속해 상호작용하려면 실시간 동기화 서버가 필요했습니다.",
+      decisions: ["C++ 기반 서버 엔진 기술 연구·개발", "JavaScript·C# 클라이언트 라이브러리와 서비스 플로우 설계"],
+      outcome: {
+        label: "결과",
+        text: "연구 기술이 [닥터메타](/projects/dr-meta) 의료진 컨퍼런스의 멀티플레이 서버로 시스템 내부에서 활용되었습니다.",
+      },
+    },
   },
 ];
 
