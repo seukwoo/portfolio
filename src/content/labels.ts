@@ -12,6 +12,10 @@ export const labels = {
   profile: {
     contact: "연락처",
     documents: "PDF",
+    downloadResume: "이력서 PDF 다운로드",
+    resumePdfNote: "이 페이지 내용으로 만든 최신 이력서",
+    resumePdfFileName: "이석우_이력서.pdf",
+    printFooter: (url: string) => `이 이력서는 ${url} 의 내용으로 생성되었습니다.`,
     lastUpdated: "Last updated",
     photoAlt: (name: string) => `${name} 프로필 사진`,
   },

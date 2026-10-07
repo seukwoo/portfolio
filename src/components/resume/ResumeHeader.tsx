@@ -2,14 +2,14 @@ import Image from "next/image";
 import { labels } from "@/content";
 import { mailHref } from "@/lib/links";
 import type { DocumentItem, Profile } from "@/types/content";
-import { AppLink, Card, Eyebrow, IconImage } from "@/components/ui";
+import { Card, Eyebrow, IconImage } from "@/components/ui";
 
-type Props = { greeting: string; profile: Profile; documents: DocumentItem[]; lastUpdated: string };
+type Props = { greeting: string; profile: Profile; resumePdf: DocumentItem; lastUpdated: string };
 
-/** Top of /resume: photo, name, contact, and the downloadable PDFs. */
-export function ResumeHeader({ greeting, profile, documents, lastUpdated }: Props) {
+/** Top of /resume: photo, name, contact, and the resume PDF generated from this page. */
+export function ResumeHeader({ greeting, profile, resumePdf, lastUpdated }: Props) {
   return (
-    <Card className="grid gap-8 p-6 sm:p-8 md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_minmax(0,320px)]">
+    <Card className="grid gap-8 p-6 sm:p-8 md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] lg:items-center">
       <Image
         src={profile.photo.src}
         width={profile.photo.width}
@@ -36,20 +36,17 @@ export function ResumeHeader({ greeting, profile, documents, lastUpdated }: Prop
       </div>
 
       <div className="md:col-span-2 lg:col-span-1">
-        <p className="mb-2 text-xs font-semibold text-muted">{labels.profile.documents}</p>
-        <ul className="grid gap-1 text-sm sm:grid-cols-2 lg:grid-cols-1">
-          {documents.map((doc) => (
-            <li key={doc.id}>
-              <AppLink href={doc.href} className="flex items-center gap-3 rounded-lg py-1.5 hover:text-accent">
-                <IconImage src="/images/web.svg" />
-                <span className="flex-1">{doc.label}.pdf</span>
-                <span aria-hidden className="text-muted">
-                  ↗
-                </span>
-              </AppLink>
-            </li>
-          ))}
-        </ul>
+        <a
+          href={resumePdf.href}
+          download={labels.profile.resumePdfFileName}
+          className="inline-flex items-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-ink transition hover:-translate-y-0.5"
+        >
+          <svg viewBox="0 0 24 24" className="size-4" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+            <path d="M12 4v11M7 10l5 5 5-5M5 20h14" />
+          </svg>
+          {labels.profile.downloadResume}
+        </a>
+        <p className="mt-2 text-xs text-muted">{labels.profile.resumePdfNote}</p>
       </div>
     </Card>
   );

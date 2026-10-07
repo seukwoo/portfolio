@@ -15,10 +15,10 @@ import {
   activities,
   certifications,
   degrees,
-  documents,
   experiences,
   introduction,
   profile,
+  resumePdf,
   resumeSections,
   sections,
   site,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <Container className="pt-10 pb-24 sm:pt-14">
-      <ResumeHeader greeting={site.greeting} profile={profile} documents={documents} lastUpdated={site.lastUpdated} />
+      <ResumeHeader greeting={site.greeting} profile={profile} resumePdf={resumePdf} lastUpdated={site.lastUpdated} />
 
       <div className="mt-10 lg:mt-16 lg:grid lg:grid-cols-[180px_1fr] lg:gap-14">
         {/* Sticky on the aside (not the nav) so it sticks for the whole page height on mobile too. */}

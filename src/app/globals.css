@@ -95,6 +95,13 @@ body {
   color: var(--accent-ink);
 }
 
+/* Paper is white: the resume PDF and any printout drop the beige page background */
+@media print {
+  body {
+    background: #ffffff;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

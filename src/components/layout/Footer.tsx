@@ -5,7 +5,7 @@ type Props = { owner: string; lastUpdated: string };
 
 export function Footer({ owner, lastUpdated }: Props) {
   return (
-    <footer className="border-t border-line">
+    <footer className="border-t border-line print:hidden">
       <Container className="flex flex-col gap-3 py-10 text-sm text-muted sm:flex-row sm:items-center sm:justify-between">
         <p>
           © {new Date().getFullYear()} {owner} · {labels.profile.lastUpdated}: {lastUpdated}

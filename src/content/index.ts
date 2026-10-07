@@ -5,7 +5,7 @@ export { degrees } from "./education";
 export { experiences } from "./experience";
 export { featuredProjectSlugs, hero, latestWork, leadership, metrics, workStyle } from "./home";
 export { labels } from "./labels";
-export { about, documents, introduction, profile, socialLinks } from "./profile";
+export { about, introduction, profile, resumePdf, socialLinks } from "./profile";
 export { projects } from "./projects";
 export { navigation, resumeSections, sections, site } from "./site";
 export { skillGroups } from "./skills";

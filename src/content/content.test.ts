@@ -24,7 +24,7 @@ describe("content", () => {
   });
 
   it("points every document and the profile photo at an existing file", () => {
-    for (const doc of content.documents) expect(existsSync(publicFile(doc.href)), doc.href).toBe(true);
+    expect(existsSync(publicFile(content.resumePdf.href)), "run pnpm resume:pdf").toBe(true);
     expect(existsSync(publicFile(content.profile.photo.src))).toBe(true);
   });
 

@@ -62,14 +62,8 @@ export const about: About = {
   ],
 };
 
-export const documents: DocumentItem[] = [
-  { id: "resume", label: "이석우 이력서", href: "/docs/resume.pdf" },
-  { id: "portfolio", label: "포트폴리오_이석우", href: "/docs/portfolio.pdf" },
-  { id: "career-presentation", label: "경력소개PT_이석우", href: "/docs/career-presentation.pdf" },
-  { id: "career-description", label: "경력기술서_이석우", href: "/docs/career-description.pdf" },
-  { id: "research-introduction", label: "학_석사 연구소개_이석우", href: "/docs/research-introduction.pdf" },
-  { id: "masters-thesis", label: "석사논문_이석우", href: "/docs/masters-thesis.pdf" },
-];
+/** Generated from the /resume content by `pnpm resume:pdf` — never edited by hand. */
+export const resumePdf: DocumentItem = { id: "resume", label: "이석우 이력서", href: "/docs/resume.pdf" };
 
 export const socialLinks: LinkItem[] = [
   {

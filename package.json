@@ -9,7 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "typecheck": "tsc --noEmit",
-    "assets": "node scripts/prepare-assets.mjs"
+    "assets": "node scripts/prepare-assets.mjs",
+    "resume:pdf": "next build && node scripts/generate-resume-pdf.mjs"
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

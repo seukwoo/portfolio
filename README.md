@@ -11,7 +11,8 @@ pnpm test        # 콘텐츠 무결성 + 유틸 테스트
 pnpm typecheck   # 타입 검사
 pnpm lint
 pnpm build       # 프로덕션 빌드
-pnpm assets      # notion-export/ 원본 → public/ 이미지·PDF 재생성
+pnpm assets      # notion-export/ 원본 → public/ 이미지 재생성
+pnpm resume:pdf  # 이력서 PDF(public/docs/resume.pdf)를 /resume 콘텐츠로 재생성 (로컬 Chrome 필요)
 ```
 
 `main`에 push하면 Vercel이 자동으로 배포합니다. push 전에 `pnpm test && pnpm build`를 권장합니다.
@@ -55,7 +56,7 @@ scripts/
 | 버튼·필드명 문구 수정 | `src/content/labels.ts` |
 | 섹션 제목/순서 변경 | 제목: `src/content/site.ts` · 순서: `src/app/page.tsx` |
 | 프로젝트 추가 | `projects.ts`에 항목 추가 → `public/projects/<slug>/01.webp…` 이미지 추가 (또는 `notion-assets.config.json`에 매핑 후 `pnpm assets`) |
-| PDF 교체 | `public/docs/`의 파일 교체 (목록은 `profile.ts`의 `documents`) |
+| 이력서 PDF | 콘텐츠를 고친 뒤 `pnpm resume:pdf` 실행 → 생성된 `public/docs/resume.pdf`를 함께 커밋. 레이아웃은 `components/resume/ResumePrint.tsx` (`/resume/print`) |
 | 색상·폰트 | `src/app/globals.css`의 `:root` 토큰 (다크 모드 포함) |
 | 새 섹션 추가 | `components/sections/`에 `<Section meta=…>`로 감싼 컴포넌트 작성 → `site.ts`에 제목 추가 → `page.tsx`에 배치 |
 
