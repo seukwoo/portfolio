@@ -1,51 +1,75 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif">
-  <title>AI 기반 코드 생성 시스템 흐름</title>
-  <rect width="1200" height="750" fill="#f6f3ee"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750">
+  <title>UI 코드 자동화 — 디자인에서 컴포넌트 코드로</title>
+  <!-- Card cover only: no text (it is shown small). Light tone so it differs from the dark Decision Graph cover. -->
+  <!-- Our own illustration of design → code; nothing from the product or internal data. -->
+  <rect width="1200" height="750" fill="#f3ede4"/>
   <defs>
-    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
-      <path d="M0 0L10 5L0 10z" fill="#b8b0a5"/>
-    </marker>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#e7dfd3" stroke-width="1.5"/>
+    </pattern>
   </defs>
-  <!-- Card cover: the four-step flow only (the card overlays its own headline at the bottom) -->
-  <g transform="translate(0,-180)">
-  <!-- 01 data -->
-  <rect x="80" y="260" width="220" height="250" rx="22" fill="#ffffff" stroke="#e2dcd2" stroke-width="2"/>
-  <text x="104" y="300" font-size="15" fill="#6b6660" letter-spacing="2">01 / DATA</text>
-  <text x="104" y="344" font-size="24" font-weight="700" fill="#18181b">사내 디자인</text>
-  <text x="104" y="376" font-size="24" font-weight="700" fill="#18181b">데이터</text>
-  <text x="104" y="420" font-size="17" fill="#6b6660">축적된 디자인을</text>
-  <text x="104" y="446" font-size="17" fill="#6b6660">학습 데이터로 정제</text>
+  <rect width="1200" height="750" fill="url(#grid)"/>
 
-  <line x1="306" y1="385" x2="354" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Design: a phone screen -->
+  <g>
+    <rect x="150" y="40" width="270" height="470" rx="40" fill="#ffffff" stroke="#d6ccbf" stroke-width="3"/>
+    <rect x="240" y="58" width="90" height="12" rx="6" fill="#e4dbcf"/>
+    <rect x="178" y="92" width="214" height="104" rx="16" fill="#f6d9c8"/>
+    <circle cx="222" cy="144" r="22" fill="#eab597"/>
+    <rect x="178" y="214" width="150" height="14" rx="7" fill="#2a2622"/>
+    <rect x="178" y="238" width="190" height="10" rx="5" fill="#cfc5b8"/>
+    <!-- Repeated list rows, grouped into one component (dashed outline) -->
+    <rect x="168" y="266" width="234" height="176" rx="14" fill="none" stroke="#d9581f" stroke-width="3" stroke-dasharray="10 8"/>
+    <g>
+      <circle cx="202" cy="296" r="16" fill="#e4dbcf"/>
+      <rect x="228" y="286" width="120" height="10" rx="5" fill="#8f857a"/>
+      <rect x="228" y="302" width="80" height="8" rx="4" fill="#d6ccbf"/>
+      <circle cx="202" cy="352" r="16" fill="#e4dbcf"/>
+      <rect x="228" y="342" width="130" height="10" rx="5" fill="#8f857a"/>
+      <rect x="228" y="358" width="70" height="8" rx="4" fill="#d6ccbf"/>
+      <circle cx="202" cy="408" r="16" fill="#e4dbcf"/>
+      <rect x="228" y="398" width="110" height="10" rx="5" fill="#8f857a"/>
+      <rect x="228" y="414" width="90" height="8" rx="4" fill="#d6ccbf"/>
+    </g>
+    <rect x="178" y="458" width="214" height="36" rx="18" fill="#d9581f"/>
+  </g>
 
-  <!-- 02 models -->
-  <rect x="360" y="260" width="240" height="250" rx="22" fill="#fbe6da" stroke="#d9581f" stroke-width="2"/>
-  <text x="384" y="300" font-size="15" fill="#d9581f" letter-spacing="2">02 / MODEL</text>
-  <text x="384" y="344" font-size="24" font-weight="700" fill="#18181b">자체 학습 모델</text>
-  <text x="384" y="392" font-size="17" fill="#18181b">· 이미지 기반 이해</text>
-  <text x="384" y="420" font-size="17" fill="#18181b">· 레이아웃(구조) 기반 이해</text>
-  <text x="384" y="462" font-size="15" fill="#6b6660">코드 변환을 돕는 보조 모델</text>
+  <!-- Transform -->
+  <g>
+    <circle cx="510" cy="270" r="42" fill="#1d1a17"/>
+    <path d="M492 270 H 524 M512 256 L 527 270 L 512 284" fill="none" stroke="#f2814b" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 
-  <line x1="606" y1="385" x2="654" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
+  <!-- Code: component code in an editor -->
+  <g>
+    <rect x="600" y="70" width="470" height="400" rx="26" fill="#1d1a17"/>
+    <circle cx="634" cy="102" r="7" fill="#5a524a"/>
+    <circle cx="656" cy="102" r="7" fill="#5a524a"/>
+    <circle cx="678" cy="102" r="7" fill="#5a524a"/>
+    <!-- code lines: keyword / name / props, indented like a component -->
+    <rect x="636" y="140" width="70" height="14" rx="7" fill="#f2814b"/>
+    <rect x="716" y="140" width="150" height="14" rx="7" fill="#efe9e1"/>
+    <rect x="664" y="176" width="90" height="14" rx="7" fill="#9bb8a6"/>
+    <rect x="764" y="176" width="130" height="14" rx="7" fill="#8f857a"/>
+    <rect x="664" y="212" width="60" height="14" rx="7" fill="#f2814b"/>
+    <rect x="692" y="248" width="110" height="14" rx="7" fill="#efe9e1"/>
+    <rect x="812" y="248" width="90" height="14" rx="7" fill="#9bb8a6"/>
+    <rect x="720" y="284" width="140" height="14" rx="7" fill="#8f857a"/>
+    <rect x="720" y="320" width="100" height="14" rx="7" fill="#8f857a"/>
+    <rect x="692" y="356" width="80" height="14" rx="7" fill="#efe9e1"/>
+    <rect x="664" y="392" width="40" height="14" rx="7" fill="#f2814b"/>
+    <rect x="636" y="428" width="24" height="14" rx="7" fill="#efe9e1"/>
+    <!-- the generated component highlighted, matching the dashed group on the left -->
+    <rect x="680" y="238" width="236" height="134" rx="10" fill="none" stroke="#d9581f" stroke-width="3" stroke-dasharray="10 8"/>
+  </g>
 
-  <!-- 03 generation -->
-  <rect x="660" y="260" width="220" height="250" rx="22" fill="#ffffff" stroke="#e2dcd2" stroke-width="2"/>
-  <text x="684" y="300" font-size="15" fill="#6b6660" letter-spacing="2">03 / PIPELINE</text>
-  <text x="684" y="344" font-size="24" font-weight="700" fill="#18181b">코드 생성</text>
-  <text x="684" y="392" font-size="17" fill="#6b6660">룰 기반 모듈과</text>
-  <text x="684" y="418" font-size="17" fill="#6b6660">AI 모델 단계를</text>
-  <text x="684" y="444" font-size="17" fill="#6b6660">결합한 파이프라인</text>
-
-  <line x1="886" y1="385" x2="934" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <!-- 04 output -->
-  <rect x="940" y="260" width="180" height="250" rx="22" fill="#1d1a17"/>
-  <text x="964" y="300" font-size="15" fill="#f2814b" letter-spacing="2">04 / OUTPUT</text>
-  <text x="964" y="344" font-size="24" font-weight="700" fill="#efe9e1">컴포넌트</text>
-  <text x="964" y="376" font-size="24" font-weight="700" fill="#efe9e1">코드</text>
-  <text x="964" y="424" font-size="18" fill="#efe9e1">AOS</text>
-  <text x="964" y="452" font-size="18" fill="#efe9e1">iOS</text>
-  <text x="964" y="480" font-size="18" fill="#efe9e1">Web</text>
-
+  <!-- Several platforms from one design -->
+  <g>
+    <rect x="1090" y="120" width="70" height="70" rx="18" fill="#ffffff" stroke="#d6ccbf" stroke-width="3"/>
+    <rect x="1090" y="210" width="70" height="70" rx="18" fill="#ffffff" stroke="#d6ccbf" stroke-width="3"/>
+    <rect x="1090" y="300" width="70" height="70" rx="18" fill="#ffffff" stroke="#d6ccbf" stroke-width="3"/>
+    <circle cx="1125" cy="155" r="14" fill="#9bb8a6"/>
+    <rect x="1111" y="231" width="28" height="28" rx="6" fill="#f2814b"/>
+    <path d="M1125 318 L 1142 350 H 1108 Z" fill="#8f857a"/>
   </g>
 </svg>
