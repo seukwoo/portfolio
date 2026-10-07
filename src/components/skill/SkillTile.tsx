@@ -1,11 +1,11 @@
-import { Card } from "@/components/ui";
 import { SkillIcon } from "./SkillIcon";
 
+/** Icon + name on one line; sized to its label so names never break mid-word. */
 export function SkillTile({ name }: { name: string }) {
   return (
-    <Card className="flex aspect-square flex-col items-center justify-center gap-2 rounded-2xl p-3 text-center">
-      <SkillIcon name={name} />
-      <span className="text-xs font-medium">{name}</span>
-    </Card>
+    <span className="inline-flex items-center gap-2 rounded-xl border border-line bg-surface px-3 py-2 text-sm font-medium whitespace-nowrap">
+      <SkillIcon name={name} className="size-5 shrink-0" />
+      {name}
+    </span>
   );
 }

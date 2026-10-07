@@ -6,11 +6,11 @@ import { Section } from "./Section";
 export function SkillsSection({ meta, groups, bare }: { meta: SectionMeta; groups: SkillGroup[]; bare?: boolean }) {
   return (
     <Section meta={meta} bare={bare}>
-      <div className="grid gap-10 lg:grid-cols-3">
+      <div className="grid gap-8 md:grid-cols-2">
         {groups.map((group) => (
           <div key={group.type}>
             <h3 className="font-semibold">{group.type}</h3>
-            <Reveal className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-3">
+            <Reveal className="mt-3 flex flex-wrap gap-2">
               {group.items.map((name) => (
                 <div data-reveal key={name}>
                   <SkillTile name={name} />

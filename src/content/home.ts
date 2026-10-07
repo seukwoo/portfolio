@@ -44,8 +44,7 @@ export const latestWork: LatestWork = {
   href: routes.project("ui-code-ai"),
 };
 
-// 🟨 Third slot is temporary (MX Studio) until Decision Graph is added.
-export const featuredProjectSlugs = ["ui-code-ai", "alan", "mx-studio"];
+export const featuredProjectSlugs = ["ui-code-ai", "alan", "decision-graph", "mx-studio"];
 
 export const leadership: LeadershipBlock[] = [
   {

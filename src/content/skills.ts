@@ -1,9 +1,20 @@
-// Source: Notion "보유 스킬 (Skill)" database, grouped by Type in database order.
-// Skill Level / Description are empty in Notion.
+// 보유 스킬 — regrouped from the original Notion skill database by what the projects actually used.
+// Every item is backed by at least one project or experience entry.
 import type { SkillGroup } from "@/types/content";
 
 export const skillGroups: SkillGroup[] = [
-  { type: "프로그래밍", items: ["Cloud", "Docker", "Jenkins", "Python", "C/C++", "Java Script", "Java"] },
-  { type: "협업", items: ["Git", "Notion", "NAS", "Jira", "Redmine"] },
-  { type: "운영 체제", items: ["Window", "Linux", "IOS", "Android"] },
+  {
+    type: "AI · LLM",
+    items: ["Python", "PyTorch", "LLM API", "LangGraph", "MCP", "RAG", "Computer Vision"],
+  },
+  {
+    type: "백엔드 · 인프라",
+    items: ["Node.js", "FastAPI", "Java · Spring", "C/C++", "Docker", "Jenkins", "AWS", "Azure"],
+  },
+  {
+    type: "프론트엔드 · 크로스플랫폼",
+    items: ["TypeScript", "JavaScript", "React", "React Native", "Three.js", "Unity"],
+  },
+  { type: "협업 · 분석", items: ["Git", "Jira", "Notion", "Figma", "Google Analytics", "Amplitude"] },
+  { type: "플랫폼", items: ["Windows", "Linux", "iOS", "Android"] },
 ];
