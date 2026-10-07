@@ -41,7 +41,7 @@ yarn-error.log*
 next-env.d.ts
 
 # raw Notion export backup (originals, not deployed)
-/notion-export/
+/notion-export
 
 # personal feedback notes (not published)
 /feedback.md
