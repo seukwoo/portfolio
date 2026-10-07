@@ -73,6 +73,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "LLM 기반 AI 앱 서비스 기능 기획, 일정, 리스크 관리",
       "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 독자 개발",
       "슬라이드 생성 기능: 조사·기획 단계부터 프로젝트 주도",
+      "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭",
+      "백오피스 내부 운영 툴 개발",
       "결제 시스템 프로세스 및 상품 유료화 정책 수립",
       "상용화 운영 중 ([https://myalan.ai/](https://myalan.ai/))",
     ],
@@ -88,7 +90,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "무료 서비스를 유료 상용 서비스로 전환해 운영 ([myalan.ai](https://myalan.ai/))",
+        text: "딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 무료 서비스를 유료 상용 서비스로 전환했으며, 운영을 위한 백오피스 내부 툴까지 개발했습니다. ([myalan.ai](https://myalan.ai/))",
       },
     },
     skills: list("GPT, Gemini, MCP, Notion, Google Analytics, Git, Azure, Figma, MS Docs, Slashpage"),
