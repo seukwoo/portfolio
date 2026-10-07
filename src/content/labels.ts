@@ -58,12 +58,12 @@ export const labels = {
   },
   home: {
     metricsLabel: "주요 지표",
-    latestWorkCta: "프로젝트 보기 ↗",
+    latestWorkCta: "사례 보기 ↗",
   },
   contact: {
     eyebrow: "Contact",
-    title: "함께 이야기 나눠요",
-    description: "개발 조직 리딩, AI 제품 개발에 관한 이야기는 이메일로 편하게 연락 주세요.",
+    title: "이야기 나눠요",
+    description: "AI를 실제 서비스로 옮기는 고민, 개발 조직을 꾸리는 고민이라면 편하게 연락 주세요.",
     mailSubject: "[포트폴리오] 문의",
     copyHint: "클릭하면 복사",
     copyEmailLabel: (email: string) => `이메일 주소 ${email} 복사`,
@@ -71,6 +71,7 @@ export const labels = {
     copyFailed: "복사 실패",
   },
   activityKinds: { award: "수상", paper: "논문·학술", activity: "활동" },
+  studentActivities: (count: number) => `학생 시절 수상·활동 (2010–2013) · ${count}`,
   footer: {
     backToTop: "맨 위로 ↑",
   },

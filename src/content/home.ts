@@ -27,20 +27,20 @@ export const metrics: Metric[] = [
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
 
-// 🟨 Temporary: current main project. Swap to Decision Graph once its details are ready.
-// Confidential (current employer): describe the flow only — no model names, tools or pipeline specifics.
+// "How I build": the pipeline approach used in both UI code AI and Decision Graph, so it doesn't repeat a featured card.
+// Confidential (current employer): principles only — no model names, tools or pipeline specifics.
 export const latestWork: LatestWork = {
-  kicker: "Recently shipped",
-  title: "AI 기반 코드 생성 시스템",
-  summary: "PoC부터 정식 출시까지 — [ProtoPie MCP ↗](https://www.protopie.io/blog/protopie-mcp-official) (2026.10)",
+  kicker: "How I build",
+  title: "AI 파이프라인 설계 원칙",
+  summary: "[UI 코드 AI](/projects/ui-code-ai)와 [Decision Graph](/projects/decision-graph)에서 실제로 쓴 방식",
   layers: [
-    { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
-    { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 학습" },
-    { label: "03 / Pipeline", value: "룰 기반 모듈 + AI 모델 단계 결합" },
-    { label: "04 / Output", value: "React · Flutter · SwiftUI 등 7개 프레임워크 코드" },
+    { label: "01 / Split", value: "룰로 풀 수 있는 건 룰로, 나머지만 AI 모델 단계로" },
+    { label: "02 / Route", value: "싼 모델이 먼저 거르고, 판단만 고성능 모델에" },
+    { label: "03 / Ground", value: "결과엔 원문 근거를, 확정은 사람이" },
+    { label: "04 / Measure", value: "정답 예제·골든셋과 비용으로 판단" },
   ],
-  footnote: "스튜디오씨드코리아 · 2026.01 – 2026.10",
-  href: routes.project("ui-code-ai"),
+  footnote: "골든셋 신뢰도 80%+ · 실행 비용 $10.2 → $7.6",
+  href: routes.project("decision-graph"),
 };
 
 /** Which projects are featured; they're shown newest first (by period), not in this order. */

@@ -1,7 +1,7 @@
 import { ActivityItem, CertificationCard, DegreeCard } from "@/components/credentials";
 import { Reveal } from "@/components/motion";
 import { labels } from "@/content";
-import { groupActivities } from "@/lib/activities";
+import { groupActivities, studentActivities } from "@/lib/activities";
 import type { Activity, Certification, Degree, SectionMeta } from "@/types/content";
 import { Section } from "./Section";
 
@@ -20,6 +20,7 @@ export function DegreesSection({ meta, degrees, bare }: { meta: SectionMeta; deg
 }
 
 export function ActivitiesSection({ meta, activities, bare }: { meta: SectionMeta; activities: Activity[]; bare?: boolean }) {
+  const student = studentActivities(activities);
   return (
     <Section meta={meta} bare={bare}>
       <div className="space-y-10">
@@ -35,6 +36,21 @@ export function ActivitiesSection({ meta, activities, bare }: { meta: SectionMet
             </ol>
           </Reveal>
         ))}
+        {student.length > 0 && (
+          <details className="group">
+            <summary className="cursor-pointer list-none text-sm font-semibold text-muted hover:text-accent">
+              <span className="mr-1.5 inline-block transition-transform group-open:rotate-90">▸</span>
+              {labels.studentActivities(student.length)}
+            </summary>
+            <ol className="mt-3 divide-y divide-line border-y border-line">
+              {student.map((activity) => (
+                <li key={activity.title}>
+                  <ActivityItem activity={activity} />
+                </li>
+              ))}
+            </ol>
+          </details>
+        )}
       </div>
     </Section>
   );

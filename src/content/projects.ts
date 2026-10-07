@@ -100,7 +100,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "연구 조직에서 시험 운영하던 서비스를 상용화하고 수익화까지 리드했습니다. 딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 유료 상용 서비스로 전환했으며, 운영을 위한 백오피스 내부 툴까지 개발했습니다. ([myalan.ai](https://myalan.ai/))",
+        text: "연구 조직에서 시험 운영하던 서비스를 상용화하고 수익화까지 리드했습니다. 딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 서비스의 첫 유료 매출을 만들었고, 이를 바탕으로 엔터프라이즈 상품을 기획했습니다. 이 기반은 이후 대학교 계약 매출로 이어졌습니다. ([myalan.ai](https://myalan.ai/))",
       },
     },
     skills: list("GPT, Gemini, MCP, Notion, Google Analytics, Git, Azure, Figma, MS Docs, Slashpage"),

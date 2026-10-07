@@ -142,6 +142,8 @@ export type ActivityKind = "award" | "paper" | "activity";
 
 export type Activity = {
   kind: ActivityKind;
+  /** From student years: folded on the web, left out of the PDF. */
+  student?: boolean;
   title: string;
   date: string;
   lines: string[];
