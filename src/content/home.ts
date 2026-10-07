@@ -33,7 +33,7 @@ export const metrics: Metric[] = [
 export const latestWork: LatestWork = {
   kicker: "Recently shipped",
   title: "AI 기반 코드 생성 시스템",
-  summary: "PoC부터 정식 출시까지 — ProtoPie MCP (2026.10)",
+  summary: "PoC부터 정식 출시까지 — [ProtoPie MCP ↗](https://www.protopie.io/blog/protopie-mcp-official) (2026.10)",
   layers: [
     { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
     { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 학습" },

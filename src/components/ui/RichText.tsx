@@ -1,3 +1,4 @@
+import { cn } from "@/lib/cn";
 import { parseRichText } from "@/lib/rich-text";
 import { AppLink } from "./AppLink";
 
@@ -11,7 +12,11 @@ export function RichText({ text, baseUrl }: { text: string; baseUrl?: string }) 
       <AppLink
         key={i}
         href={baseUrl && token.href.startsWith("/") ? baseUrl + token.href : token.href}
-        className="break-all text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+        // Only a bare URL may break anywhere; a labeled link keeps its words whole.
+        className={cn(
+          "text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent",
+          token.label === token.href && "break-all",
+        )}
       >
         {token.label}
       </AppLink>
