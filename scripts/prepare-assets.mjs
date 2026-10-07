@@ -35,7 +35,9 @@ for (const { group, file } of manifest) {
 
 await mkdir(path.join(PUBLIC, "images"), { recursive: true });
 const profile = await sharp(path.join(SRC, config.profilePhoto))
-  .webp({ quality: 90 })
+  .extract(config.profilePhotoCrop) // square crop for the round avatar
+  .resize(600, 600)
+  .webp({ quality: 88 })
   .toFile(path.join(PUBLIC, "images/profile.webp"));
 await copyFile(path.join(SRC, config.socialPreview), path.join(ROOT, "src/app/opengraph-image.png"));
 for (const icon of config.icons) {

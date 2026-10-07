@@ -10,6 +10,20 @@ export const experiences: Experience[] = [
     tenure: "2026.01.06 - 현재",
     projects: [
       {
+        role: "설계·개발 (1인)",
+        productLabel: "사내 도구",
+        product: "[Decision Graph](/projects/decision-graph)",
+        period: "2026.08 -",
+        title: "의사결정 추출 LLM 파이프라인",
+        subtitle: "(Slack·Notion → 근거 있는 결정 기록)",
+        details: [
+          "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
+          "단계별 모델 분리(분류: 경량 모델, 추출·검증: 메인 모델)를 회귀 검사 비교로 결정",
+          "요청별 시간·비용을 기록해 병목을 찾고 호출 구조 개선 — 같은 데이터 기준 1,289회·$10.2 → 336회·$7.6, 증분 실행 30회·$0.7, 첫 결과 16분 → 8초",
+          "비용 상한 평가 실행기와 회귀 검사 23개로 품질 관리",
+        ],
+      },
+      {
         role: "Head of Product Dev Team",
         product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) 정식 출시",
         title: "AI 기반 코드 생성 시스템",
@@ -21,21 +35,8 @@ export const experiences: Experience[] = [
           "이미지 기반·레이아웃(구조) 기반 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
           "데이터 정제부터 학습·배포까지 이어지는 MLOps 파이프라인 설계",
           "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
+          "최근 1년 내 실제 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
           "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 ProtoPie MCP로 정식 출시 (Dev View · Code MCP, 7개 프레임워크 코드 생성 지원)",
-        ],
-      },
-      {
-        role: "설계·개발 (1인)",
-        productLabel: "사내 도구",
-        product: "[Decision Graph](/projects/decision-graph)",
-        period: "2026.08 -",
-        title: "의사결정 추출 LLM 파이프라인",
-        subtitle: "(Slack·Notion → 근거 있는 결정 기록)",
-        details: [
-          "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
-          "단계별 모델 분리(분류: 경량 모델, 추출·검증: 메인 모델)를 회귀 검사 비교로 결정",
-          "텔레메트리로 병목 측정 후 호출 구조 개선 — 같은 데이터 기준 1,289회·$10.2 → 336회·$7.6, 증분 실행 30회·$0.7, 첫 결과 16분 → 8초",
-          "비용 상한 평가 실행기와 회귀 검사 23개로 품질 관리",
         ],
       },
     ],

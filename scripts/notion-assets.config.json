@@ -20,7 +20,7 @@
       "04"
     ]
   },
-  "profilePhoto": "엔젤포토_반명함_02.jpg",
+  "profilePhoto": "../extra/profile-picture.jpg",
   "socialPreview": "SocialMediaPreviewImage.png",
   "icons": [
     "mail.svg",
@@ -29,5 +29,11 @@
   "screenshot": {
     "maxWidth": 1920,
     "quality": 82
+  },
+  "profilePhotoCrop": {
+    "left": 100,
+    "top": 150,
+    "width": 1300,
+    "height": 1300
   }
 }

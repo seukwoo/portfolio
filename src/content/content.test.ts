@@ -33,6 +33,11 @@ describe("content", () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
+  it("lists projects newest first", () => {
+    const starts = content.projects.map((p) => p.period.split("-")[0].trim());
+    expect(starts).toEqual([...starts].sort().reverse());
+  });
+
   it("features only existing projects", () => {
     const slugs = new Set(content.projects.map((p) => p.slug));
     for (const slug of content.featuredProjectSlugs) expect(slugs.has(slug), slug).toBe(true);

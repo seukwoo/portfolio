@@ -10,7 +10,7 @@ import { routes } from "@/lib/routes";
 export default function HomePage() {
   return (
     <>
-      <HomeHero hero={hero} photo={profile.photo} aside={<LatestWorkCard work={latestWork} />} />
+      <HomeHero hero={hero} photo={profile.photo} feature={<LatestWorkCard work={latestWork} />} />
       <ProofStrip metrics={metrics} />
       <Section
         meta={sections.featured}

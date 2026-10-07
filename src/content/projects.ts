@@ -30,6 +30,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
       "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
+      "최근 1년 내 실제 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
       "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
@@ -53,8 +54,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "직접 개발한 코어 파이프라인(PoC)에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시되었고 Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
-        note: "반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
+        text: "PoC를 개발하며 최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 생성 결과를 검증했고, 80% 이상의 신뢰도를 확인했습니다. 이 코어 파이프라인에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시했습니다. Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
+        note: "신뢰도 검증은 프로젝트 1건 기준이며, 여러 프로젝트로 넓힌 검증은 아직 진행하지 못했습니다. 반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
       },
     },
   },
@@ -121,7 +122,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 인용 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
       "분석 단위 분할 → 1차 분류(경량 모델) → 결정 추출 → 근거 검증(코드 + 모델) → 중복·관계 분석의 다단계 파이프라인 설계",
       "같은 데이터·같은 회귀 검사로 모델을 비교해 단계별 모델 선택 (분류: 경량 모델, 추출·검증: 메인 모델)",
-      "요청별 텔레메트리(지연·대기·재시도·캐시 적중·토큰·비용)로 병목을 측정하고 호출 구조 최적화",
+      "요청마다 지연·대기·재시도·캐시 적중·토큰·비용을 기록해 병목을 찾고 호출 구조 최적화",
       "콘텐츠 해시 캐시와 증분 재분석, 대화·스레드 단위 배치, 문장 번호 인용, 단계를 겹쳐 실행하는 스케줄러 구현",
       "비용 상한이 있는 평가 실행기, 회귀 검사 23개, 합성 데이터셋, 제외 후보 검토 시트로 품질 관리",
     ],
@@ -135,7 +136,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
         "결정은 Slack과 Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어려웠습니다. LLM으로 자동 추출하되, 근거 없는 결과와 비용·속도를 함께 관리해야 했습니다.",
       decisions: [
         "단계별로 모델을 나눔 — 1차 분류는 경량 모델, 추출·검증은 메인 모델. 같은 데이터·같은 회귀 검사로 비교해 결정 (경량 모델을 메인으로 쓰면 $2.2로 싸지만 24개 중 17개 통과, 메인 모델은 24/24)",
-        "요청별 텔레메트리로 병목을 측정한 뒤 대화 단위 추출(반복 맥락 91% 제거), 스레드 단위 배치, 콘텐츠 해시 캐시와 증분 재분석으로 호출 구조를 개선",
+        "요청마다 걸린 시간·비용을 기록해 병목을 찾은 뒤 대화 단위 추출(반복 맥락 91% 제거), 스레드 단위 배치, 콘텐츠 해시 캐시와 증분 재분석으로 호출 구조를 개선",
         "모델은 인용문 대신 문장 번호만 고르고, 코드와 별도 검증 호출이 원문 근거를 두 번 확인 — 실패하면 자동 확정 없이 사람 검토로",
         "비용 상한이 있는 평가 실행기와 회귀 검사 23개·합성 데이터셋으로 프롬프트·모델을 바꿀 때마다 품질 확인",
       ],
@@ -353,7 +354,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
 ];
 
-export const projects: Project[] = data.map(({ leadImages = [], ...p }) => ({
-  ...p,
-  images: p.images ?? [...leadImages, ...(projectImages[p.slug] ?? [])],
-}));
+/** "2026.08 -" → "2026.08"; string order matches date order for this format. */
+const periodStart = (period: string) => period.split("-")[0].trim();
+
+/** Newest first, by the start of `period` — the order in `data` above doesn't matter. */
+export const projects: Project[] = data
+  .map(({ leadImages = [], ...p }) => ({
+    ...p,
+    images: p.images ?? [...leadImages, ...(projectImages[p.slug] ?? [])],
+  }))
+  .sort((a, b) => periodStart(b.period).localeCompare(periodStart(a.period)));

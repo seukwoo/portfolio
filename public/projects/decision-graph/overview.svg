@@ -8,7 +8,7 @@
 <text x="84" y="470" font-size="14" fill="#6b6660" letter-spacing="2">ACROSS ALL STAGES</text>
 <text x="84" y="512" font-size="20" font-weight="700" fill="#18181b">캐시 · 증분 재분석</text>
 <text x="84" y="542" font-size="16" fill="#6b6660">콘텐츠 해시 캐시, 바뀐 부분만 다시 처리</text>
-<text x="444" y="512" font-size="20" font-weight="700" fill="#18181b">텔레메트리</text>
+<text x="444" y="512" font-size="20" font-weight="700" fill="#18181b">비용·지연 측정</text>
 <text x="444" y="542" font-size="16" fill="#6b6660">요청별 지연·재시도·캐시·토큰·비용 기록</text>
 <text x="804" y="512" font-size="20" font-weight="700" fill="#18181b">평가</text>
 <text x="804" y="542" font-size="16" fill="#6b6660">회귀 검사 23개 · 비용 상한 평가 실행기</text>

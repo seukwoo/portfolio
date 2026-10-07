@@ -44,7 +44,8 @@ export const latestWork: LatestWork = {
   href: routes.project("ui-code-ai"),
 };
 
-export const featuredProjectSlugs = ["ui-code-ai", "alan", "decision-graph", "mx-studio"];
+/** Which projects are featured; they're shown newest first (by period), not in this order. */
+export const featuredProjectSlugs = ["decision-graph", "ui-code-ai", "alan", "mx-studio"];
 
 export const leadership: LeadershipBlock[] = [
   {

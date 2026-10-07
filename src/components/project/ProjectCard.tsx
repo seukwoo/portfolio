@@ -36,7 +36,7 @@ export function ProjectCard({ project, priority }: { project: Project; priority?
             )}
             <p
               className={cn(
-                "relative p-6 text-2xl leading-snug font-semibold tracking-tight",
+                "relative p-5 text-xl leading-snug font-semibold tracking-tight lg:p-4 lg:text-lg",
                 cover && "text-white drop-shadow-sm",
               )}
             >
@@ -47,9 +47,9 @@ export function ProjectCard({ project, priority }: { project: Project; priority?
           </>
         )}
       </div>
-      <div className="flex flex-1 flex-col gap-2 p-5">
+      <div className="flex flex-1 flex-col gap-2 p-5 lg:p-4">
         <Eyebrow>{[project.client, project.period].filter(Boolean).join(" · ")}</Eyebrow>
-        <h3 className="text-lg font-semibold tracking-tight group-hover:text-accent">{project.name}</h3>
+        <h3 className="text-lg leading-snug font-semibold tracking-tight group-hover:text-accent lg:text-base">{project.name}</h3>
         <p className="text-sm leading-relaxed text-muted">{project.summary}</p>
         <div className="mt-auto pt-3">
           <ChipList items={project.keywords} />
