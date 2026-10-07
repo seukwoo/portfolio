@@ -3,9 +3,11 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { AppLink } from "@/components/ui";
-import { labels } from "@/content/labels";
+import { useLabels, useLang } from "@/i18n/client";
+import { localizePath } from "@/i18n/paths";
 import { cn } from "@/lib/cn";
 import type { LinkItem } from "@/types/content";
+import { LanguageSwitch } from "./LanguageSwitch";
 import { ThemeToggle } from "./ThemeToggle";
 
 const isActive = (pathname: string, href: string) =>
@@ -14,6 +16,8 @@ const isActive = (pathname: string, href: string) =>
 /** Inline menu on desktop; a ☰ toggle with a full-width panel on mobile. */
 export function NavMenu({ items }: { items: LinkItem[] }) {
   const pathname = usePathname();
+  const lang = useLang();
+  const labels = useLabels();
   const [open, setOpen] = useState(false);
 
   // Links close the panel on click; Escape closes it too.
@@ -29,9 +33,9 @@ export function NavMenu({ items }: { items: LinkItem[] }) {
       <AppLink
         key={item.href}
         href={item.href}
-        aria-current={isActive(pathname, item.href) ? "page" : undefined}
+        aria-current={isActive(pathname, localizePath(item.href, lang)) ? "page" : undefined}
         onClick={() => setOpen(false)}
-        className={cn(className, isActive(pathname, item.href) && "text-accent")}
+        className={cn(className, isActive(pathname, localizePath(item.href, lang)) && "text-accent")}
       >
         {item.label}
       </AppLink>
@@ -43,6 +47,7 @@ export function NavMenu({ items }: { items: LinkItem[] }) {
         {links("rounded-full px-3 py-1.5 hover:bg-surface-2")}
       </div>
 
+      <LanguageSwitch />
       <ThemeToggle />
 
       <button

@@ -1,10 +1,11 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { Reveal } from "@/components/motion";
 import { Card, Eyebrow, RichText } from "@/components/ui";
 import type { CaseStudy } from "@/types/content";
 
 /** Problem → key decisions → outcome, shown first on featured project pages. */
-export function ProjectCaseStudy({ caseStudy }: { caseStudy: CaseStudy }) {
+export async function ProjectCaseStudy({ caseStudy }: { caseStudy: CaseStudy }) {
+  const { labels } = await getContent();
   const l = labels.projects.caseStudy;
   return (
     <section aria-label={l.title}>

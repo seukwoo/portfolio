@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { labels } from "@/content/labels";
+import { useLabels } from "@/i18n/client";
 import { cn } from "@/lib/cn";
 
 type Status = "idle" | "copied" | "failed";
@@ -22,6 +22,7 @@ function copyWithSelection(text: string) {
 
 /** The email address itself; clicking copies it and shows "복사됨" beside it for two seconds. */
 export function CopyEmail({ email, className }: { email: string; className?: string }) {
+  const labels = useLabels();
   const [status, setStatus] = useState<Status>("idle");
 
   useEffect(() => {

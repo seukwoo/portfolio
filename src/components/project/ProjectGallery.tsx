@@ -6,7 +6,7 @@ import { A11y, Keyboard, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { labels } from "@/content/labels";
+import { useLabels } from "@/i18n/client";
 import type { ImageAsset } from "@/types/content";
 
 type Props = {
@@ -18,6 +18,7 @@ type Props = {
 
 /** Screenshot carousel. Slides are not links, so a missed click on the arrows never opens a new tab. */
 export function ProjectGallery({ images, title, extraSlide }: Props) {
+  const labels = useLabels();
   if (images.length === 0) return null;
   return (
     <div className="gallery overflow-hidden rounded-2xl border border-line bg-surface-2">

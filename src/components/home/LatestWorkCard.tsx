@@ -1,4 +1,4 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { AppLink, Card, Eyebrow, RichText } from "@/components/ui";
 import type { LatestWork } from "@/types/content";
 
@@ -6,7 +6,8 @@ import type { LatestWork } from "@/types/content";
  * Light card in the hero (e.g. "How I build" principles). The layers are a compact numbered list (label | value)
  * so the card stays about as tall as the hero text next to it.
  */
-export function LatestWorkCard({ work }: { work: LatestWork }) {
+export async function LatestWorkCard({ work }: { work: LatestWork }) {
+  const { labels } = await getContent();
   return (
     <Card className="p-6 shadow-sm sm:p-7">
       <Eyebrow latin className="flex items-center gap-2">

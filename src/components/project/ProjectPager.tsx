@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { cn } from "@/lib/cn";
 import { routes } from "@/lib/routes";
 import type { Project } from "@/types/content";
@@ -8,7 +8,8 @@ import { cardClass } from "@/components/ui";
 type Props = { prev?: Project; next?: Project };
 
 /** Previous / next project links at the bottom of a detail page. */
-export function ProjectPager({ prev, next }: Props) {
+export async function ProjectPager({ prev, next }: Props) {
+  const { labels } = await getContent();
   return (
     <nav className="grid gap-4 sm:grid-cols-2" aria-label={labels.projects.pagerLabel}>
       {prev ? <PagerLink project={prev} caption={labels.projects.prev} /> : <span />}

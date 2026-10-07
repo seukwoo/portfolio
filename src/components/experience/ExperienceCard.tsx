@@ -1,4 +1,4 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { experienceUnits, isGroup, tenureLength } from "@/lib/experience";
 import type { Experience, ExperienceUnit } from "@/types/content";
 import { Card, Eyebrow } from "@/components/ui";
@@ -8,7 +8,8 @@ import { ExperienceProjectItem } from "./ExperienceProjectItem";
  * One company: role/tenure on the left, the projects done there on the right.
  * A company group shows its total length on the left and each affiliate as a sub-heading on the right.
  */
-export function ExperienceCard({ experience }: { experience: Experience }) {
+export async function ExperienceCard({ experience }: { experience: Experience }) {
+  const { labels } = await getContent();
   const group = isGroup(experience);
   const units = experienceUnits(experience);
   return (
@@ -18,7 +19,7 @@ export function ExperienceCard({ experience }: { experience: Experience }) {
         {group ? (
           <>
             <h3 className="mt-2 text-xl font-bold">{experience.company}</h3>
-            <p className="mt-1 text-sm text-muted">{tenureLength(experience.tenure)}</p>
+            <p className="mt-1 text-sm text-muted">{tenureLength(experience.tenure, labels.experience.tenureLength)}</p>
           </>
         ) : (
           <>

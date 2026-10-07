@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { mailHref } from "@/lib/links";
 import type { DocumentItem, Profile } from "@/types/content";
 import { Card, Eyebrow, IconImage } from "@/components/ui";
@@ -7,26 +7,27 @@ import { Card, Eyebrow, IconImage } from "@/components/ui";
 type Props = { greeting: string; profile: Profile; resumePdf: DocumentItem; lastUpdated: string };
 
 /** Top of /resume: photo, name, contact, and the resume PDF generated from this page. */
-export function ResumeHeader({ greeting, profile, resumePdf, lastUpdated }: Props) {
+export async function ResumeHeader({ greeting, profile, resumePdf, lastUpdated }: Props) {
+  const { labels } = await getContent();
   return (
     <Card className="grid gap-8 p-6 sm:p-8 md:grid-cols-[auto_1fr] lg:grid-cols-[auto_1fr_auto] lg:items-center">
       <Image
         src={profile.photo.src}
         width={profile.photo.width}
         height={profile.photo.height}
-        alt={labels.profile.photoAlt(profile.nameKo)}
+        alt={labels.profile.photoAlt(profile.name)}
         priority
         className="size-32 rounded-full border-2 border-surface object-cover shadow-md ring-1 ring-line sm:size-40"
       />
 
       <div>
         <Eyebrow className="text-sm">{greeting}</Eyebrow>
-        <h1 className="mt-2 text-4xl font-bold tracking-tight">{profile.nameKo}</h1>
+        <h1 className="mt-2 text-4xl font-bold tracking-tight">{profile.name}</h1>
         <p className="mt-1 text-muted">
           {profile.position} · {profile.role}
         </p>
         <p className="mt-6 mb-2 text-xs font-semibold text-muted">{labels.profile.contact}</p>
-        <a href={mailHref(profile.email)} className="inline-flex items-center gap-3 text-sm break-all hover:text-accent">
+        <a href={mailHref(profile.email, labels.contact.mailSubject)} className="inline-flex items-center gap-3 text-sm break-all hover:text-accent">
           <IconImage src="/images/mail.svg" />
           {profile.email}
         </a>

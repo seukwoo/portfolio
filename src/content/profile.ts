@@ -4,8 +4,8 @@ import type { About, DocumentItem, LinkItem, Profile } from "@/types/content";
 import { profileImage } from "./images.generated";
 
 export const profile: Profile = {
-  nameKo: "이석우",
-  nameEn: "Seukwoo Lee",
+  name: "이석우",
+  altName: "Seukwoo Lee",
   role: "10년차 개발 리더",
   position: "AI Engineering Lead",
   email: "seukwoo88@gmail.com",

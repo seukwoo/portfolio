@@ -2,13 +2,17 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import * as content from "@/content";
+import { contentByLang } from "@/content/by-lang";
+import { LANGS } from "@/i18n/config";
 import { parseRichText } from "@/lib/rich-text";
 import { routes } from "@/lib/routes";
 
 const publicFile = (href: string) => path.join(process.cwd(), "public", href);
 
-describe("content", () => {
+// Every check runs for both languages.
+describe.each(LANGS)("content (%s)", (lang) => {
+  const content = contentByLang[lang];
+
   it("has unique project slugs", () => {
     const slugs = content.projects.map((p) => p.slug);
     expect(new Set(slugs).size).toBe(slugs.length);
@@ -85,5 +89,28 @@ describe("content", () => {
 
   it("does not publish a phone number", () => {
     expect(JSON.stringify(content)).not.toMatch(/01[016789]-?\d{3,4}-?\d{4}/);
+  });
+});
+
+describe("Korean and English content", () => {
+  const { ko, en } = contentByLang;
+
+  it("list the same projects, in the same order, with the same images", () => {
+    expect(en.projects.map((p) => p.slug)).toEqual(ko.projects.map((p) => p.slug));
+    expect(en.featuredProjectSlugs).toEqual(ko.featuredProjectSlugs);
+    for (const [i, project] of ko.projects.entries()) {
+      expect(en.projects[i].images.map((img) => img.src), project.slug).toEqual(project.images.map((img) => img.src));
+      expect(en.projects[i].period, project.slug).toBe(project.period);
+    }
+  });
+
+  it("use the same section anchors and resume table of contents", () => {
+    expect(Object.values(en.sections).map((s) => s.id)).toEqual(Object.values(ko.sections).map((s) => s.id));
+    expect(en.resumeSections.map((s) => s.id)).toEqual(ko.resumeSections.map((s) => s.id));
+  });
+
+  it("keep the same experience periods", () => {
+    const periods = (c: typeof ko) => JSON.stringify(c.experiences).match(/\d{4}\.\d{2}(\.\d{2})?/g);
+    expect(periods(en)).toEqual(periods(ko));
   });
 });

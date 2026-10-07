@@ -1,11 +1,12 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { BrandMark } from "@/components/ui";
 import type { LinkItem } from "@/types/content";
 import { Container } from "./Container";
 import { HomeLink } from "./HomeLink";
 import { NavMenu } from "./NavMenu";
 
-export function Header({ navigation }: { navigation: LinkItem[] }) {
+export async function Header({ navigation }: { navigation: LinkItem[] }) {
+  const { labels } = await getContent();
   return (
     <header className="sticky top-0 z-50 print:hidden border-b border-line/70 bg-bg/80 backdrop-blur-md">
       <Container className="flex h-16 items-center justify-between gap-4">

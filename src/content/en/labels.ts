@@ -1,6 +1,10 @@
 // Fixed UI copy (buttons, field names, alt text). Components read from here instead of inlining strings.
 
 export const labels = {
+  meta: {
+    titleTemplate: "%s | Seukwoo Lee",
+    resumeDescription: (name: string, position: string) => `${name} — ${position} resume: experience, projects, skills, education, awards`,
+  },
   nav: {
     home: "Home",
     openMenu: "Open menu",
@@ -8,6 +12,8 @@ export const labels = {
     main: "Main menu",
     toDark: "Switch to dark mode",
     toLight: "Switch to light mode",
+    languageSwitch: "한국어",
+    languageSwitchLabel: "View in Korean",
   },
   profile: {
     contact: "Contact",
@@ -27,6 +33,8 @@ export const labels = {
     tenure: "Tenure",
     defaultProductLabel: "Product",
     details: "Details",
+    tenureLength: (years: number, months: number) =>
+      [years && `${years} yr${years > 1 ? "s" : ""}`, months && `${months} mo${months > 1 ? "s" : ""}`].filter(Boolean).join(" ") || "under 1 mo",
   },
   projects: {
     featured: "Selected projects",

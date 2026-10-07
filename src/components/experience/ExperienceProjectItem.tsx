@@ -1,9 +1,10 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import type { ExperienceProject } from "@/types/content";
 import { RichText } from "@/components/ui";
 
 /** A project inside a company card; the bullet list collapses like Notion's "세부 내용" toggle. */
-export function ExperienceProjectItem({ project }: { project: ExperienceProject }) {
+export async function ExperienceProjectItem({ project }: { project: ExperienceProject }) {
+  const { labels } = await getContent();
   return (
     <>
       <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">

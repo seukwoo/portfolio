@@ -5,8 +5,8 @@ import type { HomeHero, LatestWork, LeadershipBlock, Metric, WorkStyle } from "@
 
 // Same thesis as the resume introduction (content/en/profile.ts).
 export const hero: HomeHero = {
-  name: "이석우",
-  nameEn: "Seukwoo Lee",
+  name: "Seukwoo Lee",
+  altName: "이석우",
   eyebrow: "AI Engineering Lead",
   headline: ["10 years leading development,", "from kickoff to commercial launch."],
   intro:
@@ -23,7 +23,7 @@ export const hero: HomeHero = {
 export const metrics: Metric[] = [
   { value: "10", unit: "years", label: "Software & AI development", note: "2017.01 – present" },
   { value: "50", unit: "people", label: "Largest team led", note: "Built and led a research division" },
-  { value: "5", unit: "services", label: "Commercial services built", note: "ProtoPie MCP · Alan · Dr.Meta · Meta.CRO · 내눈N" },
+  { value: "5", unit: "services", label: "Commercial services built", note: "ProtoPie MCP · Alan · Dr.Meta · Meta.CRO · NaenunN" },
   { value: "3", unit: "awards", label: "Group-wide awards", note: "Technology Innovation Award · Super Leader · Maestro" },
 ];
 

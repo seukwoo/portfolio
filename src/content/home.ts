@@ -6,7 +6,7 @@ import type { HomeHero, LatestWork, LeadershipBlock, Metric, WorkStyle } from "@
 // Same thesis as the resume introduction (content/profile.ts).
 export const hero: HomeHero = {
   name: "이석우",
-  nameEn: "Seukwoo Lee",
+  altName: "Seukwoo Lee",
   eyebrow: "AI Engineering Lead",
   headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
   intro:

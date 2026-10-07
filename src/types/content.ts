@@ -17,7 +17,8 @@ export type Site = {
 /** Home hero. `headline` renders as two lines, the second in the accent color. */
 export type HomeHero = {
   name: string;
-  nameEn: string;
+  /** The name in the other language, shown smaller next to it. */
+  altName: string;
   eyebrow: string;
   headline: [string, string];
   intro: string;
@@ -43,8 +44,10 @@ export type LeadershipBlock = { title: string; points: string[] };
 export type WorkStyle = { headline: string[]; paragraphs: string[] };
 
 export type Profile = {
-  nameKo: string;
-  nameEn: string;
+  /** Name as shown in this language (e.g. 이석우 / Seukwoo Lee). */
+  name: string;
+  /** The name in the other language, shown smaller next to it. */
+  altName: string;
   role: string;
   position: string;
   email: string;

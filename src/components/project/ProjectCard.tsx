@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { cn } from "@/lib/cn";
 import { routes } from "@/lib/routes";
 import type { Project } from "@/types/content";
@@ -7,7 +7,8 @@ import { cardClass, ChipList, Eyebrow } from "@/components/ui";
 import { ProjectCover } from "./ProjectCover";
 
 /** Featured project card: 16:10 cover with the punchline (same cover as the project page banner), then the summary. */
-export function ProjectCard({ project, priority }: { project: Project; priority?: boolean }) {
+export async function ProjectCard({ project, priority }: { project: Project; priority?: boolean }) {
+  const { labels } = await getContent();
   return (
     <Link
       href={routes.project(project.slug)}

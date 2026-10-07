@@ -1,4 +1,5 @@
-// Builds public/docs/resume.pdf from the /resume/print page, so the PDF always matches the site content.
+// Builds the resume PDFs from the print pages, so they always match the site content:
+//   /resume/print → public/docs/resume.pdf, /en/resume/print → public/docs/resume-en.pdf
 // Usage: pnpm resume:pdf   (runs `next build` first, then this script)
 // Needs Google Chrome installed locally (override the path with CHROME_PATH).
 import { spawn } from "node:child_process";
@@ -7,7 +8,10 @@ import os from "node:os";
 import path from "node:path";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const OUT = path.join(ROOT, "public/docs/resume.pdf");
+const PDFS = [
+  ["/resume/print", "public/docs/resume.pdf"],
+  ["/en/resume/print", "public/docs/resume-en.pdf"],
+];
 const APP_PORT = 4319;
 const DEBUG_PORT = 9349;
 const CHROME =
@@ -76,27 +80,31 @@ try {
       { name: "prefers-reduced-motion", value: "reduce" },
     ],
   });
-  await send("Page.navigate", { url: `http://localhost:${APP_PORT}/resume/print` });
-  for (let t = 0; t < 100 && !events.some((e) => e.method === "Page.loadEventFired"); t++) await sleep(100);
-  await send("Runtime.evaluate", { expression: "document.fonts.ready.then(() => true)", awaitPromise: true });
+  for (const [route, file] of PDFS) {
+    events.length = 0;
+    await send("Page.navigate", { url: `http://localhost:${APP_PORT}${route}` });
+    for (let t = 0; t < 100 && !events.some((e) => e.method === "Page.loadEventFired"); t++) await sleep(100);
+    await send("Runtime.evaluate", { expression: "document.fonts.ready.then(() => true)", awaitPromise: true });
 
-  const { data } = await send("Page.printToPDF", {
-    paperWidth: 8.27, // A4
-    paperHeight: 11.69,
-    marginTop: 0.55,
-    marginBottom: 0.55,
-    marginLeft: 0.6,
-    marginRight: 0.6,
-    printBackground: true,
-    displayHeaderFooter: true,
-    headerTemplate: "<span></span>",
-    footerTemplate:
-      '<div style="width:100%;font-size:8px;color:#888;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
-  });
-  await mkdir(path.dirname(OUT), { recursive: true });
-  await writeFile(OUT, Buffer.from(data, "base64"));
+    const { data } = await send("Page.printToPDF", {
+      paperWidth: 8.27, // A4
+      paperHeight: 11.69,
+      marginTop: 0.55,
+      marginBottom: 0.55,
+      marginLeft: 0.6,
+      marginRight: 0.6,
+      printBackground: true,
+      displayHeaderFooter: true,
+      headerTemplate: "<span></span>",
+      footerTemplate:
+        '<div style="width:100%;font-size:8px;color:#888;text-align:center"><span class="pageNumber"></span> / <span class="totalPages"></span></div>',
+    });
+    const out = path.join(ROOT, file);
+    await mkdir(path.dirname(out), { recursive: true });
+    await writeFile(out, Buffer.from(data, "base64"));
+    console.log(`Wrote ${file}`);
+  }
   ws.close();
-  console.log(`Wrote ${path.relative(ROOT, OUT)}`);
 } finally {
   stop();
   // Chrome may still be flushing its profile for a moment after being killed.

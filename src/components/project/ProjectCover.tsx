@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { cn } from "@/lib/cn";
 import type { Project } from "@/types/content";
 
@@ -22,7 +22,8 @@ const punchlineClass = {
  * Cover image with the two-line punchline over a bottom gradient — shared by the project card
  * and the project page banner. Without an image, the punchline sits on a plain surface.
  */
-export function ProjectCover({ project, className, size, sizes, priority }: Props) {
+export async function ProjectCover({ project, className, size, sizes, priority }: Props) {
+  const { labels } = await getContent();
   const cover = project.cardImage ?? project.images[0];
   const punchline = project.punchline;
   return (

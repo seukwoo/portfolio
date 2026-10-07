@@ -10,34 +10,31 @@ import {
   ProjectPager,
 } from "@/components/project";
 import { AppLink } from "@/components/ui";
-import { labels, projects } from "@/content";
+import { contentByLang } from "@/content/by-lang";
+import type { Lang } from "@/i18n/config";
 import { pageMetadata } from "@/lib/metadata";
 import { getAdjacentProjects, getProject } from "@/lib/projects";
 import { routes } from "@/lib/routes";
 
-export const dynamicParams = false;
+export const projectSlugs = (lang: Lang) => contentByLang[lang].projects.map((p) => ({ slug: p.slug }));
 
-export function generateStaticParams() {
-  return projects.map((p) => ({ slug: p.slug }));
-}
-
-export async function generateMetadata({ params }: PageProps<"/projects/[slug]">): Promise<Metadata> {
-  const project = getProject((await params).slug);
+export function projectMetadata(lang: Lang, slug: string): Metadata {
+  const project = getProject(contentByLang[lang], slug);
   if (!project) return {};
   // Shares use the site preview image; project screenshots are SVG/WebP, which most link previews can't show.
-  return pageMetadata(routes.project(project.slug), { title: project.name, description: project.summary });
+  return pageMetadata(lang, routes.project(project.slug), { title: project.name, description: project.summary });
 }
 
-export default async function ProjectPage({ params }: PageProps<"/projects/[slug]">) {
-  const { slug } = await params;
-  const project = getProject(slug);
+export function ProjectView({ lang, slug }: { lang: Lang; slug: string }) {
+  const c = contentByLang[lang];
+  const project = getProject(c, slug);
   if (!project) notFound();
-  const { prev, next } = getAdjacentProjects(slug);
+  const { prev, next } = getAdjacentProjects(c, slug);
 
   return (
     <Container className="space-y-10 pt-10 pb-24 sm:space-y-12 sm:pt-14">
       <AppLink href={routes.projects} className="inline-block text-sm text-muted hover:text-accent">
-        {labels.projects.backToList}
+        {c.labels.projects.backToList}
       </AppLink>
       <ProjectHeader project={project} />
       {project.caseStudy && <ProjectCaseStudy caseStudy={project.caseStudy} />}
@@ -50,7 +47,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
           )
         }
       />
-      {project.caseStudy && <h2 className="text-xl font-bold">{labels.projects.detailsTitle}</h2>}
+      {project.caseStudy && <h2 className="text-xl font-bold">{c.labels.projects.detailsTitle}</h2>}
       <ProjectInfoList project={project} />
       <ProjectPager prev={prev} next={next} />
     </Container>

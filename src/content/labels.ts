@@ -1,6 +1,10 @@
 // Fixed UI copy (buttons, field names, alt text). Components read from here instead of inlining strings.
 
 export const labels = {
+  meta: {
+    titleTemplate: "%s | 이석우 포트폴리오",
+    resumeDescription: (name: string, position: string) => `${name} — ${position} 이력서: 경력, 프로젝트, 스킬, 학위, 수상`,
+  },
   nav: {
     home: "Home",
     openMenu: "메뉴 열기",
@@ -8,6 +12,8 @@ export const labels = {
     main: "주 메뉴",
     toDark: "다크 모드로 전환",
     toLight: "라이트 모드로 전환",
+    languageSwitch: "English",
+    languageSwitchLabel: "영어로 보기",
   },
   profile: {
     contact: "연락처",
@@ -27,6 +33,7 @@ export const labels = {
     tenure: "재직 날짜",
     defaultProductLabel: "제품명",
     details: "세부 내용",
+    tenureLength: (years: number, months: number) => [years && `${years}년`, months && `${months}개월`].filter(Boolean).join(" ") || "1개월 미만",
   },
   projects: {
     featured: "대표 프로젝트",

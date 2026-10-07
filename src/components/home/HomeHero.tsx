@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/layout";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { Reveal, SplitHeadline } from "@/components/motion";
 import { ButtonLink } from "@/components/ui";
 import type { HomeHero as HomeHeroContent, ImageAsset } from "@/types/content";
@@ -11,7 +11,8 @@ type Props = { hero: HomeHeroContent; photo: ImageAsset; feature: React.ReactNod
  * Profile-style hero: large round portrait with name and role, then the thesis headline, intro and
  * calls to action. On wide screens `feature` is a third column on the right; narrower, it sits below.
  */
-export function HomeHero({ hero, photo, feature }: Props) {
+export async function HomeHero({ hero, photo, feature }: Props) {
+  const { labels } = await getContent();
   return (
     <Container className="grid gap-10 pt-12 pb-16 sm:pt-16 md:grid-cols-[200px_1fr] md:gap-12 lg:grid-cols-[240px_1fr] lg:pb-24 xl:grid-cols-[220px_1fr_380px] xl:gap-12">
       <div className="flex items-center gap-5 md:block">
@@ -25,7 +26,7 @@ export function HomeHero({ hero, photo, feature }: Props) {
         />
         <div className="md:mt-6">
           <p className="text-2xl font-bold tracking-tight sm:text-3xl">{hero.name}</p>
-          <p className="mt-1 text-lg text-muted">{hero.nameEn}</p>
+          <p className="mt-1 text-lg text-muted">{hero.altName}</p>
           <p className="mt-3 text-sm leading-snug text-muted">{hero.eyebrow}</p>
         </div>
       </div>

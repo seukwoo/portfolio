@@ -1,4 +1,4 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { ButtonLink, Eyebrow } from "@/components/ui";
 import type { LinkItem } from "@/types/content";
 import { Container } from "./Container";
@@ -7,7 +7,8 @@ import { CopyEmail } from "./CopyEmail";
 type Props = { email: string; socialLinks: LinkItem[] };
 
 /** Shared contact call-to-action rendered above the footer on every page (anchor: #contact). */
-export function ContactStrip({ email, socialLinks }: Props) {
+export async function ContactStrip({ email, socialLinks }: Props) {
+  const { labels } = await getContent();
   return (
     <section id="contact" aria-labelledby="contact-title" className="scroll-mt-20 border-t border-line bg-surface-2/60 print:hidden">
       <Container className="grid gap-8 py-16 sm:py-20 lg:grid-cols-[1fr_auto] lg:items-end">

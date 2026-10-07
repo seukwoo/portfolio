@@ -1,10 +1,11 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { Reveal } from "@/components/motion";
 import { ChipList, RichText } from "@/components/ui";
 import type { Project } from "@/types/content";
 
 /** The numbered 1–6 fields from each Notion project page, as a label/value list. */
-export function ProjectInfoList({ project }: { project: Project }) {
+export async function ProjectInfoList({ project }: { project: Project }) {
+  const { labels } = await getContent();
   const f = labels.projects.fields;
   const rows: { label: string; value: React.ReactNode }[] = [
     { label: f.fullName, value: project.fullName },

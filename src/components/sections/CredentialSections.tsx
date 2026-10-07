@@ -1,6 +1,6 @@
 import { ActivityItem, CertificationCard, DegreeCard } from "@/components/credentials";
 import { Reveal } from "@/components/motion";
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { groupActivities, studentActivities } from "@/lib/activities";
 import type { Activity, Certification, Degree, SectionMeta } from "@/types/content";
 import { Section } from "./Section";
@@ -19,7 +19,8 @@ export function DegreesSection({ meta, degrees, bare }: { meta: SectionMeta; deg
   );
 }
 
-export function ActivitiesSection({ meta, activities, bare }: { meta: SectionMeta; activities: Activity[]; bare?: boolean }) {
+export async function ActivitiesSection({ meta, activities, bare }: { meta: SectionMeta; activities: Activity[]; bare?: boolean }) {
+  const { labels } = await getContent();
   const student = studentActivities(activities);
   return (
     <Section meta={meta} bare={bare}>

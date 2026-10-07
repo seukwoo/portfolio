@@ -1,9 +1,10 @@
-import { labels } from "@/content";
+import { getContent } from "@/i18n/server";
 import { Container } from "@/components/layout";
 import type { Metric } from "@/types/content";
 
 /** Row of verifiable numbers under the hero; stacks into a list on mobile. */
-export function ProofStrip({ metrics }: { metrics: Metric[] }) {
+export async function ProofStrip({ metrics }: { metrics: Metric[] }) {
+  const { labels } = await getContent();
   return (
     <section aria-label={labels.home.metricsLabel} className="border-y border-line bg-surface/60">
       <Container>

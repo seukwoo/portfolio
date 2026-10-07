@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { labels } from "@/content/labels";
+import { useLabels } from "@/i18n/client";
 import { cn } from "@/lib/cn";
 import type { SectionMeta } from "@/types/content";
 
@@ -12,6 +12,7 @@ import type { SectionMeta } from "@/types/content";
  * Highlights the section currently in view.
  */
 export function ResumeToc({ sections }: { sections: SectionMeta[] }) {
+  const labels = useLabels();
   const [active, setActive] = useState(sections[0]?.id);
   const listRef = useRef<HTMLUListElement>(null);
 

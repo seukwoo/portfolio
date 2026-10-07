@@ -1,7 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { labels } from "@/content/labels";
+import { useLabels } from "@/i18n/client";
 
 type Theme = "light" | "dark";
 const DARK_QUERY = "(prefers-color-scheme: dark)";
@@ -27,6 +27,7 @@ function subscribe(onChange: () => void) {
 
 /** Sun/moon button that flips the theme and remembers the choice. */
 export function ThemeToggle() {
+  const labels = useLabels();
   // null on the server: the theme is only known in the browser.
   const theme = useSyncExternalStore(subscribe, getTheme, () => null);
 
