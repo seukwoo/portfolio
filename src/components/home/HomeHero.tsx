@@ -13,7 +13,7 @@ type Props = { hero: HomeHeroContent; photo: ImageAsset; feature: React.ReactNod
  */
 export function HomeHero({ hero, photo, feature }: Props) {
   return (
-    <Container className="grid gap-10 pt-12 pb-16 sm:pt-16 md:grid-cols-[200px_1fr] md:gap-12 lg:grid-cols-[240px_1fr] lg:pb-24 xl:grid-cols-[220px_1fr_340px] xl:gap-12">
+    <Container className="grid gap-10 pt-12 pb-16 sm:pt-16 md:grid-cols-[200px_1fr] md:gap-12 lg:grid-cols-[240px_1fr] lg:pb-24 xl:grid-cols-[220px_1fr_380px] xl:gap-12">
       <div className="flex items-center gap-5 md:block">
         <Image
           src={photo.src}

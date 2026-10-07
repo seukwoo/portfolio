@@ -31,12 +31,13 @@ export const metrics: Metric[] = [
 export const latestWork: LatestWork = {
   kicker: "How I build",
   title: "AI 서비스를 만드는 방식",
-  summary: "PoC부터 운영까지, AI 제품을 만들 때 지키는 네 가지",
+  summary: "PoC부터 운영까지, AI 제품을 만들 때 지키는 다섯 가지",
   layers: [
-    { label: "01 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 필요한 곳에만" },
-    { label: "02 / Pipeline", value: "단계를 나누고, 단계마다 맞는 모델을" },
-    { label: "03 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로" },
-    { label: "04 / Operate", value: "비용·품질을 측정하며 운영하고, 사람이 볼 지점은 남긴다" },
+    { label: "01 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 꼭 필요한 곳에만" },
+    { label: "02 / Pipeline", value: "문제를 단계로 나누고, 단계마다 맞는 모델을" },
+    { label: "03 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로 평가" },
+    { label: "04 / Review", value: "AI가 틀릴 수 있는 지점엔 사람의 확인 단계를 둔다" },
+    { label: "05 / Operate", value: "비용·지연·품질을 측정하며 운영하고 개선" },
   ],
   href: routes.projects,
 };
