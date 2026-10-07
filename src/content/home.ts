@@ -12,7 +12,7 @@ export const hero: HomeHero = {
   intro:
     "안녕하세요, 이석우입니다. 룰 기반 모듈과 AI 모델을 결합한 AI 파이프라인 설계부터 실시간 엔진·크로스 플랫폼 애플리케이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
   focus:
-    "최근에는 PoC를 리드한 AI 코드 생성 기술이 제품화를 거쳐 ProtoPie에 Dev View·MCP 기능으로 공식 출시되었습니다.",
+    "최근에는 직접 개발한 코어 파이프라인(PoC)을 팀과 함께 제품화해 2026년 10월 ProtoPie MCP로 정식 출시했습니다.",
   credibility: "2017년부터 소프트웨어·AI 제품 개발",
   actions: [
     { label: "프로젝트 보기 →", href: routes.projects },
@@ -33,12 +33,12 @@ export const metrics: Metric[] = [
 export const latestWork: LatestWork = {
   kicker: "Recently shipped",
   title: "AI 기반 코드 생성 시스템",
-  summary: "PoC부터 제품화까지 — ProtoPie Dev View·MCP로 출시",
+  summary: "PoC부터 정식 출시까지 — ProtoPie MCP (2026.10)",
   layers: [
     { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
     { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 학습" },
     { label: "03 / Pipeline", value: "룰 기반 모듈 + AI 모델 단계 결합" },
-    { label: "04 / Output", value: "AOS · iOS · Web 컴포넌트 코드" },
+    { label: "04 / Output", value: "React · Flutter · SwiftUI 등 7개 프레임워크 코드" },
   ],
   footnote: "스튜디오씨드코리아 · 2026.01 –",
   href: routes.project("ui-code-ai"),

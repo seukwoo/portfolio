@@ -11,17 +11,17 @@ export const experiences: Experience[] = [
     projects: [
       {
         role: "Head of Product Dev Team",
-        product: "[ProtoPie](https://www.protopie.io/) Dev View · MCP (AI 기반 신규 기능) 공식 출시",
+        product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) 정식 출시",
         title: "AI 기반 코드 생성 시스템",
         subtitle: "(PoC → 제품화)",
         details: [
           "AI 기반 코드 생성 시스템 전체 설계 및 개발 팀 리드",
           "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",
           "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
-          "사내에 축적된 디자인 데이터로 이미지 기반·레이아웃(구조) 기반 코드 변환을 보조하는 모델 자체 학습 (AI 엔지니어와 협업)",
+          "이미지 기반·레이아웃(구조) 기반 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
           "데이터 정제부터 학습·배포까지 이어지는 MLOps 파이프라인 설계",
           "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
-          "PoC 리드 → 제품화를 거쳐 ProtoPie에 공식 탑재, [Dev View·MCP](https://www.protopie.io/learn/docs/mcp-dev-view)로 출시",
+          "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 ProtoPie MCP로 정식 출시 (Dev View · Code MCP, 7개 프레임워크 코드 생성 지원)",
         ],
       },
     ],

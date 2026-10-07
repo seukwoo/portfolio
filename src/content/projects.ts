@@ -11,7 +11,7 @@ const list = (s: string) => s.split(",").map((v) => v.trim());
 const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: ImageAsset[] })[] = [
   {
     slug: "ui-code-ai",
-    summary: "디자인을 크로스 플랫폼 컴포넌트 코드로 바꿔주는 AI 시스템 — PoC를 리드해 ProtoPie Dev View·MCP로 출시",
+    summary: "디자인을 크로스 플랫폼 컴포넌트 코드로 바꿔주는 AI 시스템 — 코어 파이프라인 직접 개발, 2026.10 ProtoPie MCP로 정식 출시",
     punchline: ["디자인 데이터에서", "크로스 플랫폼 코드로"],
     name: "UI 코드 자동화 AI 시스템",
     // Confidential (current employer): model names, training pipeline and screenshots are intentionally omitted.
@@ -28,13 +28,20 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",
       "사내에 축적된 디자인 데이터를 학습 데이터로 정제하는 데이터·학습 파이프라인 설계",
       "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
-      "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델 자체 학습 (AI 엔지니어와 협업)",
+      "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
-      "PoC 리드 → 제품화를 거쳐 ProtoPie에 공식 탑재, [Dev View·MCP](https://www.protopie.io/learn/docs/mcp-dev-view)로 출시",
+      "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
     skills: list("Python, PyTorch, Computer Vision, LLM, AI Pipeline, AWS, Git, Figma, Notion"),
-    images: [{ src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 }],
+    // Official launch images are from the public ProtoPie MCP announcement; the overview is our own diagram.
+    images: [
+      { src: "/projects/ui-code-ai/release-01.webp", width: 1920, height: 1078 },
+      { src: "/projects/ui-code-ai/overview.svg", width: 1200, height: 675 },
+      { src: "/projects/ui-code-ai/release-03.webp", width: 1920, height: 1202 },
+      { src: "/projects/ui-code-ai/release-02.webp", width: 1920, height: 1202 },
+      { src: "/projects/ui-code-ai/release-04.webp", width: 1920, height: 1202 },
+    ],
     cardImage: { src: "/projects/ui-code-ai/card.svg", width: 1200, height: 750 },
     caseStudy: {
       problem:
@@ -42,12 +49,12 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       decisions: [
         "룰 기반 모듈 사이사이에 AI 모델 단계를 배치한 코드 생성 파이프라인을 직접 설계",
         "이미지 기반 입력과 레이아웃(구조) 기반 입력을 모두 코드로 변환할 수 있도록 변환 경로를 설계",
-        "사내에 축적된 디자인 데이터로 이미지·레이아웃(구조)을 이해하는 보조 모델을 팀과 함께 자체 학습해 파이프라인에 연결하고, AOS·iOS·Web 컴포넌트 코드로 출력",
+        "이미지·레이아웃(구조)을 이해하는 보조 모델의 학습을 설계하고 라벨링 등 학습 데이터를 직접 구축, 팀원이 학습한 모델을 파이프라인에 연결해 AOS·iOS·Web 컴포넌트 코드로 출력",
       ],
       outcome: {
         label: "결과",
-        text: "PoC를 리드한 기술이 제품화를 거쳐 ProtoPie에 공식 탑재되어 [Dev View(웹)와 MCP](https://www.protopie.io/learn/docs/mcp-dev-view) 기능으로 출시되었습니다. 반복되는 UI 요소를 묶어 재사용하기 쉬운 컴포넌트 단위로 코드를 구성하는 데에도 도움을 주었습니다.",
-        note: "컴포넌트화 효과는 내부 사례 기준의 정성적 관찰입니다.",
+        text: "직접 개발한 코어 파이프라인(PoC)에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시되었습니다. React·Flutter·SwiftUI 등 7개 프레임워크의 코드 생성을 지원합니다.",
+        note: "반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
       },
     },
   },
