@@ -9,8 +9,15 @@ import "swiper/css/pagination";
 import { labels } from "@/content/labels";
 import type { ImageAsset } from "@/types/content";
 
-/** Screenshot carousel; each slide links to the full-size image. */
-export function ProjectGallery({ images, title }: { images: ImageAsset[]; title: string }) {
+type Props = {
+  images: ImageAsset[];
+  title: string;
+  /** Rendered (on the server) as the second slide, right after the first image — e.g. the project cover. */
+  extraSlide?: React.ReactNode;
+};
+
+/** Screenshot carousel; each image slide links to the full-size image. */
+export function ProjectGallery({ images, title, extraSlide }: Props) {
   if (images.length === 0) return null;
   return (
     <div className="gallery overflow-hidden rounded-2xl border border-line bg-surface-2">
@@ -21,7 +28,7 @@ export function ProjectGallery({ images, title }: { images: ImageAsset[]; title:
         keyboard={{ enabled: true }}
         autoHeight
       >
-        {images.map((img, i) => (
+        {images.flatMap((img, i) => [
           <SwiperSlide key={img.src} className="pb-10">
             <a href={img.src} target="_blank" rel="noopener noreferrer" className="block">
               <Image
@@ -34,8 +41,15 @@ export function ProjectGallery({ images, title }: { images: ImageAsset[]; title:
                 className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
               />
             </a>
-          </SwiperSlide>
-        ))}
+          </SwiperSlide>,
+          ...(i === 0 && extraSlide
+            ? [
+                <SwiperSlide key="extra" className="pb-10">
+                  {extraSlide}
+                </SwiperSlide>,
+              ]
+            : []),
+        ])}
       </Swiper>
     </div>
   );

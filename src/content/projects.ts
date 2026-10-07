@@ -44,6 +44,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       { src: "/projects/ui-code-ai/release-04.webp", width: 1920, height: 1202 },
     ],
     cardImage: { src: "/projects/ui-code-ai/card.svg", width: 1200, height: 750 },
+    coverInGallery: true,
     caseStudy: {
       problem:
         "범용 LLM만으로는 디자인의 구조(계층·반복 요소)를 안정적으로 읽기 어려워, 생성된 코드가 화면 단위로 평평하게 나오고 재사용하기 어려웠습니다.",
@@ -132,6 +133,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Internal tool: no screenshots of real data — our own diagrams only.
     images: [{ src: "/projects/decision-graph/overview.svg", width: 1200, height: 675 }],
     cardImage: { src: "/projects/decision-graph/card.svg", width: 1200, height: 750 },
+    coverInGallery: true,
     caseStudy: {
       problem:
         "결정은 Slack과 Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어려웠습니다. LLM으로 자동 추출하되, 지어낸 결정이나 빠진 조건 없이 믿을 수 있어야 했고 매일 돌려도 부담 없는 비용과 속도여야 했습니다.",

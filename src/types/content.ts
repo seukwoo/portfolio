@@ -113,6 +113,8 @@ export type Project = {
   /** Cover used only on featured cards (falls back to images[0]); keep its bottom free of text for the punchline. */
   cardImage?: ImageAsset;
   caseStudy?: CaseStudy;
+  /** Also show the card cover (with its punchline) as a gallery slide — for drawn covers that are not screenshots. */
+  coverInGallery?: boolean;
 };
 
 /** Case-study summary shown at the top of a featured project page. */

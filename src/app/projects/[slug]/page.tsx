@@ -42,18 +42,16 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
         {labels.projects.backToList}
       </AppLink>
       <ProjectHeader project={project} />
-      {/* Featured projects open with the same cover as their card */}
-      {project.punchline && (
-        <ProjectCover
-          project={project}
-          size="banner"
-          className="aspect-16/10 rounded-2xl sm:aspect-2/1"
-          sizes="(min-width: 1152px) 1104px, 100vw"
-          priority
-        />
-      )}
       {project.caseStudy && <ProjectCaseStudy caseStudy={project.caseStudy} />}
-      <ProjectGallery images={project.images} title={project.name} />
+      <ProjectGallery
+        images={project.images}
+        title={project.name}
+        extraSlide={
+          project.coverInGallery && (
+            <ProjectCover project={project} size="banner" className="aspect-video" sizes="(min-width: 1152px) 1104px, 100vw" />
+          )
+        }
+      />
       {project.caseStudy && <h2 className="text-xl font-bold">{labels.projects.detailsTitle}</h2>}
       <ProjectInfoList project={project} />
       <ProjectPager prev={prev} next={next} />
