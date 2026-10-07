@@ -30,7 +30,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
       "이미지 기반·레이아웃(구조) 기반 입력의 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
       "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
-      "코어 파이프라인 직접 개발(PoC) → 팀이 UI·로그인 등을 붙여 기존 제품에 통합 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
+      "코어 파이프라인 직접 개발(PoC) → 팀과 함께 제품화 → 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
     ],
     roles: ["Development Team Leader", "(+ Product Owner, + AI Engineer)"],
     skills: list("Python, PyTorch, Computer Vision, LLM, AI Pipeline, AWS, Git, Figma, Notion"),
@@ -53,7 +53,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "직접 개발한 코어 파이프라인(PoC)에 팀이 UI·로그인 등을 붙여 기존 제품에 통합했고, 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시했습니다. Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
+        text: "코어 파이프라인(PoC)을 직접 개발했고, 팀과 함께 제품화해 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시했습니다. Dev View도 베타를 마치고 정식 제공됩니다. Code MCP는 ProtoPie 엔진 정보를 활용해 React·Flutter·SwiftUI 등 7개 프레임워크의 코드를 생성합니다. ([문서](https://www.protopie.io/learn/docs/mcp-getting-started))",
         note: "반복되는 UI 요소를 재사용하기 쉬운 컴포넌트 단위로 묶는 효과는 내부 사례 기준의 정성적 관찰입니다.",
       },
     },
