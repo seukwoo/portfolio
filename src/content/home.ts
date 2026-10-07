@@ -1,0 +1,75 @@
+// Home page content: the curated "argument" of the site. Full records live on /resume.
+// 🟨 marks copy that is temporary until the new introduction (feedback #6) and Decision Graph (#7) are ready.
+import { routes } from "@/lib/routes";
+import type { HomeHero, LatestWork, LeadershipBlock, Metric, WorkStyle } from "@/types/content";
+
+// 🟨 Derived from the current Notion introduction; replace with the final thesis.
+export const hero: HomeHero = {
+  name: "이석우",
+  nameEn: "Seukwoo Lee",
+  eyebrow: "Development Team Leader · Software & AI Engineer",
+  headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
+  intro:
+    "안녕하세요, 이석우입니다. 딥러닝 모델 파인튜닝부터 MCP 기반 AI Agent 오케스트레이션까지, 폭넓은 기술 스택을 기반으로 제품 개발과 팀 리더십을 함께 수행해왔습니다.",
+  focus:
+    "현재는 모바일 UI 디자인 데이터를 크로스 플랫폼 컴포넌트 코드로 자동 변환·생성하는 AI 기반 코드 생성 시스템을 만들고 있습니다.",
+  credibility: "2017년부터 소프트웨어·AI 제품 개발",
+  actions: [
+    { label: "프로젝트 보기 →", href: routes.projects },
+    { label: "이력서 보기", href: routes.resume },
+  ],
+};
+
+/** Every number must be traceable to the resume content; `note` shows the source. */
+export const metrics: Metric[] = [
+  { value: "10", unit: "년차", label: "Software & AI Engineer", note: "2017.02 – 현재" },
+  { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
+  { value: "4", unit: "개", label: "상용화 서비스 개발", note: "Alan · Meta.CRO · 내눈N · WAPL" },
+  { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
+];
+
+// 🟨 Temporary: current main project. Swap to Decision Graph once its details are ready.
+// Confidential (current employer): describe the flow only — no model names, tools or pipeline specifics.
+export const latestWork: LatestWork = {
+  kicker: "Now building",
+  title: "AI 기반 코드 생성 시스템",
+  summary: "디자인 데이터에서 크로스 플랫폼 코드까지",
+  layers: [
+    { label: "01 / Data", value: "사내에 축적된 디자인 데이터" },
+    { label: "02 / Model", value: "이미지·레이아웃(구조) 이해 모델 자체 학습" },
+    { label: "03 / Generate", value: "AI Agent 오케스트레이션 · RAG" },
+    { label: "04 / Output", value: "AOS · iOS · Web 컴포넌트 코드" },
+  ],
+  footnote: "스튜디오씨드코리아 · 2026.01 –",
+  href: routes.project("ui-code-ai"),
+};
+
+// 🟨 Third slot is temporary (MX Studio) until Decision Graph is added.
+export const featuredProjectSlugs = ["ui-code-ai", "alan", "mx-studio"];
+
+export const leadership: LeadershipBlock[] = [
+  {
+    title: "조직 규모",
+    points: [
+      "소규모(3명) 개발 파트부터 대규모(50명) 연구 본부까지 팀 빌딩 및 리딩",
+      "현재 4~5명 애자일 팀 운영 — 빠른 의사결정과 유연한 실행",
+    ],
+  },
+  {
+    title: "의사결정 · 작게 만들고 빠르게 검증",
+    points: [
+      "짧은 주기로 만들고 확인하며 방향을 조정하는 애자일 방식으로 팀 운영",
+      "프로토타입과 베타 테스트로 반응을 먼저 확인한 뒤 확장 (MX Studio 외부 베타, 닥터메타 내부 베타)",
+    ],
+  },
+  {
+    title: "우선순위 · 사용자 데이터와 사업 지표로",
+    points: [
+      "Google Analytics · Amplitude로 트래픽 흐름과 기능별 사용률을 보고 개발 우선순위 결정",
+      "무료→유료 전환 시 가격·약관·환불 정책까지 개발과 함께 설계",
+    ],
+  },
+];
+
+/** 🟨 Hidden until written (feedback #6, #19). Set to an object to show the section. */
+export const workStyle: WorkStyle | null = null;

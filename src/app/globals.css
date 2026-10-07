@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f3ee;
+  --surface: #ffffff;
+  --surface-2: #efeae2;
+  --ink: #18181b;
+  --muted: #6b6660;
+  --line: #e2dcd2;
+  --accent: #d9581f;
+  --accent-soft: #fbe6da;
+  --accent-ink: #ffffff;
+  /* Inverted panel (e.g. the "Now building" card) — dark in both themes */
+  --panel: #1d1a17;
+  --panel-ink: #efe9e1;
+  --panel-accent: #f2814b;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121110;
+    --surface: #1b1a18;
+    --surface-2: #24221f;
+    --ink: #eeeae4;
+    --muted: #a39e97;
+    --line: #2e2b28;
+    --accent: #f2814b;
+    --accent-soft: #3a2418;
+    --accent-ink: #1b0f08;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-panel: var(--panel);
+  --color-panel-ink: var(--panel-ink);
+  --color-panel-accent: var(--panel-accent);
+  --font-sans: var(--font-pretendard), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Swiper theming */
+.gallery {
+  --swiper-theme-color: var(--accent);
+  --swiper-navigation-size: 20px;
+  --swiper-pagination-bullet-inactive-color: var(--muted);
+}
+.gallery .swiper-button-prev,
+.gallery .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  color: var(--ink);
+  backdrop-filter: blur(6px);
+}
+.gallery .swiper-button-prev svg,
+.gallery .swiper-button-next svg {
+  width: 14px;
+  height: 14px;
+}

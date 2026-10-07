@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif">
+  <title>AI 기반 코드 생성 시스템 개요</title>
+  <rect width="1200" height="675" fill="#f6f3ee"/>
+  <text x="80" y="92" font-size="18" fill="#d9581f" letter-spacing="3">OVERVIEW</text>
+  <text x="80" y="140" font-size="38" font-weight="700" fill="#18181b">디자인 데이터에서 크로스 플랫폼 코드까지</text>
+  <text x="80" y="184" font-size="20" fill="#6b6660">사내에 축적된 디자인 데이터로 학습한 자체 모델이 코드 생성 과정을 보조합니다.</text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+      <path d="M0 0L10 5L0 10z" fill="#b8b0a5"/>
+    </marker>
+  </defs>
+
+  <!-- 01 data -->
+  <rect x="80" y="260" width="220" height="250" rx="22" fill="#ffffff" stroke="#e2dcd2" stroke-width="2"/>
+  <text x="104" y="300" font-size="15" fill="#6b6660" letter-spacing="2">01 / DATA</text>
+  <text x="104" y="344" font-size="24" font-weight="700" fill="#18181b">사내 디자인</text>
+  <text x="104" y="376" font-size="24" font-weight="700" fill="#18181b">데이터</text>
+  <text x="104" y="420" font-size="17" fill="#6b6660">축적된 디자인을</text>
+  <text x="104" y="446" font-size="17" fill="#6b6660">학습 데이터로 정제</text>
+
+  <line x1="306" y1="385" x2="354" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 02 models -->
+  <rect x="360" y="260" width="240" height="250" rx="22" fill="#fbe6da" stroke="#d9581f" stroke-width="2"/>
+  <text x="384" y="300" font-size="15" fill="#d9581f" letter-spacing="2">02 / MODEL</text>
+  <text x="384" y="344" font-size="24" font-weight="700" fill="#18181b">자체 학습 모델</text>
+  <text x="384" y="392" font-size="17" fill="#18181b">· 이미지 기반 이해</text>
+  <text x="384" y="420" font-size="17" fill="#18181b">· 레이아웃(구조) 기반 이해</text>
+  <text x="384" y="462" font-size="15" fill="#6b6660">코드 변환을 돕는 보조 모델</text>
+
+  <line x1="606" y1="385" x2="654" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 03 generation -->
+  <rect x="660" y="260" width="220" height="250" rx="22" fill="#ffffff" stroke="#e2dcd2" stroke-width="2"/>
+  <text x="684" y="300" font-size="15" fill="#6b6660" letter-spacing="2">03 / GENERATE</text>
+  <text x="684" y="344" font-size="24" font-weight="700" fill="#18181b">코드 생성</text>
+  <text x="684" y="392" font-size="17" fill="#6b6660">AI Agent</text>
+  <text x="684" y="418" font-size="17" fill="#6b6660">오케스트레이션과</text>
+  <text x="684" y="444" font-size="17" fill="#6b6660">검색 증강(RAG)</text>
+
+  <line x1="886" y1="385" x2="934" y2="385" stroke="#b8b0a5" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <!-- 04 output -->
+  <rect x="940" y="260" width="180" height="250" rx="22" fill="#1d1a17"/>
+  <text x="964" y="300" font-size="15" fill="#f2814b" letter-spacing="2">04 / OUTPUT</text>
+  <text x="964" y="344" font-size="24" font-weight="700" fill="#efe9e1">컴포넌트</text>
+  <text x="964" y="376" font-size="24" font-weight="700" fill="#efe9e1">코드</text>
+  <text x="964" y="424" font-size="18" fill="#efe9e1">AOS</text>
+  <text x="964" y="452" font-size="18" fill="#efe9e1">iOS</text>
+  <text x="964" y="480" font-size="18" fill="#efe9e1">Web</text>
+
+  <text x="80" y="600" font-size="16" fill="#6b6660">세부 모델 구성과 학습 파이프라인은 비공개입니다.</text>
+</svg>

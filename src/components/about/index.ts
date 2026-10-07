@@ -1,0 +1,1 @@
+export { StrengthCard } from "./StrengthCard";
