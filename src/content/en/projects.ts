@@ -83,8 +83,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "Ran and managed the patch notes page",
       "Ran quality testing and worked with other in-house teams (QA, authentication, payments, infrastructure, etc.) on development, quality and infrastructure",
       "Managed feature planning, schedules and risks for the LLM-based AI app service",
-      "Built image search, YouTube search & summary, report generation and slide generation features, plus specialized agents, in-house",
-      "Slide generation: led the project from the research and planning stage",
+      "Built image search, YouTube search & summary and report generation features, plus specialized agents, in-house",
+      "Led planning of the slide generation feature — benchmarked Genspark and other services, defined user scenarios and the generation flow",
+      "Designed the slide generation agent — staged orchestration (intent → scope and outline → research → template, style and fonts → HTML rendering → revision), with human-in-the-loop review of intermediate results",
       "Shipped the deep research and slide generation services",
       "Developed an internal back-office operations tool",
       "Planned the monetization of an AI service — modeled margin from inference cost per call and set the Pro plan's price and usage limits from competitor pricing and expected paid conversion",
@@ -98,7 +99,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       decisions: [
         "Moved the trial-stage service onto separate Dev, QA, Stage and Release servers to bring it up to commercial-service standards",
         "Offered the LLM agent service in a search style to lower the barrier for existing search users",
-        "Built features and specialized agents in-house, including image search, YouTube search & summary, and report and slide generation (led slide generation from the research and planning stage)",
+        "Slides in stages, not one shot — an agent orchestration split into intent, scope, research, template, rendering and revision, with a step where users check and edit intermediate results (also built image/YouTube search and report generation agents in-house)",
         "Priced on evidence — modeled margin from inference cost per call, then set the Pro plan's price and usage limits from competitor pricing and expected paid conversion",
       ],
       outcome: {
