@@ -12,7 +12,7 @@ export const hero: HomeHero = {
   intro:
     "안녕하세요, 이석우입니다. 연구·시험 단계의 기술을 실제 사용자가 쓰고 돈을 내는 제품으로 만들어 왔습니다. 직접 설계하고 코드를 쓰며, 3명 개발 파트부터 50명 연구 본부까지 이끌었습니다.",
   focus:
-    "최근에는 직접 개발한 코어 파이프라인(PoC)을 팀과 함께 제품화해 2026년 10월 ProtoPie MCP로 정식 출시했습니다.",
+    "최근 2년은 회사마다 'AI를 제품으로' 만드는 미션을 맡아 끝까지 마쳤습니다 — 이스트소프트에서 Alan 유료화, 스튜디오씨드코리아에서 ProtoPie MCP 정식 출시(2026.10).",
   actions: [
     { label: "프로젝트 보기 →", href: routes.projects },
     { label: "이력서 보기", href: routes.resume },
@@ -21,8 +21,8 @@ export const hero: HomeHero = {
 
 /** Every number must be traceable to the resume content; `note` shows the source. */
 export const metrics: Metric[] = [
-  { value: "10", unit: "년차", label: "소프트웨어·AI 개발", note: "2017.01 – 현재" },
-  { value: "50", unit: "명", label: "최대 조직 규모", note: "연구 본부 팀 빌딩 및 리딩" },
+  { value: "10", unit: "년차", label: "개발 경력", note: "2017.01 – 현재 · AI 제품 개발은 2025.04부터" },
+  { value: "50", unit: "명", label: "최대 조직 규모", note: "R&D 연구본부장 · 티맥스에이아이 2020–2022" },
   { value: "5", unit: "개", label: "상용화 서비스 개발", note: "ProtoPie MCP · Alan · 닥터메타 · Meta.CRO · 내눈N" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
@@ -36,7 +36,7 @@ export const latestWork: LatestWork = {
     { label: "01 / Define", value: "요구사항으로 문제·기능을 정의하고 기술 검토" },
     { label: "02 / Scope", value: "룰로 풀 수 있는 건 룰로, AI는 필요한 곳에만 투입" },
     { label: "03 / Pipeline", value: "단계를 나누고, 단계마다 맞는 모델 적용" },
-    { label: "04 / Eval", value: "정답 예제를 먼저 만들고, 바꿀 때마다 같은 기준으로 평가" },
+    { label: "04 / Eval", value: "사람이 만든 정답 기준을 먼저 두고, 바꿀 때마다 같은 기준으로 평가" },
     { label: "05 / Verify", value: "기계가 확인할 것과 사람이 판단할 것을 나눠 검증" },
     { label: "06 / Operate", value: "비용·지연·품질을 측정하며 개선" },
   ],
@@ -50,7 +50,7 @@ export const leadership: LeadershipBlock[] = [
   {
     title: "조직 규모",
     points: [
-      "소규모(3명) 개발 파트부터 대규모(50명) 연구 본부까지 팀 빌딩 및 리딩",
+      "소규모(3명) 개발 파트부터 대규모(50명) R&D 본부까지 팀 빌딩 및 리딩 — 본부장으로 CTO 공백 1년간 기술 총괄",
       "현재 4~5명 애자일 팀 운영 — 빠른 의사결정과 유연한 실행",
     ],
   },

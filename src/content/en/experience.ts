@@ -7,22 +7,23 @@ export const experiences: Experience[] = [
     role: "Head of Product Dev Team",
     company: "Studio XID (ProtoPie)",
     department: "Product Dev Team",
-    tenure: "2026.01.06 - Present",
+    tenure: "2026.01 - Present",
+    mission: "Take design-to-code AI from PoC to official launch — completed with the ProtoPie MCP launch (2026.10)",
     projects: [
       {
         role: "Design & development (solo)",
-        productLabel: "Internal tool",
+        productLabel: "New product PoC",
         product: "[Decision Graph](/projects/decision-graph)",
         period: "2026.08 - 2026.10",
         title: "LLM pipeline for decision extraction",
         subtitle: "(Slack·Notion → decision records with evidence)",
         details: [
-          "Designed and built, solo, an LLM pipeline that extracts who decided what and why from Slack and Notion, together with the source text as evidence",
-          "Validated PoC results using one real project from the past year as the golden set — confirmed reliability of 80%+",
-          "Verified and reviewed the feared technical risks firsthand through the PoC (judging by labeled test cases instead of a reliability %, one-way records, preventing duplicate entries on re-runs)",
-          "Chose the two-tier inference structure (first-pass classification: lightweight model; extraction and validation: high-capability model) by comparing options on the same labeled test cases",
-          "Logged time and cost per request to find bottlenecks and improved the call structure — on the same data, 1,289 calls · $10.2 → 336 calls · $7.6; re-running only the changed parts: 30 calls · $0.7",
-          "Checked quality on every change with 23 labeled test cases (with a cap on evaluation cost)",
+          "Turned PO requirements into a technical spec, then designed and built (solo) the LLM pipeline PoC that extracts who decided what and why from Slack and Notion, with source evidence",
+          "Validated PoC results against a golden set where people manually marked the correct decisions on one real project — extracted 80%+ of the human-labeled decisions",
+          "Verified and reviewed the feared technical risks firsthand through the PoC (judging quality against human-made ground truth, one-way records, preventing duplicate entries on re-runs)",
+          "Chose the two-tier inference structure (first-pass classification: lightweight model; extraction and validation: high-capability model) by comparing options on the same tests (all-lightweight rejected after passing only 17 of 24)",
+          "Logged time and cost per request to find bottlenecks and improved the call structure — on the same data, 74% fewer calls (1,289 → 336) and 25% lower cost ($10.2 → $7.6); re-running only the changed parts: $0.7",
+          "Checked quality on every change with 24 test cases with known correct answers (with a cap on evaluation cost)",
         ],
       },
       {
@@ -32,13 +33,11 @@ export const experiences: Experience[] = [
         title: "AI-based code generation system",
         subtitle: "(PoC → productization)",
         details: [
-          "Led the team for the overall design and development of the AI-based code generation system",
-          "Ran an agile team of 4–5 AI engineers and app developers",
-          "Designed the code generation pipeline combining rule-based modules with AI model stages (led directly)",
-          "Designed training for models that support image-based and layout (structure)-based code conversion, and built training data including labeling (training done by the AI engineers)",
-          "Designed the MLOps pipeline from data cleaning through training and deployment",
-          "Built the cross-platform component code generation pipeline for AOS, iOS and Web",
-          "Developed the core pipeline directly (PoC) → productized it with the team → official launch as ProtoPie MCP in October 2026 (Dev View · Code MCP, code generation for 7 frameworks)",
+          "[Hands-on] Designed the code generation pipeline combining rule-based modules with AI model stages, and developed the core pipeline (PoC)",
+          "[Hands-on] Designed training for auxiliary models that understand images and layout (structure), and built training data including labeling",
+          "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, product integration with the team",
+          "[Team lead] Designed the MLOps pipeline from data cleaning → training → deployment",
+          "[Team lead] Expanded to AOS, iOS and Web cross-platform; official launch as ProtoPie MCP in October 2026 (Dev View · Code MCP, code generation for 7 frameworks)",
         ],
       },
     ],
@@ -47,7 +46,8 @@ export const experiences: Experience[] = [
     role: "Product Owner",
     company: "ESTsoft",
     department: "AI Agent Lab / Alan Development Team / PO",
-    tenure: "2025.04.22 - 2026.01.05",
+    tenure: "2025.04 - 2026.01",
+    mission: "Turn the research team's pilot service Alan into a paid commercial product — completed with the Pro subscription launch and first paid revenue",
     projects: [
       {
         role: "Product Owner",
@@ -63,10 +63,10 @@ export const experiences: Experience[] = [
           "Architected the Azure, Fast API, React and LangGraph structure",
           "Ran quality testing and collaborated with other in-house development, quality and infrastructure teams (QA, authentication, payments, infrastructure, etc.)",
           "Handled feature planning, scheduling and risk management for the LLM-based AI app service",
-          "Independently developed image search, YouTube search & summarization, report generation and slide generation features plus specialized agents (led slide generation from research and planning onward)",
+          "Built in-house image search, YouTube search & summarization, report generation and slide generation features plus specialized agents (led slide generation from research and planning onward)",
           "Set up the payment system process and the paid product policy",
           "Deployed the deep research and slide generation services, launched the Pro subscription, and developed an internal back-office operations tool",
-          "Pro subscription brought the service's first paid revenue; building on it, planned an enterprise product (later the basis for institutional contract revenue)",
+          "Pro subscription brought the service's first paid revenue (figures not disclosed); building on it, planned an enterprise product (later the basis for institutional contract revenue)",
           "In commercial operation ([myalan.ai](https://myalan.ai/))",
         ],
       },
@@ -75,13 +75,13 @@ export const experiences: Experience[] = [
   {
     // Grouped as one because the department moved between Tmax affiliates (newest affiliate first)
     company: "Tmax Group",
-    tenure: "2017.01.02 - 2025.04.14",
+    tenure: "2017.01 - 2025.04",
     units: [
       {
         role: "Project Leader, Development Team",
         company: "TmaxMetaAI",
         department: "Meta AI Research Division / Researcher (Head of Office)",
-        tenure: "2022.07.01 - 2025.04.14",
+        tenure: "2022.07 - 2025.04",
         projects: [
           {
             role: "Project Leader",
@@ -89,6 +89,11 @@ export const experiences: Experience[] = [
             period: "2022.07 - 2025.02",
             title: "Software for building 3D web components",
             subtitle: "Development of 'MX studio' and productization based on it",
+            brief: [
+              "Led the MX studio engine team and a task force (planning, design, development, QA)",
+              "Led design/development of the physics engine, real-time rendering & post-processing, 3D events/actions and a node-based visual code system",
+              "Productized Dr.Meta and Meta.CRO on its output; ran an external beta test",
+            ],
             details: [
               "Led the MX studio engine team",
               "Led a task force team of planners, designers, developers and QA",
@@ -105,6 +110,10 @@ export const experiences: Experience[] = [
             period: "2024.06 - 2025.01",
             title: "Metaverse platform used by cancer centers nationwide",
             subtitle: "Development of 'Dr.Meta' (Korea Smart Healthcare Association)",
+            brief: [
+              "Led design/development of the React web app ↔ Unity app integration and admin/permission features",
+              "In commercial operation at cancer centers nationwide ([web.drmeta.kr](http://web.drmeta.kr/))",
+            ],
             details: [
               "Led a task force team of planners, designers, developers and QA",
               "Led design/development of the integration between a React-based web app and a Unity app",
@@ -118,6 +127,10 @@ export const experiences: Experience[] = [
             period: "2023.06 - 2025.01",
             title: "3D-based virtual simulation training platform for clinical trials",
             subtitle: "Development of 'Meta.CRO' (Korea Smart Healthcare Association)",
+            brief: [
+              "Designed and released a 3D render engine library (private npm); led a development/QA task force",
+              "In commercial operation at cancer centers nationwide",
+            ],
             details: [
               "Led a task force team of developers and QA",
               "Designed and released a 3D render engine library (set up a private npm environment)",
@@ -130,6 +143,9 @@ export const experiences: Experience[] = [
             period: "2024.03 - 2024.09",
             title: "Online marketplace platform for contact lenses",
             subtitle: "Development of 'NaenunN' (Pixelro)",
+            brief: [
+              "The first online contact-lens purchase & delivery service, opened under a regulatory sandbox exemption — led the React Native cross-platform app; in commercial operation",
+            ],
             details: [
               "Led a task force team of developers and QA",
               "Developed, together with the partner company, an online contact lens purchase and delivery service first permitted under a regulatory sandbox special exemption for demonstration",
@@ -144,6 +160,9 @@ export const experiences: Experience[] = [
             period: "2023.12 - 2024.08",
             title: "GIS-based Samsung data center information system",
             subtitle: "Development of 'GIS S-DCIS' (Samsung C&T)",
+            brief: [
+              "GIS system on GeoServer · PostGIS · OpenLayers, built for a closed-network on-premise environment — co-developed and delivered with Yeonwoo Technology (B2B)",
+            ],
             details: [
               "Communicated and collaborated with the planning team, the business team and another company's research team",
               "Built a spatial function server and DB using GeoServer and PostGIS",
@@ -159,6 +178,9 @@ export const experiences: Experience[] = [
             period: "2023.01 - 2024.09",
             title: "Real-time multi-sync server",
             subtitle: "Research on ’MVS: Metaverse Server’ (internal project)",
+            brief: [
+              "Researched and developed a C++ real-time multi-user sync server engine — applied as the multiplayer server for Dr.Meta's medical staff conferences",
+            ],
             details: [
               "Led the R&D team; researched and developed C++-based server engine technology",
               "Designed client libraries (Javascript, C#)",
@@ -172,7 +194,11 @@ export const experiences: Experience[] = [
         role: "Project Leader",
         company: "TmaxAI",
         department: "Meta Vision Research Division / Researcher (Head of Office, concurrently Division Head)",
-        tenure: "2020.07.25 - 2022.06.30",
+        tenure: "2020.07 - 2022.06",
+        highlights: [
+          "R&D Division Head (concurrently Head of Office) — led an R&D organization of up to 50",
+          "Acted as technical lead for about a year while the CTO role was vacant",
+        ],
         projects: [
           {
             role: "Project Leader",
@@ -181,6 +207,9 @@ export const experiences: Experience[] = [
             period: "2021.07 - 2022.06",
             title: "Metaverse education platform",
             subtitle: "Development of 'Mint'",
+            brief: [
+              "Planned and built a metaverse education platform on Phaser · WebRTC · WebGL — delivered to Kongju National University",
+            ],
             details: [
               "Planned the product using Gather Town as a benchmark",
               "Used open-source technologies including the Phaser game engine, WebRTC, WebGL, React and MobX",
@@ -194,6 +223,9 @@ export const experiences: Experience[] = [
             period: "2020.07 - 2021.06",
             title: "Advanced technology research",
             subtitle: "Deep Learning, 3DMM, SLAM",
+            brief: [
+              "Early research on deep-learning digital humans (TTS) and SLAM-based 3D space generation — demoed at Tmax Day 2020",
+            ],
             details: [
               "As advanced technology research, studied generating digital humans capable of Deep Learning-based text-to-speech",
               "As advanced technology research, studied generating metaverse spaces using Deep Learning-based SLAM 3D spatial technology",
@@ -207,7 +239,7 @@ export const experiences: Experience[] = [
         role: "Product Engineer",
         company: "TmaxA&C",
         department: "Graphics Research Division / Researcher (Team Lead)",
-        tenure: "2017.01.02 - 2020.07.24",
+        tenure: "2017.01 - 2020.07",
         projects: [
           {
             role: "Product Engineer",
@@ -215,6 +247,7 @@ export const experiences: Experience[] = [
             period: "2019.01 - 2020.06",
             title: "Collaboration solution",
             subtitle: "Development of 'WAPL'",
+            brief: ["Frontend development of the collaboration solution's calendar and messenger — commercialized by TmaxWAPL"],
             details: [
               "Developed calendar and messenger features (frontend)",
               "In commercial operation by TmaxWAPL",
@@ -226,6 +259,7 @@ export const experiences: Experience[] = [
             period: "2017.06 - 2018.12",
             title: "Linux-based product",
             subtitle: "Development of 'TmaxOS'",
+            brief: ["C++ development for a Linux-based OS — built and refactored the settings screen and video player"],
             details: [
               "Developed in C++",
               "Fixed bugs in the OS personal settings section (frontend)",
@@ -238,6 +272,7 @@ export const experiences: Experience[] = [
             period: "2017.02 - 2017.06",
             title: "Integrated system interface solution software",
             subtitle: "Structure analysis of 'Anylink'",
+            brief: ["Structure analysis and refactoring design of an integrated interface solution — identified improvements with the engine research team; a TmaxSoft commercial product"],
             details: [
               "Took part in structure analysis and refactoring design of the integrated system interface solution",
               "Worked with the engine research team to identify usability and quality improvement points",

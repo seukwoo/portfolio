@@ -29,6 +29,7 @@ export async function ExperienceCard({ experience }: { experience: Experience })
               <Field label={labels.experience.department} value={experience.department} />
               <Field label={labels.experience.tenure} value={experience.tenure} />
             </dl>
+            {experience.mission && <Mission text={experience.mission} label={labels.experience.mission} />}
           </>
         )}
       </div>
@@ -60,6 +61,25 @@ function UnitHeader({ unit }: { unit: ExperienceUnit }) {
         <span className="text-xs text-muted tabular-nums">{unit.tenure}</span>
       </div>
       <p className="mt-1 text-sm text-muted">{unit.department}</p>
+      {unit.highlights && (
+        <ul className="mt-2 space-y-1 text-sm">
+          {unit.highlights.map((h) => (
+            <li key={h} className="flex gap-2">
+              <span aria-hidden className="mt-[0.6em] size-1 shrink-0 rounded-full bg-accent" />
+              {h}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+function Mission({ text, label }: { text: string; label: string }) {
+  return (
+    <div className="mt-4 rounded-xl bg-accent-soft px-4 py-3 text-sm leading-relaxed">
+      <p className="text-xs font-semibold text-accent">{label}</p>
+      <p className="mt-1">{text}</p>
     </div>
   );
 }

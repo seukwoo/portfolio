@@ -12,7 +12,7 @@ export const hero: HomeHero = {
   intro:
     "Hi, I'm Seukwoo Lee. I turn research- and pilot-stage technology into products people actually use and pay for. I design and write the code myself, and have led teams from a 3-person dev unit to a 50-person research division.",
   focus:
-    "Most recently, I took a core pipeline (PoC) I built myself, productized it with my team, and officially launched it as ProtoPie MCP in October 2026.",
+    "For the past two years I've taken on one 'turn AI into a product' mission per company and seen each through — Alan's monetization at ESTsoft, and the official ProtoPie MCP launch at Studio XID (Oct 2026).",
   actions: [
     { label: "View projects →", href: routes.projects },
     { label: "View resume", href: routes.resume },
@@ -21,8 +21,8 @@ export const hero: HomeHero = {
 
 /** Every number must be traceable to the resume content; `note` shows the source. */
 export const metrics: Metric[] = [
-  { value: "10", unit: "years", label: "Software & AI development", note: "2017.01 – present" },
-  { value: "50", unit: "people", label: "Largest team led", note: "Built and led a research division" },
+  { value: "10", unit: "years", label: "Years in development", note: "2017.01 – present · AI products since 2025.04" },
+  { value: "50", unit: "people", label: "Largest team led", note: "R&D Division Head · TmaxAI 2020–2022" },
   { value: "5", unit: "services", label: "Commercial services built", note: "ProtoPie MCP · Alan · Dr.Meta · Meta.CRO · NaenunN" },
   { value: "3", unit: "awards", label: "Group-wide awards", note: "Technology Innovation Award · Super Leader · Maestro" },
 ];
@@ -36,7 +36,7 @@ export const latestWork: LatestWork = {
     { label: "01 / Define", value: "Problem and features from requirements, plus a tech review" },
     { label: "02 / Scope", value: "Rules where rules suffice, AI only where needed" },
     { label: "03 / Pipeline", value: "Separate stages, the right model for each stage" },
-    { label: "04 / Eval", value: "Labeled test cases first, same bar for every change" },
+    { label: "04 / Eval", value: "Human-made ground truth first, same bar for every change" },
     { label: "05 / Verify", value: "Verification split between machine checks and human judgment" },
     { label: "06 / Operate", value: "Continuous improvement on cost, latency, and quality" },
   ],
@@ -50,7 +50,7 @@ export const leadership: LeadershipBlock[] = [
   {
     title: "Team size",
     points: [
-      "Built and led teams from a small 3-person dev unit to a 50-person research division",
+      "Built and led teams from a small 3-person dev unit to a 50-person R&D division — as division head, acted as technical lead for a year while the CTO role was vacant",
       "Currently running a 4–5 person agile team — fast decisions, flexible execution",
     ],
   },

@@ -24,7 +24,7 @@ export const about: About = {
     {
       title: "From pilot technology to commercial product",
       evidence: [
-        "Took [Alan](/projects/alan), an LLM service piloted by a research team, to a Pro subscription for its first paid revenue, and planned the enterprise plan — laying the groundwork for institutional contract revenue",
+        "Took [Alan](/projects/alan), an LLM service piloted by a research team, to a Pro subscription for its first paid revenue (figures not disclosed), and planned the enterprise plan",
         "Built [Dr.Meta](/projects/dr-meta) and [Meta.CRO](/projects/meta-cro) on the output of [MX Studio](/projects/mx-studio), a 3D web component tool — in commercial operation at cancer centers nationwide",
       ],
     },
@@ -32,20 +32,20 @@ export const about: About = {
       title: "Designing AI systems hands-on, proving them in code",
       evidence: [
         "Designed a code-generation pipeline combining rule-based modules with AI models and built its core (PoC) myself → officially launched with the team as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) in October 2026",
-        "Designed and built [Decision Graph](/projects/decision-graph), an LLM pipeline that extracts decisions, on my own — over 80% reliability on a golden set from real projects",
+        "Designed and built [Decision Graph](/projects/decision-graph), an LLM pipeline that extracts decisions, on my own — extracted 80%+ of the human-labeled decisions in a golden set",
       ],
     },
     {
       title: "Deciding by measurement, not gut feel",
       evidence: [
-        "Model choices made against labeled test cases — rejected a switch to a lighter model that got only 17 of 24 right, and restructured the calls to cut run cost from $10.2 to $7.6",
+        "Model choices made by testing — rejected a switch to a lighter model that passed only 17 of 24 test cases, and restructured the calls for 74% fewer calls and 25% lower cost",
         "Set development priorities from traffic flows and per-feature usage in Google Analytics and Amplitude",
       ],
     },
     {
       title: "Leadership sized to the team",
       evidence: [
-        "Built and led teams from a 3-person dev unit to a 50-person research division; 3 group-wide awards (Maestro · Super Leader · Technology Innovation Award)",
+        "Built and led teams from a 3-person dev unit to a 50-person R&D division — as division head, acted as technical lead for a year while the CTO role was vacant; 3 group-wide awards",
         "Running an agile team of 4–5 AI engineers and app developers — build small, validate fast",
       ],
     },

@@ -7,22 +7,23 @@ export const experiences: Experience[] = [
     role: "Head of Product Dev Team",
     company: "스튜디오씨드코리아(프로토파이)",
     department: "Product Dev Team",
-    tenure: "2026.01.06 - 현재",
+    tenure: "2026.01 - 현재",
+    mission: "디자인 → 코드 AI를 PoC부터 정식 출시까지 — 2026.10 ProtoPie MCP 출시로 완료",
     projects: [
       {
         role: "설계·개발 (1인)",
-        productLabel: "사내 도구",
+        productLabel: "신규 제품 PoC",
         product: "[Decision Graph](/projects/decision-graph)",
         period: "2026.08 - 2026.10",
         title: "의사결정 추출 LLM 파이프라인",
         subtitle: "(Slack·Notion → 근거 있는 결정 기록)",
         details: [
-          "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
-          "최근 1년 내 실제 진행한 프로젝트 1건을 골든셋으로 정해 PoC 결과 검증 — 신뢰도 80% 이상 확인",
-          "PoC로 우려되던 기술 리스크를 직접 검증·검토 (신뢰도 % 대신 정답 예제로 판단, 단방향 기록, 재실행 중복 반영 방지)",
-          "2-tier 추론 구조(1차 분류: 경량 모델, 추출·검증: 고성능 모델)를 같은 정답 예제로 비교해 결정",
-          "요청별 시간·비용을 기록해 병목을 찾고 호출 구조 개선 — 같은 데이터 기준 1,289회·$10.2 → 336회·$7.6, 바뀐 부분만 다시 돌리면 30회·$0.7",
-          "정답을 정해 둔 예제 23개로 수정할 때마다 품질 확인 (평가 비용 상한 설정)",
+          "PO 요구사항을 기술 명세서로 정리하고, Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 근거와 함께 추출하는 LLM 파이프라인을 1인 설계·개발(PoC)",
+          "실제 프로젝트 1건에 사람이 직접 정답을 표시한 골든셋으로 PoC 결과 검증 — 정답 결정의 80% 이상을 맞게 추출",
+          "PoC로 우려되던 기술 리스크를 직접 검증·검토 (사람이 만든 정답 기준으로 품질 판단, 단방향 기록, 재실행 중복 반영 방지)",
+          "2-tier 추론 구조(1차 분류: 경량 모델, 추출·검증: 고성능 모델)를 같은 테스트로 비교해 결정 (전부 경량 모델은 24건 중 17건 통과로 기각)",
+          "요청별 시간·비용을 기록해 병목을 찾고 호출 구조 개선 — 같은 데이터 기준 호출 74%(1,289 → 336회)·비용 25%($10.2 → $7.6) 절감, 바뀐 부분만 다시 돌리면 $0.7",
+          "정답을 정해 둔 테스트 24건으로 수정할 때마다 품질 확인 (평가 비용 상한 설정)",
         ],
       },
       {
@@ -32,13 +33,11 @@ export const experiences: Experience[] = [
         title: "AI 기반 코드 생성 시스템",
         subtitle: "(PoC → 제품화)",
         details: [
-          "AI 기반 코드 생성 시스템 전체 설계 및 개발 팀 리드",
-          "AI 엔지니어 및 앱 개발자로 구성된 4~5명 애자일 팀 운영",
-          "룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계 (직접 주도)",
-          "이미지 기반·레이아웃(구조) 기반 코드 변환을 보조하는 모델의 학습 설계, 라벨링 등 학습 데이터 구축 (학습은 AI 엔지니어 담당)",
-          "데이터 정제부터 학습·배포까지 이어지는 MLOps 파이프라인 설계",
-          "AOS·iOS·Web 크로스 플랫폼 컴포넌트 코드 생성 파이프라인 구축",
-          "코어 파이프라인 직접 개발(PoC) → 팀과 함께 제품화 → 2026년 10월 ProtoPie MCP로 정식 출시 (Dev View · Code MCP, 7개 프레임워크 코드 생성 지원)",
+          "[직접] 룰 기반 모듈과 AI 모델 단계를 결합한 코드 생성 파이프라인 설계, 코어 파이프라인(PoC) 개발",
+          "[직접] 이미지·레이아웃(구조) 이해 보조 모델의 학습 설계, 라벨링 등 학습 데이터 구축",
+          "[팀 리드] AI 엔지니어·앱 개발자 4~5명 애자일 팀 운영 — 모델 학습은 AI 엔지니어 담당, 제품 통합은 팀과 함께",
+          "[팀 리드] 데이터 정제 → 학습 → 배포로 이어지는 MLOps 파이프라인 설계",
+          "[팀 리드] AOS·iOS·Web 크로스 플랫폼 확장, 2026년 10월 ProtoPie MCP로 정식 출시 (Dev View · Code MCP, 7개 프레임워크 코드 생성 지원)",
         ],
       },
     ],
@@ -47,7 +46,8 @@ export const experiences: Experience[] = [
     role: "Product Owner",
     company: "이스트소프트",
     department: "AI Agent Lab / Alan 개발 팀 / PO",
-    tenure: "2025.04.22 - 2026.01.05",
+    tenure: "2025.04 - 2026.01",
+    mission: "연구 조직의 시험 서비스 Alan을 유료 상용 서비스로 — Pro 구독 런칭·첫 유료 매출로 완료",
     projects: [
       {
         role: "Product Owner",
@@ -63,10 +63,10 @@ export const experiences: Experience[] = [
           "Azure, Fast API, React, LangGraph 구조 아키텍처링",
           "품질 테스트 및 사내 타 부서 (QA, 인증, 결제, 인프라 등) 개발/품질/인프라 팀과 협업",
           "LLM 기반 AI 앱 서비스 기능 기획, 일정, 리스크 관리",
-          "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 독자 개발 (슬라이드 생성은 조사·기획부터 주도)",
+          "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 자체 개발 (슬라이드 생성은 조사·기획부터 주도)",
           "결제 시스템 프로세스 및 상품 유료화 정책 수립",
           "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭, 백오피스 내부 운영 툴 개발",
-          "Pro 구독으로 서비스의 첫 유료 매출, 이를 바탕으로 엔터프라이즈 상품 기획 (이후 기관 계약 매출의 발판)",
+          "Pro 구독으로 서비스의 첫 유료 매출(수치 비공개), 이를 바탕으로 엔터프라이즈 상품 기획 (이후 기관 계약 매출의 발판)",
           "상용화 운영 중 ([myalan.ai](https://myalan.ai/))",
         ],
       },
@@ -75,13 +75,13 @@ export const experiences: Experience[] = [
   {
     // 티맥스 계열사 사이에서 부서가 옮겨진 것이라 한 그룹으로 묶음 (최신 계열사부터)
     company: "티맥스 그룹",
-    tenure: "2017.01.02 - 2025.04.14",
+    tenure: "2017.01 - 2025.04",
     units: [
       {
         role: "개발팀 Project Leader",
         company: "티맥스메타에이아이",
         department: "Meta AI 연구본부 / 연구원 (실장)",
-        tenure: "2022.07.01 - 2025.04.14",
+        tenure: "2022.07 - 2025.04",
         projects: [
           {
             role: "Project Leader",
@@ -89,6 +89,11 @@ export const experiences: Experience[] = [
             period: "2022.07 - 2025.02",
             title: "3D Web Component 제작 소프트웨어",
             subtitle: "'MX studio' 개발 및 이를 기반으로 한 제품화",
+            brief: [
+              "MX studio 엔진팀·TF팀(기획·디자인·개발·QA) 리드",
+              "물리 엔진·실시간 렌더링·후처리, 3D 이벤트·액션, 노드 기반 비주얼 코드 시스템 설계/개발 리드",
+              "산출물로 닥터메타·Meta.CRO 제품화, 외부 베타 테스트 진행",
+            ],
             details: [
               "MX studio 엔진팀 리드",
               "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
@@ -105,6 +110,10 @@ export const experiences: Experience[] = [
             period: "2024.06 - 2025.01",
             title: "전국 암센터 활용 메타버스 플랫폼",
             subtitle: "'닥터메타' 개발 (한국스마트헬스케어협회)",
+            brief: [
+              "React 웹 앱과 Unity 앱 연동, 관리자·권한 기능 설계/개발 리드",
+              "전국 암센터에서 상용 운영 ([web.drmeta.kr](http://web.drmeta.kr/))",
+            ],
             details: [
               "기획, 디자이너, 개발자, QA로 구성된 TF팀 리드",
               "React 기반의 웹 앱과 Unity 앱 연동 설계/개발 리드",
@@ -118,6 +127,10 @@ export const experiences: Experience[] = [
             period: "2023.06 - 2025.01",
             title: "3D 기반 임상시험 가상 시뮬레이션 교육 플랫폼",
             subtitle: "'Meta.CRO' 개발 (한국스마트헬스케어협회)",
+            brief: [
+              "3D render engine library 설계·배포(private npm), 개발·QA TF팀 리드",
+              "전국 암센터에서 상용 운영",
+            ],
             details: [
               "개발자, QA로 구성된 TF팀 리드",
               "3D render engine library 설계/배포 (private npm 환경 구성)",
@@ -130,6 +143,9 @@ export const experiences: Experience[] = [
             period: "2024.03 - 2024.09",
             title: "콘택트렌즈 온라인 마켓 플랫폼",
             subtitle: "'내눈N' 개발 (픽셀로)",
+            brief: [
+              "규제 샌드박스 실증특례로 처음 열린 콘택트렌즈 온라인 구매·배송 서비스 — React Native 크로스플랫폼 앱 개발 리드, 상용 운영",
+            ],
             details: [
               "개발자, QA로 구성된 TF팀 리드",
               "규제 샌드박스 실증특례로 처음 허용된 콘택트렌즈 온라인 구매·배송 서비스를 업체와 함께 개발",
@@ -144,6 +160,9 @@ export const experiences: Experience[] = [
             period: "2023.12 - 2024.08",
             title: "GIS 기반 삼성 데이터 센터 정보 시스템",
             subtitle: "'GIS S-DCIS' 개발 (삼성물산)",
+            brief: [
+              "GeoServer·PostGIS·OpenLayers 기반 GIS 시스템, 폐쇄망·온프레미스 구축 — 연우테크놀러지와 공동 개발·납품 (B2B)",
+            ],
             details: [
               "기획팀, 사업팀, 타사 연구팀과 소통 및 협업",
               "GeoServer와 PostGIS를 활용한 공간함수 서버 및 DB 구축",
@@ -159,6 +178,9 @@ export const experiences: Experience[] = [
             period: "2023.01 - 2024.09",
             title: "실시간 다중 동기화 서버",
             subtitle: "’MVS: Metaverse Server’ 연구 (사내 프로젝트)",
+            brief: [
+              "C++ 실시간 다중 동기화 서버 엔진 연구·개발 — 닥터메타 의료진 컨퍼런스 멀티플레이 서버로 적용",
+            ],
             details: [
               "R&D 팀 리드하며 C++ 기반의 서버 엔진 기술 연구 및 개발",
               "Client Library 설계 (Javascript, C#)",
@@ -172,7 +194,11 @@ export const experiences: Experience[] = [
         role: "Project Leader",
         company: "티맥스에이아이",
         department: "Meta Vision 연구본부 / 연구원 (실장, 본부장 겸직)",
-        tenure: "2020.07.25 - 2022.06.30",
+        tenure: "2020.07 - 2022.06",
+        highlights: [
+          "R&D 연구본부장(실장 겸직) — 최대 50명 R&D 조직 리딩",
+          "CTO 부재 기간 약 1년간 기술 총괄 역할 수행",
+        ],
         projects: [
           {
             role: "Project Leader",
@@ -181,6 +207,9 @@ export const experiences: Experience[] = [
             period: "2021.07 - 2022.06",
             title: "메타버스 교육 플랫폼",
             subtitle: "'Mint' 개발",
+            brief: [
+              "Phaser·WebRTC·WebGL 기반 메타버스 교육 플랫폼 기획·개발 — 공주대학교 납품",
+            ],
             details: [
               "게더타운을 벤치마크 하여 제품 기획",
               "Game engine Phaser, WebRTC, WebGL, React, MobX 등 오픈소스 기술 활용",
@@ -194,6 +223,9 @@ export const experiences: Experience[] = [
             period: "2020.07 - 2021.06",
             title: "선행 기술 연구",
             subtitle: "Deep Learning, 3DMM, SLAM 진행",
+            brief: [
+              "딥러닝 기반 디지털 휴먼(TTS)·SLAM 3D 공간 생성 선행 연구 — 2020 티맥스데이 시연",
+            ],
             details: [
               "선행 기술 연구로, Deep Learning 기반의 Text-to-Speech가 가능한 디지털 휴먼 생성 연구 수행",
               "선행 기술 연구로, Deep Learning 기반의 SLAM 3D 공간 기술을 활용한 메타버스 공간 생성 연구 수행",
@@ -207,7 +239,7 @@ export const experiences: Experience[] = [
         role: "Product Engineer",
         company: "티맥스에이앤씨",
         department: "Graphics 연구본부 / 연구원 (팀장)",
-        tenure: "2017.01.02 - 2020.07.24",
+        tenure: "2017.01 - 2020.07",
         projects: [
           {
             role: "Product Engineer",
@@ -215,6 +247,7 @@ export const experiences: Experience[] = [
             period: "2019.01 - 2020.06",
             title: "협업 솔루션",
             subtitle: "'WAPL' 개발",
+            brief: ["협업 솔루션 캘린더·메신저 프론트엔드 개발 — 티맥스와플에서 상용화"],
             details: [
               "캘린더 및 메신저 기능 개발(frontend) 업무 수행",
               "티맥스와플 사에서 상용화 운영",
@@ -226,6 +259,7 @@ export const experiences: Experience[] = [
             period: "2017.06 - 2018.12",
             title: "Linux 기반 제품",
             subtitle: "'TmaxOS' 개발",
+            brief: ["Linux 기반 OS의 C++ 개발 — 설정 화면, 비디오 플레이어 개발·리팩토링"],
             details: ["C++을 활용한 개발", "OS 개인 설정 섹션(frontend) 버그 수정 및 해결", "Video player 개발 및 코드 리팩토링"],
           },
           {
@@ -234,6 +268,7 @@ export const experiences: Experience[] = [
             period: "2017.02 - 2017.06",
             title: "통합 시스템 인터페이스 솔루션 소프트웨어",
             subtitle: "'Anylink' 구조 분석",
+            brief: ["통합 인터페이스 솔루션 구조 분석·리팩토링 설계 — 엔진 연구팀과 개선점 도출, 티맥스소프트 상용 제품"],
             details: [
               "통합 시스템 인터페이스 솔루션의 구조 분석 및 리팩토링 설계 참여",
               "엔진 연구팀과 협업하여 사용성·품질 개선 포인트 도출",

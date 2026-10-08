@@ -29,6 +29,7 @@ export const labels = {
     toc: "목차",
   },
   experience: {
+    mission: "미션",
     department: "부서 직책",
     tenure: "재직 날짜",
     defaultProductLabel: "제품명",

@@ -29,6 +29,7 @@ export const labels = {
     toc: "Contents",
   },
   experience: {
+    mission: "Mission",
     department: "Department & title",
     tenure: "Tenure",
     defaultProductLabel: "Product",

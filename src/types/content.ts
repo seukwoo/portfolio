@@ -70,6 +70,8 @@ export type ExperienceProject = {
   title: string;
   subtitle: string;
   details: string[];
+  /** 1–3 lines used instead of `details` in the PDF (older work kept short; the site still shows all details). */
+  brief?: string[];
 };
 
 /** One company stint — or one affiliate inside a company group. */
@@ -78,6 +80,10 @@ export type ExperienceUnit = {
   company: string;
   department: string;
   tenure: string;
+  /** What the company brought the candidate in to do, and how it ended — frames a short tenure. */
+  mission?: string;
+  /** Role-level facts that aren't a project (e.g. heading a division). */
+  highlights?: string[];
   projects: ExperienceProject[];
 };
 

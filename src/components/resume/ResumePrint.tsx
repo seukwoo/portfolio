@@ -120,6 +120,15 @@ export async function ResumePrint(p: Props) {
                               <span className="shrink-0 text-[12px] text-muted tabular-nums">{unit.tenure}</span>
                             </div>
                             <p className="mb-2 text-[12px] text-muted">{unit.department}</p>
+                            {unit.highlights && (
+                              <ul className="mb-2 list-disc pl-4 text-[12.5px] marker:text-accent">
+                                {unit.highlights.map((h) => (
+                                  <li key={h} className="font-medium">
+                                    {h}
+                                  </li>
+                                ))}
+                              </ul>
+                            )}
                           </>
                         }
                       />
@@ -132,7 +141,14 @@ export async function ResumePrint(p: Props) {
                     lead={
                       <>
                         {companyHeading}
-                        <p className="mt-1 mb-3 text-[12px] text-muted">{exp.department}</p>
+                        <p className="mt-1 text-[12px] text-muted">{exp.department}</p>
+                        {exp.mission && (
+                          <p className="mt-1.5 text-[12.5px]">
+                            <span className="mr-1.5 font-semibold text-accent">{labels.experience.mission}</span>
+                            {exp.mission}
+                          </p>
+                        )}
+                        <div className="mb-3" />
                       </>
                     }
                   />
@@ -204,23 +220,7 @@ export async function ResumePrint(p: Props) {
         </div>
       </Block>
 
-      <Block title={sections.certifications.title}>
-        <ul className="space-y-1">
-          {p.certifications.map((c) => (
-            <li key={c.title} className="flex gap-3">
-              <span className="w-20 shrink-0 text-[12px] text-muted tabular-nums">{c.date}</span>
-              <span>
-                <span className="font-semibold">{c.title}</span>
-                <span className="text-muted">
-                  {" "}
-                  — {[c.detail, c.issuer].filter(Boolean).join(" · ")}
-                </span>
-              </span>
-            </li>
-          ))}
-        </ul>
-      </Block>
-
+      {/* Certifications (MOS, OPIc) stay on the site only — they don't help a lead-level PDF. */}
       <p className="mt-8 border-t border-line pt-3 text-[11px] text-muted">{labels.profile.printFooter(resumeUrl)}</p>
     </article>
   );
@@ -252,7 +252,8 @@ async function ProjectList({ projects, siteUrl, nested, lead }: ProjectListProps
   return (
     <div className="space-y-4">
       {projects.map((proj, i) => {
-        const [first, ...rest] = proj.details;
+        // Older work keeps one summary line in the PDF; the site still has the full details.
+        const [first, ...rest] = proj.brief ?? proj.details;
         return (
           <div key={proj.title}>
             {/* Headings, the project title and its first bullet stay on one page; later bullets may flow on. */}
