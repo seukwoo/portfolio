@@ -32,7 +32,7 @@ export const about: About = {
       title: "AI 시스템을 직접 설계하고 코드로 증명",
       evidence: [
         "룰 기반 모듈과 AI 모델을 결합한 코드 생성 파이프라인을 설계하고 코어(PoC)를 직접 개발 → 팀과 함께 2026년 10월 [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official)로 정식 출시",
-        "의사결정 추출 LLM 파이프라인 [Decision Graph](/projects/decision-graph)를 1인 설계·개발 — 사람이 만든 골든셋 기준 정답 결정의 80% 이상 추출",
+        "의사결정 추출 LLM 파이프라인 [Decision Graph](/projects/decision-graph)를 1인 설계·개발 — 결정 관계 그래프 자동 시각화, 사람이 만든 골든셋 기준 정답 결정의 80% 이상 추출",
       ],
     },
     {

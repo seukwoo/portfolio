@@ -109,7 +109,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "decision-graph",
-    summary: "Slack·Notion에서 의사결정을 원문 근거와 함께 뽑는 LLM 파이프라인 — 사람이 표시한 정답 결정의 80% 이상 추출, 호출 74%·비용 25% 절감",
+    summary: "Slack·Notion에서 의사결정을 근거와 함께 뽑아 관계 그래프로 자동 시각화하는 LLM 파이프라인 — 사람이 표시한 정답 결정의 80% 이상 추출, 호출 74%·비용 25% 절감",
     punchline: ["흩어진 대화에서", "근거 있는 결정으로"],
     name: "Decision Graph",
     client: "스튜디오씨드코리아",
@@ -122,6 +122,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     tasks: [
       "PO 요구사항을 기술 명세서로 정리하고 PoC로 기술 타당성 검증 — 신규 제품 검토",
       "Slack·Notion에서 '누가·무엇을·왜' 결정했는지 원문 인용 근거와 함께 추출하는 LLM 파이프라인 1인 설계·개발",
+      "추출된 결정을 관계도·타임라인으로 자동 시각화 — 결정 간 전제·대체·중단 관계를 자동으로 잇고, 각 결정에서 근거 원문으로 바로 이동",
       "최근 1년 내 실제 프로젝트 1건의 대화에 사람이 직접 정답(결정·근거)을 표시한 골든셋으로 PoC 결과 검증 — 정답 결정의 80% 이상을 맞게 추출",
       "PoC로 우려되던 기술 리스크를 직접 검증·검토 (예: 사람이 만든 정답 기준으로 품질 판단, 원문 → 결정 → 문서 단방향 기록, 재실행 중복 반영 방지)",
       "분석 단위 분할 → 1차 분류(경량 모델) → 결정 추출 → 근거 검증(코드 + 모델) → 중복·관계 분석의 다단계 파이프라인 설계",
@@ -136,15 +137,16 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Real screens of the tool; decision text is blurred (internal project data).
     images: [
       { src: "/projects/decision-graph/overview.svg", width: 1200, height: 675 },
-      { src: "/projects/decision-graph/relations.webp", width: 2190, height: 1312 },
-      { src: "/projects/decision-graph/timeline.webp", width: 2196, height: 1248 },
+      { src: "/projects/decision-graph/relations.webp", width: 2190, height: 1312, caption: "시스템이 자동으로 그린 결정 관계도 — 추출된 결정 사이의 전제·대체·중단 관계와 상태를 자동으로 연결 (결정 내용은 사내 정보라 흐리게 처리)" },
+      { src: "/projects/decision-graph/timeline.webp", width: 2196, height: 1248, caption: "시스템이 자동으로 그린 결정 타임라인 — 결정 수준(전사·프로젝트·기능·실무)과 시점, 마일스톤으로 프로젝트의 결정 흐름 표시" },
     ],
     cardImage: { src: "/projects/decision-graph/card.svg", width: 1200, height: 750 },
     coverInGallery: true,
     caseStudy: {
       problem:
-        "결정은 Slack과 Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어려웠습니다. LLM으로 자동 추출하되, 지어낸 결정이나 빠진 조건 없이 믿을 수 있어야 했고 매일 돌려도 부담 없는 비용과 속도여야 했습니다.",
+        "결정은 Slack과 Notion 곳곳에서 내려지지만, 나중에 '누가, 무엇을, 왜' 정했는지 근거와 함께 찾기 어렵고, 프로젝트 전체의 결정 흐름도 한눈에 보이지 않았습니다. LLM으로 자동 추출하되, 지어낸 결정이나 빠진 조건 없이 믿을 수 있어야 했고 매일 돌려도 부담 없는 비용과 속도여야 했습니다.",
       decisions: [
+        "결정은 목록이 아니라 그래프로 — 시스템이 결정 사이의 전제·대체·중단 관계를 자동으로 잇고 근거 원문을 참조로 연결해, 프로젝트의 결정 흐름을 빠르게 파악",
         "발언 중 결정만 후보로 올리고, 사람이 확정하기 전에는 기록에 넣지 않도록 설계",
         "근거는 원문 문장 번호로 인용하고, 코드와 별도 검증 단계가 두 번 확인",
         "사람이 정답을 표시한 골든셋과, 자주 틀리는 경우(조건 누락 등)로 만든 테스트 24건으로 고칠 때마다 품질 확인",
@@ -153,7 +155,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "최근 1년 내 실제 프로젝트 1건에 사람이 직접 정답(결정·근거)을 표시한 골든셋과 비교해, 정답 결정의 80% 이상을 맞게 추출하는 것을 확인했습니다. 테스트 24건을 모두 통과하고 잘못 제외된 결정 없이 품질을 지키면서, 같은 데이터 기준 호출 수 74%(1,289 → 336회), 실행 비용 25%($10.2 → $7.6)를 줄였습니다. 새로 바뀐 대화만 다시 돌리면 $0.7입니다.",
+        text: "최근 1년 내 실제 프로젝트 1건에 사람이 직접 정답(결정·근거)을 표시한 골든셋과 비교해, 정답 결정의 80% 이상을 맞게 추출하는 것을 확인했습니다. 추출된 결정은 관계도와 타임라인으로 자동으로 그려집니다. 테스트 24건을 모두 통과하고 잘못 제외된 결정 없이 품질을 지키면서, 같은 데이터 기준 호출 수 74%(1,289 → 336회), 실행 비용 25%($10.2 → $7.6)를 줄였습니다. 새로 바뀐 대화만 다시 돌리면 $0.7입니다.",
         note: "사내 알파 단계 기준입니다.",
       },
     },

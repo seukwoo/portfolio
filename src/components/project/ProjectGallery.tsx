@@ -42,6 +42,7 @@ export function ProjectGallery({ images, title, extraSlide }: Props) {
               sizes="(min-width: 1152px) 1104px, 100vw"
               className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
             />
+            {img.caption && <p className="mx-auto mt-3 max-w-3xl px-12 text-center text-sm text-muted">{img.caption}</p>}
           </SwiperSlide>,
           ...(i === 0 && extraSlide
             ? [

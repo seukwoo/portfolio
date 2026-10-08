@@ -228,7 +228,23 @@ export async function ResumePrint(p: Props) {
         </div>
       </Block>
 
-      {/* Certifications (MOS, OPIc) stay on the site only — they don't help a lead-level PDF. */}
+      <Block title={sections.certifications.title}>
+        <ul className="space-y-1">
+          {p.certifications.map((c) => (
+            <li key={c.title} className="flex gap-3">
+              <span className="w-20 shrink-0 text-[12px] text-muted tabular-nums">{c.date}</span>
+              <span>
+                <span className="font-semibold">{c.title}</span>
+                <span className="text-muted">
+                  {" "}
+                  — {[c.detail, c.issuer].filter(Boolean).join(" · ")}
+                </span>
+              </span>
+            </li>
+          ))}
+        </ul>
+      </Block>
+
       <p className="mt-8 border-t border-line pt-3 text-[11px] text-muted">{labels.profile.printFooter(resumeUrl)}</p>
     </article>
   );

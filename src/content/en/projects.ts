@@ -112,7 +112,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   {
     slug: "decision-graph",
     summary:
-      "LLM pipeline that extracts decisions from Slack and Notion along with source evidence — extracted 80%+ of the human-labeled decisions, 74% fewer calls, 25% lower cost",
+      "LLM pipeline that extracts decisions from Slack and Notion with evidence and visualizes them as a relation graph automatically — extracted 80%+ of the human-labeled decisions, 74% fewer calls, 25% lower cost",
     punchline: ["From scattered conversations", "to decisions with evidence"],
     name: "Decision Graph",
     client: "Studio XID",
@@ -125,6 +125,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     tasks: [
       "Turned PO requirements into a technical spec and validated technical feasibility with a PoC — new product exploration",
       "Designed and developed, solo, an LLM pipeline that extracts who decided what and why from Slack and Notion, with quoted source evidence",
+      "Visualized extracted decisions automatically as a relation map and timeline — prerequisite, replacement and stop relations linked by the system, with each decision linking straight to its source text",
       "Validated the PoC against a golden set where people manually marked the correct decisions (and evidence) in the conversations of one real project from the past year — extracted 80%+ of the human-labeled decisions",
       "Verified and reviewed the technical risks raised during the PoC myself (e.g. judging quality against human-made ground truth, one-way recording from source → decision → document, preventing duplicate entries on re-runs)",
       "Designed a multi-stage pipeline: split into analysis units → first-pass classification (lightweight model) → decision extraction → evidence verification (code + model) → duplicate and relationship analysis",
@@ -139,15 +140,16 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     // Real screens of the tool; decision text is blurred (internal project data).
     images: [
       { src: "/projects/decision-graph/overview.svg", width: 1200, height: 675 },
-      { src: "/projects/decision-graph/relations.webp", width: 2190, height: 1312 },
-      { src: "/projects/decision-graph/timeline.webp", width: 2196, height: 1248 },
+      { src: "/projects/decision-graph/relations.webp", width: 2190, height: 1312, caption: "Decision relation map drawn automatically by the system — prerequisite, replacement and stop relations and statuses between extracted decisions (decision text blurred: internal data)" },
+      { src: "/projects/decision-graph/timeline.webp", width: 2196, height: 1248, caption: "Decision timeline drawn automatically by the system — decision level (company, project, feature, task), timing and milestones" },
     ],
     cardImage: { src: "/projects/decision-graph/card.svg", width: 1200, height: 750 },
     coverInGallery: true,
     caseStudy: {
       problem:
-        "Decisions are made all over Slack and Notion, but later it was hard to find who decided what and why, along with the evidence. Extraction would be automated with an LLM, but it had to be trustworthy — no invented decisions or missing conditions — and cheap and fast enough to run every day.",
+        "Decisions are made all over Slack and Notion, but later it was hard to find who decided what and why, along with the evidence — and the project's overall flow of decisions was hard to see. Extraction would be automated with an LLM, but it had to be trustworthy — no invented decisions or missing conditions — and cheap and fast enough to run every day.",
       decisions: [
+        "Decisions as a graph, not a list — the system links prerequisite, replacement and stop relations between decisions and references the source text, so the project's decision flow is quick to grasp",
         "Only decisions from what was said are raised as candidates, and nothing goes into the record until a person confirms it",
         "Evidence is cited by source sentence number and checked twice — by code and by a separate verification stage",
         "Checked quality on every change against a golden set with human-marked answers and 24 test cases built from common failure cases (e.g. missing conditions)",
@@ -156,7 +158,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Outcome",
-        text: "Compared against a golden set where people manually marked the correct decisions (and evidence) on one real project from the past year, and confirmed it correctly extracted 80%+ of the human-labeled decisions. While keeping quality — all 24 test cases passed, with no decisions wrongly excluded — cut calls by 74% (1,289 → 336) and run cost by 25% ($10.2 → $7.6) on the same data. Re-running only the conversations that changed costs $0.7.",
+        text: "Compared against a golden set where people manually marked the correct decisions (and evidence) on one real project from the past year, and confirmed it correctly extracted 80%+ of the human-labeled decisions. Extracted decisions are drawn automatically as a relation map and timeline. While keeping quality — all 24 test cases passed, with no decisions wrongly excluded — cut calls by 74% (1,289 → 336) and run cost by 25% ($10.2 → $7.6) on the same data. Re-running only the conversations that changed costs $0.7.",
         note: "As of the internal alpha stage.",
       },
     },

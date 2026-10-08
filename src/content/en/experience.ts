@@ -19,6 +19,7 @@ export const experiences: Experience[] = [
         subtitle: "(Slack·Notion → decision records with evidence)",
         details: [
           "Turned PO requirements into a technical spec, then designed and built (solo) the LLM pipeline PoC that extracts who decided what and why from Slack and Notion, with source evidence",
+          "Visualized extracted decisions automatically as a relation map and timeline — relations (prerequisite, replacement, stop) linked by the system, each decision referencing its source text",
           "Validated PoC results against a golden set where people manually marked the correct decisions on one real project — extracted 80%+ of the human-labeled decisions",
           "Verified and reviewed the feared technical risks firsthand through the PoC (judging quality against human-made ground truth, one-way records, preventing duplicate entries on re-runs)",
           "Chose the two-tier inference structure (first-pass classification: lightweight model; extraction and validation: high-capability model) by comparing options on the same tests (all-lightweight rejected after passing only 17 of 24)",

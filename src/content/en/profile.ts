@@ -32,7 +32,7 @@ export const about: About = {
       title: "Designing AI systems hands-on, proving them in code",
       evidence: [
         "Designed a code-generation pipeline combining rule-based modules with AI models and built its core (PoC) myself → officially launched with the team as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) in October 2026",
-        "Designed and built [Decision Graph](/projects/decision-graph), an LLM pipeline that extracts decisions, on my own — extracted 80%+ of the human-labeled decisions in a golden set",
+        "Designed and built [Decision Graph](/projects/decision-graph), an LLM pipeline that extracts decisions and graphs their relations automatically, on my own — extracted 80%+ of the human-labeled decisions in a golden set",
       ],
     },
     {
