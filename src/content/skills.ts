@@ -5,7 +5,7 @@ import type { SkillGroup } from "@/types/content";
 export const skillGroups: SkillGroup[] = [
   {
     type: "AI · LLM",
-    items: ["Python", "LLM API", "LangGraph", "MCP", "RAG", "Computer Vision"],
+    items: ["Python", "LLM API", "LangGraph", "MCP", "Computer Vision"],
   },
   {
     type: "백엔드 · 인프라",

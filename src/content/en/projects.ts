@@ -286,11 +286,11 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     domain: "Pixelro / Commerce",
     period: "2024.03 - 2024.09",
     tasks: [
-      "Worked on 'NaenunN', an online marketplace platform for contact lenses",
-      "As the lead, handled PM/PE work for design and development",
-      "Led a task force of developers and QA",
-      "Led design/development of a cross-platform app from a single core codebase with React and React Native",
-      "Led builds and releases to meet Android and iOS review requirements",
+      "Led design and development as project lead — ran a developer/QA task force and aligned requirements with the client",
+      "Designed the data flow and server sequences between frontend and backend, and reviewed technical risks",
+      "Shipped separate iOS and Android apps as a WebView-based cross-platform app over a React web app — led builds and releases for store review",
+      "Designed integrations with external APIs, including payment and delivery",
+      "Designed the operations admin — a central admin separated from per-store screens for each optician",
       "In commercial operation (https://nenoonn.mycafe24.com/)",
     ],
     roles: ["System Engineer, Project Manager"],
@@ -299,8 +299,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       problem:
         "Selling contact lenses online had not been allowed, so we had to build a service that didn't yet exist in Korea from scratch, together with a company granted a regulatory sandbox exemption. Users expected to access it on multiple platforms, including mobile.",
       decisions: [
-        "Shared a single core codebase across React and React Native to build web, Android and iOS apps quickly",
-        "Led builds and releases to meet Android and iOS review criteria",
+        "Wrapped one web app in WebView-based apps for iOS and Android — three platforms with a small team",
+        "Designed the payment/delivery API integrations and the frontend–backend data flow and sequences first, reviewing technical risks before development",
+        "Split the admin into a central console and per-store screens, so headquarters and each optician manage only what they need",
       ],
       outcome: {
         label: "Outcome",

@@ -8,7 +8,7 @@ export const hero: HomeHero = {
   name: "Seukwoo Lee",
   altName: "이석우",
   eyebrow: "AI Engineering Lead",
-  headline: ["10 years in development,", "from kickoff to launch."],
+  headline: ["From prototype AI", "to paid product."],
   intro:
     "Hi, I'm Seukwoo Lee. I turn research- and pilot-stage technology into products people actually use and pay for. I design and write the code myself, and have led teams from a 3-person dev unit to a 50-person research division.",
   focus:
@@ -43,8 +43,8 @@ export const latestWork: LatestWork = {
   href: routes.projects,
 };
 
-/** Which projects are featured; they're shown newest first (by period), not in this order. */
-export const featuredProjectSlugs = ["decision-graph", "ui-code-ai", "alan", "mx-studio"];
+/** Featured projects in display order: shipped results first (official launch, monetization), then the latest PoC. */
+export const featuredProjectSlugs = ["ui-code-ai", "alan", "decision-graph", "mx-studio"];
 
 export const leadership: LeadershipBlock[] = [
   {
@@ -52,6 +52,7 @@ export const leadership: LeadershipBlock[] = [
     points: [
       "Built and led teams from a small 3-person dev unit to a 50-person R&D division — as division head, acted as technical lead for a year while the CTO role was vacant",
       "Currently running a 4–5 person agile team — fast decisions, flexible execution",
+      "Evaluated team members and team leads directly, and kept refining what good leadership means — and how I lead — through the feedback both ways",
     ],
   },
   {

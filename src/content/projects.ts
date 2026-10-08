@@ -278,11 +278,11 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     domain: "픽셀로/커머스",
     period: "2024.03 - 2024.09",
     tasks: [
-      "콘택트렌즈 온라인 마켓 플랫폼 '내눈N' 프로젝트에 참여",
-      "책임자로서 설계 및 개발 PM/PE 업무 수행",
-      "개발자, QA로 구성된 TF팀 리드",
-      "React, React Native를 활용하여 core 소스 하나로 크로스플랫폼 앱 설계/개발 리드",
-      "Android, iOS 심사에 맞게 빌드 및 배포 리드",
+      "책임자(PL)로 설계·개발 리드 — 개발자·QA TF팀 운영, 고객사와 요구사항 조율",
+      "프론트엔드·백엔드 간 데이터 흐름과 서버 시퀀스 설계, 기술 리스크 검토",
+      "React 웹 + 웹뷰 기반 크로스플랫폼 앱으로 iOS·Android 각각 출시 — 스토어 심사 기준에 맞춘 빌드·배포 리드",
+      "결제·배송 등 외부 API 연동 설계",
+      "운영 관리자 페이지 설계 — 통합 관리자와 안경점별 관리 화면 분리",
       "상용화 운영 중 (https://nenoonn.mycafe24.com/)",
     ],
     roles: ["System Engineer, Project Manager"],
@@ -291,8 +291,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       problem:
         "콘택트렌즈 온라인 판매는 원래 허용되지 않던 영역이라, 규제 샌드박스 실증특례를 받은 업체와 함께 국내에 없던 서비스를 처음부터 만들어야 했습니다. 사용자는 모바일을 비롯한 여러 플랫폼에서 접속하길 기대했습니다.",
       decisions: [
-        "React·React Native로 core 소스 하나를 공유해 웹·Android·iOS 앱을 빠르게 제작",
-        "Android·iOS 심사 기준에 맞춘 빌드·배포 리드",
+        "웹 하나를 웹뷰 기반 앱으로 감싸 iOS·Android에 각각 출시 — 작은 팀으로 세 플랫폼 대응",
+        "결제·배송 외부 API와 프론트·백엔드 간 데이터 흐름·시퀀스를 먼저 설계하고 기술 리스크를 검토한 뒤 개발",
+        "운영 관리자를 통합 관리자와 안경점별 화면으로 나눠, 본사와 각 매장이 각자 필요한 범위만 관리",
       ],
       outcome: {
         label: "결과",

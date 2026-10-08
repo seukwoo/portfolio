@@ -16,6 +16,7 @@ export function ResumePrintView({ lang }: { lang: Lang }) {
       lang={lang}
       profile={c.profile}
       siteUrl={c.site.url}
+      github={c.socialLinks.find((l) => l.label === "GitHub")?.href}
       lastUpdated={c.site.lastUpdated}
       introduction={c.introduction}
       about={c.about}

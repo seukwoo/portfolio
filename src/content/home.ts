@@ -8,7 +8,7 @@ export const hero: HomeHero = {
   name: "이석우",
   altName: "Seukwoo Lee",
   eyebrow: "AI Engineering Lead",
-  headline: ["10년차 개발 리더,", "프로젝트 초기부터 상용화까지."],
+  headline: ["연구 단계의 AI를,", "돈을 내는 제품으로."],
   intro:
     "안녕하세요, 이석우입니다. 연구·시험 단계의 기술을 실제 사용자가 쓰고 돈을 내는 제품으로 만들어 왔습니다. 직접 설계하고 코드를 쓰며, 3명 개발 파트부터 50명 연구 본부까지 이끌었습니다.",
   focus:
@@ -43,8 +43,8 @@ export const latestWork: LatestWork = {
   href: routes.projects,
 };
 
-/** Which projects are featured; they're shown newest first (by period), not in this order. */
-export const featuredProjectSlugs = ["decision-graph", "ui-code-ai", "alan", "mx-studio"];
+/** Featured projects in display order: shipped results first (official launch, monetization), then the latest PoC. */
+export const featuredProjectSlugs = ["ui-code-ai", "alan", "decision-graph", "mx-studio"];
 
 export const leadership: LeadershipBlock[] = [
   {
@@ -52,6 +52,7 @@ export const leadership: LeadershipBlock[] = [
     points: [
       "소규모(3명) 개발 파트부터 대규모(50명) R&D 본부까지 팀 빌딩 및 리딩 — 본부장으로 CTO 공백 1년간 기술 총괄",
       "현재 4~5명 애자일 팀 운영 — 빠른 의사결정과 유연한 실행",
+      "팀원과 리더의 평가를 직접 맡으며, 주고받은 피드백으로 '좋은 리더'의 기준과 리딩 방식을 계속 다듬어 옴",
     ],
   },
   {

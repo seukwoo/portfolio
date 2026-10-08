@@ -47,6 +47,7 @@ export const about: About = {
       evidence: [
         "Built and led teams from a 3-person dev unit to a 50-person R&D division — as division head, acted as technical lead for a year while the CTO role was vacant; 3 group-wide awards",
         "Running an agile team of 4–5 AI engineers and app developers — build small, validate fast",
+        "Evaluated team members and leads directly, and kept adjusting how I lead from the feedback both ways",
       ],
     },
   ],
@@ -61,4 +62,5 @@ export const socialLinks: LinkItem[] = [
     href: "https://connect.rememberapp.co.kr/profile/2472858?internal_path=rc_connect_search_list",
   },
   { label: "LinkedIn", href: "http://www.linkedin.com/in/seuk-woo-lee-ko" },
+  { label: "GitHub", href: "https://github.com/seukwoo" },
 ];

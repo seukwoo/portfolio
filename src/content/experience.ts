@@ -148,13 +148,14 @@ export const experiences: Experience[] = [
             title: "콘택트렌즈 온라인 마켓 플랫폼",
             subtitle: "'내눈N' 개발 (픽셀로)",
             brief: [
-              "규제 샌드박스 실증특례로 처음 열린 콘택트렌즈 온라인 구매·배송 서비스 — React Native 크로스플랫폼 앱 개발 리드, 상용 운영",
+              "규제 샌드박스로 처음 열린 콘택트렌즈 온라인 구매·배송 서비스 — 웹뷰 기반 iOS·Android 앱 출시, 결제·배송 API 연동·관리자 페이지 설계 리드, 상용 운영",
             ],
             details: [
               "개발자, QA로 구성된 TF팀 리드",
               "규제 샌드박스 실증특례로 처음 허용된 콘택트렌즈 온라인 구매·배송 서비스를 업체와 함께 개발",
-              "React, React Native를 활용하여 core 소스 하나로 크로스플랫폼 앱 설계/개발 리드",
-              "Android, iOS 심사에 맞게 빌드 및 배포 리드",
+              "프론트엔드·백엔드 간 데이터 흐름과 서버 시퀀스 설계, 기술 리스크 검토",
+              "React 웹 + 웹뷰 기반 크로스플랫폼 앱으로 iOS·Android 각각 출시, 스토어 심사에 맞춘 빌드·배포 리드",
+              "결제·배송 등 외부 API 연동, 운영 관리자 페이지(통합·안경점별) 설계",
               "상용화 운영 중 ([nenoonn.mycafe24.com](https://nenoonn.mycafe24.com/))",
             ],
           },
@@ -202,6 +203,7 @@ export const experiences: Experience[] = [
         highlights: [
           "R&D 연구본부장(실장 겸직) — 최대 50명 R&D 조직 리딩",
           "CTO 부재 기간 약 1년간 기술 총괄 역할 수행",
+          "팀원·팀장 평가와 피드백 운영",
         ],
         projects: [
           {

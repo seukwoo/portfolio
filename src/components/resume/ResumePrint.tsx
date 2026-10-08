@@ -10,6 +10,8 @@ type Props = {
   lang: Lang;
   profile: Profile;
   siteUrl: string;
+  /** Public code profile shown in the header (e.g. GitHub). */
+  github?: string;
   lastUpdated: string;
   introduction: string[];
   about: About;
@@ -54,6 +56,11 @@ export async function ResumePrint(p: Props) {
           <p>
             <a href={p.siteUrl}>{p.siteUrl.replace(/^https?:\/\//, "")}</a>
           </p>
+          {p.github && (
+            <p>
+              <a href={p.github}>{p.github.replace(/^https?:\/\//, "")}</a>
+            </p>
+          )}
           <p>
             {labels.profile.lastUpdated}: {p.lastUpdated}
           </p>
@@ -160,11 +167,12 @@ export async function ResumePrint(p: Props) {
       </Block>
 
       <Block title={sections.skills.title}>
-        <dl className="space-y-1">
+        {/* Two columns: the groups are short, so this saves lines on the page. */}
+        <dl className="grid grid-cols-2 gap-x-6 gap-y-1.5">
           {p.skillGroups.map((g) => (
-            <div key={g.type} className="flex gap-3">
-              <dt className="w-44 shrink-0 font-semibold">{g.type}</dt>
-              <dd>{g.items.join(" · ")}</dd>
+            <div key={g.type} className="break-inside-avoid">
+              <dt className="inline font-semibold">{g.type}</dt>
+              <dd className="inline text-muted"> — {g.items.join(" · ")}</dd>
             </div>
           ))}
         </dl>
@@ -204,8 +212,8 @@ export async function ResumePrint(p: Props) {
                         <span className="font-semibold">{a.title}</span>
                         {group.kind === "paper" ? (
                           <>
-                            <span className="block">{first}</span>
-                            {rest.length > 0 && <span className="block text-[12px] text-muted">{rest.join(" · ")}</span>}
+                            {/* Title only in the PDF; venue and pages stay on the site. */}
+                            <span className="block">{first.replace(/^(제목|Title):\s*/, "")}</span>
                           </>
                         ) : (
                           <span className="text-muted"> — {[first, ...rest].join(" ")}</span>

@@ -9,9 +9,9 @@ export function getAdjacentProjects({ projects }: Projects, slug: string) {
   return { prev: projects[index - 1], next: projects[index + 1] };
 }
 
-/** Featured projects (picked in content/home.ts), newest first like every project list. */
+/** Featured projects in the order picked in content/home.ts (strongest first); other lists stay newest first. */
 export const getFeaturedProjects = ({ projects, featuredProjectSlugs }: Projects) =>
-  projects.filter((p) => featuredProjectSlugs.includes(p.slug));
+  featuredProjectSlugs.map((slug) => projects.find((p) => p.slug === slug)).filter((p) => p !== undefined);
 
 /** Everything not featured, newest first. */
 export const getOtherProjects = ({ projects, featuredProjectSlugs }: Projects) =>

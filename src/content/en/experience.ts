@@ -148,13 +148,14 @@ export const experiences: Experience[] = [
             title: "Online marketplace platform for contact lenses",
             subtitle: "Development of 'NaenunN' (Pixelro)",
             brief: [
-              "The first online contact-lens purchase & delivery service, opened under a regulatory sandbox exemption — led the React Native cross-platform app; in commercial operation",
+              "The first online contact-lens purchase & delivery service, opened under a regulatory sandbox exemption — shipped WebView-based iOS/Android apps, led design of payment/delivery API integrations and the admin; in commercial operation",
             ],
             details: [
               "Led a task force team of developers and QA",
               "Developed, together with the partner company, an online contact lens purchase and delivery service first permitted under a regulatory sandbox special exemption for demonstration",
-              "Led design/development of a cross-platform app from a single core codebase using React and React Native",
-              "Led builds and releases to meet Android and iOS review requirements",
+              "Designed the frontend–backend data flow and server sequences, and reviewed technical risks",
+              "Shipped separate iOS and Android apps as a WebView-based cross-platform app over a React web app; led builds and releases for store review",
+              "Designed external API integrations (payment, delivery) and the operations admin (central and per-store)",
               "In commercial operation ([nenoonn.mycafe24.com](https://nenoonn.mycafe24.com/))",
             ],
           },
@@ -202,6 +203,7 @@ export const experiences: Experience[] = [
         highlights: [
           "R&D Division Head (concurrently Head of Office) — led an R&D organization of up to 50",
           "Acted as technical lead for about a year while the CTO role was vacant",
+          "Ran evaluations and feedback for team members and team leads",
         ],
         projects: [
           {

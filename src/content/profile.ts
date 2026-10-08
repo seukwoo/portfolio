@@ -47,6 +47,7 @@ export const about: About = {
       evidence: [
         "3명 개발 파트부터 50명 R&D 본부까지 팀 빌딩·리딩 — 본부장으로 CTO 공백 1년간 기술 총괄, 그룹사 수상 3회",
         "AI 엔지니어·앱 개발자 4~5명 애자일 팀 운영 — 작게 만들고 빠르게 검증",
+        "팀원·리더 평가를 직접 맡고, 주고받은 피드백으로 리딩 방식을 계속 고쳐 옴",
       ],
     },
   ],
@@ -61,5 +62,6 @@ export const socialLinks: LinkItem[] = [
     href: "https://connect.rememberapp.co.kr/profile/2472858?internal_path=rc_connect_search_list",
   },
   { label: "링크드인 (LinkedIn)", href: "http://www.linkedin.com/in/seuk-woo-lee-ko" },
+  { label: "GitHub", href: "https://github.com/seukwoo" },
 ];
 
