@@ -65,7 +65,7 @@ export const leadership: LeadershipBlock[] = [
     title: "Priorities · Driven by user data and business metrics",
     points: [
       "Set development priorities from traffic flows and per-feature usage in Google Analytics and Amplitude",
-      "Designed pricing, terms, and refund policy alongside development for the free-to-paid transition",
+      "For the free-to-paid transition, set pricing from competitor prices, cost per call and expected conversion, and designed terms and refund policy alongside development",
     ],
   },
 ];

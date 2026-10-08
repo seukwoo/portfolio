@@ -85,7 +85,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "슬라이드 생성 기능: 조사·기획 단계부터 프로젝트 주도",
       "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭 (2025.07, [공식 발표](https://estsoft.ai/all/250707))",
       "백오피스 내부 운영 툴 개발",
-      "결제 시스템 프로세스 및 상품 유료화 정책 수립",
+      "유료 상품 기획 — 시장·경쟁사 가격 조사, 콜당 LLM 원가 계산, 활성 사용자 대비 유료 전환 비율 가정으로 가격 책정, 결제 프로세스·약관·환불 정책 수립",
       "상용화 운영 중 ([https://myalan.ai/](https://myalan.ai/))",
     ],
     roles: ["Product Owner", "(+ Project Manager, + Development Leader)"],
@@ -96,7 +96,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
         "시험 운영 단계의 서비스를 Dev·QA·Stage·Release 서버 분리 운영 체계로 전환해 상용 서비스 수준으로 정비",
         "LLM Agent 서비스를 검색 스타일로 제공해 기존 검색 사용자의 진입 장벽을 낮춤",
         "이미지 서치, 유튜브 서치·요약, 보고서·슬라이드 생성 등 기능과 특화 에이전트를 자체 개발 (슬라이드 생성은 조사·기획 단계부터 주도)",
-        "다양한 사용자층을 고려한 결제 프로세스와 유료화 정책 수립",
+        "가격은 근거로 — 경쟁사 가격 조사, 콜당 LLM 원가, 활성 사용자 대비 유료 전환 비율을 따져 Pro 플랜 가격을 정하고 결제·약관·환불 정책까지 설계",
       ],
       outcome: {
         label: "결과",

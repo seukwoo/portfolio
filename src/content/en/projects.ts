@@ -87,7 +87,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "Slide generation: led the project from the research and planning stage",
       "Shipped the deep research and slide generation services and launched the Pro subscription (2025.07, [announcement](https://estsoft.ai/all/250707))",
       "Developed an internal back-office operations tool",
-      "Defined the payment process and the monetization policy for products",
+      "Planned the paid product — researched market and competitor pricing, calculated LLM cost per call, and priced the plan on assumed active-to-paid conversion; set up the payment process, terms and refund policy",
       "In commercial operation ([https://myalan.ai/](https://myalan.ai/))",
     ],
     roles: ["Product Owner", "(+ Project Manager, + Development Leader)"],
@@ -98,7 +98,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
         "Moved the trial-stage service onto separate Dev, QA, Stage and Release servers to bring it up to commercial-service standards",
         "Offered the LLM agent service in a search style to lower the barrier for existing search users",
         "Built features and specialized agents in-house, including image search, YouTube search & summary, and report and slide generation (led slide generation from the research and planning stage)",
-        "Defined a payment process and monetization policy with a range of user groups in mind",
+        "Priced on evidence — set the Pro plan price from competitor pricing, LLM cost per call and the expected active-to-paid conversion rate, then designed payment, terms and refund policy",
       ],
       outcome: {
         label: "Outcome",

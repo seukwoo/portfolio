@@ -65,7 +65,7 @@ export const experiences: Experience[] = [
           "Ran quality testing and collaborated with other in-house development, quality and infrastructure teams (QA, authentication, payments, infrastructure, etc.)",
           "Handled feature planning, scheduling and risk management for the LLM-based AI app service",
           "Built in-house image search, YouTube search & summarization, report generation and slide generation features plus specialized agents (led slide generation from research and planning onward)",
-          "Set up the payment system process and the paid product policy",
+          "Planned the paid product — researched market and competitor pricing, calculated LLM cost per call, and priced the plan on assumed active-to-paid conversion; set up the payment process, terms and refund policy",
           "Deployed the deep research and slide generation services, launched the Pro subscription (2025.07, [announcement](https://estsoft.ai/all/250707)), and developed an internal back-office operations tool",
           "Pro subscription brought the service's first paid revenue (figures not disclosed); building on it, planned an enterprise product (later the basis for institutional contract revenue)",
           "In commercial operation ([myalan.ai](https://myalan.ai/))",
