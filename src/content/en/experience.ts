@@ -34,8 +34,9 @@ export const experiences: Experience[] = [
         subtitle: "(PoC → productization)",
         details: [
           "[Hands-on] Designed the code generation pipeline combining rule-based modules with AI model stages, and developed the core pipeline (PoC)",
-          "[Hands-on] Designed training for auxiliary models that understand images and layout (structure), and built training data including labeling",
-          "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, product integration with the team",
+          "[Hands-on] Designed training for auxiliary models that understand images and layout (structure), and built training data",
+          "[Hands-on] Designed the product integration architecture for plugging the code generation pipeline into the existing product (ProtoPie)",
+          "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, integration development with the team",
           "[Team lead] Designed the MLOps pipeline from data cleaning → training → deployment",
           "[Team lead] Expanded to AOS, iOS and Web cross-platform; official launch as ProtoPie MCP in October 2026 (Dev View · Code MCP, code generation for 7 frameworks)",
         ],

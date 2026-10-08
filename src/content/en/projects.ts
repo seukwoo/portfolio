@@ -26,9 +26,10 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2026.01 - 2026.10",
     tasks: [
       "[Hands-on] Designed a code generation pipeline combining rule-based modules with AI model stages, and developed the core pipeline (PoC)",
-      "[Hands-on] Designed the training of auxiliary models that understand images and layout (structure), and built the training data, including labeling",
+      "[Hands-on] Designed the training of auxiliary models that understand images and layout (structure), and built the training data",
+      "[Hands-on] Designed the product integration architecture for plugging the code generation pipeline into the existing product (ProtoPie)",
       "[Hands-on] Designed the data pipeline that refines design data accumulated in-house into training data",
-      "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, product integration with the team",
+      "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, integration development with the team",
       "[Team lead] Designed the MLOps pipeline from data cleaning → training → deployment",
       "[Team lead] Expanded to cross-platform component code generation for AOS, iOS and Web; official launch as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) in October 2026",
     ],
@@ -49,7 +50,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       decisions: [
         "Designed a code generation pipeline that places AI model stages between rule-based modules",
         "Designed conversion paths so that both image-based and layout (structure)-based inputs can be turned into code",
-        "Designed the training of auxiliary models that understand images and layout (structure) and built the training data, including labeling, myself; connected the models trained by teammates to the pipeline to output AOS, iOS and Web component code",
+        "Designed the training of auxiliary models that understand images and layout (structure) and built the training data myself; connected the models trained by teammates to the pipeline to output AOS, iOS and Web component code",
       ],
       outcome: {
         label: "Outcome",
