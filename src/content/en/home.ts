@@ -71,5 +71,13 @@ export const leadership: LeadershipBlock[] = [
   },
 ];
 
-/** 🟨 Hidden until written (feedback #6, #19). Set to an object to show the section. */
-export const workStyle: WorkStyle | null = null;
+/** Longer form of the hero thesis, shown near the end of the home page. */
+export const workStyle: WorkStyle | null = {
+  headline: ["From design to launch,", "without handing off."],
+  paragraphs: [
+    "I turn requirements into a technical spec, design the pipeline, build and validate the core myself, and stay accountable until it ships as a real product with the team. ProtoPie MCP grew from a code generation PoC I built into an official launch; Alan went from a research team's pilot to a paid subscription service.",
+    "AI products aren't finished by model quality alone. Data structure and business context, cost and latency, the points where people need to check, and business terms like pricing, policies and payments all have to fit together. I design and build where engineering, product and business meet.",
+    "I'm also changing how I work. I use AI agents not just to write code but to measure cost, run evaluation tests and iterate on experiments — that's how I built Decision Graph solo in six weeks and cut calls 74% and cost 25% on the same data. The engineer defines the problem and the bar; measuring, building and optimizing happen together with AI.",
+    "Turning research-stage technology into products people actually use and pay for — that's what I do best, and what I want to keep doing.",
+  ],
+};

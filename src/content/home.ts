@@ -71,5 +71,13 @@ export const leadership: LeadershipBlock[] = [
   },
 ];
 
-/** 🟨 Hidden until written (feedback #6, #19). Set to an object to show the section. */
-export const workStyle: WorkStyle | null = null;
+/** Longer form of the hero thesis, shown near the end of the home page. */
+export const workStyle: WorkStyle | null = {
+  headline: ["설계부터 출시까지,", "나누지 않고 끝까지."],
+  paragraphs: [
+    "요구사항을 기술 명세로 정리하고, 파이프라인을 설계하고, 코어를 직접 만들어 검증한 뒤, 팀과 함께 실제 제품으로 내보내는 데까지 책임집니다. ProtoPie MCP는 직접 만든 코드 생성 PoC에서 정식 출시로 이어졌고, Alan은 연구 조직의 시험 서비스에서 유료 구독 서비스가 됐습니다.",
+    "AI 제품은 모델 성능만으로 완성되지 않습니다. 데이터 구조와 업무 맥락, 비용과 응답 속도, 사람이 확인해야 할 지점, 그리고 가격·약관·결제 같은 사업 조건까지 함께 맞물려야 합니다. 저는 엔지니어링과 제품, 사업이 만나는 그 연결 지점을 설계하고 직접 구현해 왔습니다.",
+    "일하는 방식도 바꾸고 있습니다. AI 에이전트를 코드 작성뿐 아니라 비용 측정, 평가 테스트, 실험 반복에 함께 써서 Decision Graph를 혼자 6주 만에 만들고, 같은 데이터에서 호출 74%·비용 25%를 줄였습니다. 엔지니어가 문제와 기준을 정하고, AI와 함께 측정하고 구현하고 최적화하는 방식입니다.",
+    "연구 단계의 기술을 사람들이 실제로 쓰고 돈을 내는 제품으로 바꾸는 일, 그게 제가 가장 잘하는 일이고 앞으로도 계속하고 싶은 일입니다.",
+  ],
+};
