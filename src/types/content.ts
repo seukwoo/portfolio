@@ -159,6 +159,8 @@ export type Activity = {
   kind: ActivityKind;
   /** From student years: folded on the web, left out of the PDF. */
   student?: boolean;
+  /** One-line version for the PDF (e.g. how rare an award is). */
+  short?: string;
   title: string;
   date: string;
   lines: string[];

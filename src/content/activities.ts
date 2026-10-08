@@ -5,6 +5,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "연간기술혁신상 수상",
+    short: "그룹사 전체 연 1회, 10명 내외",
     date: "2023.01",
     lines: [
       "티맥스 메타에이아이 사에서 ‘연간 기술 혁신상’ 명칭으로 우수 사원상을 수상",
@@ -14,6 +15,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "Super Leader 수상",
+    short: "그룹사 전체 연 2회, 5명 내외",
     date: "2022.06",
     lines: [
       "티맥스 에이아이 사에서 ‘Super Leader’ 명칭으로 우수상을 수상",
@@ -23,6 +25,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "Maestro 수상",
+    short: "그룹사 전체 연 1회, 3명 내외",
     date: "2022.01",
     lines: [
       "티맥스 에이아이 사에서 ‘Maestro’ 명칭으로 최우수상 수상",

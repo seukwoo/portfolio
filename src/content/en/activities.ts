@@ -5,6 +5,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "Annual Technology Innovation Award",
+    short: "group-wide, once a year, about 10 people",
     date: "2023.01",
     lines: [
       "Received the outstanding employee award titled ‘Annual Technology Innovation Award’ at TmaxMetaAI",
@@ -14,6 +15,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "Super Leader Award",
+    short: "group-wide, twice a year, about 5 people",
     date: "2022.06",
     lines: [
       "Received the excellence award titled ‘Super Leader’ at TmaxAI",
@@ -23,6 +25,7 @@ export const activities: Activity[] = [
   {
     kind: "award",
     title: "Maestro Award",
+    short: "group-wide, once a year, about 3 people",
     date: "2022.01",
     lines: [
       "Received the top award titled ‘Maestro’ at TmaxAI",

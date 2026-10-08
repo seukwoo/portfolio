@@ -21,7 +21,6 @@ export const labels = {
     downloadResume: "Download resume PDF",
     resumePdfNote: "Latest resume, generated from this page",
     resumePdfFileName: "Seukwoo_Lee_Resume.pdf",
-    printFooter: (url: string) => `This resume was generated from the content at ${url}.`,
     lastUpdated: "Last updated",
     photoAlt: (name: string) => `Profile photo of ${name}`,
   },

@@ -30,7 +30,6 @@ export async function ResumePrint(p: Props) {
   const { labels, sections } = await getContent();
   // Links in the PDF are absolute and stay in the PDF's language.
   const linkBase = p.lang === "en" ? `${p.siteUrl}/en` : p.siteUrl;
-  const resumeUrl = `${linkBase}/resume`;
   return (
     <article className="mx-auto max-w-[760px] px-6 py-10 text-[13px] leading-[1.6] text-ink print:max-w-none print:px-0 print:py-0">
       <header className="flex items-end justify-between gap-6 border-b-2 border-ink pb-4">
@@ -210,14 +209,11 @@ export async function ResumePrint(p: Props) {
                       <span className="w-20 shrink-0 text-[12px] text-muted tabular-nums">{a.date}</span>
                       <span>
                         <span className="font-semibold">{a.title}</span>
-                        {group.kind === "paper" ? (
-                          <>
-                            {/* Title only in the PDF; venue and pages stay on the site. */}
-                            <span className="block">{first.replace(/^(제목|Title):\s*/, "")}</span>
-                          </>
-                        ) : (
-                          <span className="text-muted"> — {[first, ...rest].join(" ")}</span>
-                        )}
+                        <span className="text-muted">
+                          {" — "}
+                          {/* One line each: paper titles without venue/pages, awards as how rare they are. */}
+                          {group.kind === "paper" ? first.replace(/^(제목|Title):\s*/, "") : (a.short ?? [first, ...rest].join(" "))}
+                        </span>
                       </span>
                     </li>
                   );
@@ -245,7 +241,6 @@ export async function ResumePrint(p: Props) {
         </ul>
       </Block>
 
-      <p className="mt-8 border-t border-line pt-3 text-[11px] text-muted">{labels.profile.printFooter(resumeUrl)}</p>
     </article>
   );
 }
