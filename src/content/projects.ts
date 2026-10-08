@@ -83,7 +83,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "LLM 기반 AI 앱 서비스 기능 기획, 일정, 리스크 관리",
       "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 자체 개발",
       "슬라이드 생성 기능: 조사·기획 단계부터 프로젝트 주도",
-      "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭",
+      "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭 (2025.07, [공식 발표](https://estsoft.ai/all/250707))",
       "백오피스 내부 운영 툴 개발",
       "결제 시스템 프로세스 및 상품 유료화 정책 수립",
       "상용화 운영 중 ([https://myalan.ai/](https://myalan.ai/))",
@@ -100,7 +100,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "연구 조직에서 시험 운영하던 서비스를 상용화하고 수익화까지 리드했습니다. 딥리서치·슬라이드 생성 서비스를 배포하고 Pro 구독을 런칭해 서비스의 첫 유료 매출(수치 비공개)을 만들었고, 이를 바탕으로 엔터프라이즈 상품을 기획했습니다. 이 기반은 이후 기관 계약 매출로 이어졌습니다. ([myalan.ai](https://myalan.ai/))",
+        text: "연구 조직에서 시험 운영하던 서비스를 상용화하고 수익화까지 리드했습니다. 딥리서치·슬라이드 생성 서비스를 배포하고 2025년 7월 Pro 구독을 런칭해([공식 발표](https://estsoft.ai/all/250707)) 서비스의 첫 유료 매출(수치 비공개)을 만들었고, 이를 바탕으로 엔터프라이즈 상품을 기획했습니다. 이 기반은 이후 기관 계약 매출로 이어졌습니다. ([myalan.ai](https://myalan.ai/))",
       },
     },
     skills: list("GPT, Gemini, MCP, Notion, Google Analytics, Git, Azure, Figma, MS Docs, Slashpage"),

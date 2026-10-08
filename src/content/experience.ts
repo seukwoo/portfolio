@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     company: "이스트소프트",
     department: "AI Agent Lab / Alan 개발 팀 / PO",
     tenure: "2025.04 - 2026.01",
-    mission: "연구 조직의 시험 서비스 Alan을 유료 상용 서비스로 — Pro 구독 런칭·첫 유료 매출로 완료",
+    mission: "연구 조직의 시험 서비스 Alan을 유료 상용 서비스로 — Pro 구독 런칭(2025.07)·첫 유료 매출로 완료",
     projects: [
       {
         role: "Product Owner",
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
           "LLM 기반 AI 앱 서비스 기능 기획, 일정, 리스크 관리",
           "이미지 서치, 유튜브 서치·요약, 보고서 생성, 슬라이드 생성 기능과 특화 에이전트 자체 개발 (슬라이드 생성은 조사·기획부터 주도)",
           "결제 시스템 프로세스 및 상품 유료화 정책 수립",
-          "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭, 백오피스 내부 운영 툴 개발",
+          "딥리서치·슬라이드 생성 서비스 배포, Pro 구독 서비스 런칭 (2025.07, [공식 발표](https://estsoft.ai/all/250707)), 백오피스 내부 운영 툴 개발",
           "Pro 구독으로 서비스의 첫 유료 매출(수치 비공개), 이를 바탕으로 엔터프라이즈 상품 기획 (이후 기관 계약 매출의 발판)",
           "상용화 운영 중 ([myalan.ai](https://myalan.ai/))",
         ],

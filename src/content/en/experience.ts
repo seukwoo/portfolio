@@ -48,7 +48,7 @@ export const experiences: Experience[] = [
     company: "ESTsoft",
     department: "AI Agent Lab / Alan Development Team / PO",
     tenure: "2025.04 - 2026.01",
-    mission: "Turn the research team's pilot service Alan into a paid commercial product — completed with the Pro subscription launch and first paid revenue",
+    mission: "Turn the research team's pilot service Alan into a paid commercial product — completed with the Pro subscription launch (2025.07) and first paid revenue",
     projects: [
       {
         role: "Product Owner",
@@ -66,7 +66,7 @@ export const experiences: Experience[] = [
           "Handled feature planning, scheduling and risk management for the LLM-based AI app service",
           "Built in-house image search, YouTube search & summarization, report generation and slide generation features plus specialized agents (led slide generation from research and planning onward)",
           "Set up the payment system process and the paid product policy",
-          "Deployed the deep research and slide generation services, launched the Pro subscription, and developed an internal back-office operations tool",
+          "Deployed the deep research and slide generation services, launched the Pro subscription (2025.07, [announcement](https://estsoft.ai/all/250707)), and developed an internal back-office operations tool",
           "Pro subscription brought the service's first paid revenue (figures not disclosed); building on it, planned an enterprise product (later the basis for institutional contract revenue)",
           "In commercial operation ([myalan.ai](https://myalan.ai/))",
         ],

@@ -85,7 +85,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "Managed feature planning, schedules and risks for the LLM-based AI app service",
       "Built image search, YouTube search & summary, report generation and slide generation features, plus specialized agents, in-house",
       "Slide generation: led the project from the research and planning stage",
-      "Shipped the deep research and slide generation services and launched the Pro subscription",
+      "Shipped the deep research and slide generation services and launched the Pro subscription (2025.07, [announcement](https://estsoft.ai/all/250707))",
       "Developed an internal back-office operations tool",
       "Defined the payment process and the monetization policy for products",
       "In commercial operation ([https://myalan.ai/](https://myalan.ai/))",
@@ -102,7 +102,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Outcome",
-        text: "Led a service in trial operation at the research org through commercial launch and monetization. Shipped deep research and slide generation and launched the Pro subscription, which brought in the service's first paid revenue (figures not disclosed), then planned an enterprise product on that basis. That groundwork later led to revenue from institutional contracts. ([myalan.ai](https://myalan.ai/))",
+        text: "Led a service in trial operation at the research org through commercial launch and monetization. Shipped deep research and slide generation and launched the Pro subscription in July 2025 ([announcement](https://estsoft.ai/all/250707)), which brought in the service's first paid revenue (figures not disclosed), then planned an enterprise product on that basis. That groundwork later led to revenue from institutional contracts. ([myalan.ai](https://myalan.ai/))",
       },
     },
     skills: list("GPT, Gemini, MCP, Notion, Google Analytics, Git, Azure, Figma, MS Docs, Slashpage"),
