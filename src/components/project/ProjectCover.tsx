@@ -34,6 +34,8 @@ export async function ProjectCover({ project, className, size, sizes, priority }
           alt={labels.projects.coverAlt(project.name)}
           fill
           priority={priority}
+          // Also used as a gallery slide (off-screen until swiped) — load it up front.
+          loading={priority ? undefined : "eager"}
           sizes={sizes}
           className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
         />

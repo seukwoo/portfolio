@@ -37,6 +37,8 @@ export function ProjectGallery({ images, title, extraSlide }: Props) {
               width={img.width}
               height={img.height}
               priority={i === 0}
+              // Off-screen slides sit beside the visible one; lazy loading may never start for them (e.g. Safari).
+              loading={i === 0 ? undefined : "eager"}
               sizes="(min-width: 1152px) 1104px, 100vw"
               className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
             />

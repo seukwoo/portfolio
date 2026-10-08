@@ -12,7 +12,7 @@ export const hero: HomeHero = {
   intro:
     "Hi, I'm Seukwoo Lee. I turn research- and pilot-stage technology into products people actually use and pay for. I design and write the code myself, and have led teams from a 3-person dev unit to a 50-person research division.",
   focus:
-    "For the past two years I've taken on one 'turn AI into a product' mission per company and seen each through — Alan's monetization at ESTsoft, and the official ProtoPie MCP launch at Studio XID (Oct 2026).",
+    "For the past two years I've taken on one 'turn AI into a product' mission per company and seen each through — Alan's monetization at ESTsoft (Jul 2025), and the official ProtoPie MCP launch at Studio XID (Oct 2026).",
   actions: [
     { label: "View projects →", href: routes.projects },
     { label: "View resume", href: routes.resume },
