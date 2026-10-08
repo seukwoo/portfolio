@@ -24,7 +24,7 @@ export const about: About = {
     {
       title: "From pilot technology to commercial product",
       evidence: [
-        "Owned the monetization of [Alan](/projects/alan), an LLM service piloted by a research team, as PO — pricing, terms, payment/refund flows and the launch announcement — launching the Pro subscription (2025.07) and its first paid revenue (figures not disclosed)",
+        "Led the monetization of [Alan](/projects/alan), an LLM service piloted by a research team, from planning to launch as PO — Pro subscription launch (2025.07), first paid revenue (figures not disclosed)",
         "Built [Dr.Meta](/projects/dr-meta) and [Meta.CRO](/projects/meta-cro) on the output of [MX Studio](/projects/mx-studio), a 3D web component tool — in commercial operation at cancer centers nationwide",
       ],
     },
