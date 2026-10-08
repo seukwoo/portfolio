@@ -24,30 +24,30 @@ export const about: About = {
     {
       title: "From pilot technology to commercial product",
       evidence: [
-        "Led the monetization of [Alan](/projects/alan), an LLM service piloted by a research team, from planning to launch as PO — Pro subscription launch (2025.07), first paid revenue (figures not disclosed)",
-        "Built [Dr.Meta](/projects/dr-meta) and [Meta.CRO](/projects/meta-cro) on the output of [MX Studio](/projects/mx-studio), a 3D web component tool — in commercial operation at cancer centers nationwide",
+        "Led [Alan](/projects/alan)'s monetization as PO, planning to launch — Pro launch (2025.07), first paid revenue (not disclosed)",
+        "Built [Dr.Meta](/projects/dr-meta) and [Meta.CRO](/projects/meta-cro) on [MX Studio](/projects/mx-studio) output — used at cancer centers nationwide",
       ],
     },
     {
       title: "Designing AI systems hands-on, proving them in code",
       evidence: [
-        "Designed a code-generation pipeline combining rule-based modules with AI models and built its core (PoC) myself → officially launched with the team as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) in October 2026",
-        "Designed and built [Decision Graph](/projects/decision-graph), an LLM pipeline that extracts decisions and graphs their relations automatically, on my own — extracted 80%+ of the human-labeled decisions in a golden set",
+        "Designed a rules + AI code-generation pipeline and built its core (PoC) → launched with the team as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Oct 2026)",
+        "Built [Decision Graph](/projects/decision-graph) solo — extracts decisions and auto-graphs their relations; 80%+ of human-labeled decisions found",
       ],
     },
     {
       title: "Deciding by measurement, not gut feel",
       evidence: [
-        "Model choices made by testing — rejected a switch to a lighter model that passed only 17 of 24 test cases, and restructured the calls for 74% fewer calls and 25% lower cost",
+        "Chose models by testing (lighter model rejected at 17/24) and cut calls 74%, cost 25%",
         "Set development priorities from traffic flows and per-feature usage in Google Analytics and Amplitude",
       ],
     },
     {
       title: "Leadership sized to the team",
       evidence: [
-        "Built and led teams from a 3-person dev unit to a 50-person R&D division — as division head, acted as technical lead for a year while the CTO role was vacant; 3 group-wide awards",
+        "Led teams from 3 people to a 50-person R&D division — acting technical lead for a year without a CTO; 3 group awards",
         "Running an agile team of 4–5 AI engineers and app developers — build small, validate fast",
-        "Evaluated team members and leads directly, and kept adjusting how I lead from the feedback both ways",
+        "Evaluated members and leads, and adjusted how I lead from feedback both ways",
       ],
     },
   ],

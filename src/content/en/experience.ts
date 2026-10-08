@@ -18,13 +18,13 @@ export const experiences: Experience[] = [
         title: "LLM pipeline for decision extraction",
         subtitle: "(Slack·Notion → decision records with evidence)",
         details: [
-          "Turned PO requirements into a technical spec, then designed and built (solo) the LLM pipeline PoC that extracts who decided what and why from Slack and Notion, with source evidence",
-          "Visualized extracted decisions automatically as a relation map and timeline — relations (prerequisite, replacement, stop) linked by the system, each decision referencing its source text",
-          "Validated PoC results against a golden set where people manually marked the correct decisions on one real project — extracted 80%+ of the human-labeled decisions",
-          "Verified and reviewed the feared technical risks firsthand through the PoC (judging quality against human-made ground truth, one-way records, preventing duplicate entries on re-runs)",
-          "Chose the two-tier inference structure (first-pass classification: lightweight model; extraction and validation: high-capability model) by comparing options on the same tests (all-lightweight rejected after passing only 17 of 24)",
-          "Logged time and cost per request to find bottlenecks and improved the call structure — on the same data, 74% fewer calls (1,289 → 336) and 25% lower cost ($10.2 → $7.6); re-running only the changed parts: $0.7",
-          "Checked quality on every change with 24 test cases with known correct answers (with a cap on evaluation cost)",
+          "Turned PO requirements into a tech spec and built (solo) an LLM PoC that extracts who decided what and why, with evidence",
+          "Auto-visualized decisions as a relation map and timeline, each linked to its source text",
+          "Validated on a human-labeled golden set from one real project — extracted 80%+ of the labeled decisions",
+          "Tested key risks in the PoC: human ground truth, one-way records, no duplicates on re-runs",
+          "Two-tier inference (light model triages, strong model extracts/verifies), chosen by tests; all-light 17/24",
+          "Profiled per-request time and cost: 74% fewer calls (1,289 → 336), 25% lower cost ($10.2 → $7.6); incremental $0.7",
+          "Checked every change against 24 test cases, with a cap on evaluation cost",
         ],
       },
       {
@@ -34,12 +34,12 @@ export const experiences: Experience[] = [
         title: "AI-based code generation system",
         subtitle: "(PoC → productization)",
         details: [
-          "[Hands-on] Designed the code generation pipeline combining rule-based modules with AI model stages, and developed the core pipeline (PoC)",
-          "[Hands-on] Designed training for auxiliary models that understand images and layout (structure), and built training data",
-          "[Hands-on] Designed the product integration architecture for plugging the code generation pipeline into the existing product (ProtoPie)",
-          "[Team lead] Ran an agile team of 4–5 AI engineers and app developers — model training by the AI engineers, integration development with the team",
+          "[Hands-on] Designed the rules + AI-stage code generation pipeline and built its core (PoC)",
+          "[Hands-on] Designed training for image/layout-understanding models and built the training data",
+          "[Hands-on] Designed how the pipeline integrates into the existing product (ProtoPie)",
+          "[Team lead] Ran a 4–5 person agile team — AI engineers trained the models; integration built with the team",
           "[Team lead] Designed the MLOps pipeline from data cleaning → training → deployment",
-          "[Team lead] Expanded to AOS, iOS and Web cross-platform; official launch as ProtoPie MCP in October 2026 (Dev View · Code MCP, code generation for 7 frameworks)",
+          "[Team lead] Expanded to AOS, iOS and Web; launched as ProtoPie MCP in Oct 2026 (7 frameworks)",
         ],
       },
     ],
@@ -49,7 +49,7 @@ export const experiences: Experience[] = [
     company: "ESTsoft",
     department: "AI Agent Lab / Alan Development Team / PO",
     tenure: "2025.04 - 2026.01",
-    mission: "Turn the research team's pilot service Alan into a paid commercial product — completed with the Pro subscription launch (2025.07) and first paid revenue",
+    mission: "Turn the pilot service Alan into a paid product — done with the Pro launch (2025.07) and first paid revenue",
     projects: [
       {
         role: "Product Owner",
@@ -58,21 +58,16 @@ export const experiences: Experience[] = [
         title: "AI search engine service (LLM-based agentic AI)",
         subtitle: "Advancing ’Alan’ (ESTsoft)",
         details: [
-          "Led a service in trial operation at the research organization through commercial launch and monetization",
-          "Led the development team for an LLM-based agentic AI app service, working as Product Owner",
-          "Led a team made up of AI researchers and app developers (FE, BE)",
-          "Operated and managed separate Dev, QA, Stage and Release servers",
-          "Architected the Azure, Fast API, React and LangGraph structure",
-          "Ran quality testing and collaborated with other in-house development, quality and infrastructure teams (QA, authentication, payments, infrastructure, etc.)",
-          "Handled feature planning, scheduling and risk management for the LLM-based AI app service",
-          "Built in-house image search, YouTube search & summarization and report generation features plus specialized agents",
-          "Led planning of the slide generation feature — benchmarked Genspark and other services, defined user scenarios and the generation flow",
-          "Designed the slide generation agent — staged orchestration (intent → scope and outline → research → template, style and fonts → HTML rendering → revision), with human-in-the-loop review of intermediate results",
-          "Planned the monetization of an AI service — modeled margin from inference cost per call and set the Pro plan's price and usage limits from competitor pricing and expected paid conversion",
-          "Led the paid launch as PO — built plan entitlements and payment, cancellation and refund flows, revised the terms and paid-conversion notices, and launched with marketing and business teams (2025.07, [announcement](https://estsoft.ai/all/250707))",
-          "Deployed the deep research and slide generation services, and developed an internal back-office operations tool",
-          "Pro subscription brought the service's first paid revenue (figures not disclosed); building on it, planned an enterprise product (later the basis for institutional contract revenue)",
-          "In commercial operation ([myalan.ai](https://myalan.ai/))",
+          "As PO, led the AI researcher and FE/BE developer team taking a research pilot service to commercial launch and monetization",
+          "Architected on Azure, FastAPI, React and LangGraph with separate Dev/QA/Stage/Release environments",
+          "Owned feature planning, schedule and risk; ran quality testing with QA, auth, payments and infra teams",
+          "Built in-house agents for image search, YouTube summaries and report generation",
+          "Led slide generation planning — Genspark benchmark, user scenarios and generation flow",
+          "Designed the slide agent: staged orchestration (intent → scope → research → style → HTML → revision), human-in-the-loop",
+          "Planned AI monetization: priced Pro and usage limits from inference cost per call, competitors and expected conversion",
+          "Led the paid launch as PO — entitlements, payment/cancel/refund flows, terms and notices, launch with marketing and business (2025.07, [announcement](https://estsoft.ai/all/250707))",
+          "Shipped deep research, slide generation and a back-office tool; in commercial operation ([myalan.ai](https://myalan.ai/))",
+          "First paid revenue from Pro (not disclosed); then planned an enterprise product, later the basis for institutional contracts",
         ],
       },
     ],
@@ -93,10 +88,10 @@ export const experiences: Experience[] = [
             product: "MX studio",
             period: "2022.07 - 2025.02",
             title: "Software for building 3D web components",
-            subtitle: "Development of 'MX studio' and productization based on it",
+            subtitle: "'MX studio' and productization on it",
             brief: [
               "Led the MX studio engine team and a task force (planning, design, development, QA)",
-              "Led design/development of the physics engine, real-time rendering & post-processing, 3D events/actions and a node-based visual code system",
+              "Led the physics engine, real-time rendering, 3D events/actions and a node-based visual code system",
               "Productized Dr.Meta and Meta.CRO on its output; ran an external beta test",
             ],
             details: [
@@ -149,7 +144,7 @@ export const experiences: Experience[] = [
             title: "Online marketplace platform for contact lenses",
             subtitle: "Development of 'NaenunN' (Pixelro)",
             brief: [
-              "The first online contact-lens purchase & delivery service, opened under a regulatory sandbox exemption — shipped WebView-based iOS/Android apps, led design of payment/delivery API integrations and the admin; in commercial operation",
+              "First online contact-lens sales service (regulatory sandbox) — shipped WebView iOS/Android apps, led payment/delivery API and admin design; in operation",
             ],
             details: [
               "Led a task force team of developers and QA",
@@ -167,7 +162,7 @@ export const experiences: Experience[] = [
             title: "GIS-based Samsung data center information system",
             subtitle: "Development of 'GIS S-DCIS' (Samsung C&T)",
             brief: [
-              "GIS system on GeoServer · PostGIS · OpenLayers, built for a closed-network on-premise environment — co-developed and delivered with Yeonwoo Technology (B2B)",
+              "GIS system on GeoServer · PostGIS · OpenLayers for a closed on-premise network — co-developed with Yeonwoo Technology (B2B)",
             ],
             details: [
               "Communicated and collaborated with the planning team, the business team and another company's research team",
@@ -185,7 +180,7 @@ export const experiences: Experience[] = [
             title: "Real-time multi-sync server",
             subtitle: "Research on ’MVS: Metaverse Server’ (internal project)",
             brief: [
-              "Researched and developed a C++ real-time multi-user sync server engine — applied as the multiplayer server for Dr.Meta's medical staff conferences",
+              "Built a C++ real-time multi-user sync server engine — used as the multiplayer server for Dr.Meta conferences",
             ],
             details: [
               "Led the R&D team; researched and developed C++-based server engine technology",
@@ -215,7 +210,7 @@ export const experiences: Experience[] = [
             title: "Metaverse education platform",
             subtitle: "Development of 'Mint'",
             brief: [
-              "Planned and built a metaverse education platform on Phaser · WebRTC · WebGL — delivered to Kongju National University",
+              "Built a metaverse education platform (Phaser, WebRTC, WebGL) — delivered to Kongju National Univ.",
             ],
             details: [
               "Planned the product using Gather Town as a benchmark",
@@ -231,7 +226,7 @@ export const experiences: Experience[] = [
             title: "Advanced technology research",
             subtitle: "Deep Learning, 3DMM, SLAM",
             brief: [
-              "Early research on deep-learning digital humans (TTS) and SLAM-based 3D space generation — demoed at Tmax Day 2020",
+              "Research on deep-learning digital humans (TTS) and SLAM 3D spaces — demoed at Tmax Day 2020",
             ],
             details: [
               "As advanced technology research, studied generating digital humans capable of Deep Learning-based text-to-speech",
@@ -279,7 +274,7 @@ export const experiences: Experience[] = [
             period: "2017.02 - 2017.06",
             title: "Integrated system interface solution software",
             subtitle: "Structure analysis of 'Anylink'",
-            brief: ["Structure analysis and refactoring design of an integrated interface solution — identified improvements with the engine research team; a TmaxSoft commercial product"],
+            brief: ["Structure analysis and refactoring design of an integration solution — a TmaxSoft commercial product"],
             details: [
               "Took part in structure analysis and refactoring design of the integrated system interface solution",
               "Worked with the engine research team to identify usability and quality improvement points",

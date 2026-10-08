@@ -10,7 +10,7 @@ export const degrees: Degree[] = [
     period: "2013.09 - 2016.02 (Graduated)",
   },
   {
-    school: "Ajou University (College of Information Technology), Digital Media",
+    school: "Ajou University, Digital Media",
     degree: "B.S. in Digital Media (Bachelor's degree)",
     gpa: "3.76 / 4.5",
     focus: "Computer programming, computer architecture, object-oriented programming, information design",
