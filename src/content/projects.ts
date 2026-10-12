@@ -175,9 +175,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[직접] 범위 결정 — MVP 기능은 모두 개발하고 USB 연결 등 선택적 네이티브 기능은 보류해 일정 안에 출시",
       "2026년 8월 Huawei AppGallery 출시 ([공식 발표](https://www.protopie.io/blog/protopie-player-harmonyos-appgallery))",
     ],
-    roles: ["Product Owner", "(+ 스펙·계획·검증·출시)"],
+    roles: ["Product Owner"],
     skills: list("HarmonyOS, ArkTS, Claude Code, Codex, Spec-Driven Development"),
-    images: [{ src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 }],
+    images: [
+      { src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 },
+      { src: "/projects/harmonyos-player/store-01.webp", width: 900, height: 1600 },
+      { src: "/projects/harmonyos-player/store-02.webp", width: 900, height: 1600 },
+    ],
     caseStudy: {
       problem:
         "ProtoPie Player는 iOS·Android로만 제공돼, Huawei(HarmonyOS) 기기에서는 프로토타입을 실행해 볼 수 없었습니다. HarmonyOS는 언어와 UI 프레임워크가 달라 엔진·렌더러·UI 코드를 모두 새로 써야 했고, 인원은 PO인 저와 개발자 1명이었습니다.",

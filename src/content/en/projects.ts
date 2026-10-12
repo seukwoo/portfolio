@@ -178,9 +178,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[Hands-on] Scope call — shipped every MVP feature and deferred optional native features such as USB connection to launch on schedule",
       "Launched on Huawei AppGallery in August 2026 ([announcement](https://www.protopie.io/blog/protopie-player-harmonyos-appgallery))",
     ],
-    roles: ["Product Owner", "(+ spec, planning, verification, release)"],
+    roles: ["Product Owner"],
     skills: list("HarmonyOS, ArkTS, Claude Code, Codex, Spec-Driven Development"),
-    images: [{ src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 }],
+    images: [
+      { src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 },
+      { src: "/projects/harmonyos-player/store-01.webp", width: 900, height: 1600 },
+      { src: "/projects/harmonyos-player/store-02.webp", width: 900, height: 1600 },
+    ],
     caseStudy: {
       problem:
         "ProtoPie Player was only on iOS and Android, so prototypes could not run on Huawei (HarmonyOS) devices. HarmonyOS uses a different language and UI framework, so the engine, renderer and UI all had to be rewritten — with just me as PO and one developer.",
