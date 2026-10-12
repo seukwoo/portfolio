@@ -28,6 +28,22 @@ export const experiences: Experience[] = [
         ],
       },
       {
+        role: "Product Owner",
+        product: "[ProtoPie Player (HarmonyOS)](/projects/harmonyos-player)",
+        period: "2026.06 - 2026.08",
+        title: "HarmonyOS 앱 신규 출시",
+        subtitle: "(Android 앱 기반 포팅, Huawei AppGallery)",
+        brief: [
+          "[리드] PO로 개발자 1명과 2개월 만에 출시 — 스펙 주도 개발·AI 에이전트로 엔진·렌더러·UI 재작성, MVP 외 선택 기능 보류 (2026.08)",
+        ],
+        details: [
+          "[리드] PO로 개발자 1명과 2개월 만에 신규 플랫폼 앱 출시 — 개발 외 스펙·계획·검증·범위 결정·출시를 맡음",
+          "[직접] 스펙 주도 개발 — Android 앱 동작을 스펙·검증 기준으로 정리, 언어가 달라 엔진·렌더러·UI를 모두 새로 작성",
+          "[리드] Claude Code(계획·검증)·Codex(코딩)·에이전트 팀으로 개발, 학습이 부족한 API·문서 오류는 직접 테스트해 보완",
+          "[직접] MVP는 모두 개발, USB 연결 등 선택적 네이티브 기능은 보류해 일정 내 출시 (2026.08, [공식 발표](https://www.protopie.io/blog/protopie-player-harmonyos-appgallery))",
+        ],
+      },
+      {
         role: "Head of Product Dev Team",
         product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) 정식 출시",
         period: "2026.01 - 2026.10",
