@@ -34,7 +34,7 @@ export const experiences: Experience[] = [
         title: "HarmonyOS 앱 신규 출시",
         subtitle: "(Android 앱 기반 포팅, Huawei AppGallery)",
         brief: [
-          "[리드] PO로 개발자 1명과 2개월 만에 출시 — 스펙 주도 개발·AI 에이전트로 엔진·렌더러·UI 재작성, MVP 외 선택 기능 보류 (2026.08)",
+          "[리드] PO로 개발자 1명과 2개월 만에 출시 — 스펙 주도 개발·AI 에이전트로 엔진·렌더러·UI 재작성, MVP 외 선택 기능 보류",
         ],
         details: [
           "[리드] PO로 개발자 1명과 2개월 만에 신규 플랫폼 앱 출시 — 개발 외 스펙·계획·검증·범위 결정·출시를 맡음",

@@ -23,7 +23,7 @@ export const hero: HomeHero = {
 export const metrics: Metric[] = [
   { value: "10", unit: "년차", label: "개발 경력", note: "2017.01 – 현재 · AI 제품 개발은 2025.04부터" },
   { value: "50", unit: "명", label: "최대 조직 규모", note: "R&D 연구본부장 · 티맥스에이아이 2020–2022" },
-  { value: "5", unit: "개", label: "상용화 서비스 개발", note: "ProtoPie MCP · Alan · 닥터메타 · Meta.CRO · 내눈N" },
+  { value: "6", unit: "개", label: "상용화 서비스 개발", note: "ProtoPie MCP · ProtoPie Player (HarmonyOS) · Alan · 닥터메타 · Meta.CRO · 내눈N" },
   { value: "3", unit: "회", label: "그룹사 수상", note: "기술혁신상 · Super Leader · Maestro" },
 ];
 

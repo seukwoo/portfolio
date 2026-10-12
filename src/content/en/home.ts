@@ -23,7 +23,7 @@ export const hero: HomeHero = {
 export const metrics: Metric[] = [
   { value: "10", unit: "years", label: "Years in development", note: "2017.01 – present · AI products since 2025.04" },
   { value: "50", unit: "people", label: "Largest team led", note: "R&D Division Head · TmaxAI 2020–2022" },
-  { value: "5", unit: "services", label: "Commercial services built", note: "ProtoPie MCP · Alan · Dr.Meta · Meta.CRO · NaenunN" },
+  { value: "6", unit: "services", label: "Commercial services built", note: "ProtoPie MCP · ProtoPie Player (HarmonyOS) · Alan · Dr.Meta · Meta.CRO · NaenunN" },
   { value: "3", unit: "awards", label: "Group-wide awards", note: "Technology Innovation Award · Super Leader · Maestro" },
 ];
 
