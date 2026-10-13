@@ -201,6 +201,47 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     },
   },
   {
+    slug: "nudg",
+    summary: "A UI interaction format your AI coding tool can edit — states, events and motion in plain JSON, with a validator, simulator and runtime that play it on any platform (personal open source, early design)",
+    name: "nudg",
+    client: "Personal project",
+    duty: "Design & development (solo)",
+    keywords: list("Interaction Format, AI-native Tooling, Motion Runtime"),
+    notionDate: { start: "2026-10-13" },
+    fullName: "nudg — The interaction format your AI can nudge",
+    domain: "Personal project / Open source (in progress)",
+    period: "2026.10 -",
+    tasks: [
+      "[Hands-on] Format design — states, events and motion as plain JSON, so a request like \"a little bouncier\" becomes a one-field diff (bounce 0.25 → 0.4)",
+      "[Hands-on] Turned \"AI-native\" into requirements — text source, a validator that says how to fix errors, headless simulation, frame rendering, CLI and MCP",
+      "[Hands-on] Platform-neutral design — the core takes events and returns property values without drawing; each platform applies them through a thin adapter",
+      "[Hands-on] The spec is the source of truth — JSON Schema plus a language-neutral conformance suite whose expected values come from an independent derivation, so the runtime never grades itself",
+      "[Hands-on] Built the TypeScript reference core (spring, tween and kick motion, state machine, OKLab color), a CLI (validate, simulate), a DOM adapter and a demo",
+      "Next: frame rendering (nudg render) and an MCP server",
+    ],
+    roles: ["Design & development (solo)"],
+    skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
+    images: [
+      { src: "/projects/nudg/demo.webp", width: 1088, height: 500, caption: "One headless core playing a toggle and a like button, each from a single JSON file" },
+      { src: "/projects/nudg/validator.webp", width: 1048, height: 690, caption: "A typo gets an error with its location and how to fix it — so an AI can correct itself from the hint" },
+    ],
+    caseStudy: {
+      problem:
+        "Interactive animations usually live in binary files made in dedicated tools, so AI coding tools can't read or edit them, and there's no code review or readable history. More and more UI is built in the repo with AI, but interactions sat outside that workflow.",
+      decisions: [
+        "Plain JSON — every platform already parses it, JSON Schema describes it, and LLMs write it reliably. A note field instead of comments leaves explanations an AI can read",
+        "Let the AI check its own work — every validator error has a stable code, a location and a fix hint; the simulator sends events headlessly and reports values over time",
+        "Deterministic clock — the same events at the same times always produce the same values, the basis for simulation, rendering and conformance tests",
+        "The core never draws — events in, property values out; drawing is the platform adapter's job, so a new platform needs only a thin adapter",
+      ],
+      outcome: {
+        label: "Status",
+        text: "The v0.1 grammar draft, JSON Schema, conformance suite, TypeScript reference core, CLI (validate, simulate), DOM adapter and demo all work. It starts with web micro-interactions such as toggles and like buttons; frame rendering and an MCP server come next.",
+        note: "A personal open-source project, still in early design.",
+      },
+    },
+  },
+  {
     slug: "mx-studio",
     summary: "3D web component authoring tool — used as the base to develop and productize Dr.Meta and Meta.CRO",
     punchline: ["From a 3D web component tool", "to productized live services"],

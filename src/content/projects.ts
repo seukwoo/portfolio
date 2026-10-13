@@ -198,6 +198,47 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     },
   },
   {
+    slug: "nudg",
+    summary: "AI 코딩 도구가 직접 고칠 수 있는 UI 인터랙션 포맷 — 상태·이벤트·모션을 JSON 텍스트로 정의하고, 검증기·시뮬레이터·런타임으로 어느 플랫폼에서나 재생 (개인 오픈소스, 설계 단계)",
+    name: "nudg",
+    client: "개인 프로젝트",
+    duty: "설계·개발 (1인)",
+    keywords: list("Interaction Format, AI-native Tooling, Motion Runtime"),
+    notionDate: { start: "2026-10-13" },
+    fullName: "nudg — The interaction format your AI can nudge",
+    domain: "개인 프로젝트 / 오픈소스 (진행 중)",
+    period: "2026.10 -",
+    tasks: [
+      "[직접] 포맷 설계 — 상태·이벤트·모션을 평범한 JSON 텍스트로 정의해, \"조금 더 통통 튀게\" 같은 요청이 필드 하나를 고치는 diff가 되게 함 (bounce 0.25 → 0.4)",
+      "[직접] AI-native를 기능 요구사항으로 정의 — 텍스트 소스, 고치는 방법을 알려 주는 검증기, 렌더링 없는 시뮬레이션, 프레임 렌더링, CLI·MCP",
+      "[직접] 플랫폼 중립 구조 — 코어는 이벤트를 받아 속성 값만 내고 그리지 않음, 각 플랫폼은 얇은 어댑터로 적용",
+      "[직접] 스펙이 기준 — JSON Schema와 언어 중립 적합성 테스트, 기대값은 런타임과 독립된 계산으로 만들어 구현이 자기 자신을 검증하지 않게 함",
+      "[직접] TypeScript 레퍼런스 코어(스프링·트윈·킥 모션, 상태 머신, OKLab 색 보간), CLI(validate·simulate), DOM 어댑터와 데모 구현",
+      "다음 단계: 프레임 렌더링(nudg render), MCP 서버",
+    ],
+    roles: ["설계·개발 (1인)"],
+    skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
+    images: [
+      { src: "/projects/nudg/demo.webp", width: 1088, height: 500, caption: "같은 헤드리스 코어가 JSON 파일 하나씩으로 토글·좋아요 버튼을 재생하는 데모" },
+      { src: "/projects/nudg/validator.webp", width: 1048, height: 690, caption: "오타를 내면 검증기가 오류 위치와 고치는 방법을 알려 줌 — AI가 이 힌트로 스스로 고칠 수 있게" },
+    ],
+    caseStudy: {
+      problem:
+        "인터랙션 애니메이션은 보통 전용 도구에서 만드는 바이너리 파일이라, AI 코딩 도구가 읽거나 고칠 수 없고 코드 리뷰와 변경 이력도 남지 않습니다. UI는 점점 저장소 안에서 AI와 함께 만들어지는데, 인터랙션만 그 흐름 밖에 있었습니다.",
+      decisions: [
+        "평범한 JSON 하나 — 별도 파서 없이 모든 플랫폼이 읽고, JSON Schema로 기술되고, LLM이 안정적으로 씀. 주석 대신 note 필드로 AI가 읽을 수 있는 설명을 남김",
+        "AI가 스스로 확인하게 — 검증기는 오류마다 고정 코드·위치·고치는 방법을 주고, 시뮬레이터는 화면 없이 이벤트를 보내 값을 시간별로 보고",
+        "결정적 시계 — 같은 이벤트를 같은 시점에 보내면 항상 같은 값. 시뮬레이션·렌더링·적합성 테스트의 기반",
+        "코어는 그리지 않음 — 이벤트 입력과 속성 값 출력만 하고 그리기는 플랫폼 어댑터 몫. 새 플랫폼은 얇은 어댑터만 추가",
+      ],
+      outcome: {
+        label: "현재",
+        text: "v0.1 문법 초안, JSON Schema, 적합성 테스트, TypeScript 레퍼런스 코어, CLI(validate·simulate), DOM 어댑터와 데모가 동작합니다. 토글·좋아요 버튼 같은 웹 마이크로 인터랙션부터 시작해, 다음은 프레임 렌더링과 MCP 서버입니다.",
+        note: "개인 오픈소스 프로젝트로, 아직 설계 단계입니다.",
+      },
+    },
+  },
+  {
     slug: "mx-studio",
     summary: "3D 웹 컴포넌트 저작 도구 — 이를 기반으로 닥터메타·Meta.CRO 제품 개발 및 제품화",
     punchline: ["3D 웹 컴포넌트 도구에서", "실서비스 제품화까지"],
