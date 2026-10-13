@@ -202,7 +202,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "nudg",
-    summary: "A UI interaction format your AI coding tool can edit — states, events and motion in plain JSON, with a validator, simulator and runtime that play it on any platform (MIT open source, v0.1)",
+    summary: "A UI interaction format your AI coding tool can edit — states, events and motion in plain JSON, with a validator, simulator and runtime that play it on any platform (MIT open source, npm @nudg/core 0.1)",
     name: "nudg",
     client: "Personal project",
     duty: "Design & development (solo)",
@@ -218,7 +218,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[Hands-on] The spec is the source of truth — JSON Schema plus a language-neutral conformance suite whose expected values come from an independent derivation, so the runtime never grades itself",
       "[Hands-on] Built the TypeScript reference core (spring, tween and kick motion, state machine, OKLab color), a DOM adapter and a demo",
       "[Hands-on] Tools for an AI to check its own work — a CLI (validate, simulate, plot, render) and an MCP server, so an agent can call validation, values over time, motion graphs and real frame images directly",
-      "Open source under MIT ([GitHub](https://github.com/seukwoo/nudg)); next: an npm package, then gestures and a React adapter (stage 1)",
+      "Open source under MIT ([GitHub](https://github.com/seukwoo/nudg)) and published to npm ([@nudg/core](https://www.npmjs.com/package/@nudg/core)); next: gestures and a React adapter (stage 1)",
     ],
     roles: ["Design & development (solo)"],
     skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
@@ -239,7 +239,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Status",
-        text: "The v0.1 grammar, JSON Schema, conformance suite, TypeScript reference core, DOM adapter and demo, CLI (validate, simulate, plot, render) and MCP server cover everything web micro-interactions like toggles and like buttons need (stage 0). It is open source under MIT; next are an npm package, then gestures and a React adapter (stage 1). The goal is an open-source format that many people use. ([GitHub](https://github.com/seukwoo/nudg))",
+        text: "The v0.1 grammar, JSON Schema, conformance suite, TypeScript reference core, DOM adapter and demo, CLI (validate, simulate, plot, render) and MCP server cover everything web micro-interactions like toggles and like buttons need (stage 0). It is open source under MIT and published to npm as @nudg/core 0.1.0; gestures and a React adapter (stage 1) come next. The goal is an open-source format that many people use. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core))",
         note: "Early stage (v0.1).",
       },
     },

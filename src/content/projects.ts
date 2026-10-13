@@ -199,7 +199,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "nudg",
-    summary: "AI 코딩 도구가 직접 고칠 수 있는 UI 인터랙션 포맷 — 상태·이벤트·모션을 JSON 텍스트로 정의하고, 검증기·시뮬레이터·런타임으로 어느 플랫폼에서나 재생 (MIT 오픈소스, v0.1)",
+    summary: "AI 코딩 도구가 직접 고칠 수 있는 UI 인터랙션 포맷 — 상태·이벤트·모션을 JSON 텍스트로 정의하고, 검증기·시뮬레이터·런타임으로 어느 플랫폼에서나 재생 (MIT 오픈소스, npm @nudg/core 0.1)",
     name: "nudg",
     client: "개인 프로젝트",
     duty: "설계·개발 (1인)",
@@ -215,7 +215,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[직접] 스펙이 기준 — JSON Schema와 언어 중립 적합성 테스트, 기대값은 런타임과 독립된 계산으로 만들어 구현이 자기 자신을 검증하지 않게 함",
       "[직접] TypeScript 레퍼런스 코어(스프링·트윈·킥 모션, 상태 머신, OKLab 색 보간), DOM 어댑터와 데모 구현",
       "[직접] AI가 스스로 확인하는 도구 — CLI(validate·simulate·plot·render)와 MCP 서버로 검증 결과, 시간별 값, 모션 그래프, 실제 프레임 이미지를 에이전트가 직접 호출",
-      "MIT 라이선스로 오픈소스 공개 ([GitHub](https://github.com/seukwoo/nudg)), 다음 단계는 npm 패키지 배포와 제스처·React 어댑터(stage 1)",
+      "MIT 라이선스로 오픈소스 공개 ([GitHub](https://github.com/seukwoo/nudg)), npm 패키지 배포 ([@nudg/core](https://www.npmjs.com/package/@nudg/core)) — 다음 단계는 제스처·React 어댑터(stage 1)",
     ],
     roles: ["설계·개발 (1인)"],
     skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
@@ -236,7 +236,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "현재",
-        text: "v0.1 문법, JSON Schema, 적합성 테스트, TypeScript 레퍼런스 코어, DOM 어댑터와 데모, CLI(validate·simulate·plot·render)와 MCP 서버까지, 토글·좋아요 버튼 같은 웹 마이크로 인터랙션(stage 0)에 필요한 도구를 갖췄습니다. MIT 라이선스로 공개했고, 다음은 npm 패키지 배포와 제스처·React 어댑터(stage 1)입니다. 목표는 많은 사람이 쓰는 오픈소스 포맷입니다. ([GitHub](https://github.com/seukwoo/nudg))",
+        text: "v0.1 문법, JSON Schema, 적합성 테스트, TypeScript 레퍼런스 코어, DOM 어댑터와 데모, CLI(validate·simulate·plot·render)와 MCP 서버까지, 토글·좋아요 버튼 같은 웹 마이크로 인터랙션(stage 0)에 필요한 도구를 갖췄습니다. MIT 라이선스로 공개하고 npm에 @nudg/core 0.1.0으로 배포했습니다. 다음은 제스처·React 어댑터(stage 1)입니다. 목표는 많은 사람이 쓰는 오픈소스 포맷입니다. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core))",
         note: "초기 단계(v0.1)입니다.",
       },
     },
