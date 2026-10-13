@@ -215,6 +215,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[직접] 스펙이 기준 — JSON Schema와 언어 중립 적합성 테스트, 기대값은 런타임과 독립된 계산으로 만들어 구현이 자기 자신을 검증하지 않게 함",
       "[직접] TypeScript 레퍼런스 코어(스프링·트윈·킥 모션, 상태 머신, OKLab 색 보간), CLI(validate·simulate), DOM 어댑터와 데모 구현",
       "다음 단계: 프레임 렌더링(nudg render), MCP 서버",
+      "오픈소스로 공개 ([GitHub](https://github.com/seukwoo/nudg))",
     ],
     roles: ["설계·개발 (1인)"],
     skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
@@ -233,8 +234,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "현재",
-        text: "v0.1 문법 초안, JSON Schema, 적합성 테스트, TypeScript 레퍼런스 코어, CLI(validate·simulate), DOM 어댑터와 데모가 동작합니다. 토글·좋아요 버튼 같은 웹 마이크로 인터랙션부터 시작해, 다음은 프레임 렌더링과 MCP 서버입니다.",
-        note: "개인 오픈소스 프로젝트로, 아직 설계 단계입니다.",
+        text: "v0.1 문법 초안, JSON Schema, 적합성 테스트, TypeScript 레퍼런스 코어, CLI(validate·simulate), DOM 어댑터와 데모가 동작합니다. 토글·좋아요 버튼 같은 웹 마이크로 인터랙션부터 시작해, 다음은 프레임 렌더링과 MCP 서버입니다. 목표는 오픈소스로 많은 사람이 쓰는 포맷입니다. ([GitHub](https://github.com/seukwoo/nudg))",
+        note: "아직 설계 단계입니다.",
       },
     },
   },

@@ -218,6 +218,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[Hands-on] The spec is the source of truth — JSON Schema plus a language-neutral conformance suite whose expected values come from an independent derivation, so the runtime never grades itself",
       "[Hands-on] Built the TypeScript reference core (spring, tween and kick motion, state machine, OKLab color), a CLI (validate, simulate), a DOM adapter and a demo",
       "Next: frame rendering (nudg render) and an MCP server",
+      "Open source ([GitHub](https://github.com/seukwoo/nudg))",
     ],
     roles: ["Design & development (solo)"],
     skills: list("TypeScript, Node.js, JSON Schema, Claude Code"),
@@ -236,8 +237,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Status",
-        text: "The v0.1 grammar draft, JSON Schema, conformance suite, TypeScript reference core, CLI (validate, simulate), DOM adapter and demo all work. It starts with web micro-interactions such as toggles and like buttons; frame rendering and an MCP server come next.",
-        note: "A personal open-source project, still in early design.",
+        text: "The v0.1 grammar draft, JSON Schema, conformance suite, TypeScript reference core, CLI (validate, simulate), DOM adapter and demo all work. It starts with web micro-interactions such as toggles and like buttons; frame rendering and an MCP server come next. The goal is an open-source format that many people use. ([GitHub](https://github.com/seukwoo/nudg))",
+        note: "Still in early design.",
       },
     },
   },
