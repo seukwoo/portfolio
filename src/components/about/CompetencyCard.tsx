@@ -6,7 +6,7 @@ export function CompetencyCard({ competency, index }: { competency: Competency; 
   return (
     <Card className="h-full rounded-2xl p-6">
       <p className="flex items-baseline gap-3 text-lg font-semibold tracking-tight">
-        <span className="font-mono text-sm text-accent">{String(index + 1).padStart(2, "0")}</span>
+        <span className="shrink-0 font-mono text-sm text-accent">{String(index + 1).padStart(2, "0")}</span>
         {competency.title}
       </p>
       <ul className="mt-3 space-y-2 text-[15px] leading-relaxed text-ink/85">

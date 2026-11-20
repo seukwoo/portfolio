@@ -45,6 +45,23 @@ export const experiences: Experience[] = [
       },
       {
         role: "Head of Product Dev Team",
+        product: "ProtoPie graphics engine & renderer",
+        period: "2026.02 - Present",
+        title: "Graphics core engine & renderer",
+        subtitle: "(architecture · problem solving)",
+        brief: [
+          "[Hands-on] Next-gen core engine architecture; rendering and engine bugs fixed via repro tests",
+        ],
+        details: [
+          "[Hands-on] Next-gen core engine architecture — separate input, state and rendering layers, a node-based interaction model, swappable renderer plugins",
+          "[Hands-on] Analyzed the existing engine code and core technology and wrote it up as technical documentation",
+          "[Hands-on] Rendering and engine fixes — cross-browser rendering (Safari rounded-corner clipping), media durations, formula variable order, memory blowups on deeply nested formulas, keeping input focus through reorders, and more",
+          "[Hands-on] Each problem narrowed with a repro test, then fixed together with a regression test",
+          "[Lead] Engine fixes packaged per release for QA — what to verify, samples, before/after",
+        ],
+      },
+      {
+        role: "Head of Product Dev Team",
         product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) official launch",
         period: "2026.01 - 2026.10",
         title: "AI-based code generation system",

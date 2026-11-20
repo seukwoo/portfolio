@@ -44,7 +44,7 @@ export const latestWork: LatestWork = {
 };
 
 /** Featured projects in display order: shipped results first (official launch, monetization), then the latest PoC. */
-export const featuredProjectSlugs = ["ui-code-ai", "alan", "decision-graph", "mx-studio"];
+export const featuredProjectSlugs = ["ui-code-ai", "nudg", "alan", "decision-graph"];
 
 export const leadership: LeadershipBlock[] = [
   {

@@ -45,6 +45,23 @@ export const experiences: Experience[] = [
       },
       {
         role: "Head of Product Dev Team",
+        product: "ProtoPie 그래픽스 엔진·렌더러",
+        period: "2026.02 - 현재",
+        title: "그래픽스 코어 엔진·렌더러",
+        subtitle: "(구조 설계 · 문제 해결)",
+        brief: [
+          "[직접] 차세대 코어 엔진 구조 설계, 렌더링·엔진 문제를 재현 테스트로 좁혀 수정",
+        ],
+        details: [
+          "[직접] 차세대 코어 엔진 구조 설계 — 입력·상태·렌더링 계층 분리, 노드 기반 인터랙션 모델, 렌더러를 바꿔 끼울 수 있는 플러그인 구조",
+          "[직접] 기존 엔진 코드와 핵심 기술을 분석해 기술 문서로 정리",
+          "[직접] 렌더링·엔진 문제 해결 — 브라우저별 렌더링 차이(Safari 둥근 모서리 클리핑), 미디어 재생 시간, 수식 변수 계산 순서, 깊게 중첩된 수식의 메모리 초과, 재배치 중 입력 포커스 유지 등",
+          "[직접] 문제마다 재현 테스트로 원인을 좁히고, 회귀 테스트와 함께 수정",
+          "[리드] 엔진 수정 사항을 릴리스별로 정리해 QA에 인계 — 검증 항목·샘플·수정 전후 비교",
+        ],
+      },
+      {
+        role: "Head of Product Dev Team",
         product: "[ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Dev View · Code MCP) 정식 출시",
         period: "2026.01 - 2026.10",
         title: "AI 기반 코드 생성 시스템",

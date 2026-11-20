@@ -29,8 +29,9 @@ export const about: About = {
       ],
     },
     {
-      title: "Designing AI systems hands-on, proving them in code",
+      title: "Designing AI systems and graphics engines hands-on, proving them in code",
       evidence: [
+        "Designed engines hands-on, from the [MX Studio](/projects/mx-studio) 3D engine to ProtoPie's next-gen core and renderer",
         "Designed a rules + AI code-generation pipeline and built its core (PoC) → launched with the team as [ProtoPie MCP](https://www.protopie.io/blog/protopie-mcp-official) (Oct 2026)",
         "Built [Decision Graph](/projects/decision-graph) solo — extracts decisions and auto-graphs their relations; 80%+ of human-labeled decisions found",
       ],
