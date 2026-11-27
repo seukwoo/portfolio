@@ -226,7 +226,6 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     skills: list("Rust, wgpu, WebGPU, WebGL2, Vulkan, Metal, WebAssembly"),
     images: [
       { src: "/projects/bite-engine/overview-en.webp", width: 1600, height: 900, caption: "Engine stack — from graphics APIs (WebGPU, WebGL2, Vulkan, Metal) through wgpu, the Rust core and the host API up to apps. The engine knows no app; a 3D frame takes 3.6 ms on a phone; the default web build is 600 KB" },
-      { src: "/projects/bite-engine/perf-en.webp", width: 1600, height: 900, caption: "Performance and quality — shader compiles 20–50 → 0, re-renders while aiming 100 → 1, a 600 KB web build cap, matching result hashes across versions" },
       { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D rendering — models on terrain with shadows and a water surface (WebGPU)" },
       { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "Materials — overlapping translucent glass blending and shadows (WebGPU)" },
       { src: "/projects/bite-engine/course.webp", width: 900, height: 600, caption: "Terrain surfaces — fairway mowing, bunkers, water and rough drawn per surface and used in how the ball rolls and bounces" },

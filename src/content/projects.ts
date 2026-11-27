@@ -223,7 +223,6 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     skills: list("Rust, wgpu, WebGPU, WebGL2, Vulkan, Metal, WebAssembly"),
     images: [
       { src: "/projects/bite-engine/overview-ko.webp", width: 1600, height: 900, caption: "엔진 구조 — 아래 그래픽 API(WebGPU·WebGL2·Vulkan·Metal)부터 wgpu, Rust 코어, 호스트 API, 맨 위 앱까지. 엔진은 앱을 모르는 독립 엔진, 폰에서 3D 한 프레임 3.6ms, 웹 기본 빌드 600KB" },
-      { src: "/projects/bite-engine/perf-ko.webp", width: 1600, height: 900, caption: "성능·품질 지표 — 셰이더 컴파일 20~50회 → 0회, 조준 중 다시 그리기 100회 → 1회, 웹 빌드 600KB 상한, 버전 간 결과 해시 일치" },
       { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D 렌더링 — 지형 위 모델과 그림자, 물 표면 (WebGPU)" },
       { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "재질 — 반투명 유리가 겹칠 때의 색 섞임과 그림자 (WebGPU)" },
       { src: "/projects/bite-engine/course.webp", width: 900, height: 600, caption: "지형 표면 — 페어웨이 잔디 패턴, 벙커, 물, 러프를 표면마다 다르게 그리고 공의 구름·튐에 반영" },
