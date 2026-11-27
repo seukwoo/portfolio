@@ -17,6 +17,10 @@ export const experiences: Experience[] = [
         period: "2026.08 - 2026.10",
         title: "LLM pipeline for decision extraction",
         subtitle: "(Slack·Notion → decision records with evidence)",
+        brief: [
+          "[Hands-on] Solo LLM PoC from PO requirements: extracts decisions with evidence and auto-graphs them; 80%+ of golden-set decisions found",
+          "[Hands-on] Two-tier inference (all-light rejected at 17/24 tests); per-request cost profiling cut calls 74%, cost 25%",
+        ],
         details: [
           "[Hands-on] Turned PO requirements into a tech spec; built solo an LLM PoC extracting who decided what and why, with evidence",
           "[Hands-on] Auto-visualized decisions as a relation map and timeline, each linked to its source text",
