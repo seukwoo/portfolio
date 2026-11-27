@@ -222,7 +222,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["Design & development"],
     skills: list("Rust, wgpu, WebGL2, WebAssembly, iOS, Android"),
     images: [
-      { src: "/projects/bite-engine/golf-3d.webp", width: 780, height: 1688, caption: "PlaySnack's golf game drawn by the Bite engine — 3D course, ball flight, shadows, minimap (live on playsnack.app)" },
+      { src: "/projects/bite-engine/render.webp", width: 525, height: 740, caption: "Bite engine 3D rendering — terrain, mowing patterns, trees with shadows and the aim line (the live screen without its UI)" },
     ],
     caseStudy: {
       problem:
@@ -242,7 +242,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "playsnack",
-    summary: "Games played together live from one link — the main game is 3D golf, and an iPhone camera measures a real swing so that shot plays the round — the Real Swing mode is in closed beta (personal project)",
+    summary: "Games played live from one link by friends, groups and event crowds, with a paid pass for event hosts — the main game is 3D golf, and an iPhone camera measures a real swing so that shot plays the round — the Real Swing mode is in closed beta (personal project)",
     name: "PlaySnack",
     client: "Personal project",
     duty: "Planning, design & development",
@@ -253,7 +253,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2026.10 -",
     tasks: [
       "[Hands-on] Service planning and development — games, quizzes, polls and brackets as JSON app documents, played live by everyone who opens the link ([playsnack.app](https://playsnack.app))",
-      "[Hands-on] Designed the Bite app engine — a format that defines apps as JSON documents and its runtime; heavy games like 3D golf run on a Rust engine ([Bite engine](/projects/bite-engine))",
+      "[Hands-on] Event host features — an event such as a year-end party or workshop holds up to 200 people in one room, the host manages the room (PIN and more), and the event pass (US$49 a day, for as many days as needed) went live for payment in Nov 2026",
+      "[Hands-on] Host-run multiplayer — the host's device runs the game and tallies, and the server only relays messages, so more rooms add little server load and a failure stays small",
+      "[Hands-on] A format that defines games as JSON documents — running them and 3D rendering are handled by my own [Bite engine](/projects/bite-engine)",
       "[Hands-on] [3D golf game](https://playsnack.app/games/golf/) — two golf clubs and up to 18 holes, wind, slopes and per-club ball flight, and a mode to play together",
       "[Hands-on] Real-swing measuring app Snack Golf (iOS) — an iPhone behind the ball films at 240 fps and 1/2000 s exposure, measuring ball speed, launch angle, direction and carry with no launch monitor",
       "[Hands-on] Measurement core (Rust) — tracks the ball from behind the addressing club through flicker and dim flight; instead of estimating a 3D position per frame, fits a ball-flight model with gravity, drag and lift to every frame's 2D observation (ball center and motion-streak width), with the impact sound pinning the moment of contact",
@@ -271,16 +273,16 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     ],
     caseStudy: {
       problem:
-        "Light games to play together at a gathering usually need an install or sign-up, and golf games tied to a real swing need expensive measuring gear.",
+        "Games to play together at a gathering or event usually need an install or sign-up, and event hosts needed a way to bring tens to hundreds of people in at once. Golf games tied to a real swing also need expensive measuring gear.",
       decisions: [
-        "One link, together — no install or sign-up; everyone who opens the link plays live",
+        "One link, together — no install or sign-up; everyone who opens the link plays live, and a host opens and runs an event",
+        "A thin server — the host's device runs the game; the server only relays",
         "Games as documents — apps are JSON documents, easy for AI to make and edit",
-        "Heavy games start with the engine — built a Rust engine for 3D golf, with the same results on web and phones",
         "An iPhone instead of a launch monitor — fit a ball-flight model to the whole 240 fps video, link it to the game live, and let that shot play the round",
       ],
       outcome: {
         label: "Status",
-        text: "Live at playsnack.app; the main game, 3D golf, runs on the Rust engine. The Real Swing mode, which links the Snack Golf measuring app so a real swing plays the round, is in closed beta. ([playsnack.app](https://playsnack.app))",
+        text: "Live at playsnack.app, selling an event pass to event hosts; the main game is 3D golf. The Real Swing mode, which links the Snack Golf measuring app so a real swing plays the round, is in closed beta. ([playsnack.app](https://playsnack.app))",
       },
     },
   },

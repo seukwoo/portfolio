@@ -219,7 +219,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["설계·개발"],
     skills: list("Rust, wgpu, WebGL2, WebAssembly, iOS, Android"),
     images: [
-      { src: "/projects/bite-engine/golf-3d.webp", width: 780, height: 1688, caption: "Bite 엔진이 그린 PlaySnack 골프 게임 — 3D 코스, 탄도, 그림자, 미니맵 (playsnack.app 실제 화면)" },
+      { src: "/projects/bite-engine/render.webp", width: 525, height: 740, caption: "Bite 엔진의 3D 렌더링 — 지형·잔디 패턴·나무와 그림자·조준선 (실제 서비스 화면에서 UI를 뺀 부분)" },
     ],
     caseStudy: {
       problem:
@@ -239,7 +239,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "playsnack",
-    summary: "링크 하나로 친구와 바로 같이 하는 게임 서비스 — 메인은 3D 골프 게임, 아이폰 카메라로 실제 스윙을 측정해 그 샷으로 라운드하는 리얼 스윙 모드는 클로즈드 베타 (개인 프로젝트)",
+    summary: "링크 하나로 친구·모임·행사 참가자가 바로 같이 하는 게임 서비스, 행사 주최자용 유료 이용권 판매 중 — 메인은 3D 골프 게임, 아이폰 카메라로 실제 스윙을 측정해 그 샷으로 라운드하는 리얼 스윙 모드는 클로즈드 베타 (개인 프로젝트)",
     name: "PlaySnack",
     client: "개인 프로젝트",
     duty: "기획·설계·개발",
@@ -250,7 +250,9 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     period: "2026.10 -",
     tasks: [
       "[직접] 서비스 기획·개발 — 게임·퀴즈·투표·월드컵을 JSON 앱 문서로 만들고, 링크를 연 사람끼리 실시간으로 같이 플레이 ([playsnack.app](https://playsnack.app))",
-      "[직접] 앱 엔진 Bite 설계 — 앱을 JSON 문서로 정의하는 포맷과 런타임, 3D 골프 같은 무거운 게임은 Rust 엔진([Bite 엔진](/projects/bite-engine))으로",
+      "[직접] 행사 주최자용 기능 — 송년회·워크숍 같은 행사를 열면 최대 200명이 같은 방에서 참여, 진행자가 방(PIN 등)을 관리, 행사 이용권(하루 US$49, 필요한 날수만큼) 결제를 2026.11 실서비스로 오픈",
+      "[직접] 호스트 방식 멀티플레이 — 게임 진행·집계는 방장 기기가 맡고 서버는 메시지만 중계해, 방이 늘어도 서버 부담과 장애 범위를 작게",
+      "[직접] 게임을 JSON 문서로 정의하는 포맷 — 게임 실행과 3D 렌더링은 직접 만든 [Bite 엔진](/projects/bite-engine)이 맡음",
       "[직접] [3D 골프 게임](https://playsnack.app/games/golf/) — 골프장 2곳·최대 18홀, 바람·경사·클럽별 탄도, 여럿이 함께 치는 모드",
       "[직접] 실제 스윙 측정 앱 Snack Golf (iOS) — 아이폰을 공 뒤에 세워 240fps·노출 1/2000초로 촬영, 측정 장비 없이 볼 스피드·발사각·방향·비거리 계산",
       "[직접] 측정 코어(Rust) — 클럽에 가려진 공부터 깜빡임·흐린 비행 구간까지 추적, 프레임마다 3D 위치를 추정하지 않고 중력·항력·양력을 넣은 탄도 모델을 모든 프레임의 2D 관측(공 중심·움직임 줄무늬 폭)에 직접 맞춤, 임팩트 소리로 타격 시각을 고정해 정확도 보완",
@@ -268,16 +270,16 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     ],
     caseStudy: {
       problem:
-        "모임에서 바로 같이 할 수 있는 가벼운 게임은 설치나 가입이 번거롭고, 골프처럼 실제 운동과 이어지는 게임은 비싼 측정 장비가 필요했습니다.",
+        "모임이나 행사에서 바로 같이 할 수 있는 게임은 설치나 가입이 번거롭고, 행사 주최자는 수십~수백 명을 한 번에 참여시킬 도구가 필요했습니다. 또 골프처럼 실제 운동과 이어지는 게임은 비싼 측정 장비가 필요했습니다.",
       decisions: [
-        "링크 하나로 같이 — 설치·가입 없이 링크를 연 사람끼리 실시간으로 플레이",
+        "링크 하나로 같이 — 설치·가입 없이 링크를 연 사람끼리 실시간으로 플레이, 행사는 주최자가 열고 진행",
+        "서버는 얇게 — 게임 진행은 방장 기기가, 서버는 중계만",
         "게임은 문서로 — 앱을 JSON 문서로 정의해 AI가 만들고 고치기 쉽게",
-        "무거운 게임은 엔진부터 — 3D 골프를 위해 Rust 엔진을 직접 만들어 웹·폰에서 같은 결과",
         "측정 장비 대신 아이폰 — 240fps 카메라 영상 전체에 탄도 모델을 맞춰 샷을 재고, 게임과 실시간으로 이어 그 샷으로 라운드",
       ],
       outcome: {
         label: "현재",
-        text: "playsnack.app에서 서비스 중이며, 메인 게임인 3D 골프는 Rust 엔진으로 돌아갑니다. 측정 앱 Snack Golf를 연결해 실제 스윙으로 치는 리얼 스윙 모드는 클로즈드 베타입니다. ([playsnack.app](https://playsnack.app))",
+        text: "playsnack.app에서 서비스 중이며, 행사 주최자용 이용권을 판매하고 있습니다. 메인 게임은 3D 골프입니다. 측정 앱 Snack Golf를 연결해 실제 스윙으로 치는 리얼 스윙 모드는 클로즈드 베타입니다. ([playsnack.app](https://playsnack.app))",
       },
     },
   },
