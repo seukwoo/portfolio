@@ -69,8 +69,8 @@ export const labels = {
   },
   contact: {
     eyebrow: "Contact",
-    title: "이야기 나눠요",
-    description: "AI를 실제 서비스로 옮기는 고민, 개발 조직을 꾸리는 고민이라면 편하게 연락 주세요.",
+    title: "이야기 나누고 싶습니다",
+    description: "AI를 실제 서비스로 옮기는 고민, 개발 조직을 꾸리는 고민이라면 편하게 연락 주십시오.",
     mailSubject: "[포트폴리오] 문의",
     copyHint: "클릭하면 복사",
     copyEmailLabel: (email: string) => `이메일 주소 ${email} 복사`,
@@ -84,7 +84,7 @@ export const labels = {
   },
   notFound: {
     code: "404",
-    title: "페이지를 찾을 수 없어요",
+    title: "페이지를 찾을 수 없습니다",
     home: "홈으로 돌아가기 →",
   },
 };
