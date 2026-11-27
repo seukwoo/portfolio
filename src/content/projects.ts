@@ -199,6 +199,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "bite-engine",
+    punchline: ["웹·iOS·Android에서", "같은 결과를 그리는 엔진"],
     summary: "웹·iOS·Android에서 같은 엔진으로 도는 Rust 게임 엔진 — wgpu 렌더러, 2D·3D·탄도·파티클, PlaySnack 골프 게임을 실제로 구동 (개인 프로젝트)",
     name: "Bite 엔진 (Rust)",
     client: "개인 프로젝트",
@@ -219,8 +220,15 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["설계·개발"],
     skills: list("Rust, wgpu, WebGL2, WebAssembly, iOS, Android"),
     images: [
-      { src: "/projects/bite-engine/render.webp", width: 525, height: 740, caption: "Bite 엔진의 3D 렌더링 — 지형·잔디 패턴·나무와 그림자·조준선 (실제 서비스 화면에서 UI를 뺀 부분)" },
+      { src: "/projects/bite-engine/perf-ko.webp", width: 1600, height: 900, caption: "성능·품질 지표 — 셰이더 컴파일 20~50회 → 0회, 조준 중 다시 그리기 100회 → 1회, 웹 빌드 600KB 상한, 버전 간 결과 해시 일치" },
+      { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D 렌더링 — 지형 위 모델과 그림자, 물 표면 (WebGPU)" },
+      { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "재질 — 반투명 유리가 겹칠 때의 색 섞임과 그림자 (WebGPU)" },
+      { src: "/projects/bite-engine/course.webp", width: 900, height: 600, caption: "지형 표면 — 페어웨이 잔디 패턴, 벙커, 물, 러프를 표면마다 다르게 그리고 공의 구름·튐에 반영" },
+      { src: "/projects/bite-engine/ballflight.webp", width: 640, height: 480, caption: "탄도 — 바람·스핀을 넣은 공의 비행과 착지 궤적" },
+      { src: "/projects/bite-engine/camera-avoid.webp", width: 872, height: 900, caption: "카메라 가림 피하기 — 전(왼쪽): 나무 줄기가 공을 가림 / 후(오른쪽): 카메라가 미리 비켜 공이 계속 보임" },
+      { src: "/projects/bite-engine/rust-vs-legacy.webp", width: 1470, height: 780, caption: "기존 JS 엔진과 같은 화면 검증 — 같은 앱을 Rust 엔진과 기존 엔진으로 그려 같은 기기 픽셀 위치에 맞는지 비교 (iOS 시뮬레이터)" },
     ],
+    cardImage: { src: "/projects/bite-engine/card.webp", width: 1200, height: 750 },
     caseStudy: {
       problem:
         "PlaySnack의 게임은 JS 엔진으로 돌았는데, 3D 골프처럼 무거운 게임과 폰·인앱 브라우저 성능을 함께 감당하기 어려웠습니다. 웹·iOS·Android에서 같은 결과가 나와야 했고, 웹 첫 화면은 가벼워야 했습니다.",
@@ -265,8 +273,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     skills: list("TypeScript, Rust, Swift, Cloudflare, WebSocket"),
     images: [
       { src: "/projects/playsnack/golf-3d.webp", width: 780, height: 1688, caption: "3D 골프 게임 — 당겼다 놓으면 스윙, 바람·경사·클럽별 탄도" },
-      { src: "/projects/playsnack/home.webp", width: 780, height: 1688, caption: "PlaySnack 홈 — 주기적으로 새 질문이 나오는 퀴즈와 모임 게임 (playsnack.app 실제 화면)" },
       { src: "/projects/playsnack/golf-courses.webp", width: 780, height: 1688, caption: "골프 코스 선택 — 2개 골프장, 9홀·18홀 코스" },
+      { src: "/projects/playsnack/home.webp", width: 780, height: 1688, caption: "PlaySnack 홈 — 주기적으로 새 질문이 나오는 퀴즈와 모임 게임" },
+      { src: "/projects/playsnack/pricing.webp", width: 780, height: 1688, caption: "요금 — 친구방은 무료, 행사 이용권은 하루 US$49·200명까지" },
+      { src: "/projects/playsnack/horse-in.webp", width: 780, height: 1688, caption: "경마 게임 — 탭할수록 빨라지는 말, 여럿이 같이" },
+      { src: "/projects/playsnack/worldcup-in.webp", width: 780, height: 1688, caption: "음식 월드컵 — 두 후보 중 하나를 고르는 토너먼트" },
+      { src: "/projects/playsnack/ladder-in.webp", width: 780, height: 1688, caption: "사다리 타기 — 결과를 적고 사다리를 그려 추첨" },
+      { src: "/projects/playsnack/wheel.webp", width: 780, height: 1688, caption: "룰렛 만들기 — 후보를 적어 바로 돌리는 룰렛" },
     ],
     caseStudy: {
       problem:

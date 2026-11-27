@@ -99,7 +99,9 @@ describe("Korean and English content", () => {
     expect(en.projects.map((p) => p.slug)).toEqual(ko.projects.map((p) => p.slug));
     expect(en.featuredProjectSlugs).toEqual(ko.featuredProjectSlugs);
     for (const [i, project] of ko.projects.entries()) {
-      expect(en.projects[i].images.map((img) => img.src), project.slug).toEqual(project.images.map((img) => img.src));
+      // An image with text in it may have one file per language: "perf-ko.webp" and "perf-en.webp" count as the same image.
+      const sameImage = (src: string) => src.replace(/-(ko|en)(\.\w+)$/, "$2");
+      expect(en.projects[i].images.map((img) => sameImage(img.src)), project.slug).toEqual(project.images.map((img) => sameImage(img.src)));
       expect(en.projects[i].period, project.slug).toBe(project.period);
     }
   });

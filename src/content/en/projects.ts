@@ -202,6 +202,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "bite-engine",
+    punchline: ["One engine that draws", "the same on web and phones"],
     summary: "A Rust game engine that runs the same on web, iOS and Android — wgpu renderer, 2D and 3D, ballistics and particles, powering PlaySnack's golf game in production (personal project)",
     name: "Bite engine (Rust)",
     client: "Personal project",
@@ -222,8 +223,15 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["Design & development"],
     skills: list("Rust, wgpu, WebGL2, WebAssembly, iOS, Android"),
     images: [
-      { src: "/projects/bite-engine/render.webp", width: 525, height: 740, caption: "Bite engine 3D rendering — terrain, mowing patterns, trees with shadows and the aim line (the live screen without its UI)" },
+      { src: "/projects/bite-engine/perf-en.webp", width: 1600, height: 900, caption: "Performance and quality — shader compiles 20–50 → 0, re-renders while aiming 100 → 1, a 600 KB web build cap, matching result hashes across versions" },
+      { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D rendering — models on terrain with shadows and a water surface (WebGPU)" },
+      { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "Materials — overlapping translucent glass blending and shadows (WebGPU)" },
+      { src: "/projects/bite-engine/course.webp", width: 900, height: 600, caption: "Terrain surfaces — fairway mowing, bunkers, water and rough drawn per surface and used in how the ball rolls and bounces" },
+      { src: "/projects/bite-engine/ballflight.webp", width: 640, height: 480, caption: "Ball flight — flight and landing with wind and spin" },
+      { src: "/projects/bite-engine/camera-avoid.webp", width: 872, height: 900, caption: "Camera occlusion avoidance — before (left): a tree trunk hides the ball / after (right): the camera moves aside early and the ball stays visible" },
+      { src: "/projects/bite-engine/rust-vs-legacy.webp", width: 1470, height: 780, caption: "Same screen as the old JS engine — the same app drawn by the Rust and the old engine, checked to land on the same device pixels (iOS simulator)" },
     ],
+    cardImage: { src: "/projects/bite-engine/card.webp", width: 1200, height: 750 },
     caseStudy: {
       problem:
         "PlaySnack's games ran on a JS engine, which struggled with heavy games like 3D golf on phones and in-app browsers. Results had to match on web, iOS and Android, and the first web load had to stay light.",
@@ -268,8 +276,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     skills: list("TypeScript, Rust, Swift, Cloudflare, WebSocket"),
     images: [
       { src: "/projects/playsnack/golf-3d.webp", width: 780, height: 1688, caption: "The 3D golf game — pull back and release to swing; wind, slopes and per-club ball flight" },
-      { src: "/projects/playsnack/home.webp", width: 780, height: 1688, caption: "PlaySnack home — quizzes with fresh questions on a timer, and party games (live on playsnack.app)" },
       { src: "/projects/playsnack/golf-courses.webp", width: 780, height: 1688, caption: "Choosing a course — two golf clubs, 9- and 18-hole courses" },
+      { src: "/projects/playsnack/home.webp", width: 780, height: 1688, caption: "PlaySnack home — quizzes with fresh questions on a timer, and party games" },
+      { src: "/projects/playsnack/pricing.webp", width: 780, height: 1688, caption: "Pricing — free rooms for friends; the event pass is US$49 a day for up to 200 people" },
+      { src: "/projects/playsnack/horse-in.webp", width: 780, height: 1688, caption: "Horse race — tap to make your horse faster, together" },
+      { src: "/projects/playsnack/worldcup-in.webp", width: 780, height: 1688, caption: "Food world cup — a bracket of pick-one-of-two" },
+      { src: "/projects/playsnack/ladder-in.webp", width: 780, height: 1688, caption: "Ladder draw — write the results and draw the ladder" },
+      { src: "/projects/playsnack/wheel.webp", width: 780, height: 1688, caption: "Roulette maker — type the options and spin" },
     ],
     caseStudy: {
       problem:
