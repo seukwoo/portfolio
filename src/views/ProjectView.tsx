@@ -43,7 +43,7 @@ export function ProjectView({ lang, slug }: { lang: Lang; slug: string }) {
         title={project.name}
         extraSlide={
           project.coverInGallery && (
-            <ProjectCover project={project} size="banner" className="aspect-video" sizes="(min-width: 1152px) 1104px, 100vw" />
+            <ProjectCover project={project} size="banner" className="aspect-video h-full max-w-full" sizes="(min-width: 1152px) 1104px, 100vw" />
           )
         }
       />

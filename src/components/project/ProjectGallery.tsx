@@ -16,6 +16,10 @@ type Props = {
   extraSlide?: React.ReactNode;
 };
 
+/** Every slide gets the same image frame and caption space, so the arrows and dots stay put whatever the image's shape. */
+const FRAME = "mx-auto flex h-[62vw] max-h-[70vh] items-center justify-center px-12 sm:h-[460px] lg:h-[560px]";
+const CAPTION = "mx-auto mt-3 min-h-[2.75rem] max-w-3xl px-12 text-center text-sm text-muted";
+
 /** Screenshot carousel. Slides are not links, so a missed click on the arrows never opens a new tab. */
 export function ProjectGallery({ images, title, extraSlide }: Props) {
   const labels = useLabels();
@@ -27,27 +31,29 @@ export function ProjectGallery({ images, title, extraSlide }: Props) {
         navigation
         pagination={{ clickable: true }}
         keyboard={{ enabled: true }}
-        autoHeight
       >
         {images.flatMap((img, i) => [
-          <SwiperSlide key={img.src} className="pb-10">
-            <Image
-              src={img.src}
-              alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
-              width={img.width}
-              height={img.height}
-              priority={i === 0}
-              // Off-screen slides sit beside the visible one; lazy loading may never start for them (e.g. Safari).
-              loading={i === 0 ? undefined : "eager"}
-              sizes="(min-width: 1152px) 1104px, 100vw"
-              className="mx-auto h-auto max-h-[70vh] w-auto max-w-full object-contain"
-            />
-            {img.caption && <p className="mx-auto mt-3 max-w-3xl px-12 text-center text-sm text-muted">{img.caption}</p>}
+          <SwiperSlide key={img.src} className="pt-4 pb-10">
+            <div className={FRAME}>
+              <Image
+                src={img.src}
+                alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
+                width={img.width}
+                height={img.height}
+                priority={i === 0}
+                // Off-screen slides sit beside the visible one; lazy loading may never start for them (e.g. Safari).
+                loading={i === 0 ? undefined : "eager"}
+                sizes="(min-width: 1152px) 1104px, 100vw"
+                className="h-auto max-h-full w-auto max-w-full object-contain"
+              />
+            </div>
+            <p className={CAPTION}>{img.caption}</p>
           </SwiperSlide>,
           ...(i === 0 && extraSlide
             ? [
-                <SwiperSlide key="extra" className="pb-10">
-                  {extraSlide}
+                <SwiperSlide key="extra" className="pt-4 pb-10">
+                  <div className={FRAME}>{extraSlide}</div>
+                  <p className={CAPTION} />
                 </SwiperSlide>,
               ]
             : []),

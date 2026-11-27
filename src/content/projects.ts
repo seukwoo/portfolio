@@ -220,6 +220,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["설계·개발"],
     skills: list("Rust, wgpu, WebGL2, WebAssembly, iOS, Android"),
     images: [
+      { src: "/projects/bite-engine/overview-ko.webp", width: 1600, height: 900, caption: "Rust로 만든 크로스플랫폼 엔진 — wgpu 하나로 웹(WebGPU·WebGL2)·Android(Vulkan)·macOS(Metal)·iPhone(Safari)에서 같은 결과, 실제 폰에서 3D 골프 60fps, 웹 기본 빌드 600KB" },
       { src: "/projects/bite-engine/perf-ko.webp", width: 1600, height: 900, caption: "성능·품질 지표 — 셰이더 컴파일 20~50회 → 0회, 조준 중 다시 그리기 100회 → 1회, 웹 빌드 600KB 상한, 버전 간 결과 해시 일치" },
       { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D 렌더링 — 지형 위 모델과 그림자, 물 표면 (WebGPU)" },
       { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "재질 — 반투명 유리가 겹칠 때의 색 섞임과 그림자 (WebGPU)" },
