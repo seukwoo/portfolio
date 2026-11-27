@@ -181,6 +181,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["Product Owner"],
     skills: list("HarmonyOS, ArkTS, Claude Code, Codex, Spec-Driven Development"),
     images: [
+      { src: "/projects/harmonyos-player/overview-en.webp", width: 1600, height: 900, caption: "Overview — port the spec, not the code: the PO sets the spec, acceptance and scope, and AI agents rewrite the engine, renderer and UI for HarmonyOS (ArkTS). Two people, two months, every MVP feature shipped" },
       { src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 },
       { src: "/projects/harmonyos-player/store-01.webp", width: 900, height: 1600 },
       { src: "/projects/harmonyos-player/store-02.webp", width: 900, height: 1600 },

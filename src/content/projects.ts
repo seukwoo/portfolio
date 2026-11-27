@@ -178,6 +178,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
     roles: ["Product Owner"],
     skills: list("HarmonyOS, ArkTS, Claude Code, Codex, Spec-Driven Development"),
     images: [
+      { src: "/projects/harmonyos-player/overview-ko.webp", width: 1600, height: 900, caption: "개요 — 코드가 아니라 스펙을 옮김: 사람(PO)이 스펙·검증 기준과 범위를 정하고, AI 에이전트가 엔진·렌더러·UI를 HarmonyOS(ArkTS)로 다시 작성. 2명·2개월, MVP 전부 출시" },
       { src: "/projects/harmonyos-player/launch.webp", width: 1920, height: 1077 },
       { src: "/projects/harmonyos-player/store-01.webp", width: 900, height: 1600 },
       { src: "/projects/harmonyos-player/store-02.webp", width: 900, height: 1600 },
