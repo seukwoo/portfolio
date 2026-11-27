@@ -285,7 +285,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "nudg",
-    summary: "AI 코딩 도구가 직접 고치는 UI 인터랙션 포맷 — 모션·소리·햅틱·파티클을 JSON 한 파일로, 웹·iOS·Android에서 같게 재생. npm 최근 30일 4,050회 다운로드, 공식 MCP Registry 등록 (MIT 오픈소스)",
+    summary: "AI 코딩 도구가 직접 고치는 UI 인터랙션 포맷 — 모션·소리·햅틱·파티클을 JSON 한 파일로, 웹·iOS·Android에서 같게 재생. npm 배포·공식 MCP Registry 등록 (MIT 오픈소스)",
     punchline: ["AI가 고치는", "인터랙션 포맷"],
     name: "nudg",
     client: "개인 프로젝트",
@@ -303,7 +303,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[직접] AI가 스스로 확인하는 도구 — CLI·MCP 서버로 검증, 시간별 값, 모션 그래프, 실제 프레임, 변경 전후 비교(nudg_compare)를 에이전트가 직접 호출",
       "[직접] React·Vite·React Native 연결, SwiftUI·Material 3 모션을 같은 포맷의 라이브러리로 제공",
       "[직접] 적용 사례 — [PlaySnack](https://playsnack.app)(파티 게임 웹앱)의 모션을 PR 1건으로 이전, nudg 비율 49% → 89%, CSS 키프레임 42개 중 36개를 검증과 함께 변환, 앱 테스트 1,410건 모두 통과",
-      "배포 — npm [@nudg/core](https://www.npmjs.com/package/@nudg/core) 1.15.0(최근 30일 4,050회 다운로드), [공식 MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.seukwoo/nudg)에 io.github.seukwoo/nudg로 등록, 외부 MCP 카탈로그(The Gilde)에도 수록, [라이브 데모](https://seukwoo.github.io/nudg/demo/) 예제 53개",
+      "배포 — npm [@nudg/core](https://www.npmjs.com/package/@nudg/core) 1.15.0(공개 후 37개 버전 배포), [공식 MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.seukwoo/nudg)에 io.github.seukwoo/nudg로 등록, 외부 MCP 카탈로그(The Gilde)에도 수록, [라이브 데모](https://seukwoo.github.io/nudg/demo/) 예제 53개",
     ],
     roles: ["설계·개발 (1인)"],
     skills: list("TypeScript, Swift, Kotlin, React, JSON Schema, MCP, Claude Code"),
@@ -326,8 +326,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "공개 약 6주 만에 v1.15.0까지 배포했습니다. npm에서 최근 30일 4,050회 다운로드됐고, 공식 MCP Registry에 등록돼 Claude Code 같은 AI 도구에서 바로 연결해 쓸 수 있습니다. PlaySnack은 PR 1건으로 앱 모션의 nudg 비율을 49%에서 89%로 올렸습니다. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core) · [데모](https://seukwoo.github.io/nudg/demo/))",
-        note: "다운로드 수는 npm 공개 통계 기준(2026.10.27–11.25)입니다.",
+        text: "공개 약 6주 동안 37개 버전을 배포해 v1.15.0에 이르렀고, 공식 MCP Registry에 등록돼 Claude Code 같은 AI 도구에서 바로 연결해 쓸 수 있습니다. PlaySnack은 PR 1건으로 앱 모션의 nudg 비율을 49%에서 89%로 올렸습니다. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core) · [데모](https://seukwoo.github.io/nudg/demo/))",
       },
     },
   },
