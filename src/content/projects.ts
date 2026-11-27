@@ -200,7 +200,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   {
     slug: "bite-engine",
     punchline: ["웹과 폰에서", "같은 결과를 그리는 엔진"],
-    summary: "특정 앱에 묶이지 않은 Rust 범용 게임 엔진 — wgpu로 웹(WebGPU·WebGL2)·Android(Vulkan)·macOS(Metal)에서 같은 결과, 실제 폰에서 3D 60fps (개인 프로젝트)",
+    summary: "특정 앱에 묶이지 않은 Rust 범용 게임 엔진 — wgpu로 웹(WebGPU·WebGL2)·Android(Vulkan)·macOS(Metal)에서 같은 결과, 폰에서 3D 한 프레임 3.6ms (개인 프로젝트)",
     name: "Bite 엔진 (Rust)",
     client: "개인 프로젝트",
     duty: "설계·개발",
@@ -216,13 +216,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[직접] 3D·탄도·파티클·모션·텍스트·SVG를 기능별 모듈(crate)로 나누고, 필요한 기능만 넣어 웹 기본 빌드를 600KB 안에 유지",
       "[직접] 결정성 검증 — 같은 입력이면 버전이 바뀌어도 프레임·샷 결과 해시가 같도록, 기존 JS 엔진 화면과 나란히 비교하는 플레이그라운드와 기준 이미지 테스트",
       "[직접] 성능 개선 — 홀을 바꿀 때 GPU 파이프라인을 재사용해 홀당 셰이더 컴파일 20~50회 → 0회, 조준 중 그림자 재사용으로 드라이버 다시 그리기 100회 → 1회",
-      "[직접] 모바일 실측 — Galaxy S24 Ultra에서 3D 골프 장면 60fps(25ms 넘는 프레임 0개), 첫 화면 0.7초 안팎",
+      "[직접] 모바일 실측 — Galaxy S24 Ultra에서 3D 골프 장면 한 프레임 처리 3.6ms(60fps 예산 16.7ms의 약 1/5), 25ms 넘는 프레임 0개, 첫 화면 0.7초 안팎",
       "첫 적용 사례: [PlaySnack](https://playsnack.app) [골프 게임](https://playsnack.app/games/golf/)이 이 엔진으로 실제 서비스 중 (최신 v2.24)",
     ],
     roles: ["설계·개발"],
     skills: list("Rust, wgpu, WebGPU, WebGL2, Vulkan, Metal, WebAssembly"),
     images: [
-      { src: "/projects/bite-engine/overview-ko.webp", width: 1600, height: 900, caption: "Rust로 만든 크로스플랫폼 엔진 — wgpu 하나로 웹(WebGPU·WebGL2)·Android(Vulkan)·macOS(Metal)·iPhone(Safari)에서 같은 결과, 실제 폰에서 3D 골프 60fps, 웹 기본 빌드 600KB" },
+      { src: "/projects/bite-engine/overview-ko.webp", width: 1600, height: 900, caption: "엔진 구조 — 아래 그래픽 API(WebGPU·WebGL2·Vulkan·Metal)부터 wgpu, Rust 코어, 호스트 API, 맨 위 앱까지. 엔진은 앱을 모르는 독립 엔진, 폰에서 3D 한 프레임 3.6ms, 웹 기본 빌드 600KB" },
       { src: "/projects/bite-engine/perf-ko.webp", width: 1600, height: 900, caption: "성능·품질 지표 — 셰이더 컴파일 20~50회 → 0회, 조준 중 다시 그리기 100회 → 1회, 웹 빌드 600KB 상한, 버전 간 결과 해시 일치" },
       { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D 렌더링 — 지형 위 모델과 그림자, 물 표면 (WebGPU)" },
       { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "재질 — 반투명 유리가 겹칠 때의 색 섞임과 그림자 (WebGPU)" },
@@ -244,7 +244,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "결과",
-        text: "실제 폰에서 3D 장면이 60fps로 돌고, 첫 적용처인 PlaySnack 골프 게임이 이 엔진으로 서비스 중입니다. 홀 전환 셰이더 컴파일을 0회로, 조준 중 다시 그리기를 100회에서 1회로 줄였습니다. 엔진은 v2.24까지 나왔습니다. ([골프 게임](https://playsnack.app/games/golf/))",
+        text: "실제 폰에서 3D 한 프레임을 3.6ms에 처리해 60fps 예산의 1/5만 쓰고, 첫 적용처인 PlaySnack 골프 게임이 이 엔진으로 서비스 중입니다. 홀 전환 셰이더 컴파일을 0회로, 조준 중 다시 그리기를 100회에서 1회로 줄였습니다. 엔진은 v2.24까지 나왔습니다. ([골프 게임](https://playsnack.app/games/golf/))",
         note: "비공개 저장소입니다.",
       },
     },

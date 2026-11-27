@@ -203,7 +203,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   {
     slug: "bite-engine",
     punchline: ["One engine that draws", "the same on web and phones"],
-    summary: "A general-purpose Rust game engine, independent of any app — wgpu gives the same result on web (WebGPU, WebGL2), Android (Vulkan) and macOS (Metal), with 3D at 60 fps on a real phone (personal project)",
+    summary: "A general-purpose Rust game engine, independent of any app — wgpu gives the same result on web (WebGPU, WebGL2), Android (Vulkan) and macOS (Metal), with a 3D frame in 3.6 ms on a phone (personal project)",
     name: "Bite engine (Rust)",
     client: "Personal project",
     duty: "Design & development",
@@ -219,13 +219,13 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[Hands-on] 3D, ballistics, particles, motion, text and SVG as separate crates, so the default web build stays under 600 KB",
       "[Hands-on] Determinism checks — the same input gives the same frame and shot hashes across versions, with a playground and baseline images against the previous JS engine",
       "[Hands-on] Performance — reusing GPU pipelines across holes cut shader compiles from 20–50 per hole to 0; reusing shadows while aiming cut driver re-renders from 100 to 1",
-      "[Hands-on] Measured on phones — a 3D golf scene at 60 fps on a Galaxy S24 Ultra (0 frames over 25 ms), first screen in about 0.7 s",
+      "[Hands-on] Measured on phones — a 3D golf scene takes 3.6 ms per frame on a Galaxy S24 Ultra (about 1/5 of the 16.7 ms budget at 60 fps), 0 frames over 25 ms, first screen in about 0.7 s",
       "First user: [PlaySnack](https://playsnack.app)'s [golf game](https://playsnack.app/games/golf/) runs on it in production (latest v2.24)",
     ],
     roles: ["Design & development"],
     skills: list("Rust, wgpu, WebGPU, WebGL2, Vulkan, Metal, WebAssembly"),
     images: [
-      { src: "/projects/bite-engine/overview-en.webp", width: 1600, height: 900, caption: "A cross-platform engine in Rust — one wgpu layer for web (WebGPU, WebGL2), Android (Vulkan), macOS (Metal) and iPhone (Safari) with the same result, 3D golf at 60 fps on a real phone, a 600 KB default web build" },
+      { src: "/projects/bite-engine/overview-en.webp", width: 1600, height: 900, caption: "Engine stack — from graphics APIs (WebGPU, WebGL2, Vulkan, Metal) through wgpu, the Rust core and the host API up to apps. The engine knows no app; a 3D frame takes 3.6 ms on a phone; the default web build is 600 KB" },
       { src: "/projects/bite-engine/perf-en.webp", width: 1600, height: 900, caption: "Performance and quality — shader compiles 20–50 → 0, re-renders while aiming 100 → 1, a 600 KB web build cap, matching result hashes across versions" },
       { src: "/projects/bite-engine/diorama.webp", width: 640, height: 480, caption: "3D rendering — models on terrain with shadows and a water surface (WebGPU)" },
       { src: "/projects/bite-engine/glass.webp", width: 640, height: 480, caption: "Materials — overlapping translucent glass blending and shadows (WebGPU)" },
@@ -247,7 +247,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Outcome",
-        text: "3D scenes run at 60 fps on a real phone, and the first user, PlaySnack's golf game, runs on the engine in production. Shader compiles on hole changes went to 0 and re-renders while aiming from 100 to 1. The engine is at v2.24. ([golf game](https://playsnack.app/games/golf/))",
+        text: "A 3D frame takes 3.6 ms on a real phone, about 1/5 of the 60 fps budget, and the first user, PlaySnack's golf game, runs on the engine in production. Shader compiles on hole changes went to 0 and re-renders while aiming from 100 to 1. The engine is at v2.24. ([golf game](https://playsnack.app/games/golf/))",
         note: "Private repository.",
       },
     },
