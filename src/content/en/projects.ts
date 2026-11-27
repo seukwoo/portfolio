@@ -202,7 +202,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
   },
   {
     slug: "nudg",
-    summary: "A UI interaction format AI coding tools can edit — motion, sound, haptics and particles in one JSON file, played the same on web, iOS and Android. 4,281 npm downloads in the last 30 days, listed on the official MCP Registry (MIT open source)",
+    summary: "A UI interaction format AI coding tools can edit — motion, sound, haptics and particles in one JSON file, played the same on web, iOS and Android. 4,050 npm downloads in the last 30 days, listed on the official MCP Registry (MIT open source)",
     punchline: ["An interaction format", "your AI can edit"],
     name: "nudg",
     client: "Personal project",
@@ -220,7 +220,7 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       "[Hands-on] Tools for an AI to check its own work — a CLI and MCP server for validation, values over time, motion graphs, real frames and before/after comparison (nudg_compare)",
       "[Hands-on] React, Vite and React Native integration; SwiftUI and Material 3 motion shipped as libraries in the same format",
       "[Hands-on] Case study — [PlaySnack](https://playsnack.app) (a party-game web app) moved its motion in one pull request: 49% → 89% on nudg, 36 of 42 CSS keyframes converted with proof, all 1,410 app tests passing",
-      "Shipped — npm [@nudg/core](https://www.npmjs.com/package/@nudg/core) 1.14.0 (4,281 downloads in the last 30 days), listed on the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.seukwoo/nudg) as io.github.seukwoo/nudg and picked up by a third-party MCP catalog (The Gilde), [live demo](https://seukwoo.github.io/nudg/demo/) with 53 examples",
+      "Shipped — npm [@nudg/core](https://www.npmjs.com/package/@nudg/core) 1.15.0 (4,050 downloads in the last 30 days), listed on the [official MCP Registry](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.seukwoo/nudg) as io.github.seukwoo/nudg and picked up by a third-party MCP catalog (The Gilde), [live demo](https://seukwoo.github.io/nudg/demo/) with 53 examples",
     ],
     roles: ["Design & development (solo)"],
     skills: list("TypeScript, Swift, Kotlin, React, JSON Schema, MCP, Claude Code"),
@@ -243,8 +243,8 @@ const data: (Omit<Project, "images"> & { images?: ImageAsset[]; leadImages?: Ima
       ],
       outcome: {
         label: "Outcome",
-        text: "About five weeks after going public it is at v1.14.0. It had 4,281 npm downloads in the last 30 days and is listed on the official MCP Registry, so AI tools like Claude Code can connect to it directly. PlaySnack raised the share of its app motion on nudg from 49% to 89% in one pull request. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core) · [demo](https://seukwoo.github.io/nudg/demo/))",
-        note: "Downloads are from npm's public stats (2026.10.20–11.18).",
+        text: "About six weeks after going public it is at v1.15.0. It had 4,050 npm downloads in the last 30 days and is listed on the official MCP Registry, so AI tools like Claude Code can connect to it directly. PlaySnack raised the share of its app motion on nudg from 49% to 89% in one pull request. ([GitHub](https://github.com/seukwoo/nudg) · [npm](https://www.npmjs.com/package/@nudg/core) · [demo](https://seukwoo.github.io/nudg/demo/))",
+        note: "Downloads are from npm's public stats (2026.10.27–11.25).",
       },
     },
   },
