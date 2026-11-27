@@ -31,21 +31,37 @@ export function ProjectGallery({ images, title, extraSlide }: Props) {
         navigation
         pagination={{ clickable: true }}
         keyboard={{ enabled: true }}
+        // A video keeps playing off-screen otherwise.
+        onSlideChange={(swiper) => swiper.el.querySelectorAll("video").forEach((v) => v.pause())}
       >
         {images.flatMap((img, i) => [
           <SwiperSlide key={img.src} className="pt-4 pb-10">
             <div className={FRAME}>
-              <Image
-                src={img.src}
-                alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
-                width={img.width}
-                height={img.height}
-                priority={i === 0}
-                // Off-screen slides sit beside the visible one; lazy loading may never start for them (e.g. Safari).
-                loading={i === 0 ? undefined : "eager"}
-                sizes="(min-width: 1152px) 1104px, 100vw"
-                className="h-auto max-h-full w-auto max-w-full object-contain"
-              />
+              {img.video ? (
+                <video
+                  src={img.video}
+                  poster={img.src}
+                  width={img.width}
+                  height={img.height}
+                  controls
+                  playsInline
+                  preload="none"
+                  aria-label={labels.projects.screenshotAlt(title, i + 1, images.length)}
+                  className="h-auto max-h-full w-auto max-w-full rounded-lg"
+                />
+              ) : (
+                <Image
+                  src={img.src}
+                  alt={labels.projects.screenshotAlt(title, i + 1, images.length)}
+                  width={img.width}
+                  height={img.height}
+                  priority={i === 0}
+                  // Off-screen slides sit beside the visible one; lazy loading may never start for them (e.g. Safari).
+                  loading={i === 0 ? undefined : "eager"}
+                  sizes="(min-width: 1152px) 1104px, 100vw"
+                  className="h-auto max-h-full w-auto max-w-full object-contain"
+                />
+              )}
             </div>
             <p className={CAPTION}>{img.caption}</p>
           </SwiperSlide>,
